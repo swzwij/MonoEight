@@ -33,20 +33,12 @@ public class SpriteSheet
         SpliceSprites();
     }
 
-    public SpriteSheet(string texturePath, int tileSize)
+    public Texture2D Get(int index)
     {
-        _texture = ContentLoader.Load<Texture2D>(texturePath);
-        _tileSize = new Point(tileSize, tileSize);
+        if (index < 0 || index >= _sprites.Length)
+            throw new IndexOutOfRangeException();
 
-        SpliceSprites();
-    }
-
-    public SpriteSheet(string texturePath, Point tileSize)
-    {
-        _texture = ContentLoader.Load<Texture2D>(texturePath);
-        _tileSize = tileSize;
-
-        SpliceSprites();
+        return _sprites[index];
     }
 
     private void SpliceSprites()
@@ -82,13 +74,5 @@ public class SpriteSheet
         sprite.SetData(data);
 
         return sprite;
-    }
-
-    public Texture2D Get(int index)
-    {
-        if (index < 0 || index >= _sprites.Length)
-            throw new IndexOutOfRangeException();
-
-        return _sprites[index];
     }
 }

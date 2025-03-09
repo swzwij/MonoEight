@@ -25,6 +25,27 @@
 /processorParam:TextureFormat=Color
 /build:Debug.png
 
+#begin Engine/Font/h1.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Engine/Font/h1.spritefont
+
+#begin Engine/Font/h2.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Engine/Font/h2.spritefont
+
+#begin Engine/Font/p.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Engine/Font/p.spritefont
+
 #begin Engine/MonoEight.png
 /importer:TextureImporter
 /processor:TextureProcessor

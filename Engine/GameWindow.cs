@@ -10,7 +10,7 @@ public static class GameWindow
     private const int MIN_SCALE = 1;
     private const int MAX_SCALE = 16;
 
-    private static int _scale = 4;
+    private static int _scale = 10;
 
     private static GraphicsDeviceManager _graphics;
 
