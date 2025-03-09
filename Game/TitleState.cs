@@ -8,11 +8,13 @@ public class TitleState : GameState
 {
     private Texture2D _title;
     private SpriteFont _font;
+    private Canvas _canvas;
 
     public override void Initialize()
     {
         base.Initialize();
         Camera.Position = Vector2.Zero;
+        _canvas = new();
     }
 
     public override void LoadContent()
@@ -31,14 +33,10 @@ public class TitleState : GameState
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Vector2 center = new(GameWindow.Width / 2 - _title.Width / 2, GameWindow.Height / 2 - _title.Height / 2);
         spriteBatch.Draw(_title, Vector2.Zero, Color.White);
 
         string text = "Press Start to Begin";
-        Vector2 textSize = _font.MeasureString(text);
-        Vector2 textPosition = new(GameWindow.Width / 2 - textSize.X / 2, GameWindow.Height - textSize.Y * 2);
-        textPosition += Camera.Position;
-        spriteBatch.DrawString(_font, text, textPosition, Color.White);
+        _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
 
         base.Draw(spriteBatch);
     }

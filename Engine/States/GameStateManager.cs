@@ -11,8 +11,6 @@ public class GameStateManager
     private readonly Dictionary<string, GameState> _states;
     private GameState _currentState;
     private string _currentStateName;
-    private GameState _previousState;
-
     public GameState CurrentState => _currentState;
 
     public string CurrentStateName => _currentStateName;

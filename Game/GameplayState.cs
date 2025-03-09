@@ -13,7 +13,7 @@ public class GameplayState : GameState
     {
         base.Initialize();
 
-        _player = new Player(new(64,64), 0);
+        _player = new Player(Vector2.Zero, 0);
         Add(_player);
     }
 
@@ -40,6 +40,8 @@ public class GameplayState : GameState
         Vector2 textPosition = new(GameWindow.Width / 2 - textSize.X / 2, GameWindow.Height - textSize.Y * 2);
         textPosition += Camera.Position;
         spriteBatch.DrawString(_font, text, textPosition, Color.White);
+
+        Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
 
         base.Draw(spriteBatch);
     }
