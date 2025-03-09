@@ -36,13 +36,6 @@ public abstract class GameObject
         _layer = layer;
     }
 
-    public GameObject(int layer)
-    {
-        _transform = new Transform();
-        _isActive = true;
-        _layer = layer;
-    }
-
     public abstract void Update(GameTime gameTime);
     public abstract void Draw(SpriteBatch spriteBatch);
 

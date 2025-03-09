@@ -17,6 +17,7 @@ public class MainGame : Game
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
+        IsMouseVisible = true;
     }
 
     protected override void Initialize()
@@ -32,6 +33,8 @@ public class MainGame : Game
         _stateManager.AddState("Game", new GameplayState());
 
         _stateManager.ChangeState("Title");
+
+        Camera.Initialize();
 
         base.Initialize();
     }
@@ -65,7 +68,7 @@ public class MainGame : Game
         GraphicsDevice.SetRenderTarget(_renderTarget);
         GraphicsDevice.Clear(Color.Black);
 
-        _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        _spriteBatch.Begin(transformMatrix: Camera.Transform, samplerState: SamplerState.PointClamp);
         _stateManager.Draw(_spriteBatch);
         _spriteBatch.End();
 

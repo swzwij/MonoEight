@@ -6,15 +6,21 @@ namespace MonoEight;
 public class GameplayState : GameState
 {
     private Texture2D _background;
+    private Player _player;
+    private SpriteFont _font;
 
     public override void Initialize()
     {
         base.Initialize();
+
+        _player = new Player(new(64,64), 0);
+        Add(_player);
     }
 
     public override void LoadContent()
     {
         _background = ContentLoader.Load<Texture2D>("Debug");
+        _font = ContentLoader.Load<SpriteFont>("Engine/Font/p");
     }
 
     public override void Update(GameTime gameTime)
@@ -28,6 +34,12 @@ public class GameplayState : GameState
     public override void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(_background, Vector2.Zero, Color.White);
+
+        string text = "Gameplay State";
+        Vector2 textSize = _font.MeasureString(text);
+        Vector2 textPosition = new(GameWindow.Width / 2 - textSize.X / 2, GameWindow.Height - textSize.Y * 2);
+        textPosition += Camera.Position;
+        spriteBatch.DrawString(_font, text, textPosition, Color.White);
 
         base.Draw(spriteBatch);
     }

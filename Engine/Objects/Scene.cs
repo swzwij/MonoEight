@@ -46,4 +46,9 @@ public class Scene
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].Draw(spriteBatch);
     }
+
+    public void Clear()
+    {
+        _gameObjects.Clear();
+    }
 }

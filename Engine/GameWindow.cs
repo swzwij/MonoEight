@@ -37,6 +37,7 @@ public static class GameWindow
     public static int ScaledWidth => WIDTH * _scale;
     public static int ScaledHeight => HEIGHT * _scale;
     public static Point ScaledSize => new(ScaledWidth, ScaledHeight);
+    public static Vector2 Center => new(ScaledWidth / 2, ScaledHeight / 2);
 
     public static void Initialize(GraphicsDeviceManager graphics)
     {

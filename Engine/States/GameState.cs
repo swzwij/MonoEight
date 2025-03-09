@@ -16,7 +16,10 @@ public abstract class GameState
 
     public virtual void Initialize() { }
     public virtual void LoadContent() { }
-    public virtual void UnloadContent() { }
+    public virtual void UnloadContent()
+    {
+        Clear();
+    }
 
     public virtual void Update(GameTime gameTime)
     {
@@ -36,5 +39,10 @@ public abstract class GameState
     public void Remove(GameObject gameObject)
     {
         _scene.Remove(gameObject);
+    }
+
+    public void Clear()
+    {
+        _scene.Clear();
     }
 }
