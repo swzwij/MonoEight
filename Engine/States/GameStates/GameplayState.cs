@@ -33,7 +33,7 @@ public class GameplayState : GameState
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(_background, Vector2.Zero, Color.White);
+        Sprite.DrawCentered(spriteBatch, _background);
 
         string text = "Gameplay State";
         Vector2 textSize = _font.MeasureString(text);

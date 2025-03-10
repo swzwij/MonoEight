@@ -5,10 +5,9 @@ namespace MonoEight;
 
 public class LoadingState : GameState
 {
-    private const float DISPLAY_TIME = 1f;
+    private const float DISPLAY_TIME = 2f;
     private const string ENGINE_NAME = "MonoEight";
 
-    private SpriteFont _font;
     private float _timer = 0;
 
     private Canvas _canvas;
@@ -16,13 +15,14 @@ public class LoadingState : GameState
 
     public override void Initialize()
     {
-        _font = ContentLoader.Load<SpriteFont>("Engine/Font/h1");
         _canvas = new();
 
-        SpriteSheet spriteSheet = new(ContentLoader.Load<Texture2D>("Engine/MonoEight"), new Point(144, 128));
+        SpriteSheet spriteSheet = new(ContentLoader.Load<Texture2D>("Engine/MonoEight"), new Point(64, 64));
         float frameDuration = DISPLAY_TIME / spriteSheet.SpriteCount;
         _animator = new(spriteSheet, frameDuration, true);
         _animator.Play();
+
+        Camera.RelativePosition = Vector2.Zero;
     }
 
     public override void Update(GameTime gameTime)
@@ -37,7 +37,7 @@ public class LoadingState : GameState
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _canvas.DrawText(spriteBatch, ENGINE_NAME, FontSize.H1, new Vector2(GameWindow.Width / 2, GameWindow.Height / 2), Color.White, Alignment.MiddleCenter);
+        _canvas.DrawText(spriteBatch, ENGINE_NAME, FontSize.H2, new Vector2(GameWindow.Width / 2, 8), Color.White, Alignment.TopCenter);
         _animator.Draw(spriteBatch, Vector2.Zero);
     }
 }

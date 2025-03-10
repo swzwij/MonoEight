@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 
 namespace MonoEight;
@@ -42,6 +43,8 @@ public static class GameWindow
     public static void Initialize(GraphicsDeviceManager graphics)
     {
         _graphics = graphics;
+
+        Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
     }
 
     public static void UpdateWindowSize()

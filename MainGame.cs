@@ -27,6 +27,8 @@ public class MainGame : Game
         GameWindow.Initialize(_graphics);
         GameWindow.UpdateWindowSize();
 
+        Camera.Initialize();
+
         _stateManager = GameStateManager.Instance;
 
         _stateManager.AddState("Loading", new LoadingState());
@@ -34,8 +36,6 @@ public class MainGame : Game
         _stateManager.AddState("Game", new GameplayState());
 
         _stateManager.ChangeState("Loading");
-
-        Camera.Initialize();
 
         base.Initialize();
     }

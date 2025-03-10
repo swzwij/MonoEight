@@ -20,6 +20,6 @@ public class Player : GameObject
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(_texture, Transform.Position, null, Color.White, 0, Vector2.Zero, Transform.Scale, SpriteEffects.None, 0);
+        Sprite.DrawCentered(spriteBatch, _texture, Transform.Position);
     }
 }

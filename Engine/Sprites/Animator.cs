@@ -57,6 +57,6 @@ public class Animator
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        spriteBatch.Draw(_spriteSheet[_currentFrame], position, Color.White);
+        Sprite.DrawCentered(spriteBatch, _spriteSheet[_currentFrame], position);
     }
 }
