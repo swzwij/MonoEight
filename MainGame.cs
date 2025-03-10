@@ -29,10 +29,11 @@ public class MainGame : Game
 
         _stateManager = GameStateManager.Instance;
 
+        _stateManager.AddState("Loading", new LoadingState());
         _stateManager.AddState("Title", new TitleState());
         _stateManager.AddState("Game", new GameplayState());
 
-        _stateManager.ChangeState("Title");
+        _stateManager.ChangeState("Loading");
 
         Camera.Initialize();
 
