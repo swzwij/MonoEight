@@ -1,10 +1,11 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 
 public class Player : GameObject
 {
-    Texture2D _texture;
+    private Texture2D _texture;
 
     public Player(Vector2 position, int layer) : base(position, layer)
     {
