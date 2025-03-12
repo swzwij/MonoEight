@@ -12,6 +12,8 @@ public static class GameWindow
     private const int MAX_SCALE = 16;
 
     private static int _scale = 10;
+    private static bool _isFullscreen = false;
+    private static Point _previousWindowSize;
 
     private static GraphicsDeviceManager _graphics;
 
@@ -31,7 +33,37 @@ public static class GameWindow
             else
                 _scale = value;
 
-            UpdateWindowSize();
+            if (!_isFullscreen)
+                UpdateWindowSize();
+        }
+    }
+
+    public static bool IsFullscreen
+    {
+        get => _isFullscreen;
+        set
+        {
+            if (_isFullscreen != value)
+            {
+                _isFullscreen = value;
+
+                if (_isFullscreen)
+                {
+                    _previousWindowSize = new Point(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+
+                    _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
+                    _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+                    _graphics.IsFullScreen = true;
+                }
+                else
+                {
+                    _graphics.PreferredBackBufferWidth = _previousWindowSize.X;
+                    _graphics.PreferredBackBufferHeight = _previousWindowSize.Y;
+                    _graphics.IsFullScreen = false;
+                }
+
+                _graphics.ApplyChanges();
+            }
         }
     }
 
@@ -49,8 +81,16 @@ public static class GameWindow
 
     public static void UpdateWindowSize()
     {
-        _graphics.PreferredBackBufferWidth = ScaledWidth;
-        _graphics.PreferredBackBufferHeight = ScaledHeight;
-        _graphics.ApplyChanges();
+        if (!_isFullscreen)
+        {
+            _graphics.PreferredBackBufferWidth = ScaledWidth;
+            _graphics.PreferredBackBufferHeight = ScaledHeight;
+            _graphics.ApplyChanges();
+        }
+    }
+
+    public static void ToggleFullscreen()
+    {
+        IsFullscreen = !IsFullscreen;
     }
 }

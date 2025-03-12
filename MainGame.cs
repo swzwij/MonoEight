@@ -55,11 +55,12 @@ public class MainGame : Game
         if (Input.IsKeyPressed(Keys.OemMinus))
             GameWindow.Scale--;
 
+        // Add fullscreen toggle with F11
+        if (Input.IsKeyPressed(Keys.F11))
+            GameWindow.ToggleFullscreen();
+
         if (Input.IsBackPressed && _stateManager.CurrentStateName == "Title")
             Exit();
-
-        if (Input.IsKeyPressed(Keys.F))
-            _graphics.ToggleFullScreen();
 
         _stateManager.Update(gameTime);
 
@@ -76,16 +77,36 @@ public class MainGame : Game
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);
-        GraphicsDevice.Clear(Color.White);
+        GraphicsDevice.Clear(Color.Black);
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-        _spriteBatch.Draw
-        (
-            _renderTarget,
-            new Rectangle(0, 0, GameWindow.ScaledWidth, GameWindow.ScaledHeight),
-            Color.White
-        );
 
+        Rectangle destinationRectangle;
+
+        if (GameWindow.IsFullscreen)
+        {
+            float aspectRatio = (float)GameWindow.Width / GameWindow.Height;
+
+            int width = GraphicsDevice.Viewport.Width;
+            int height = (int)(width / aspectRatio);
+
+            if (height > GraphicsDevice.Viewport.Height)
+            {
+                height = GraphicsDevice.Viewport.Height;
+                width = (int)(height * aspectRatio);
+            }
+
+            int x = (GraphicsDevice.Viewport.Width - width) / 2;
+            int y = (GraphicsDevice.Viewport.Height - height) / 2;
+
+            destinationRectangle = new Rectangle(x, y, width, height);
+        }
+        else
+        {
+            destinationRectangle = new Rectangle(0, 0, GameWindow.ScaledWidth, GameWindow.ScaledHeight);
+        }
+
+        _spriteBatch.Draw(_renderTarget, destinationRectangle, Color.White);
         _spriteBatch.End();
 
         base.Draw(gameTime);
