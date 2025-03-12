@@ -41,7 +41,7 @@ public class GameplayState : GameState
         textPosition += Camera.Position;
         spriteBatch.DrawString(_font, text, textPosition, Color.White);
 
-        Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
+        // Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
 
         base.Draw(spriteBatch);
     }

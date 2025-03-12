@@ -23,8 +23,6 @@ public class Camera
         get => new(_position.X + GameWindow.Width / 2, _position.Y + GameWindow.Height / 2);
         set
         {
-            Console.WriteLine(value);
-
             _position = new(value.X - GameWindow.Width / 2, value.Y - GameWindow.Height / 2);
             UpdatePosition();
         }

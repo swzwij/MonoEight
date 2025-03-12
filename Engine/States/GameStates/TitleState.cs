@@ -31,14 +31,12 @@ public class TitleState : GameState
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Sprite.DrawCentered(spriteBatch, _title);
-
-        Sprite.DrawCentered(spriteBatch, _title, Vector2.Zero);
+        // Sprite.DrawCentered(spriteBatch, _title);
 
         string text = "Press Start to Begin";
         _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
 
-        Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
+        // Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
 
         base.Draw(spriteBatch);
     }

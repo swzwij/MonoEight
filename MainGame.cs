@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -59,6 +58,9 @@ public class MainGame : Game
         if (Input.IsBackPressed && _stateManager.CurrentStateName == "Title")
             Exit();
 
+        if (Input.IsKeyPressed(Keys.F))
+            _graphics.ToggleFullScreen();
+
         _stateManager.Update(gameTime);
 
         base.Update(gameTime);
@@ -74,7 +76,7 @@ public class MainGame : Game
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);
-        GraphicsDevice.Clear(Color.Black);
+        GraphicsDevice.Clear(Color.White);
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         _spriteBatch.Draw

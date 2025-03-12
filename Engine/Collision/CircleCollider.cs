@@ -45,6 +45,6 @@ public class CircleCollider
 
     public void Draw(SpriteBatch spriteBatch, Color color, int segments = 16)
     {
-        Debugger.DrawCircle(spriteBatch, _position, _radius, color, segments);
+        // Debugger.DrawCircle(spriteBatch, _position, _radius, color, segments);
     }
 }

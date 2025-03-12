@@ -41,6 +41,6 @@ public class BoxCollider
 
     public void Draw(SpriteBatch spriteBatch, Color color)
     {
-        Debugger.DrawSquare(spriteBatch, _position, _size, color);
+        // Debugger.DrawSquare(spriteBatch, _position, _size, color);
     }
 }
