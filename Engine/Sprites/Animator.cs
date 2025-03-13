@@ -40,19 +40,19 @@ public class Animator
 
         _frameTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-        if (_frameTimer >= _frameDuration)
-        {
-            _frameTimer = 0;
-            _currentFrame++;
+        if (_frameTimer < _frameDuration)
+            return;
 
-            if (_currentFrame >= _spriteSheet.SpriteCount)
-            {
-                if (_isLooping)
-                    _currentFrame = 0;
-                else
-                    Stop();
-            }
-        }
+        _frameTimer = 0;
+        _currentFrame++;
+
+        if (_currentFrame < _spriteSheet.SpriteCount)
+            return;
+
+        if (_isLooping)
+            _currentFrame = 0;
+        else
+            Stop();
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
-public class MainGame : Game
+public class Main : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
@@ -12,20 +12,17 @@ public class MainGame : Game
 
     private GameStateManager _stateManager;
 
-    public MainGame()
+    public Main()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+        IsMouseVisible = false;
     }
 
     protected override void Initialize()
     {
         ContentLoader.Initialize(Content);
-
-        GameWindow.Initialize(_graphics);
-        GameWindow.UpdateWindowSize();
-
+        GameWindow.Initialize(_graphics, true);
         Camera.Initialize();
 
         _stateManager = GameStateManager.Instance;
@@ -55,7 +52,6 @@ public class MainGame : Game
         if (Input.IsKeyPressed(Keys.OemMinus))
             GameWindow.Scale--;
 
-        // Add fullscreen toggle with F11
         if (Input.IsKeyPressed(Keys.F11))
             GameWindow.ToggleFullscreen();
 
@@ -70,7 +66,7 @@ public class MainGame : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.SetRenderTarget(_renderTarget);
-        GraphicsDevice.Clear(Color.Black);
+        GraphicsDevice.Clear(Camera.BackgroundColor);
 
         _spriteBatch.Begin(transformMatrix: Camera.Transform, samplerState: SamplerState.PointClamp);
         _stateManager.Draw(_spriteBatch);
@@ -81,32 +77,11 @@ public class MainGame : Game
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        Rectangle destinationRectangle;
+        Rectangle targetRect = GameWindow.IsFullscreen
+            ? GraphicsHelper.CalculateFullscreenRect(GraphicsDevice)
+            : new Rectangle(0, 0, GameWindow.ScaledWidth, GameWindow.ScaledHeight);
 
-        if (GameWindow.IsFullscreen)
-        {
-            float aspectRatio = (float)GameWindow.Width / GameWindow.Height;
-
-            int width = GraphicsDevice.Viewport.Width;
-            int height = (int)(width / aspectRatio);
-
-            if (height > GraphicsDevice.Viewport.Height)
-            {
-                height = GraphicsDevice.Viewport.Height;
-                width = (int)(height * aspectRatio);
-            }
-
-            int x = (GraphicsDevice.Viewport.Width - width) / 2;
-            int y = (GraphicsDevice.Viewport.Height - height) / 2;
-
-            destinationRectangle = new Rectangle(x, y, width, height);
-        }
-        else
-        {
-            destinationRectangle = new Rectangle(0, 0, GameWindow.ScaledWidth, GameWindow.ScaledHeight);
-        }
-
-        _spriteBatch.Draw(_renderTarget, destinationRectangle, Color.White);
+        _spriteBatch.Draw(_renderTarget, targetRect, Color.White);
         _spriteBatch.End();
 
         base.Draw(gameTime);

@@ -12,6 +12,7 @@ public class TitleState : GameState
     public override void Initialize()
     {
         base.Initialize();
+        Camera.BackgroundColor = Color.Black;
         Camera.RelativePosition = Vector2.Zero;
         _canvas = new();
     }

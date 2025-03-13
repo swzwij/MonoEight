@@ -17,9 +17,10 @@ public class LoadingState : GameState
     {
         _canvas = new();
 
+        Camera.BackgroundColor = Color.Black;
+
         SpriteSheet spriteSheet = new(ContentLoader.Load<Texture2D>("Engine/MonoEight"), new Point(64, 64));
-        float frameDuration = DISPLAY_TIME / spriteSheet.SpriteCount;
-        _animator = new(spriteSheet, frameDuration, true);
+        _animator = new(spriteSheet, DISPLAY_TIME / spriteSheet.SpriteCount, true);
         _animator.Play();
 
         Camera.RelativePosition = Vector2.Zero;
@@ -37,7 +38,15 @@ public class LoadingState : GameState
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _canvas.DrawText(spriteBatch, ENGINE_NAME, FontSize.H2, new Vector2(GameWindow.Width / 2, 8), Color.White, Alignment.TopCenter);
+        _canvas.DrawText
+        (
+            spriteBatch,
+            ENGINE_NAME,
+            FontSize.H2,
+            new Vector2(GameWindow.Width / 2, 8),
+            Color.White,
+            Alignment.TopCenter
+        );
         _animator.Draw(spriteBatch, Vector2.Zero);
     }
 }

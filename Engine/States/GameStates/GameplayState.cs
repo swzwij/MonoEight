@@ -13,6 +13,8 @@ public class GameplayState : GameState
     {
         base.Initialize();
 
+        Camera.BackgroundColor = Color.DarkMagenta;
+
         _player = new Player(Vector2.Zero, 0);
         Add(_player);
     }

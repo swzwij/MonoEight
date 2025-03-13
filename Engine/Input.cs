@@ -77,5 +77,5 @@ public static class Input
         }
     }
 
-    public static Vector2 InputAxis => new Vector2(HorizontalAxis, VerticalAxis);
+    public static Vector2 InputAxis => new(HorizontalAxis, VerticalAxis);
 }

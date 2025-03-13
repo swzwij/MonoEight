@@ -15,13 +15,6 @@ public abstract class GameObject
     public int Layer => _layer;
     public bool ShouldDestroy => _shouldDestroy;
 
-    public GameObject(Vector2 position, float rotation, float scale, int layer)
-    {
-        _transform = new Transform(position, rotation, scale);
-        _isActive = true;
-        _layer = layer;
-    }
-
     public GameObject(Vector2 position, float rotation, int layer)
     {
         _transform = new Transform(position, rotation);

@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 
 namespace MonoEight;
@@ -7,6 +6,7 @@ public class Camera
 {
     private static Matrix _transform;
     private static Vector2 _position;
+    private static Color _backgroundColor;
 
     public static Matrix Transform => _transform;
     public static Vector2 Position
@@ -27,10 +27,16 @@ public class Camera
             UpdatePosition();
         }
     }
+    public static Color BackgroundColor
+    {
+        get => _backgroundColor;
+        set => _backgroundColor = value;
+    }
 
     public static void Initialize()
     {
         Position = Vector2.Zero;
+        BackgroundColor = Color.Black;
         UpdatePosition();
     }
 

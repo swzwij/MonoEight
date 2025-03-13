@@ -43,27 +43,31 @@ public static class GameWindow
         get => _isFullscreen;
         set
         {
-            if (_isFullscreen != value)
+            if (_isFullscreen == value)
+                return;
+
+            _isFullscreen = value;
+
+            if (_isFullscreen)
             {
-                _isFullscreen = value;
+                _previousWindowSize = new Point
+                (
+                    _graphics.PreferredBackBufferWidth,
+                    _graphics.PreferredBackBufferHeight
+                );
 
-                if (_isFullscreen)
-                {
-                    _previousWindowSize = new Point(_graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-
-                    _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
-                    _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
-                    _graphics.IsFullScreen = true;
-                }
-                else
-                {
-                    _graphics.PreferredBackBufferWidth = _previousWindowSize.X;
-                    _graphics.PreferredBackBufferHeight = _previousWindowSize.Y;
-                    _graphics.IsFullScreen = false;
-                }
-
-                _graphics.ApplyChanges();
+                _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
+                _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+                _graphics.IsFullScreen = true;
             }
+            else
+            {
+                _graphics.PreferredBackBufferWidth = _previousWindowSize.X;
+                _graphics.PreferredBackBufferHeight = _previousWindowSize.Y;
+                _graphics.IsFullScreen = false;
+            }
+
+            _graphics.ApplyChanges();
         }
     }
 
@@ -72,21 +76,29 @@ public static class GameWindow
     public static Point ScaledSize => new(ScaledWidth, ScaledHeight);
     public static Vector2 Center => new(ScaledWidth / 2, ScaledHeight / 2);
 
-    public static void Initialize(GraphicsDeviceManager graphics)
+    public static void Initialize(GraphicsDeviceManager graphics, bool startFullscreen = false)
     {
         _graphics = graphics;
 
-        Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
+        if (startFullscreen)
+        {
+            IsFullscreen = true;
+        }
+        else
+        {
+            Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
+            UpdateWindowSize();
+        }
     }
 
     public static void UpdateWindowSize()
     {
-        if (!_isFullscreen)
-        {
-            _graphics.PreferredBackBufferWidth = ScaledWidth;
-            _graphics.PreferredBackBufferHeight = ScaledHeight;
-            _graphics.ApplyChanges();
-        }
+        if (_isFullscreen)
+            return;
+
+        _graphics.PreferredBackBufferWidth = ScaledWidth;
+        _graphics.PreferredBackBufferHeight = ScaledHeight;
+        _graphics.ApplyChanges();
     }
 
     public static void ToggleFullscreen()
