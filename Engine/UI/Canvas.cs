@@ -12,9 +12,9 @@ public class Canvas
     {
         _fonts = new()
         {
-            { FontSize.H1, ContentLoader.Load<SpriteFont>("Engine/Font/h1") },
-            { FontSize.H2, ContentLoader.Load<SpriteFont>("Engine/Font/h2") },
-            { FontSize.P, ContentLoader.Load<SpriteFont>("Engine/Font/p") }
+            { FontSize.H1, ContentLoader.LoadFromRoot<SpriteFont>("Assets", "Fonts/h1") },
+            { FontSize.H2, ContentLoader.LoadFromRoot<SpriteFont>("Assets", "Fonts/h2") },
+            { FontSize.P, ContentLoader.LoadFromRoot<SpriteFont>("Assets", "Fonts/p") }
         };
     }
 

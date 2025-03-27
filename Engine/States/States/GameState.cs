@@ -7,7 +7,7 @@ public class GameState : State
 {
     private Texture2D _background;
     private Player _player;
-    private SpriteFont _font;
+    private Canvas _canvas;
 
     public override void Initialize()
     {
@@ -17,12 +17,13 @@ public class GameState : State
 
         _player = new Player(Vector2.Zero, 0);
         Add(_player);
+
+        _canvas = new();
     }
 
     public override void LoadContent()
     {
         _background = ContentLoader.Load<Texture2D>("Debug");
-        _font = ContentLoader.Load<SpriteFont>("Engine/Font/p");
     }
 
     public override void Update(GameTime gameTime)
@@ -38,10 +39,7 @@ public class GameState : State
         Sprite.DrawCentered(spriteBatch, _background);
 
         string text = "Gameplay State";
-        Vector2 textSize = _font.MeasureString(text);
-        Vector2 textPosition = new(GameWindow.Width / 2 - textSize.X / 2, GameWindow.Height - textSize.Y * 2);
-        textPosition += Camera.Position;
-        spriteBatch.DrawString(_font, text, textPosition, Color.White);
+        _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
 
         // Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
 

@@ -18,7 +18,7 @@ public class TitleState : State
 
     public override void LoadContent()
     {
-        _title = ContentLoader.Load<Texture2D>("Engine/MonoEight");
+        _title = ContentLoader.LoadFromRoot<Texture2D>("Assets", "MonoEight");
     }
 
     public override void Update(GameTime gameTime)

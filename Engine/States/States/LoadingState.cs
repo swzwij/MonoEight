@@ -19,7 +19,7 @@ public class LoadingState : State
 
         Camera.BackgroundColor = Color.Black;
 
-        SpriteSheet spriteSheet = new(ContentLoader.Load<Texture2D>("Engine/MonoEight"), new Point(64, 64));
+        SpriteSheet spriteSheet = new(ContentLoader.LoadFromRoot<Texture2D>("Assets", "MonoEight"), new Point(64, 64));
         _animator = new(spriteSheet, DISPLAY_TIME / spriteSheet.SpriteCount, true);
         _animator.Play();
 
