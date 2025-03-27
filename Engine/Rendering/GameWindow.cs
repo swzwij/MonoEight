@@ -5,9 +5,6 @@ namespace MonoEight;
 
 public static class GameWindow
 {
-    // private const int WIDTH = 144;
-    // private const int HEIGHT = 128;
-
     private const int WIDTH = 256;
     private const int HEIGHT = 192;
 
@@ -16,6 +13,7 @@ public static class GameWindow
 
     private static int _scale = 10;
     private static bool _isFullscreen = false;
+    private static bool _startFullscreen = false;
 
     private static GraphicsDeviceManager _graphics;
 
@@ -68,16 +66,22 @@ public static class GameWindow
         }
     }
 
+    public static bool StartFullscreen
+    {
+        get => _startFullscreen;
+        set => _startFullscreen = value;
+    }
+
     public static int ScaledWidth => WIDTH * _scale;
     public static int ScaledHeight => HEIGHT * _scale;
     public static Point ScaledSize => new(ScaledWidth, ScaledHeight);
     public static Vector2 Center => new(ScaledWidth / 2, ScaledHeight / 2);
 
-    public static void Initialize(GraphicsDeviceManager graphics, bool startFullscreen = false)
+    public static void Initialize(GraphicsDeviceManager graphics)
     {
         _graphics = graphics;
 
-        if (startFullscreen)
+        if (StartFullscreen)
         {
             IsFullscreen = true;
             return;

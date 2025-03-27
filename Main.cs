@@ -20,7 +20,8 @@ public class Main : Game
     protected override void Initialize()
     {
         ContentLoader.Initialize(Content);
-        GameWindow.Initialize(_graphics, true);
+        GameWindow.StartFullscreen = false;
+        GameWindow.Initialize(_graphics);
         Camera.Initialize();
 
         StateManager.AddState("Loading", new LoadingState());
