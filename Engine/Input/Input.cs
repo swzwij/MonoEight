@@ -13,16 +13,13 @@ public static class Input
 
     public static void Update()
     {
-        // Keyboard
         _previousKeyboardState = _currentKeyboardState;
         _currentKeyboardState = Keyboard.GetState();
 
-        // GamePad
         _previousGamePadState = _currentGamePadState;
         _currentGamePadState = GamePad.GetState(_playerIndex);
     }
 
-    // Keyboard methods
     public static bool IsKeyDown(Keys key)
     {
         return _currentKeyboardState.IsKeyDown(key);
@@ -78,7 +75,7 @@ public static class Input
         return _currentGamePadState.ThumbSticks.Right;
     }
 
-     public static bool IsStartPressed => IsKeyPressed(Keys.Enter) || IsButtonPressed(Buttons.Start);
+    public static bool IsStartPressed => IsKeyPressed(Keys.Enter) || IsButtonPressed(Buttons.Start);
 
     public static bool IsBackPressed => IsKeyPressed(Keys.Escape) || IsButtonPressed(Buttons.Back);
 
@@ -100,7 +97,6 @@ public static class Input
         {
             float axis = 0;
 
-            // Keyboard input
             if (IsKeyDown(Keys.Left) || IsKeyDown(Keys.A))
                 axis -= 1;
 
@@ -128,7 +124,6 @@ public static class Input
         {
             float axis = 0;
 
-            // Keyboard input
             if (IsKeyDown(Keys.Up) || IsKeyDown(Keys.W))
                 axis -= 1;
 
