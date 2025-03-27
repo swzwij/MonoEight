@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class GameplayState : GameState
+public class GameState : State
 {
     private Texture2D _background;
     private Player _player;
@@ -28,7 +28,7 @@ public class GameplayState : GameState
     public override void Update(GameTime gameTime)
     {
         if (Input.IsBackPressed)
-            GameStateManager.Instance.ChangeState("Title");
+            StateManager.ChangeState("Title");
 
         base.Update(gameTime);
     }

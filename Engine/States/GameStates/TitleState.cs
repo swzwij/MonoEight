@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
-public class TitleState : GameState
+public class TitleState : State
 {
     private Texture2D _title;
     private Canvas _canvas;
@@ -25,7 +25,7 @@ public class TitleState : GameState
     public override void Update(GameTime gameTime)
     {
         if (Input.IsStartPressed || Input.IsActionKeyPressed)
-            GameStateManager.Instance.ChangeState("Game");
+            StateManager.ChangeState("Game");
 
         base.Update(gameTime);
     }

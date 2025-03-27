@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class LoadingState : GameState
+public class LoadingState : State
 {
     private const float DISPLAY_TIME = 2f;
     private const string ENGINE_NAME = "MonoEight";
@@ -31,7 +31,7 @@ public class LoadingState : GameState
         _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         if (_timer >= DISPLAY_TIME)
-            GameStateManager.Instance.ChangeState("Title");
+            StateManager.ChangeState("Title");
 
         _animator.Update(gameTime);
     }
@@ -43,7 +43,7 @@ public class LoadingState : GameState
             spriteBatch,
             ENGINE_NAME,
             FontSize.H2,
-            new Vector2(GameWindow.Width / 2, 8),
+            new Vector2(GameWindow.Width / 2, 16),
             Color.White,
             Alignment.TopCenter
         );

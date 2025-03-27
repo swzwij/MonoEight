@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public abstract class GameState
+public abstract class State
 {
     protected Scene _scene;
 
     public Scene Scene => _scene;
 
-    public GameState()
+    public State()
     {
         _scene = new Scene();
     }

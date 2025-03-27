@@ -11,8 +11,9 @@ public class CircleCollider
     public Vector2 Position => _position;
     public float Radius => _radius;
 
-    public CircleCollider(float radius)
+    public CircleCollider(Vector2 position, float radius)
     {
+        _position = position;
         _radius = radius;
     }
 
@@ -45,6 +46,6 @@ public class CircleCollider
 
     public void Draw(SpriteBatch spriteBatch, Color color, int segments = 16)
     {
-        // Debugger.DrawCircle(spriteBatch, _position, _radius, color, segments);
+        Debugger.DrawCircle(spriteBatch, _position, _radius, color, segments);
     }
 }

@@ -28,11 +28,22 @@ public class Canvas
         position += alignmentOffset;
         position += Camera.Position;
 
-        spriteBatch.DrawString(font, text, position, color);
+        spriteBatch.DrawString(font, text, position, color, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
     }
 
-    private Vector2 CalculateAlignment(Vector2 textSize, Vector2 position, Alignment alignment)
+    public void DrawSprite(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, Color color, Alignment alignment = Alignment.MiddleCenter, int scale = 1)
     {
+        Vector2 alignmentOffset = CalculateAlignment(texture.Bounds.Size.ToVector2(), position, alignment, scale);
+
+        position += alignmentOffset;
+        position += Camera.Position;
+
+        spriteBatch.Draw(texture, position, null, color, 0, Vector2.Zero, scale, SpriteEffects.None, 0);
+    }
+
+    private Vector2 CalculateAlignment(Vector2 textSize, Vector2 position, Alignment alignment, int scale = 1)
+    {
+        textSize *= scale;
         return alignment switch
         {
             Alignment.TopLeft => new Vector2(0, 0),

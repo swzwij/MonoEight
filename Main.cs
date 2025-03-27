@@ -10,8 +10,6 @@ public class Main : Game
     private SpriteBatch _spriteBatch;
     private RenderTarget2D _renderTarget;
 
-    private GameStateManager _stateManager;
-
     public Main()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -25,13 +23,11 @@ public class Main : Game
         GameWindow.Initialize(_graphics, true);
         Camera.Initialize();
 
-        _stateManager = GameStateManager.Instance;
+        StateManager.AddState("Loading", new LoadingState());
+        StateManager.AddState("Title", new TitleState());
+        StateManager.AddState("Game", new GameState());
 
-        _stateManager.AddState("Loading", new LoadingState());
-        _stateManager.AddState("Title", new TitleState());
-        _stateManager.AddState("Game", new GameplayState());
-
-        _stateManager.ChangeState("Loading");
+        StateManager.ChangeState("Loading");
 
         base.Initialize();
     }
@@ -55,10 +51,10 @@ public class Main : Game
         if (Input.IsKeyPressed(Keys.F11))
             GameWindow.ToggleFullscreen();
 
-        if (Input.IsBackPressed && _stateManager.CurrentStateName == "Title")
+        if (Input.IsBackPressed && StateManager.CurrentStateName == "Title")
             Exit();
 
-        _stateManager.Update(gameTime);
+        StateManager.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -69,7 +65,7 @@ public class Main : Game
         GraphicsDevice.Clear(Camera.BackgroundColor);
 
         _spriteBatch.Begin(transformMatrix: Camera.Transform, samplerState: SamplerState.PointClamp);
-        _stateManager.Draw(_spriteBatch);
+        StateManager.Draw(_spriteBatch);
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);

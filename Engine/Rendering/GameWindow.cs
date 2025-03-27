@@ -5,15 +5,17 @@ namespace MonoEight;
 
 public static class GameWindow
 {
-    private const int WIDTH = 144;
-    private const int HEIGHT = 128;
+    // private const int WIDTH = 144;
+    // private const int HEIGHT = 128;
+
+    private const int WIDTH = 256;
+    private const int HEIGHT = 192;
 
     private const int MIN_SCALE = 1;
     private const int MAX_SCALE = 16;
 
     private static int _scale = 10;
     private static bool _isFullscreen = false;
-    private static Point _previousWindowSize;
 
     private static GraphicsDeviceManager _graphics;
 
@@ -50,20 +52,15 @@ public static class GameWindow
 
             if (_isFullscreen)
             {
-                _previousWindowSize = new Point
-                (
-                    _graphics.PreferredBackBufferWidth,
-                    _graphics.PreferredBackBufferHeight
-                );
-
                 _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
                 _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
                 _graphics.IsFullScreen = true;
             }
             else
             {
-                _graphics.PreferredBackBufferWidth = _previousWindowSize.X;
-                _graphics.PreferredBackBufferHeight = _previousWindowSize.Y;
+                Scale = (int)Math.Floor(_graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT);
+                _graphics.PreferredBackBufferWidth = ScaledWidth;
+                _graphics.PreferredBackBufferHeight = ScaledHeight;
                 _graphics.IsFullScreen = false;
             }
 
@@ -83,12 +80,11 @@ public static class GameWindow
         if (startFullscreen)
         {
             IsFullscreen = true;
+            return;
         }
-        else
-        {
-            Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
-            UpdateWindowSize();
-        }
+
+        Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT);
+        UpdateWindowSize();
     }
 
     public static void UpdateWindowSize()

@@ -5,61 +5,43 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class GameStateManager
+public static class StateManager
 {
-    private static GameStateManager _instance;
-    private readonly Dictionary<string, GameState> _states;
-    private GameState _currentState;
-    private string _currentStateName;
-    public GameState CurrentState => _currentState;
+    private static readonly Dictionary<string, State> _states = [];
+    private static State _currentState;
+    private static string _currentStateName;
 
-    public string CurrentStateName => _currentStateName;
+    public static State CurrentState => _currentState;
+    public static string CurrentStateName => _currentStateName;
 
-    public static GameStateManager Instance
-    {
-        get
-        {
-            _instance ??= new GameStateManager();
-            return _instance;
-        }
-    }
-
-    private GameStateManager()
-    {
-        _states = [];
-    }
-
-    public void AddState(string stateName, GameState state)
+    public static void AddState(string stateName, State state)
     {
         if (_states.TryAdd(stateName, state))
             return;
+
         throw new ArgumentException($"State '{stateName}' already exists in the manager");
     }
 
-    public void ChangeState(string stateName)
+    public  static void ChangeState(string stateName)
     {
-        if (_states.TryGetValue(stateName, out GameState value))
-        {
-            _currentState?.UnloadContent();
-
-            _currentStateName = stateName;
-            _currentState = value;
-
-            _currentState.Initialize();
-            _currentState.LoadContent();
-        }
-        else
-        {
+        if (!_states.TryGetValue(stateName, out State value))
             throw new ArgumentException($"State '{stateName}' does not exist in the manager");
-        }
+
+        _currentState?.UnloadContent();
+
+        _currentStateName = stateName;
+        _currentState = value;
+
+        _currentState.Initialize();
+        _currentState.LoadContent();
     }
 
-    public void Update(GameTime gameTime)
+    public static void Update(GameTime gameTime)
     {
         _currentState?.Update(gameTime);
     }
 
-    public void Draw(SpriteBatch spriteBatch)
+    public static void Draw(SpriteBatch spriteBatch)
     {
         _currentState?.Draw(spriteBatch);
     }
