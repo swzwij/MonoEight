@@ -20,7 +20,7 @@ public class Main : Game
     protected override void Initialize()
     {
         ContentLoader.Initialize(Content);
-        GameWindow.StartFullscreen = true;
+        GameWindow.StartFullscreen = false;
         GameWindow.Initialize(_graphics, Window);
         Camera.Initialize();
 
@@ -65,7 +65,16 @@ public class Main : Game
         GraphicsDevice.SetRenderTarget(_renderTarget);
         GraphicsDevice.Clear(Camera.BackgroundColor);
 
-        _spriteBatch.Begin(transformMatrix: Camera.Transform, samplerState: SamplerState.PointClamp);
+        _spriteBatch.Begin
+        (
+            SpriteSortMode.FrontToBack,
+            null,
+            SamplerState.PointClamp,
+            null,
+            null,
+            null,
+            Camera.Transform
+        );
         StateManager.Draw(_spriteBatch);
         _spriteBatch.End();
 
