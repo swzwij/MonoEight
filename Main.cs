@@ -14,14 +14,14 @@ public class Main : Game
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
-        IsMouseVisible = false;
+        IsMouseVisible = true;
     }
 
     protected override void Initialize()
     {
         ContentLoader.Initialize(Content);
         GameWindow.StartFullscreen = false;
-        GameWindow.Initialize(_graphics);
+        GameWindow.Initialize(_graphics, Window);
         Camera.Initialize();
 
         StateManager.AddState("Loading", new LoadingState());
