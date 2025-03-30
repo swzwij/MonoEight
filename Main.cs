@@ -20,7 +20,7 @@ public class Main : Game
     protected override void Initialize()
     {
         ContentLoader.Initialize(Content);
-        GameWindow.StartFullscreen = false;
+        GameWindow.StartFullscreen = true;
         GameWindow.Initialize(_graphics, Window);
         Camera.Initialize();
 

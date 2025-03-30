@@ -14,7 +14,6 @@ public static class GameWindow
     private static int _scale = 10;
     private static bool _isFullscreen = false;
     private static bool _startFullscreen = false;
-    private static Point _position = new(0, 0);
 
     private static GraphicsDeviceManager _graphics;
     private static Microsoft.Xna.Framework.GameWindow _window;
@@ -52,29 +51,22 @@ public static class GameWindow
 
             if (_isFullscreen)
             {
-                // _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
-                // _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
-                // _graphics.IsFullScreen = true;
-
                 _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
                 _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
                 _window.IsBorderless = true;
-                _position = _window.Position;
                 _window.Position = new Point(0, 0);
             }
             else
             {
-                Scale = (int)Math.Floor(_graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT);
+                Scale = CalculateScale();
                 _graphics.PreferredBackBufferWidth = ScaledWidth;
                 _graphics.PreferredBackBufferHeight = ScaledHeight;
-                // _graphics.IsFullScreen = false;
                 _window.IsBorderless = false;
-                _window.Position = _position;
-                // _window.Position = new Point
-                // (
-                //     (_graphics.GraphicsDevice.DisplayMode.Width - ScaledWidth) / 2,
-                //     (_graphics.GraphicsDevice.DisplayMode.Height - ScaledHeight) / 2
-                // );
+                _window.Position = new Point
+                (
+                    (_graphics.GraphicsDevice.DisplayMode.Width - ScaledWidth) / 2,
+                    (_graphics.GraphicsDevice.DisplayMode.Height - ScaledHeight) / 2
+                );
             }
 
             _graphics.ApplyChanges();
@@ -93,18 +85,7 @@ public static class GameWindow
     public static Vector2 Center => new(ScaledWidth / 2, ScaledHeight / 2);
 
     public static GraphicsDeviceManager Graphics => _graphics;
-
-    public static Point GetDisplaySize()
-    {
-        if (_graphics?.GraphicsDevice != null)
-        {
-            return new Point(
-                _graphics.GraphicsDevice.DisplayMode.Width,
-                _graphics.GraphicsDevice.DisplayMode.Height
-            );
-        }
-        return Point.Zero;
-    }
+    public static Point DisplaySize => new(_graphics.GraphicsDevice.DisplayMode.Width, _graphics.GraphicsDevice.DisplayMode.Height);
 
     public static void Initialize(GraphicsDeviceManager graphics, Microsoft.Xna.Framework.GameWindow window)
     {
@@ -117,7 +98,7 @@ public static class GameWindow
             return;
         }
 
-        Scale = (int)Math.Floor(graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT);
+        Scale = CalculateScale();
         UpdateWindowSize();
     }
 
@@ -134,5 +115,10 @@ public static class GameWindow
     public static void ToggleFullscreen()
     {
         IsFullscreen = !IsFullscreen;
+    }
+
+    private static int CalculateScale()
+    {
+        return (int)Math.Floor(_graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
     }
 }

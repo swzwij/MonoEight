@@ -18,27 +18,27 @@ public class MouseHandler
 
             if (GameWindow.IsFullscreen)
             {
-                Point displaySize = GameWindow.GetDisplaySize();
+                Point displaySize = GameWindow.DisplaySize;
+                float displayWidth = displaySize.X;
+                float displayHeight = displaySize.Y;
 
                 float gameAspectRatio = (float)GameWindow.Width / GameWindow.Height;
-                float screenAspectRatio = displaySize.X / displaySize.Y;
+                float screenAspectRatio = displayWidth / displayHeight;
 
-                float screenWidth;
-                float screenHeight;
-                float offsetX = 0;
-                float offsetY = 0;
+                float screenWidth, screenHeight;
+                float offsetX = 0, offsetY = 0;
 
                 if (screenAspectRatio >= gameAspectRatio)
                 {
-                    screenHeight = displaySize.Y;
+                    screenHeight = displayHeight;
                     screenWidth = screenHeight * gameAspectRatio;
-                    offsetX = (displaySize.X - screenWidth) / 2;
+                    offsetX = (displayWidth - screenWidth) / 2;
                 }
                 else
                 {
-                    screenWidth = displaySize.X;
+                    screenWidth = displayWidth;
                     screenHeight = screenWidth / gameAspectRatio;
-                    offsetY = (displaySize.Y - screenHeight) / 2;
+                    offsetY = (displayHeight - screenHeight) / 2;
                 }
 
                 scaledPosition.X = (scaledPosition.X - offsetX) * (GameWindow.Width * GameWindow.Scale) / screenWidth;
