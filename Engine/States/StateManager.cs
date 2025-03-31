@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Manages the states of the game.
+/// </summary>
 public static class StateManager
 {
     private static readonly Dictionary<string, State> _states = [];
@@ -14,6 +17,11 @@ public static class StateManager
     public static State CurrentState => _currentState;
     public static string CurrentStateName => _currentStateName;
 
+    /// <summary>
+    /// Adds a new state to the manager.
+    /// </summary>
+    /// <param name="stateName">The name of the state.</param>
+    /// <param name="state">The state instance.</param>
     public static void AddState(string stateName, State state)
     {
         if (_states.TryAdd(stateName, state))
@@ -22,6 +30,10 @@ public static class StateManager
         throw new ArgumentException($"State '{stateName}' already exists in the manager");
     }
 
+    /// <summary>
+    /// Changes the current state to the specified state.
+    /// </summary>
+    /// <param name="stateName">The name of the state to change to.</param>
     public  static void ChangeState(string stateName)
     {
         if (!_states.TryGetValue(stateName, out State value))

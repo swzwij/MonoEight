@@ -23,6 +23,7 @@ public class Main : Game
         GameWindow.StartFullscreen = false;
         GameWindow.Initialize(_graphics, Window);
         Camera.Initialize();
+        GamePrefs.Initialize("MonoEight");
 
         StateManager.AddState("Loading", new LoadingState());
         StateManager.AddState("Title", new TitleState());

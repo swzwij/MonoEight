@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a canvas for drawing text and sprites in the game.
+/// </summary>
 public class Canvas
 {
     private readonly Dictionary<FontSize, SpriteFont> _fonts;
@@ -18,6 +21,15 @@ public class Canvas
         };
     }
 
+    /// <summary>
+    /// Draws text on the canvas.
+    /// </summary>
+    /// <param name="spriteBatch">The sprite batch used for drawing.</param>
+    /// <param name="text">The text to draw.</param>
+    /// <param name="fontSize">The font size to use.</param>
+    /// <param name="position">The position to draw the text at.</param>
+    /// <param name="color">The color of the text.</param>
+    /// <param name="alignment">The alignment of the text.</param>
     public void DrawText(SpriteBatch spriteBatch, string text, FontSize fontSize, Vector2 position, Color color, Alignment alignment = Alignment.MiddleCenter)
     {
         SpriteFont font = _fonts[fontSize];
@@ -31,6 +43,15 @@ public class Canvas
         spriteBatch.DrawString(font, text, position, color, 0, Vector2.Zero, 1, SpriteEffects.None, 1);
     }
 
+    /// <summary>
+    /// Draws a sprite on the canvas.
+    /// </summary>
+    /// <param name="spriteBatch">The sprite batch used for drawing.</param>
+    /// <param name="texture">The texture of the sprite.</param>
+    /// <param name="position">The position to draw the sprite at.</param>
+    /// <param name="color">The color of the sprite.</param>
+    /// <param name="alignment">The alignment of the sprite.</param>
+    /// <param name="scale">The scale of the sprite.</param>
     public void DrawSprite(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, Color color, Alignment alignment = Alignment.MiddleCenter, int scale = 1)
     {
         Vector2 alignmentOffset = CalculateAlignment(texture.Bounds.Size.ToVector2(), position, alignment, scale);

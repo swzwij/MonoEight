@@ -1,5 +1,8 @@
 namespace MonoEight;
 
+/// <summary>
+/// Represents the alignment of text or other elements within the canvas.
+/// </summary>
 public enum Alignment
 {
     TopLeft,
