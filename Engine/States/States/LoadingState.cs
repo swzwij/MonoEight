@@ -11,7 +11,7 @@ public class LoadingState : State
     private float _timer = 0;
 
     private Canvas _canvas;
-    private Animator _animator;
+    private Animation _animation;
 
     public override void Initialize()
     {
@@ -20,8 +20,8 @@ public class LoadingState : State
         Camera.BackgroundColor = Color.Black;
 
         SpriteSheet spriteSheet = new(ContentLoader.LoadFromRoot<Texture2D>("Assets", "MonoEight"), new Point(64, 64));
-        _animator = new(spriteSheet, DISPLAY_TIME / spriteSheet.SpriteCount, true);
-        _animator.Play();
+        _animation = new(spriteSheet, DISPLAY_TIME / spriteSheet.SpriteCount, true);
+        _animation.Play();
 
         Camera.RelativePosition = Vector2.Zero;
     }
@@ -33,7 +33,7 @@ public class LoadingState : State
         if (_timer >= DISPLAY_TIME)
             StateManager.ChangeState("Title");
 
-        _animator.Update(gameTime);
+        _animation.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
@@ -47,6 +47,6 @@ public class LoadingState : State
             Color.White,
             Alignment.TopCenter
         );
-        _animator.Draw(spriteBatch, Vector2.Zero);
+        _animation.Draw(spriteBatch, Vector2.Zero);
     }
 }

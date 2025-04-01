@@ -3,20 +3,21 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class Animator
+public class Animation
 {
     private readonly SpriteSheet _spriteSheet;
+    private readonly float _frameDuration;
+    private readonly bool _isLooping;
+
     private int _currentFrame;
     private float _frameTimer;
-    private float _frameDuration;
     private bool _isPlaying;
-    private bool _isLooping;
 
     public int CurrentFrame => _currentFrame;
     public bool IsPlaying => _isPlaying;
     public bool IsLooping => _isLooping;
 
-    public Animator(SpriteSheet spriteSheet, float frameDuration, bool isLooping)
+    public Animation(SpriteSheet spriteSheet, float frameDuration, bool isLooping)
     {
         _spriteSheet = spriteSheet;
         _frameDuration = frameDuration;

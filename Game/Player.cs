@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
@@ -14,10 +13,6 @@ public class Player : GameObject
 
     public override void Update(GameTime gameTime)
     {
-        // Vector2 input = Input.InputAxis;
-        // Transform.Position += input * 2;
-        // Camera.RelativePosition = Transform.Position;
-
         Vector2 mousePosition = Input.Mouse.Position;
         Transform.Position = mousePosition;
     }

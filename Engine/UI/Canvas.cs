@@ -35,7 +35,7 @@ public class Canvas
         SpriteFont font = _fonts[fontSize];
 
         Vector2 textSize = font.MeasureString(text);
-        Vector2 alignmentOffset = CalculateAlignment(textSize, position, alignment);
+        Vector2 alignmentOffset = CalculateAlignment(textSize, alignment);
 
         position += alignmentOffset;
         position += Camera.Position;
@@ -54,7 +54,7 @@ public class Canvas
     /// <param name="scale">The scale of the sprite.</param>
     public void DrawSprite(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, Color color, Alignment alignment = Alignment.MiddleCenter, int scale = 1)
     {
-        Vector2 alignmentOffset = CalculateAlignment(texture.Bounds.Size.ToVector2(), position, alignment, scale);
+        Vector2 alignmentOffset = CalculateAlignment(texture.Bounds.Size.ToVector2(), alignment, scale);
 
         position += alignmentOffset;
         position += Camera.Position;
@@ -62,7 +62,7 @@ public class Canvas
         spriteBatch.Draw(texture, position, null, color, 0, Vector2.Zero, scale, SpriteEffects.None, 1);
     }
 
-    private Vector2 CalculateAlignment(Vector2 textSize, Vector2 position, Alignment alignment, int scale = 1)
+    private Vector2 CalculateAlignment(Vector2 textSize, Alignment alignment, int scale = 1)
     {
         textSize *= scale;
         return alignment switch

@@ -24,6 +24,7 @@ public class Main : Game
         GameWindow.Initialize(_graphics, Window);
         Camera.Initialize();
         GamePrefs.Initialize("MonoEight");
+        Sprite.Initialize(GraphicsDevice);
 
         StateManager.AddState("Loading", new LoadingState());
         StateManager.AddState("Title", new TitleState());
