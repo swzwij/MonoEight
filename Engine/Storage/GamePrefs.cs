@@ -44,8 +44,6 @@ public static class GamePrefs
 
         _filePath = Path.Combine(rootDirectory, "playerprefs.json");
 
-        Console.WriteLine($"GamePrefs file path: {_filePath}");
-
         Load();
     }
 

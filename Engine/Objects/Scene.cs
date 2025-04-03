@@ -24,6 +24,16 @@ public class Scene
         _gameObjects.Remove(gameObject);
     }
 
+    public T Find<T>() where T : GameObject
+    {
+        return _gameObjects.OfType<T>().FirstOrDefault();
+    }
+
+    public T[] FindAll<T>() where T : GameObject
+    {
+        return _gameObjects.OfType<T>().ToArray();
+    }
+
     public void Update(GameTime gameTime)
     {
         for (int i = 0; i < _gameObjects.Count; i++)

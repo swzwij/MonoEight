@@ -9,11 +9,17 @@ public abstract class GameObject
     protected bool _isActive;
     protected int _layer;
     protected bool _shouldDestroy;
+    protected Scene _scene;
 
     public Transform Transform => _transform;
     public bool IsActive => _isActive;
     public int Layer => _layer;
     public bool ShouldDestroy => _shouldDestroy;
+    public Scene Scene
+    {
+        get => _scene;
+        set => _scene = value;
+    }
 
     public GameObject(Vector2 position, float rotation, int layer)
     {
