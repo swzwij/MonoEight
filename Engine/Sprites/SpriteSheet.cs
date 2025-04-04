@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a sprite sheet that contains multiple sprites arranged in a grid format.
+/// This class allows for easy access to individual sprites by their index.
+/// </summary>
 public class SpriteSheet
 {
     private Point _tileSize;
@@ -15,8 +19,18 @@ public class SpriteSheet
     public int SpriteCount => _sprites.Length;
     public Point TileSize => _tileSize;
 
+    /// <summary>
+    /// Gets the sprite at the specified index.
+    /// </summary>
+    /// <param name="index">The index of the sprite to retrieve.</param>
+    /// <returns>The sprite at the specified index.</returns>
     public Texture2D this[int index] => Get(index);
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SpriteSheet"/> class with the specified texture and tile size.
+    /// </summary>
+    /// <param name="texture">The texture containing the sprite sheet.</param>
+    /// <param name="tileSize">The size of each tile in the sprite sheet.</param>
     public SpriteSheet(Texture2D texture, int tileSize)
     {
         _texture = texture;
@@ -25,6 +39,11 @@ public class SpriteSheet
         SpliceSprites();
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SpriteSheet"/> class with the specified texture and tile size.
+    /// </summary>
+    /// <param name="texture">The texture containing the sprite sheet.</param>
+    /// <param name="tileSize">The size of each tile in the sprite sheet.</param>
     public SpriteSheet(Texture2D texture, Point tileSize)
     {
         _texture = texture;
@@ -33,6 +52,11 @@ public class SpriteSheet
         SpliceSprites();
     }
 
+    /// <summary>
+    /// Gets the sprite at the specified index.
+    /// </summary>
+    /// <param name="index">The index of the sprite to retrieve.</param>
+    /// <returns>The sprite at the specified index.</returns>
     public Texture2D Get(int index)
     {
         if (index < 0 || index >= _sprites.Length)

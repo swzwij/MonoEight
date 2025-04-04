@@ -3,6 +3,10 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
+/// <summary>
+/// Handles input from keyboard, gamepad, and mouse for the game.
+/// Provides methods to check the state of keys, buttons, and triggers.
+/// </summary>
 public static class Input
 {
     private static KeyboardState _currentKeyboardState;

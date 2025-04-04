@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a box collider for 2D collision detection.
+/// </summary>
 public class BoxCollider
 {
     private Vector2 _position;
@@ -23,6 +26,11 @@ public class BoxCollider
         _position = position + _offset;
     }
 
+    /// <summary>
+    /// Checks if this box collider intersects with another box collider.
+    /// </summary>
+    /// <param name="other">The other box collider to check for intersection.</param>
+    /// <returns>True if the colliders intersect, false otherwise.</returns>
     public bool Intersects(BoxCollider other)
     {
         Vector2 position = _position + _offset;
@@ -34,6 +42,11 @@ public class BoxCollider
                position.Y + Size.Y > otherPosition.Y;
     }
 
+    /// <summary>
+    /// Checks if this box collider intersects with a circle collider.
+    /// </summary>
+    /// <param name="other">The circle collider to check for intersection.</param>
+    /// <returns>True if the colliders intersect, false otherwise.</returns>
     public bool Intersects(CircleCollider other)
     {
         return other.Intersects(this);

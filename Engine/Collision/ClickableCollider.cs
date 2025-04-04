@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a clickable collider for 2D collision detection and interaction.
+/// </summary>
 public class ClickableCollider
 {
     private Vector2 _position;
@@ -53,15 +56,25 @@ public class ClickableCollider
         }
     }
 
+    /// <summary>
+    /// Enables the clickable collider.
+    /// </summary>
     public void Enable()
     {
         _isEnabled = true;
     }
+
+    /// <summary>
+    /// Disables the clickable collider.
+    /// </summary>
+    /// <remarks>When disabled, the collider will not respond to mouse events.</remarks>
     public void Disable()
     {
         _isEnabled = false;
     }
 
+    /// <summary>
+    ///
     public void Draw(SpriteBatch spriteBatch, Color color)
     {
         Color drawColor = _isHovered ? Color.Yellow : _isClicked ? Color.Red : color;

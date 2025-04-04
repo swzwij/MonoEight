@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents an animation that can be played using a sprite sheet.
+/// </summary>
 public class Animation
 {
     private readonly SpriteSheet _spriteSheet;
@@ -24,11 +27,19 @@ public class Animation
         _isLooping = isLooping;
     }
 
+    /// <summary>
+    /// Plays the animation from the beginning.
+    /// </summary>
     public void Play()
     {
+        _currentFrame = 0;
+        _frameTimer = 0;
         _isPlaying = true;
     }
 
+    /// <summary>
+    /// Stops the animation.
+    /// </summary>
     public void Stop()
     {
         _isPlaying = false;

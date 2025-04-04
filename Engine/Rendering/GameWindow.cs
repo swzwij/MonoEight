@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// GameWindow class for managing the game window's size, scale, and fullscreen mode.
+/// </summary>
 public static class GameWindow
 {
     private const int WIDTH = 256;
@@ -22,6 +25,9 @@ public static class GameWindow
     public static int Height => HEIGHT;
     public static Point Size => new(WIDTH, HEIGHT);
 
+    /// <summary>
+    /// Gets or sets the scale of the game window.
+    /// </summary>
     public static int Scale
     {
         get => _scale;
@@ -39,6 +45,11 @@ public static class GameWindow
         }
     }
 
+    /// <summary>
+    /// Gets or sets whether the game window is in fullscreen mode.
+    /// When set to true, the game window will be borderless and cover the entire screen.
+    /// When set to false, the game window will be centered on the screen with a specific size.
+    /// </summary>
     public static bool IsFullscreen
     {
         get => _isFullscreen;
@@ -73,6 +84,10 @@ public static class GameWindow
         }
     }
 
+    /// <summary>
+    /// Gets or sets whether the game window should start in fullscreen mode.
+    /// This property is used to determine the initial state of the game window when the game starts.
+    /// </summary>
     public static bool StartFullscreen
     {
         get => _startFullscreen;

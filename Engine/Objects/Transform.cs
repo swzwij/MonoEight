@@ -2,6 +2,9 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a 2D transform with position and rotation properties.
+/// </summary>
 public class Transform
 {
     public Vector2 Position;

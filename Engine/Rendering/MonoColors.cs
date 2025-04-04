@@ -2,6 +2,9 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// A static class that defines a set of colors used in the MonoEight game engine.
+/// </summary>
 public static class MonoColors
 {
     public static Color Black => new(26, 28, 44);

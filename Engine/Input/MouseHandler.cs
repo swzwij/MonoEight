@@ -3,6 +3,10 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
+/// <summary>
+/// Handles mouse input for the game, including position, button states, and scroll wheel value.
+/// Provides methods to check the state of left and right mouse buttons.
+/// </summary>
 public class MouseHandler
 {
     private MouseState _currentMouseState;

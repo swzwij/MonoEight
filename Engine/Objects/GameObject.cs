@@ -3,6 +3,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Base class for all game objects in the MonoEight engine.
+/// This class provides basic properties and methods for game objects,
+/// including position, rotation, layer, and active state.
+/// Derived classes should implement the Update and Draw methods.
+/// </summary>
 public abstract class GameObject
 {
     protected Transform _transform;

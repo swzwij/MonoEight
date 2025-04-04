@@ -3,8 +3,16 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides helper methods for graphics-related calculations.
+/// </summary>
 public static class GraphicsHelper
 {
+    /// <summary>
+    /// Calculates the fullscreen rectangle based on the current graphics device and game window size.
+    /// </summary>
+    /// <param name="graphics">The graphics device to use for calculations.</param>
+    /// <returns>A rectangle representing the fullscreen area.</returns>
     public static Rectangle CalculateFullscreenRect(GraphicsDevice graphics)
     {
         float aspectRatio = (float)GameWindow.Width / GameWindow.Height;

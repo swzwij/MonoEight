@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents an animator that manages and plays animations based on triggers.
+/// This class is used to control the animation state of a sprite using a sprite sheet.
+/// </summary>
 public class Animator
 {
     private readonly Dictionary<string, Animation> _animations = [];
@@ -24,6 +28,10 @@ public class Animator
         _currentAnimation.Play();
     }
 
+    /// <summary>
+    /// Plays the animation associated with the specified trigger.
+    /// If the trigger is the same as the current one, it does nothing.
+    /// </summary>
     public void Play(string trigger)
     {
         if (trigger == _currentTrigger)
@@ -36,6 +44,14 @@ public class Animator
         _currentAnimation = animation;
         _currentTrigger = trigger;
         _currentAnimation.Play();
+    }
+
+    /// <summary>
+    /// Stops the current animation.
+    /// </summary>
+    public void Stop()
+    {
+        _currentAnimation.Stop();
     }
 
     public void Update(GameTime gameTime)
