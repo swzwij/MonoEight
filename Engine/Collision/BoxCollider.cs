@@ -14,11 +14,13 @@ public class BoxCollider
 
     public Vector2 Position => _position;
     public Vector2 Size => _size;
+    public Vector2 Offset => _offset;
 
-    public BoxCollider(Vector2 size, Vector2 offset)
+    public BoxCollider(Vector2 position, Vector2 size, Vector2 offset)
     {
         _size = size;
         _offset = offset;
+        Update(position);
     }
 
     public void Update(Vector2 position)
@@ -34,7 +36,7 @@ public class BoxCollider
     public bool Intersects(BoxCollider other)
     {
         Vector2 position = _position + _offset;
-        Vector2 otherPosition = other.Position + other._offset;
+        Vector2 otherPosition = other.Position + other.Offset;
 
         return position.X < otherPosition.X + other.Size.X &&
                position.X + Size.X > otherPosition.X &&

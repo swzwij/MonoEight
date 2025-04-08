@@ -167,4 +167,13 @@ public static class Input
 
     public static bool IsRightPressed => IsKeyPressed(Keys.Right) || IsKeyPressed(Keys.D) ||
                                         (IsGamePadConnected() && (IsButtonPressed(Buttons.DPadRight) || GetLeftStick().X > 0.5f));
+
+    public static bool IsUpDown => IsKeyDown(Keys.Up) || IsKeyDown(Keys.W) ||
+                                  (IsGamePadConnected() && (IsButtonDown(Buttons.DPadUp) || GetLeftStick().Y > 0.5f));
+    public static bool IsDownDown => IsKeyDown(Keys.Down) || IsKeyDown(Keys.S) ||
+                                    (IsGamePadConnected() && (IsButtonDown(Buttons.DPadDown) || GetLeftStick().Y < -0.5f));
+    public static bool IsLeftDown => IsKeyDown(Keys.Left) || IsKeyDown(Keys.A) ||
+                                    (IsGamePadConnected() && (IsButtonDown(Buttons.DPadLeft) || GetLeftStick().X < -0.5f));
+    public static bool IsRightDown => IsKeyDown(Keys.Right) || IsKeyDown(Keys.D) ||
+                                     (IsGamePadConnected() && (IsButtonDown(Buttons.DPadRight) || GetLeftStick().X > 0.5f));
 }

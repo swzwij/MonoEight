@@ -10,9 +10,17 @@ public class CircleCollider
 {
     private Vector2 _position;
     private float _radius;
+    private Vector2 _offset = Vector2.Zero;
 
     public Vector2 Position => _position;
     public float Radius => _radius;
+    public Vector2 Offset => _offset;
+
+    public CircleCollider(float radius, Vector2 offset = default)
+    {
+        _radius = radius;
+        _offset = offset;
+    }
 
     public CircleCollider(Vector2 position, float radius)
     {

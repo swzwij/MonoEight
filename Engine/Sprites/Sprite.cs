@@ -99,6 +99,23 @@ public static class Sprite
     }
 
     /// <summary>
+    /// Creates a rectangular texture with the specified width, height, and color.
+    /// </summary>
+    /// <param name="width">The width of the rectangle in pixels.</param>
+    /// <param name="height">The height of the rectangle in pixels.</param>
+    /// <param name="color">The color of the rectangle.</param>
+    /// <returns>A new Texture2D representing a rectangle.</returns>
+    public static Texture2D Rectangle(int width, int height, Color color)
+    {
+        Texture2D texture = new(_graphicsDevice, width, height);
+        Color[] data = new Color[width * height];
+        for (int i = 0; i < data.Length; i++)
+            data[i] = color;
+        texture.SetData(data);
+        return texture;
+    }
+
+    /// <summary>
     /// Creates a circular texture with the specified radius and color.
     /// </summary>
     /// <param name="radius">The radius of the circle in pixels.</param>
