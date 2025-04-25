@@ -9,6 +9,8 @@ namespace MonoEight;
 /// </summary>
 public static class Debugger
 {
+    private static Texture2D _pixelTexture;
+
     /// <summary>
     /// Creates a 1x1 pixel texture for drawing.
     /// </summary>
@@ -16,8 +18,12 @@ public static class Debugger
     /// <returns>A 1x1 pixel texture.</returns>
     public static Texture2D CreatePixelTexture(GraphicsDevice graphicsDevice)
     {
+        if (_pixelTexture != null)
+            return _pixelTexture;
+
         Texture2D Pixel = new(graphicsDevice, 1, 1);
         Pixel.SetData([Color.White]);
+        _pixelTexture = Pixel;
         return Pixel;
     }
 

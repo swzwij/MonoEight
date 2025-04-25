@@ -44,7 +44,7 @@ public class GameState : State
         string text = "Gameplay State";
         _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
 
-        // Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
+        Debugger.DrawPixel(spriteBatch, Vector2.Zero, Color.Magenta);
 
         base.Draw(spriteBatch);
     }

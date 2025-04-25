@@ -73,8 +73,6 @@ public class ClickableCollider
         _isEnabled = false;
     }
 
-    /// <summary>
-    ///
     public void Draw(SpriteBatch spriteBatch, Color color)
     {
         Color drawColor = _isHovered ? Color.Yellow : _isClicked ? Color.Red : color;
