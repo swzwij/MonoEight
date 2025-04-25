@@ -1,4 +1,3 @@
-
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,6 +15,7 @@ public class ClickableCollider
 
     private bool _isHovered;
     private bool _isClicked;
+    private bool _isDown;
     private bool _isEnabled;
 
     public Vector2 Position => _position;
@@ -23,12 +23,21 @@ public class ClickableCollider
 
     public bool IsHovered => _isHovered;
     public bool IsClicked => _isClicked;
+    public bool IsDown => _isDown;
+    public bool IsEnabled
+    {
+        get => _isEnabled;
+        set => _isEnabled = value;
+    }
 
-    public ClickableCollider(Vector2 size, Vector2 offset)
+    public Action OnClick;
+
+    public ClickableCollider(Vector2 position, Vector2 size, Vector2 offset = default)
     {
         _size = size;
-        _offset = offset;
+        _offset = offset == default ? new Vector2(-size.X / 2, -size.Y / 2) : offset;
         _isEnabled = true;
+        _position = position + _offset;
     }
 
     public void Update(Vector2 position)
@@ -44,15 +53,21 @@ public class ClickableCollider
         Rectangle colliderRect = new((int)_position.X, (int)_position.Y, (int)_size.X, (int)_size.Y);
         Rectangle mouseRect = new((int)mousePosition.X, (int)mousePosition.Y, 1, 1);
 
-        if (colliderRect.Intersects(mouseRect))
-        {
-            _isHovered = true;
+        if (!colliderRect.Intersects(mouseRect))
+            return;
 
-            if (Input.Mouse.LeftButtonPressed())
-            {
-                _isClicked = true;
-                _isHovered = false;
-            }
+        _isHovered = true;
+
+        if (Input.Mouse.LeftButtonPressed())
+        {
+            _isClicked = true;
+            _isDown = true;
+        }
+        else if (Input.Mouse.LeftButtonReleased())
+        {
+            _isClicked = false;
+            _isDown = false;
+            OnClick?.Invoke();
         }
     }
 
@@ -75,7 +90,7 @@ public class ClickableCollider
 
     public void Draw(SpriteBatch spriteBatch, Color color)
     {
-        Color drawColor = _isHovered ? Color.Yellow : _isClicked ? Color.Red : color;
+        Color drawColor = _isClicked || _isDown ? Color.Red : _isHovered ? Color.Yellow : color;
         Debugger.DrawSquare(spriteBatch, _position, _size, drawColor);
     }
 }

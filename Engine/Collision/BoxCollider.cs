@@ -16,10 +16,10 @@ public class BoxCollider
     public Vector2 Size => _size;
     public Vector2 Offset => _offset;
 
-    public BoxCollider(Vector2 position, Vector2 size, Vector2 offset)
+    public BoxCollider(Vector2 position, Vector2 size, Vector2 offset = default)
     {
         _size = size;
-        _offset = offset;
+        _offset = offset == default ? new Vector2(-size.X / 2, -size.Y / 2) : offset;
         Update(position);
     }
 

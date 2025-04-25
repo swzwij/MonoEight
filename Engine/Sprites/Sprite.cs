@@ -10,6 +10,7 @@ namespace MonoEight;
 public static class Sprite
 {
     private static GraphicsDevice _graphicsDevice;
+    private static Texture2D _pixelTexture;
 
     /// <summary>
     /// Initializes the Sprite class with a graphics device.
@@ -18,6 +19,7 @@ public static class Sprite
     public static void Initialize(GraphicsDevice graphicsDevice)
     {
         _graphicsDevice = graphicsDevice;
+        _pixelTexture = Square(1, Color.White);
     }
 
     /// <summary>
@@ -57,6 +59,21 @@ public static class Sprite
     {
         Vector2 origin = new(texture.Width / 2, texture.Height / 2);
         spriteBatch.Draw(texture, position, null, Color.White, rotation, origin, scale, SpriteEffects.None, 0);
+    }
+
+    /// <summary>
+    /// Draws a centered texture at the specified position with the specified rotation, scale, and layer.
+    /// </summary>
+    /// <param name="spriteBatch">The sprite batch used for drawing.</param>
+    /// <param name="texture">The texture to draw.</param>
+    /// <param name="position">The position to draw the texture at.</param>
+    /// <param name="rotation">The rotation of the texture.</param>
+    /// <param name="scale">The scale of the texture.</param>
+    /// <param name="layer">The layer of the texture.</param>
+    public static void DrawCentered(SpriteBatch spriteBatch, Texture2D texture, Vector2 position, float rotation, float scale, float layer)
+    {
+        Vector2 origin = new(texture.Width / 2, texture.Height / 2);
+        spriteBatch.Draw(texture, position, null, Color.White, rotation, origin, scale, SpriteEffects.None, layer);
     }
 
     /// <summary>
@@ -139,5 +156,14 @@ public static class Sprite
         }
         texture.SetData(data);
         return texture;
+    }
+
+    public static void DrawLine(SpriteBatch spriteBatch, Vector2 start, Vector2 end, Color color, float layer = 0)
+    {
+        Vector2 direction = end - start;
+        float angle = (float)Math.Atan2(direction.Y, direction.X);
+        float length = direction.Length();
+
+        spriteBatch.Draw(_pixelTexture, start, null, color, angle, Vector2.Zero, new Vector2(length, 1), SpriteEffects.None, layer);
     }
 }

@@ -14,8 +14,10 @@ public class TitleState : State
         Camera.BackgroundColor = Color.Black;
         Camera.RelativePosition = Vector2.Zero;
         _canvas = new();
-    }
 
+        StartButton startButton = new(Vector2.Zero, new Vector2(200, 50));
+        Add(startButton);
+    }
     public override void LoadContent()
     {
         _title = ContentLoader.LoadFromRoot<Texture2D>("Assets", "MonoEight");
@@ -34,6 +36,8 @@ public class TitleState : State
         string text = "Press Start to Begin";
         _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
 
+        Debugger.DrawSquare(spriteBatch, new Vector2(0, 0), new Vector2(50, 50), Color.Red);
+        Debugger.DrawCircle(spriteBatch, new Vector2(0, 0), 50, Color.Red, 16);
         base.Draw(spriteBatch);
     }
 }

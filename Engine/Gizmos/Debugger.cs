@@ -1,4 +1,5 @@
 using System;
+using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -9,6 +10,7 @@ namespace MonoEight;
 /// </summary>
 public static class Debugger
 {
+    private static bool _pixelTextureCreated = false;
     private static Texture2D _pixelTexture;
 
     /// <summary>
@@ -18,12 +20,13 @@ public static class Debugger
     /// <returns>A 1x1 pixel texture.</returns>
     public static Texture2D CreatePixelTexture(GraphicsDevice graphicsDevice)
     {
-        if (_pixelTexture != null)
+        if (_pixelTextureCreated)
             return _pixelTexture;
 
         Texture2D Pixel = new(graphicsDevice, 1, 1);
         Pixel.SetData([Color.White]);
         _pixelTexture = Pixel;
+        _pixelTextureCreated = true;
         return Pixel;
     }
 
@@ -62,6 +65,22 @@ public static class Debugger
     /// <param name="color">The color of the square.</param>
     public static void DrawSquare(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
     {
+        DrawLine(spriteBatch, position, new(position.X + size.X, position.Y), color);
+        DrawLine(spriteBatch, new(position.X + size.X, position.Y), position + size, color);
+        DrawLine(spriteBatch, position + size, new(position.X, position.Y + size.Y), color);
+        DrawLine(spriteBatch, new(position.X, position.Y + size.Y), position, color);
+    }
+
+    /// <summary>
+    /// Draws a centered square at the specified position with the given size and color.
+    /// </summary>
+    /// <param name="spriteBatch">The sprite batch used for drawing.</param>
+    /// <param name="position">The position of the square.</param>
+    /// <param name="size">The size of the square.</param>
+    /// <param name="color">The color of the square.</param>
+    public static void DrawCenteredSquare(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
+    {
+        position -= size / 2;
         DrawLine(spriteBatch, position, new(position.X + size.X, position.Y), color);
         DrawLine(spriteBatch, new(position.X + size.X, position.Y), position + size, color);
         DrawLine(spriteBatch, position + size, new(position.X, position.Y + size.Y), color);

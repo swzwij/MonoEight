@@ -16,16 +16,11 @@ public class CircleCollider
     public float Radius => _radius;
     public Vector2 Offset => _offset;
 
-    public CircleCollider(float radius, Vector2 offset = default)
+    public CircleCollider(Vector2 position, float radius, Vector2 offset = default)
     {
         _radius = radius;
         _offset = offset;
-    }
-
-    public CircleCollider(Vector2 position, float radius)
-    {
-        _position = position;
-        _radius = radius;
+        Update(position);
     }
 
     public void Update(Vector2 position)
