@@ -12,7 +12,11 @@ public class BoxCollider
     private Vector2 _size;
     private Vector2 _offset;
 
-    public Vector2 Position => _position;
+    public Vector2 Position
+    {
+        get => _position;
+        set => Update(value);
+    }
     public Vector2 Size => _size;
     public Vector2 Offset => _offset;
 

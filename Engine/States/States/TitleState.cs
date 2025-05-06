@@ -27,17 +27,11 @@ public class TitleState : State
     {
         if (Input.IsStartPressed || Input.IsActionKeyPressed)
             StateManager.ChangeState("Game");
-
-        base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
         string text = "Press Start to Begin";
         _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);
-
-        Debugger.DrawSquare(spriteBatch, new Vector2(0, 0), new Vector2(50, 50), Color.Red);
-        Debugger.DrawCircle(spriteBatch, new Vector2(0, 0), 50, Color.Red, 16);
-        base.Draw(spriteBatch);
     }
 }
