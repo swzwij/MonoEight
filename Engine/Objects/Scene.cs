@@ -11,10 +11,14 @@ namespace MonoEight;
 /// </summary>
 public class Scene
 {
+    private readonly string _name;
     private List<GameObject> _gameObjects;
 
-    public Scene()
+    public string Name => _name;
+
+    public Scene(string name = "Default")
     {
+        _name = name;
         _gameObjects = [];
     }
 
@@ -25,6 +29,7 @@ public class Scene
     /// <param name="gameObject">The game object to add.</param>
     public void Add(GameObject gameObject)
     {
+        gameObject.Scene = this;
         _gameObjects.Add(gameObject);
     }
 

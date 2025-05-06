@@ -30,7 +30,11 @@ public class Main : Game
         StateManager.AddState("Title", new TitleState());
         StateManager.AddState("Game", new GameState());
 
-        StateManager.ChangeState("Loading");
+        # if DEBUG
+            StateManager.ChangeState("Title");
+        # else
+            StateManager.ChangeState("Loading");
+        #endif
 
         base.Initialize();
     }

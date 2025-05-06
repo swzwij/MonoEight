@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -19,7 +20,8 @@ public abstract class State
     /// </summary>
     public State()
     {
-        _scene = new Scene();
+        System.Type type = GetType();
+        _scene = new Scene($"{type.Name}Scene");
     }
 
     /// <summary>
