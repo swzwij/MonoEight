@@ -40,6 +40,16 @@ public class ClickableCollider
         _position = position + _offset;
     }
 
+    public ClickableCollider(Vector2 position, float width, float height, Vector2 offset = default)
+        : this(position, new Vector2(width, height), offset)
+    {
+    }
+
+    public ClickableCollider(Vector2 position, Point point, Vector2 offset = default)
+        : this(position, point.ToVector2(), offset)
+    {
+    }
+
     public void Update(Vector2 position)
     {
         _position = position + _offset;
