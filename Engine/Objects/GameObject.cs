@@ -41,6 +41,20 @@ public abstract class GameObject
         _layer = layer;
     }
 
+    public GameObject(Vector2 position)
+    {
+        _transform = new Transform(position);
+        _isActive = true;
+        _layer = 0;
+    }
+
+    public GameObject()
+    {
+        _transform = new Transform();
+        _isActive = true;
+        _layer = 0;
+    }
+
     public abstract void Update(GameTime gameTime);
     public abstract void Draw(SpriteBatch spriteBatch);
 
