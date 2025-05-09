@@ -14,10 +14,8 @@ public class TitleState : State
         Camera.BackgroundColor = Color.Black;
         Camera.RelativePosition = Vector2.Zero;
         _canvas = new();
-
-        StartButton startButton = new(Vector2.Zero, new Vector2(200, 50));
-        Add(startButton);
     }
+
     public override void LoadContent()
     {
         _title = ContentLoader.LoadFromRoot<Texture2D>("Assets", "MonoEight");
