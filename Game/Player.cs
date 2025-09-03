@@ -15,14 +15,14 @@ public class Player : GameObject
 
     public override void Update(GameTime gameTime)
     {
-        Vector2 mousePosition = Input.Mouse.Position;
+        Point mousePosition = Input.Mouse.Position;
         Transform.Position = mousePosition;
         _collider.Position = mousePosition;
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Sprite.DrawCentered(spriteBatch, _texture, Transform.Position);
+        new Sprite(spriteBatch, _texture, Transform.Position).Draw();
         _collider.Draw(spriteBatch, Color.Red);
     }
 }

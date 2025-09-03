@@ -39,7 +39,7 @@ public class GameState : State
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Sprite.DrawCentered(spriteBatch, _background);
+        SpriteRenderer.DrawCentered(spriteBatch, _background);
 
         string text = "Gameplay State";
         _canvas.DrawText(spriteBatch, text, FontSize.P, new(GameWindow.Width / 2, GameWindow.Height), Color.White, Alignment.BottomCenter);

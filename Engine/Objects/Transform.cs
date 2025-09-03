@@ -7,16 +7,16 @@ namespace MonoEight;
 /// </summary>
 public class Transform
 {
-    public Vector2 Position;
+    public Point Position;
     public float Rotation;
 
-    public Transform(Vector2 position, float rotation)
+    public Transform(Point position, float rotation)
     {
         Position = position;
         Rotation = rotation;
     }
 
-    public Transform(Vector2 position)
+    public Transform(Point position)
     {
         Position = position;
         Rotation = 0;
@@ -24,7 +24,7 @@ public class Transform
 
     public Transform()
     {
-        Position = Vector2.Zero;
+        Position = Point.Zero;
         Rotation = 0;
     }
 }

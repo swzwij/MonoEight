@@ -14,9 +14,6 @@ public static class Input
     private static GamePadState _currentGamePadState;
     private static GamePadState _previousGamePadState;
     private static readonly PlayerIndex _playerIndex = PlayerIndex.One;
-    private static readonly MouseHandler _mouseHandler = new();
-
-    public static MouseHandler Mouse => _mouseHandler;
 
     public static void Update()
     {
@@ -25,8 +22,6 @@ public static class Input
 
         _previousGamePadState = _currentGamePadState;
         _currentGamePadState = GamePad.GetState(_playerIndex);
-
-        _mouseHandler.Update();
     }
 
     public static bool IsKeyDown(Keys key)

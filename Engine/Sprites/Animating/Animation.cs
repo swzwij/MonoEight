@@ -69,6 +69,7 @@ public class Animation
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Sprite.DrawCentered(spriteBatch, _spriteSheet[_currentFrame], position);
+        SpriteRenderer.DrawCentered(spriteBatch, _spriteSheet[_currentFrame], position);
+        new Sprite(spriteBatch, _spriteSheet[_currentFrame], position)
     }
 }
