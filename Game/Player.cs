@@ -2,27 +2,26 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 
-public class Player : GameObject
+public class Player
+// public class Player : GameObject
 {
-    private Texture2D _texture;
-    private BoxCollider _collider;
+    // private Texture2D _texture;
+    // private BoxCollider _collider;
 
-    public Player(Vector2 position, int layer) : base(position, layer)
-    {
-        _texture = ContentLoader.Load<Texture2D>("PlayerTest");
-        _collider = new BoxCollider(position, new Vector2(32, 32));
-    }
+    // public Player(Vector2 position, int layer) : base(position, layer)
+    // {
+    //     _texture = ContentLoader.Load<Texture2D>("PlayerTest");
+    //     _collider = new BoxCollider(position, new Vector2(32, 32));
+    // }
 
-    public override void Update(GameTime gameTime)
-    {
-        Point mousePosition = Input.Mouse.Position;
-        Transform.Position = mousePosition;
-        _collider.Position = mousePosition;
-    }
+    // public override void Update(GameTime gameTime)
+    // {
 
-    public override void Draw(SpriteBatch spriteBatch)
-    {
-        new Sprite(spriteBatch, _texture, Transform.Position).Draw();
-        _collider.Draw(spriteBatch, Color.Red);
-    }
+    // }
+
+    // public override void Draw(SpriteBatch spriteBatch)
+    // {
+    //     new Sprite(spriteBatch, _texture, Transform.Position).Draw();
+    //     _collider.Draw(spriteBatch, Color.Red);
+    // }
 }

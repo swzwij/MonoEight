@@ -13,28 +13,34 @@ public class Main : Game
     public Main()
     {
         _graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
 
     protected override void Initialize()
     {
-        ContentLoader.Initialize(Content);
-        GameWindow.StartFullscreen = false;
-        GameWindow.Initialize(_graphics, Window);
-        Camera.Initialize();
-        GamePrefs.Initialize("MonoEight");
-        SpriteRenderer.Initialize(GraphicsDevice);
+        MonoEight.Content.Initialize(Content, "Content");
+        MonoWindow.StartFullscreen = false;
+        MonoWindow.Initialize(_graphics, Window);
+        MonoWindow.Create(800, 600);
 
-        StateManager.AddState("Loading", new LoadingState());
-        StateManager.AddState("Title", new TitleState());
-        StateManager.AddState("Game", new GameState());
 
-        # if DEBUG
-            StateManager.ChangeState("Title");
-        # else
-            StateManager.ChangeState("Loading");
-        #endif
+
+        // ContentLoader.Initialize(Content);
+        // GameWindow.StartFullscreen = false;
+        // GameWindow.Initialize(_graphics, Window);
+        // Camera.Initialize();
+        // GamePrefs.Initialize("MonoEight");
+        // StaticSpriteRenderer.Initialize(GraphicsDevice);
+
+        // StateManager.AddState("Loading", new LoadingState());
+        // StateManager.AddState("Title", new TitleState());
+        // StateManager.AddState("Game", new GameState());
+
+        // # if DEBUG
+        //     StateManager.ChangeState("Title");
+        // # else
+        //     StateManager.ChangeState("Loading");
+        // #endif
 
         base.Initialize();
     }
@@ -42,7 +48,7 @@ public class Main : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        _renderTarget = new RenderTarget2D(GraphicsDevice, GameWindow.Width, GameWindow.Height);
+        _renderTarget = new RenderTarget2D(GraphicsDevice, MonoWindow.Width, MonoWindow.Height);
     }
 
     protected override void Update(GameTime gameTime)
@@ -50,18 +56,18 @@ public class Main : Game
         Input.Update();
 
         if (Input.IsKeyPressed(Keys.OemPlus))
-            GameWindow.Scale++;
+            MonoWindow.Scale++;
 
         if (Input.IsKeyPressed(Keys.OemMinus))
-            GameWindow.Scale--;
+            MonoWindow.Scale--;
 
         if (Input.IsKeyPressed(Keys.F11))
-            GameWindow.ToggleFullscreen();
+            MonoWindow.ToggleFullscreen();
 
-        if (Input.IsBackPressed && StateManager.CurrentStateName == "Title")
-            Exit();
+        // if (Input.IsBackPressed && StateManager.CurrentStateName == "Title")
+        //     Exit();
 
-        StateManager.Update(gameTime);
+        // StateManager.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -69,7 +75,8 @@ public class Main : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.SetRenderTarget(_renderTarget);
-        GraphicsDevice.Clear(Camera.BackgroundColor);
+        GraphicsDevice.Clear(Color.BlueViolet);
+        // GraphicsDevice.Clear(Camera.BackgroundColor);
 
         _spriteBatch.Begin
         (
@@ -79,9 +86,10 @@ public class Main : Game
             null,
             null,
             null,
-            Camera.Transform
+            // Camera.Transform
+            Matrix.Identity
         );
-        StateManager.Draw(_spriteBatch);
+        // StateManager.Draw(_spriteBatch);
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);
@@ -89,9 +97,9 @@ public class Main : Game
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        Rectangle targetRect = GameWindow.IsFullscreen
+        Rectangle targetRect = MonoWindow.IsFullscreen
             ? GraphicsHelper.CalculateFullscreenRect(GraphicsDevice)
-            : new Rectangle(0, 0, GameWindow.ScaledWidth, GameWindow.ScaledHeight);
+            : new Rectangle(0, 0, MonoWindow.Size.X, MonoWindow.Size.Y);
 
         _spriteBatch.Draw(_renderTarget, targetRect, Color.White);
         _spriteBatch.End();

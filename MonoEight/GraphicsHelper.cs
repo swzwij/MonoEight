@@ -15,7 +15,7 @@ public static class GraphicsHelper
     /// <returns>A rectangle representing the fullscreen area.</returns>
     public static Rectangle CalculateFullscreenRect(GraphicsDevice graphics)
     {
-        float aspectRatio = (float)GameWindow.Width / GameWindow.Height;
+        float aspectRatio = (float)MonoWindow.Width / MonoWindow.Height;
 
         int width = graphics.Viewport.Width;
         int height = (int)(width / aspectRatio);
