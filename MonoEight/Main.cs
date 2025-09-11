@@ -25,7 +25,7 @@ public class Main : Game
         SceneManager.Add("Test 1", new TestScene());
         SceneManager.Add("Test 2", new TestScene2());
 
-        SceneManager.Change("Test 1");
+        SceneManager.Load("Test 1");
 
         // ContentLoader.Initialize(Content);
         // GameWindow.StartFullscreen = false;

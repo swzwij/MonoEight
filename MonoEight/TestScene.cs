@@ -14,7 +14,7 @@ public class TestScene : Scene
     public override void Update(GameTime gameTime)
     {
         if (Input.IsKeyPressed(Keys.Space))
-            SceneManager.Change("Test 2");
+            SceneManager.Load("Test 2");
 
         base.Update(gameTime);
     }

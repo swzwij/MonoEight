@@ -21,7 +21,7 @@ public static class SceneManager
         throw new ArgumentException($"Scene '{scene}' already exists in the scene manager");
     }
 
-    public static void Change(string name)
+    public static void Load(string name)
     {
         if (!_scenes.TryGetValue(name, out Scene scene))
             throw new ArgumentException($"Scene '{name}' does not exist in the manager");
