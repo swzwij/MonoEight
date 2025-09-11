@@ -19,9 +19,8 @@ public class Main : Game
     protected override void Initialize()
     {
         MonoEight.Content.Initialize(Content, "Content");
-        MonoWindow.StartFullscreen = false;
-        MonoWindow.Initialize(_graphics, Window);
-        MonoWindow.Create(800, 600);
+        MEWindow.StartFullscreen = false;
+        MEWindow.Initialize(_graphics, Window);
 
 
 
@@ -48,7 +47,7 @@ public class Main : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        _renderTarget = new RenderTarget2D(GraphicsDevice, MonoWindow.Width, MonoWindow.Height);
+        _renderTarget = new RenderTarget2D(GraphicsDevice, MEWindow.Width, MEWindow.Height);
     }
 
     protected override void Update(GameTime gameTime)
@@ -56,13 +55,13 @@ public class Main : Game
         Input.Update();
 
         if (Input.IsKeyPressed(Keys.OemPlus))
-            MonoWindow.Scale++;
+            MEWindow.Scale++;
 
         if (Input.IsKeyPressed(Keys.OemMinus))
-            MonoWindow.Scale--;
+            MEWindow.Scale--;
 
         if (Input.IsKeyPressed(Keys.F11))
-            MonoWindow.ToggleFullscreen();
+            MEWindow.ToggleFullscreen();
 
         // if (Input.IsBackPressed && StateManager.CurrentStateName == "Title")
         //     Exit();
@@ -97,9 +96,9 @@ public class Main : Game
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        Rectangle targetRect = MonoWindow.IsFullscreen
+        Rectangle targetRect = MEWindow.IsFullscreen
             ? GraphicsHelper.CalculateFullscreenRect(GraphicsDevice)
-            : new Rectangle(0, 0, MonoWindow.Size.X, MonoWindow.Size.Y);
+            : new Rectangle(0, 0, MEWindow.ScaledWidth, MEWindow.ScaledHeight);
 
         _spriteBatch.Draw(_renderTarget, targetRect, Color.White);
         _spriteBatch.End();
