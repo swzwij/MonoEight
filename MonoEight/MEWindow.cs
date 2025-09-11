@@ -5,8 +5,8 @@ namespace MonoEight;
 
 public static class MEWindow
 {
-    private const int WIDTH = 256;
-    private const int HEIGHT = 192;
+    private const int WIDTH = 64;
+    private const int HEIGHT = 64;
 
     private static int _scale = 10;
     private static bool _isFullscreen = false;

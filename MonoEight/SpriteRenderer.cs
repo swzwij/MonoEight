@@ -18,13 +18,13 @@ public class SpriteRenderer
         }
     }
 
-    public Rectangle Rectangle { get; set; }
     public Color Color { get; set; } = Color.White;
     public float Rotation { get; set; } = 0;
     public float Scale { get; set; } = 1;
     public SpriteEffects SpriteEffects { get; set; } = SpriteEffects.None;
     public float Layer { get; set; } = 0;
 
+    public Vector2 Origin => _origin;
 
     public SpriteRenderer(Texture2D texture)
     {
@@ -37,7 +37,7 @@ public class SpriteRenderer
         (
             _texture,
             position.ToVector2(),
-            Rectangle,
+            null,
             Color,
             Rotation,
             _origin,

@@ -22,10 +22,11 @@ public class Main : Game
         MEWindow.StartFullscreen = false;
         MEWindow.Initialize(_graphics, Window);
 
+        SceneManager.Add("Loading", new LoadingScene());
         SceneManager.Add("Test 1", new TestScene());
         SceneManager.Add("Test 2", new TestScene2());
 
-        SceneManager.Load("Test 1");
+        SceneManager.Load("Loading");
 
         // ContentLoader.Initialize(Content);
         // GameWindow.StartFullscreen = false;
