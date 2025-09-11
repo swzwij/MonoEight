@@ -17,6 +17,7 @@ public class LoadingScene : Scene
         Camera.BackgroundColor = MEColors.Black;
         _logo = Content.LoadFromRoot<Texture2D>("Assets", "MonoEightLogo");
         _spriteRenderer = new(_logo);
+        _spriteRenderer.Scale = MEWindow.Width / _logo.Width / 2;
         base.LoadContent();
     }
 
