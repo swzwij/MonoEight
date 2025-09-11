@@ -22,7 +22,10 @@ public class Main : Game
         MEWindow.StartFullscreen = false;
         MEWindow.Initialize(_graphics, Window);
 
+        SceneManager.Add("Test 1", new TestScene());
+        SceneManager.Add("Test 2", new TestScene2());
 
+        SceneManager.Change("Test 1");
 
         // ContentLoader.Initialize(Content);
         // GameWindow.StartFullscreen = false;
@@ -54,19 +57,10 @@ public class Main : Game
     {
         Input.Update();
 
-        if (Input.IsKeyPressed(Keys.OemPlus))
-            MEWindow.Scale++;
-
-        if (Input.IsKeyPressed(Keys.OemMinus))
-            MEWindow.Scale--;
-
         if (Input.IsKeyPressed(Keys.F11))
             MEWindow.ToggleFullscreen();
 
-        // if (Input.IsBackPressed && StateManager.CurrentStateName == "Title")
-        //     Exit();
-
-        // StateManager.Update(gameTime);
+        SceneManager.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -75,7 +69,7 @@ public class Main : Game
     {
         GraphicsDevice.SetRenderTarget(_renderTarget);
         GraphicsDevice.Clear(Color.BlueViolet);
-        // GraphicsDevice.Clear(Camera.BackgroundColor);
+        GraphicsDevice.Clear(SceneManager.ActiveScene.Camera.BackgroundColor);
 
         _spriteBatch.Begin
         (
@@ -85,10 +79,11 @@ public class Main : Game
             null,
             null,
             null,
-            // Camera.Transform
-            Matrix.Identity
+            SceneManager.ActiveScene.Camera.Transform
         );
-        // StateManager.Draw(_spriteBatch);
+
+        SceneManager.Draw(_spriteBatch);
+
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);

@@ -7,8 +7,10 @@ namespace MonoEight;
 
 public abstract class Scene
 {
-    private readonly string _name;
-    private readonly List<GameObject> _gameObjects;
+    private readonly List<GameObject> _gameObjects = [];
+
+    public string Name { get; set; }
+    public Camera Camera { get; set; } = new();
 
     public void Add(GameObject gameObject)
     {
@@ -37,7 +39,11 @@ public abstract class Scene
         _gameObjects.Clear();
     }
 
-    public void Update(GameTime gameTime)
+    public virtual void Awake() { }
+    public virtual void LoadContent() { }
+    public virtual void UnloadContent() { }
+
+    public virtual void Update(GameTime gameTime)
     {
         for (int i = 0; i < _gameObjects.Count; i++)
         {
@@ -52,7 +58,7 @@ public abstract class Scene
             _gameObjects[i].Update(gameTime);
     }
 
-    public void Draw(SpriteBatch spriteBatch)
+    public virtual void Draw(SpriteBatch spriteBatch)
     {
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].Draw(spriteBatch);
