@@ -21,6 +21,7 @@ public class Main : Game
         MonoEight.Content.Initialize(Content, "Content");
         MEWindow.StartFullscreen = false;
         MEWindow.Initialize(_graphics, Window);
+        Debugger.Initialize(_graphics);
 
         SceneManager.Add("Loading", new LoadingScene());
         SceneManager.Add("Test 1", new TestScene());

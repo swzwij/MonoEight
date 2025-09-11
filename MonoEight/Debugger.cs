@@ -8,9 +8,9 @@ public static class Debugger
 {
     private static Texture2D _pixel;
 
-    public static void Initialize(GraphicsDevice graphics)
+    public static void Initialize(GraphicsDeviceManager graphics)
     {
-        _pixel = new(graphics, 1, 1);
+        _pixel = new(graphics.GraphicsDevice, 1, 1);
         _pixel.SetData([Color.White]);
     }
 
