@@ -4,11 +4,8 @@ namespace MonoEight;
 
 public static class MEWindow
 {
-    private const int WIDTH = 64;
-    private const int HEIGHT = 64;
-
-    public static int Width => WIDTH;
-    public static int Height => HEIGHT;
+    public static int Width { get; set; }
+    public static int Height { get; set; }
 
     private static GraphicsDeviceManager _graphics;
     private static GameWindow _window;
@@ -85,7 +82,7 @@ public static class MEWindow
     private static Point CalculateOptimalSize()
     {
         int targetHeight = _graphics.GraphicsDevice.DisplayMode.Height * 3 / 4;
-        float aspectRatio = (float)WIDTH / (float)HEIGHT;
+        float aspectRatio = (float)Width / (float)Height;
         int targetWidth = (int)(targetHeight * aspectRatio);
         return new(targetWidth, targetHeight);
     }

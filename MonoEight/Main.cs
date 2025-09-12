@@ -20,6 +20,8 @@ public class Main : Game
     {
         MonoEight.Content.Initialize(Content, "Content");
         MEWindow.StartFullscreen = false;
+        MEWindow.Width = 64;
+        MEWindow.Height = 64;
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
 
@@ -70,7 +72,6 @@ public class Main : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.SetRenderTarget(_renderTarget);
-        GraphicsDevice.Clear(Color.BlueViolet);
         GraphicsDevice.Clear(SceneManager.ActiveScene.Camera.BackgroundColor);
 
         _spriteBatch.Begin
