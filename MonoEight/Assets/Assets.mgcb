@@ -13,26 +13,26 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Fonts/h1.spritefont
+#begin Fonts/L.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Fonts/h1.spritefont
+/build:Fonts/L.spritefont
 
-#begin Fonts/h2.spritefont
+#begin Fonts/M.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Fonts/h2.spritefont
+/build:Fonts/M.spritefont
 
-#begin Fonts/p.spritefont
+#begin Fonts/S.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Fonts/p.spritefont
+/build:Fonts/S.spritefont
 
 #begin MonoEight.png
 /importer:TextureImporter

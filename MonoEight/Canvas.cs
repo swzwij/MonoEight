@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -13,12 +12,11 @@ public class Canvas
     public Canvas(Scene scene)
     {
         _scene = scene;
-
         _fonts = new()
         {
-            { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/h1") },
-            { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/h2") },
-            { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/p") }
+            { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/S") },
+            { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/M") },
+            { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/L") },
         };
     }
 
