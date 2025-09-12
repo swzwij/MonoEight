@@ -15,7 +15,7 @@ public class LoadingScene : Scene
     public override void LoadContent()
     {
         Camera.BackgroundColor = MEColors.Black;
-        _logo = Content.LoadFromRoot<Texture2D>("Assets", "MonoEightLogo");
+        _logo = Content.LoadFromRoot<Texture2D>("Assets", "MonoEight");
         _spriteRenderer = new(_logo);
         _spriteRenderer.Scale = MEWindow.Width / _logo.Width / 2;
         base.LoadContent();

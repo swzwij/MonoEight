@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+﻿    using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -93,9 +93,7 @@ public class Main : Game
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        Rectangle targetRect = MEWindow.IsFullscreen
-            ? GraphicsHelper.CalculateFullscreenRect(GraphicsDevice)
-            : new Rectangle(0, 0, MEWindow.ScaledWidth, MEWindow.ScaledHeight);
+        Rectangle targetRect = GraphicsHelper.CalculateDisplayRect(GraphicsDevice);
 
         _spriteBatch.Draw(_renderTarget, targetRect, Color.White);
         _spriteBatch.End();

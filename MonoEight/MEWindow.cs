@@ -1,14 +1,12 @@
-using System;
 using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
 public static class MEWindow
 {
-    private const int WIDTH = 64;
+    private const int WIDTH = 96;
     private const int HEIGHT = 64;
 
-    private static int _scale = 10;
     private static bool _isFullscreen = false;
     private static bool _startFullscreen = false;
 
@@ -18,19 +16,6 @@ public static class MEWindow
     public static int Width => WIDTH;
     public static int Height => HEIGHT;
     public static Point Size => new(WIDTH, HEIGHT);
-
-    public static int Scale
-    {
-        get => _scale;
-        set
-        {
-            if (_isFullscreen)
-                return;
-
-            _scale = Math.Max(1, value);
-            UpdateWindowSize();
-        }
-    }
 
     public static bool IsFullscreen
     {
@@ -48,17 +33,19 @@ public static class MEWindow
                 _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
                 _window.IsBorderless = true;
                 _window.Position = new Point(0, 0);
+                _window.AllowUserResizing = false;
             }
             else
             {
-                Scale = CalculateScale();
-                _graphics.PreferredBackBufferWidth = ScaledWidth;
-                _graphics.PreferredBackBufferHeight = ScaledHeight;
+                _graphics.PreferredBackBufferWidth = OptimalSize.X;
+                _graphics.PreferredBackBufferHeight = OptimalSize.Y;
                 _window.IsBorderless = false;
+                _window.AllowUserResizing = true;
+
                 _window.Position = new Point
                 (
-                    (_graphics.GraphicsDevice.DisplayMode.Width - ScaledWidth) / 2,
-                    (_graphics.GraphicsDevice.DisplayMode.Height - ScaledHeight) / 2
+                    (_graphics.GraphicsDevice.DisplayMode.Width - OptimalSize.X) / 2,
+                    (_graphics.GraphicsDevice.DisplayMode.Height - OptimalSize.Y) / 2
                 );
             }
 
@@ -72,15 +59,26 @@ public static class MEWindow
         set => _startFullscreen = value;
     }
 
-    public static int ScaledWidth => WIDTH * _scale;
-    public static int ScaledHeight => HEIGHT * _scale;
-    public static Point ScaledSize => new(ScaledWidth, ScaledHeight);
-    public static Vector2 Center => new(ScaledWidth / 2, ScaledHeight / 2);
+    public static int WindowWidth => _graphics.PreferredBackBufferWidth;
+    public static int WindowHeight => _graphics.PreferredBackBufferHeight;
+    public static Point WindowSize => new(WindowWidth, WindowHeight);
+    public static Vector2 WindowCenter => new(WindowWidth / 2, WindowHeight / 2);
+
+    private static Point OptimalSize
+    {
+        get
+        {
+            int targetHeight = _graphics.GraphicsDevice.DisplayMode.Height * 3 / 4;
+            float aspectRatio = (float)WIDTH / (float)HEIGHT;
+            int targetWidth = (int)(targetHeight * aspectRatio);
+            return new(targetWidth, targetHeight);
+        }
+    }
 
     public static GraphicsDeviceManager Graphics => _graphics;
     public static Point DisplaySize => new(_graphics.GraphicsDevice.DisplayMode.Width, _graphics.GraphicsDevice.DisplayMode.Height);
 
-    public static void Initialize(GraphicsDeviceManager graphics, Microsoft.Xna.Framework.GameWindow window)
+    public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
     {
         _graphics = graphics;
         _window = window;
@@ -91,27 +89,14 @@ public static class MEWindow
             return;
         }
 
-        Scale = CalculateScale();
-        UpdateWindowSize();
-    }
-
-    public static void UpdateWindowSize()
-    {
-        if (_isFullscreen)
-            return;
-
-        _graphics.PreferredBackBufferWidth = ScaledWidth;
-        _graphics.PreferredBackBufferHeight = ScaledHeight;
+        _graphics.PreferredBackBufferWidth = OptimalSize.X;
+        _graphics.PreferredBackBufferHeight = OptimalSize.Y;
+        _window.AllowUserResizing = true;
         _graphics.ApplyChanges();
     }
 
     public static void ToggleFullscreen()
     {
         IsFullscreen = !IsFullscreen;
-    }
-
-    private static int CalculateScale()
-    {
-        return (int)Math.Floor(_graphics.GraphicsDevice.DisplayMode.Height / (float)HEIGHT) - 1;
     }
 }
