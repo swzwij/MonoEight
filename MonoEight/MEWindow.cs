@@ -4,19 +4,17 @@ namespace MonoEight;
 
 public static class MEWindow
 {
-    private const int WIDTH = 96;
+    private const int WIDTH = 64;
     private const int HEIGHT = 64;
 
-    private static bool _isFullscreen = false;
-    private static bool _startFullscreen = false;
+    public static int Width => WIDTH;
+    public static int Height => HEIGHT;
 
     private static GraphicsDeviceManager _graphics;
     private static GameWindow _window;
 
-    public static int Width => WIDTH;
-    public static int Height => HEIGHT;
-    public static Point Size => new(WIDTH, HEIGHT);
-
+    public static bool StartFullscreen { get; set; }
+    private static bool _isFullscreen = false;
     public static bool IsFullscreen
     {
         get => _isFullscreen;
@@ -28,55 +26,11 @@ public static class MEWindow
             _isFullscreen = value;
 
             if (_isFullscreen)
-            {
-                _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
-                _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
-                _window.IsBorderless = true;
-                _window.Position = new Point(0, 0);
-                _window.AllowUserResizing = false;
-            }
+                FullScreen();
             else
-            {
-                _graphics.PreferredBackBufferWidth = OptimalSize.X;
-                _graphics.PreferredBackBufferHeight = OptimalSize.Y;
-                _window.IsBorderless = false;
-                _window.AllowUserResizing = true;
-
-                _window.Position = new Point
-                (
-                    (_graphics.GraphicsDevice.DisplayMode.Width - OptimalSize.X) / 2,
-                    (_graphics.GraphicsDevice.DisplayMode.Height - OptimalSize.Y) / 2
-                );
-            }
-
-            _graphics.ApplyChanges();
+                Windowed();
         }
     }
-
-    public static bool StartFullscreen
-    {
-        get => _startFullscreen;
-        set => _startFullscreen = value;
-    }
-
-    public static int WindowWidth => _graphics.PreferredBackBufferWidth;
-    public static int WindowHeight => _graphics.PreferredBackBufferHeight;
-    public static Point WindowSize => new(WindowWidth, WindowHeight);
-    public static Vector2 WindowCenter => new(WindowWidth / 2, WindowHeight / 2);
-
-    private static Point OptimalSize
-    {
-        get
-        {
-            int targetHeight = _graphics.GraphicsDevice.DisplayMode.Height * 3 / 4;
-            float aspectRatio = (float)WIDTH / (float)HEIGHT;
-            int targetWidth = (int)(targetHeight * aspectRatio);
-            return new(targetWidth, targetHeight);
-        }
-    }
-
-    public static GraphicsDeviceManager Graphics => _graphics;
-    public static Point DisplaySize => new(_graphics.GraphicsDevice.DisplayMode.Width, _graphics.GraphicsDevice.DisplayMode.Height);
 
     public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
     {
@@ -89,14 +43,50 @@ public static class MEWindow
             return;
         }
 
-        _graphics.PreferredBackBufferWidth = OptimalSize.X;
-        _graphics.PreferredBackBufferHeight = OptimalSize.Y;
-        _window.AllowUserResizing = true;
-        _graphics.ApplyChanges();
+        Windowed();
     }
 
     public static void ToggleFullscreen()
     {
         IsFullscreen = !IsFullscreen;
+    }
+
+    private static void FullScreen()
+    {
+        _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
+        _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+
+        _window.IsBorderless = true;
+        _window.Position = new Point(0, 0);
+        _window.AllowUserResizing = false;
+
+        _graphics.ApplyChanges();
+    }
+
+    private static void Windowed()
+    {
+        Point optimalSize = CalculateOptimalSize();
+
+        _graphics.PreferredBackBufferWidth = optimalSize.X;
+        _graphics.PreferredBackBufferHeight = optimalSize.Y;
+
+        _window.IsBorderless = false;
+        _window.AllowUserResizing = true;
+
+        _window.Position = new Point
+        (
+            (_graphics.GraphicsDevice.DisplayMode.Width - optimalSize.X) / 2,
+            (_graphics.GraphicsDevice.DisplayMode.Height - optimalSize.Y) / 2
+        );
+
+        _graphics.ApplyChanges();
+    }
+
+    private static Point CalculateOptimalSize()
+    {
+        int targetHeight = _graphics.GraphicsDevice.DisplayMode.Height * 3 / 4;
+        float aspectRatio = (float)WIDTH / (float)HEIGHT;
+        int targetWidth = (int)(targetHeight * aspectRatio);
+        return new(targetWidth, targetHeight);
     }
 }
