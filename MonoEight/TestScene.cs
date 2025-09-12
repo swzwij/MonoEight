@@ -24,10 +24,9 @@ public class TestScene : Scene
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Canvas.DrawText(spriteBatch, "Test", FontSize.S, new(0, 0), MEColors.Red);
-        Debugger.DrawPixel(spriteBatch, Point.Zero, MEColors.DarkPurple);
-        Debugger.DrawPixel(spriteBatch, new(3,-1), MEColors.Green);
-        Debugger.DrawPixel(spriteBatch, new(2,2), MEColors.Blue);
+        Canvas.DrawText(spriteBatch, "Test", FontSize.S, new(0, -20), MEColors.Red);
+        Canvas.DrawText(spriteBatch, "Test", FontSize.M, new(0, 0), MEColors.Red);
+        Canvas.DrawText(spriteBatch, "Test", FontSize.L, new(0, 20), MEColors.Red);
         base.Draw(spriteBatch);
     }
 }

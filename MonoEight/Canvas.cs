@@ -16,9 +16,9 @@ public class Canvas
 
         _fonts = new()
         {
-            { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/h1") },
+            { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/h1") },
             { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/h2") },
-            { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/p") }
+            { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/p") }
         };
     }
 
@@ -26,10 +26,8 @@ public class Canvas
     {
         SpriteFont font = _fonts[size];
         Vector2 textSize = font.MeasureString(text);
-        Vector2 offset = new(-textSize.X / 2, -textSize.Y / 2);
-        // Vector2 newPosition = position.ToVector2() + offset;
-        // Console.WriteLine(_scene.Camera.Position);
-        Vector2 newPosition = position.ToVector2() + offset + _scene.Camera.Position.ToVector2();
-        spriteBatch.DrawString(font, text, newPosition, color, 0, Vector2.Zero, 1, SpriteEffects.None, 1);
+        Point offset = new((int)(-textSize.X / 2), (int)(-textSize.Y / 2));
+        Point newPosition = position + offset + _scene.Camera.Position;
+        spriteBatch.DrawString(font, text, newPosition.ToVector2(), color, 0, Vector2.Zero, 1, SpriteEffects.None, 1);
     }
 }
