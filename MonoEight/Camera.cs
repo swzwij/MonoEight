@@ -12,7 +12,7 @@ public class Camera
     public Matrix Transform => _transform;
     public Point Position
     {
-        get => _position;
+        get => _position + new Point(MEWindow.Width /2 , MEWindow.Height / 2);
         set
         {
             _position = new(value.X - MEWindow.Width / 2, value.Y - MEWindow.Height / 2);

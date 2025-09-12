@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -21,11 +22,13 @@ public class Canvas
         };
     }
 
-    public void DrawTest(SpriteBatch spriteBatch, string text, FontSize size, Point position, Color color)
+    public void DrawText(SpriteBatch spriteBatch, string text, FontSize size, Point position, Color color)
     {
         SpriteFont font = _fonts[size];
         Vector2 textSize = font.MeasureString(text);
         Vector2 offset = new(-textSize.X / 2, -textSize.Y / 2);
+        // Vector2 newPosition = position.ToVector2() + offset;
+        // Console.WriteLine(_scene.Camera.Position);
         Vector2 newPosition = position.ToVector2() + offset + _scene.Camera.Position.ToVector2();
         spriteBatch.DrawString(font, text, newPosition, color, 0, Vector2.Zero, 1, SpriteEffects.None, 1);
     }
