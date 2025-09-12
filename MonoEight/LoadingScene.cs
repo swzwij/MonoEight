@@ -35,7 +35,6 @@ public class LoadingScene : Scene
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        Console.WriteLine(Camera.Position);
         _spriteRenderer.Draw(spriteBatch, Point.Zero);
         base.Draw(spriteBatch);
     }

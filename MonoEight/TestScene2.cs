@@ -9,6 +9,8 @@ public class TestScene2 : Scene
     public override void Awake()
     {
         Camera.BackgroundColor = Color.Purple;
+
+        base.Awake();
     }
 
     public override void Update(GameTime gameTime)

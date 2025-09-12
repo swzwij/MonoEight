@@ -11,6 +11,36 @@ public abstract class Scene
 
     public string Name { get; set; }
     public Camera Camera { get; set; } = new();
+    public Canvas Canvas { get; private set; }
+
+    public virtual void Awake()
+    {
+        Canvas = new(this);
+    }
+
+    public virtual void LoadContent() { }
+    public virtual void UnloadContent() { }
+
+    public virtual void Update(GameTime gameTime)
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            if (!_gameObjects[i].ShouldDestroy)
+                continue;
+
+            _gameObjects.RemoveAt(i);
+            i--;
+        }
+
+        for (int i = 0; i < _gameObjects.Count; i++)
+            _gameObjects[i].Update(gameTime);
+    }
+
+    public virtual void Draw(SpriteBatch spriteBatch)
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
+            _gameObjects[i].Draw(spriteBatch);
+    }
 
     public void Add(GameObject gameObject)
     {
@@ -37,30 +67,5 @@ public abstract class Scene
     public void Clear()
     {
         _gameObjects.Clear();
-    }
-
-    public virtual void Awake() { }
-    public virtual void LoadContent() { }
-    public virtual void UnloadContent() { }
-
-    public virtual void Update(GameTime gameTime)
-    {
-        for (int i = 0; i < _gameObjects.Count; i++)
-        {
-            if (!_gameObjects[i].ShouldDestroy)
-                continue;
-
-            _gameObjects.RemoveAt(i);
-            i--;
-        }
-
-        for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Update(gameTime);
-    }
-
-    public virtual void Draw(SpriteBatch spriteBatch)
-    {
-        for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Draw(spriteBatch);
     }
 }
