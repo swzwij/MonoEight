@@ -7,9 +7,13 @@ public class Animation
 {
     private readonly SpriteSheet _sheet;
 
-    public int Index { get; set; } = 0;
+    private int _index;
+    private float _timer;
+    private bool _isPlaying;
+
     public float FrameDuration { get; set; } = 1f;
     public bool Loop { get; set; } = true;
+    public float Scale { get; set; } = 1f;
 
     public SpriteSheet Sheet => _sheet;
     public int Count => _sheet.Count;
@@ -18,10 +22,56 @@ public class Animation
     public Animation(SpriteSheet sheet)
     {
         _sheet = sheet;
+        _sheet.Renderer.Scale = Scale;
+        Reset();
     }
 
-    public void Reset()
+    public void Update(GameTime gameTime)
     {
-        Index = 0;
+        if (!_isPlaying)
+            return;
+
+        _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+        if (_timer < FrameDuration)
+            return;
+
+        _timer = 0;
+        _index++;
+
+        if (_index < Count)
+            return;
+
+        if (Loop)
+            _index = 0;
+        else
+        {
+            _index--;
+            Stop();
+        }
+    }
+
+    public void Stop()
+    {
+        _isPlaying = false;
+    }
+
+    public void Play()
+    {
+        Reset();
+
+        _isPlaying = true;
+    }
+
+    public void Draw(SpriteBatch spriteBatch, Point position)
+    {
+        _sheet.Draw(spriteBatch, _index, position);
+    }
+
+    private void Reset()
+    {
+        _index = 0;
+        _timer = 0;
+        _isPlaying = false;
     }
 }
