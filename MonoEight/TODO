@@ -1,9 +1,12 @@
-Cropped ICO/BMP
-Better font
+MVP:
+Crop ICO/BMP
+Create a better font
 Look into input actions
-Playerp prefs
-Json
-Summaries
-Mouse input?
-Particle system
+Add summaries to publicly accesabel methods
 Make Spritesheet inherit SpriteRenderer?
+
+FUTURE:
+Add player prefs
+Add a Json parser
+Look into mouse input?
+Look into particle system
