@@ -7,8 +7,6 @@ namespace MonoEight;
 
 public class TestScene2 : Scene
 {
-    private SpriteRenderer _renderer;
-
     public override void Awake()
     {
         Camera.BackgroundColor = MEColors.Black;
@@ -17,7 +15,6 @@ public class TestScene2 : Scene
 
     public override void LoadContent()
     {
-        _renderer = new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightText"));
         base.LoadContent();
     }
 
@@ -31,7 +28,6 @@ public class TestScene2 : Scene
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _renderer.Draw(spriteBatch, Point.Zero);
         base.Draw(spriteBatch);
     }
 }
