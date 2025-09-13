@@ -5,20 +5,31 @@ namespace MonoEight;
 
 public class LoadingScene : Scene
 {
-    private const float LOAD_TIME = 2f;
+    private const float WAIT_TIME = 1f;
 
-    private Texture2D _logo;
-    private SpriteRenderer _spriteRenderer;
+    private float _time;
     private float _timer;
+    private Animator _animator;
 
     public override void LoadContent()
     {
         Camera.BackgroundColor = MEColors.Black;
-        _logo = Content.LoadFromRoot<Texture2D>("Assets", "MonoEight");
-        _spriteRenderer = new(_logo)
-        {
-            Scale = MEWindow.Width / _logo.Width / 2
-        };
+
+        _animator = new Animator
+        (
+            [
+                new("default", new(new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
+                {
+                    FrameDuration = 0.05f,
+                    Loop = false
+                })
+            ]
+        );
+
+        _time = _animator["default"].Duration + WAIT_TIME;
+
+        _animator.Play("default");
+
         base.LoadContent();
     }
 
@@ -28,15 +39,17 @@ public class LoadingScene : Scene
 
         _timer += deltaTime;
 
-        if (_timer >= LOAD_TIME)
+        if (_timer >= _time)
             SceneManager.Load("Test 1");
+
+        _animator.Update(gameTime);
 
         base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _spriteRenderer.Draw(spriteBatch, Point.Zero);
+        _animator.Draw(spriteBatch, new(1,0));
         base.Draw(spriteBatch);
     }
 }

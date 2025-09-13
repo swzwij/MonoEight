@@ -81,6 +81,6 @@ public class SpriteSheet
         if (index >= 0 && index < Count)
             return;
 
-        throw new IndexOutOfRangeException($"{index} either negative or outside the range of the spritesheet.");
+        throw new IndexOutOfRangeException($"{index} is either negative or outside the range of the spritesheet: {Count}.");
     }
 }

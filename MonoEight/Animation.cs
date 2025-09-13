@@ -9,7 +9,11 @@ public class Animation
 
     public int Index { get; set; } = 0;
     public float FrameDuration { get; set; } = 1f;
-    public bool Looping { get; set; } = true;
+    public bool Loop { get; set; } = true;
+
+    public SpriteSheet Sheet => _sheet;
+    public int Count => _sheet.Count;
+    public float Duration => Count * FrameDuration;
 
     public Animation(SpriteSheet sheet)
     {

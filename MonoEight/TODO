@@ -2,10 +2,10 @@ Logo name
 Cropped ICO/BMP
 Better font
 Look into input actions
-Animations
 Playerp prefs
 Json
 Summaries
 Mouse input?
 Add a folder structure
 Particle system
+Refactor animator and animations to also be able to use a single animation

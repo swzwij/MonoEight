@@ -7,7 +7,7 @@ namespace MonoEight;
 
 public class TestScene2 : Scene
 {
-    private Animation _animation;
+    private Animator _animator;
 
     public override void Awake()
     {
@@ -17,10 +17,19 @@ public class TestScene2 : Scene
 
     public override void LoadContent()
     {
-        _animation = new(new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
-        {
-            FrameDuration = 0.05f
-        };
+        _animator = new Animator
+        (
+            [
+                new("default", new(new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
+                {
+                    FrameDuration = 0.05f,
+                    Loop = false
+                })
+            ]
+        );
+
+        _animator.Play("default");
+
         base.LoadContent();
     }
 
@@ -29,14 +38,14 @@ public class TestScene2 : Scene
         if (Input.IsKeyPressed(Keys.Space))
             SceneManager.Load("Test 1");
 
-        _animation.Update(gameTime);
+        _animator.Update(gameTime);
 
         base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _animation.Draw(spriteBatch, Point.Zero);
+        _animator.Draw(spriteBatch, Point.Zero);
         base.Draw(spriteBatch);
     }
 }
