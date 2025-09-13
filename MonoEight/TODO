@@ -6,4 +6,4 @@ Json
 Summaries
 Mouse input?
 Particle system
-Refactor animator and animations to also be able to use a single animation
+Make Spritesheet inherit SpriteRenderer?
