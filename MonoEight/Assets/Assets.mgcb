@@ -13,6 +13,13 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Fonts/Blocky.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Blocky.spritefont
+
 #begin Fonts/L.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

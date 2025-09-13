@@ -17,6 +17,7 @@ public class Canvas
             { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/S") },
             { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/M") },
             { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/L") },
+            { FontSize.Test, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/Blocky") },
         };
     }
 

@@ -4,5 +4,6 @@ public enum FontSize
 {
     S,
     M,
-    L
+    L,
+    Test
 }
