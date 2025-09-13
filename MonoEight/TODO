@@ -6,6 +6,5 @@ Playerp prefs
 Json
 Summaries
 Mouse input?
-Add a folder structure
 Particle system
 Refactor animator and animations to also be able to use a single animation
