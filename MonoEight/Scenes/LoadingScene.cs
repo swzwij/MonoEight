@@ -11,6 +11,11 @@ public class LoadingScene : Scene
     private float _timer;
     private Animator _animator;
 
+    public override void Awake()
+    {
+        _timer = 0;
+    }
+
     public override void LoadContent()
     {
         Camera.BackgroundColor = MEColors.Black;
@@ -25,6 +30,8 @@ public class LoadingScene : Scene
                 })
             ]
         );
+
+        // _animator.Scale = MEWindow.Width / _logo.Width / 2;
 
         _time = _animator["default"].Duration + WAIT_TIME;
 
@@ -49,7 +56,7 @@ public class LoadingScene : Scene
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _animator.Draw(spriteBatch, new(1,0));
+        _animator.Draw(spriteBatch, new(0, -3));
         base.Draw(spriteBatch);
     }
 }

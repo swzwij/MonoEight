@@ -20,8 +20,8 @@ public class Main : Game
     {
         MonoEight.Content.Initialize(Content, "Content");
         MEWindow.StartFullscreen = false;
-        MEWindow.Width = 64;
-        MEWindow.Height = 64;
+        MEWindow.Width = 256;
+        MEWindow.Height = 256;
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
 
