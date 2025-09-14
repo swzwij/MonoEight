@@ -24,6 +24,7 @@ public class Main : Game
         MEWindow.Height = 64;
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
+        Input.Add("Exit", [Keys.Escape, Keys.Back]);
 
         SceneManager.Add("Loading", new LoadingScene());
         SceneManager.Add("Test 1", new TestScene());
