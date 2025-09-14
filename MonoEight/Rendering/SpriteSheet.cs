@@ -40,6 +40,11 @@ public class SpriteSheet : SpriteRenderer
         return _sprites[index];
     }
 
+    public new void Draw(SpriteBatch spriteBatch, Point position)
+    {
+        Draw(spriteBatch, _lastDrawnIndex, position);
+    }
+
     public void Draw(SpriteBatch spriteBatch, int index, Point position)
     {
         if (index != _lastDrawnIndex)
@@ -48,7 +53,7 @@ public class SpriteSheet : SpriteRenderer
             Texture = _sprites[index];
         }
 
-        Draw(spriteBatch, position);
+        base.Draw(spriteBatch, position);
         _lastDrawnIndex = index;
     }
 
