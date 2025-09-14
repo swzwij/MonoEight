@@ -25,13 +25,10 @@ public class LoadingScene : Scene
         {
             FrameDuration = 0.05f,
             Loop = false,
-            Scale = MEWindow.Width / 64 / 2
+            Scale = MEWindow.Width / 32 / 2
         };
 
-        // _animator.Scale = MEWindow.Width / _logo.Width / 2;
-
         _time = _animation.Duration + WAIT_TIME;
-
         _animation.Play();
 
         base.LoadContent();
