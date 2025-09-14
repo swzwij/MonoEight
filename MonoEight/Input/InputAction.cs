@@ -6,12 +6,13 @@ namespace MonoEight;
 public class InputAction
 {
     private readonly Keys[] _keys;
+    private readonly Buttons[] _buttons;
 
     public bool IsPressed { get; private set; }
     public bool IsDown { get; private set; }
     public bool IsReleased { get; private set; }
 
-    public InputAction(Keys[] keys)
+    public InputAction(Keys[] keys, Buttons[] buttons)
     {
         _keys = keys;
     }

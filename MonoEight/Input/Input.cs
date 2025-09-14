@@ -108,12 +108,12 @@ public static class Input
             action.Update(_keyboardState, _lastKeyboardState);
     }
 
-    public static void Add(string input, Keys[] keys)
+    public static void Add(string input, Keys[] keys, Buttons[] buttons)
     {
         if (_actions.ContainsKey(input))
             throw new Exception($"There already exists an input action with the name {input}");
 
-        _actions.Add(input, new(keys));
+        _actions.Add(input, new(keys, buttons));
     }
 
     public static InputAction Get(string trigger)
