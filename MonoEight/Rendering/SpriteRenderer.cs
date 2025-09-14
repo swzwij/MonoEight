@@ -6,7 +6,6 @@ namespace MonoEight;
 public class SpriteRenderer
 {
     private Texture2D _texture;
-    private Vector2 _origin;
 
     public Texture2D Texture
     {
@@ -14,22 +13,23 @@ public class SpriteRenderer
         set
         {
             _texture = value;
-            _origin = new(_texture.Width / 2f, _texture.Height / 2f);
+            Origin = new(_texture.Width / 2f, _texture.Height / 2f);
         }
     }
 
     public Color Color { get; set; } = Color.White;
     public float Rotation { get; set; } = 0;
+    public Vector2 Origin { get; set; } = Vector2.Zero;
     public float Scale { get; set; } = 1;
     public SpriteEffects SpriteEffects { get; set; } = SpriteEffects.None;
     public float Layer { get; set; } = 0;
-
-    public Vector2 Origin => _origin;
 
     public SpriteRenderer(Texture2D texture)
     {
         Texture = texture;
     }
+
+    public SpriteRenderer() { }
 
     public void Draw(SpriteBatch spriteBatch, Point position)
     {
@@ -40,7 +40,7 @@ public class SpriteRenderer
             null,
             Color,
             Rotation,
-            _origin,
+            Origin,
             Scale,
             SpriteEffects,
             Layer

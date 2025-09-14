@@ -21,7 +21,7 @@ public class LoadingScene : Scene
     {
         Camera.BackgroundColor = MEColors.Black;
 
-        _animation = new(new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
+        _animation = new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64)
         {
             FrameDuration = 0.05f,
             Loop = false,

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class SpriteSheet
+public class SpriteSheet : SpriteRenderer
 {
     private readonly Point _spriteSize;
     private readonly Texture2D _texture;
@@ -16,7 +16,6 @@ public class SpriteSheet
 
     public int Count => _rows * _columns;
     public Texture2D this[int index] => Get(index);
-    public SpriteRenderer Renderer { get; set; }
 
     public SpriteSheet(Texture2D texture, Point size)
     {
@@ -30,7 +29,7 @@ public class SpriteSheet
 
         Splice();
 
-        Renderer = new(_sprites[0]);
+        Texture = _sprites[0];
     }
 
     public SpriteSheet(Texture2D texture, int size) : this(texture, new Point(size, size)) { }
@@ -46,10 +45,10 @@ public class SpriteSheet
         if (index != _lastDrawnIndex)
         {
             ValidateIndex(index);
-            Renderer.Texture = _sprites[index];
+            Texture = _sprites[index];
         }
 
-        Renderer.Draw(spriteBatch, position);
+        Draw(spriteBatch, position);
         _lastDrawnIndex = index;
     }
 

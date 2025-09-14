@@ -3,28 +3,23 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class Animation
+public class Animation : SpriteSheet
 {
-    private readonly SpriteSheet _sheet;
-
     private int _index;
     private float _timer;
     private bool _isPlaying;
 
     public float FrameDuration { get; set; } = 1f;
     public bool Loop { get; set; } = true;
-    public float Scale { get; set; } = 1f;
 
-    public SpriteSheet Sheet => _sheet;
-    public int Count => _sheet.Count;
     public float Duration => Count * FrameDuration;
 
-    public Animation(SpriteSheet sheet)
+    public Animation(Texture2D texture, Point size) : base(texture, size)
     {
-        _sheet = sheet;
-        _sheet.Renderer.Scale = Scale;
         Reset();
     }
+
+    public Animation(Texture2D texture, int size) : base(texture, size) { }
 
     public void Update(GameTime gameTime)
     {
@@ -63,9 +58,9 @@ public class Animation
         _isPlaying = true;
     }
 
-    public void Draw(SpriteBatch spriteBatch, Point position)
+    public new void Draw(SpriteBatch spriteBatch, Point position)
     {
-        _sheet.Draw(spriteBatch, _index, position);
+        Draw(spriteBatch, _index, position);
     }
 
     private void Reset()
