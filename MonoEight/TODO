@@ -4,6 +4,7 @@ Create a better font
 Look into input actions
 Add summaries to publicly accesabel methods
 Check Draw method functionality in SpriteSheet together with SpriteRenderer
+Collision detection (scene list collidable objects)
 
 FUTURE:
 Add player prefs
