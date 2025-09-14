@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
   <Asset Type="Graphics:FontDescription">
-    <FontName>Pixelt</FontName>
-    <Size>18</Size>
+    <FontName>MonoEight</FontName>
+    <Size>6</Size>
     <Spacing>1</Spacing>
     <UseKerning>false</UseKerning>
     <Style>Regular</Style>
