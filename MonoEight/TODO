@@ -3,7 +3,7 @@ Crop ICO/BMP
 Create a better font
 Look into input actions
 Add summaries to publicly accesabel methods
-Make Spritesheet inherit SpriteRenderer?
+Check Draw method functionality in SpriteSheet together with SpriteRenderer
 
 FUTURE:
 Add player prefs
