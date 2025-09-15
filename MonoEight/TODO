@@ -2,8 +2,8 @@ MVP:
 Crop ICO/BMP
 Add summaries to publicly accesable methods
 Collision detection (scene list collidable objects)
-Controller InputAction
 Axis InputAction
+Input Clean up
 
 FUTURE:
 Add player prefs
