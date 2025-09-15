@@ -5,7 +5,6 @@ Add summaries to publicly accesable methods
 Collision detection (scene list collidable objects)
 Controller InputAction
 Axis InputAction
-Input Singleton Patern
 
 FUTURE:
 Add player prefs
