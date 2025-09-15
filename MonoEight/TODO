@@ -1,6 +1,5 @@
 MVP:
 Convert Points to Vector2, except drawing
-Crop ICO/BMP
 Add summaries to publicly accesable methods
 Collision detection (scene list collidable objects)
 
