@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -25,7 +26,7 @@ public class LoadingScene : Scene
         {
             FrameDuration = 0.05f,
             Loop = false,
-            Scale = MEWindow.Width / 32 / 2
+            Scale = Math.Min(MEWindow.Width / 32, MEWindow.Height / 32) / 2
         };
 
         _time = _animation.Duration + WAIT_TIME;

@@ -1,4 +1,4 @@
-﻿    using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -20,8 +20,8 @@ public class Main : Game
     {
         MonoEight.Content.Initialize(Content, "Content");
         MEWindow.StartFullscreen = false;
-        MEWindow.Width = 64;
-        MEWindow.Height = 64;
+        MEWindow.Width = 128;
+        MEWindow.Height = 96;
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
         Input.Add("Exit", [Keys.Escape, Keys.Back], []);
