@@ -9,63 +9,19 @@ public static class Input
 {
     private static KeyboardState _keys;
     private static KeyboardState _lastKeys;
-
     private static GamePadState _buttons;
     private static GamePadState _lastButtons;
-
-    public static float ControllerDeadZone { get; set; } = 0.1f;
-
     private static readonly Dictionary<string, InputAction> _actions = [];
 
-    public static int HorizontalAxis
-    {
-        get
-        {
-            int axis = 0;
-
-            axis -= Convert.ToInt32(IsKeyDown(Keys.Left));
-            axis -= Convert.ToInt32(IsKeyDown(Keys.A));
-
-            axis += Convert.ToInt32(IsKeyDown(Keys.Right));
-            axis += Convert.ToInt32(IsKeyDown(Keys.D));
-
-            axis += _buttons.ThumbSticks.Left.X > ControllerDeadZone ? 1 : 0;
-
-            axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadLeft));
-            axis += Convert.ToInt32(IsButtonDown(Buttons.DPadRight));
-
-            return Math.Clamp(axis, -1, 1);
-        }
-    }
-
-    public static int VerticalAxis
-    {
-        get
-        {
-            int axis = 0;
-
-            axis -= Convert.ToInt32(IsKeyDown(Keys.Up));
-            axis -= Convert.ToInt32(IsKeyDown(Keys.W));
-
-            axis += Convert.ToInt32(IsKeyDown(Keys.Down));
-            axis += Convert.ToInt32(IsKeyDown(Keys.S));
-
-            axis += _buttons.ThumbSticks.Left.Y > ControllerDeadZone ? 1 : 0;
-
-            axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadUp));
-            axis += Convert.ToInt32(IsButtonDown(Buttons.DPadDown));
-
-            return Math.Clamp(axis, -1, 1);
-        }
-    }
-
+    public static float ControllerDeadZone { get; set; } = 0.1f;
+    public static int HorizontalAxis => GetHorizontalAxis();
+    public static int VerticalAxis => GetVerticalAxis();
     public static Point InputAxis => new(HorizontalAxis, VerticalAxis);
 
     public static void Update()
     {
         _lastKeys = _keys;
         _keys = Keyboard.GetState();
-
         _lastButtons = _buttons;
         _buttons = GamePad.GetState(PlayerIndex.One);
 
@@ -103,26 +59,65 @@ public static class Input
         return !_buttons.IsButtonDown(button) && _lastButtons.IsButtonDown(button);
     }
 
-    public static void Add(string input, Keys[] keys, Buttons[] buttons)
+    public static void Add(string name, Keys[] keys, Buttons[] buttons)
     {
-        if (_actions.ContainsKey(input))
-            throw new Exception($"There already exists an input action with the name '{input}'");
-
-        _actions.Add(input, new(keys, buttons));
+        if (_actions.ContainsKey(name))
+            throw new Exception($"There already exists a InputAction with the name: '{name}'");
+        _actions.Add(name, new(keys, buttons));
     }
 
-    public static bool IsPressed(string trigger)
+    public static bool IsDown(string name)
     {
-        return _actions[trigger].IsPressed;
+        if (!_actions.TryGetValue(name, out InputAction action))
+            throw new Exception($"No InputAction with the name '{name}' exists");
+        return action.IsDown;
     }
 
-    public static bool IsDown(string trigger)
+    public static bool IsPressed(string name)
     {
-        return _actions[trigger].IsDown;
+        if (!_actions.TryGetValue(name, out InputAction action))
+            throw new Exception($"No InputAction with the name '{name}' exists");
+        return action.IsPressed;
     }
 
-    public static bool IsReleased(string trigger)
+    public static bool IsReleased(string name)
     {
-        return _actions[trigger].IsReleased;
+        if (!_actions.TryGetValue(name, out InputAction action))
+            throw new Exception($"No InputAction with the name '{name}' exists");
+        return action.IsReleased;
+    }
+
+    public static int GetHorizontalAxis()
+    {
+        int axis = 0;
+
+        axis -= Convert.ToInt32(IsKeyDown(Keys.Left));
+        axis -= Convert.ToInt32(IsKeyDown(Keys.A));
+        axis += Convert.ToInt32(IsKeyDown(Keys.Right));
+        axis += Convert.ToInt32(IsKeyDown(Keys.D));
+
+        axis += _buttons.ThumbSticks.Left.X > ControllerDeadZone ? 1 : 0;
+
+        axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadLeft));
+        axis += Convert.ToInt32(IsButtonDown(Buttons.DPadRight));
+
+        return Math.Clamp(axis, -1, 1);
+    }
+
+    public static int GetVerticalAxis()
+    {
+        int axis = 0;
+
+        axis -= Convert.ToInt32(IsKeyDown(Keys.Up));
+        axis -= Convert.ToInt32(IsKeyDown(Keys.W));
+        axis += Convert.ToInt32(IsKeyDown(Keys.Down));
+        axis += Convert.ToInt32(IsKeyDown(Keys.S));
+
+        axis += _buttons.ThumbSticks.Left.Y > ControllerDeadZone ? 1 : 0;
+
+        axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadUp));
+        axis += Convert.ToInt32(IsButtonDown(Buttons.DPadDown));
+
+        return Math.Clamp(axis, -1, 1);
     }
 }
