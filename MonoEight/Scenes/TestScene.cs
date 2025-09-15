@@ -16,7 +16,7 @@ public class TestScene : Scene
 
     public override void Update(GameTime gameTime)
     {
-        if (Input.IsKeyPressed(Keys.Space))
+        if (Input.IsPressed("A"))
             SceneManager.Load("Test 2");
 
         if (Input.IsPressed("Exit"))

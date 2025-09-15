@@ -7,11 +7,11 @@ namespace MonoEight;
 
 public static class Input
 {
-    private static KeyboardState _keyboardState;
-    private static KeyboardState _lastKeyboardState;
+    private static KeyboardState _keys;
+    private static KeyboardState _lastKeys;
 
-    private static GamePadState _gamePadState;
-    private static GamePadState _lastGamePadState;
+    private static GamePadState _buttons;
+    private static GamePadState _lastButtons;
 
     public static float ControllerDeadZone { get; set; } = 0.1f;
 
@@ -29,7 +29,7 @@ public static class Input
             axis += Convert.ToInt32(IsKeyDown(Keys.Right));
             axis += Convert.ToInt32(IsKeyDown(Keys.D));
 
-            axis += _gamePadState.ThumbSticks.Left.X > ControllerDeadZone ? 1 : 0;
+            axis += _buttons.ThumbSticks.Left.X > ControllerDeadZone ? 1 : 0;
 
             axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadLeft));
             axis += Convert.ToInt32(IsButtonDown(Buttons.DPadRight));
@@ -50,7 +50,7 @@ public static class Input
             axis += Convert.ToInt32(IsKeyDown(Keys.Down));
             axis += Convert.ToInt32(IsKeyDown(Keys.S));
 
-            axis += _gamePadState.ThumbSticks.Left.Y > ControllerDeadZone ? 1 : 0;
+            axis += _buttons.ThumbSticks.Left.Y > ControllerDeadZone ? 1 : 0;
 
             axis -= Convert.ToInt32(IsButtonDown(Buttons.DPadUp));
             axis += Convert.ToInt32(IsButtonDown(Buttons.DPadDown));
@@ -63,65 +63,52 @@ public static class Input
 
     public static void Update()
     {
-        _lastKeyboardState = _keyboardState;
-        _keyboardState = Keyboard.GetState();
+        _lastKeys = _keys;
+        _keys = Keyboard.GetState();
 
-        _lastGamePadState = _gamePadState;
-        _gamePadState = GamePad.GetState(PlayerIndex.One);
+        _lastButtons = _buttons;
+        _buttons = GamePad.GetState(PlayerIndex.One);
 
-        UpdateActions();
+        foreach (InputAction action in _actions.Values)
+            action.Update(_keys, _lastKeys, _buttons, _lastButtons);
     }
 
     public static bool IsKeyDown(Keys key)
     {
-        return _keyboardState.IsKeyDown(key);
+        return _keys.IsKeyDown(key);
     }
 
     public static bool IsKeyPressed(Keys key)
     {
-        return _keyboardState.IsKeyDown(key) && !_lastKeyboardState.IsKeyDown(key);
+        return _keys.IsKeyDown(key) && !_lastKeys.IsKeyDown(key);
     }
 
     public static bool IsKeyReleased(Keys key)
     {
-        return !_keyboardState.IsKeyDown(key) && _lastKeyboardState.IsKeyDown(key);
+        return !_keys.IsKeyDown(key) && _lastKeys.IsKeyDown(key);
     }
 
     public static bool IsButtonDown(Buttons button)
     {
-        return _gamePadState.IsButtonDown(button);
+        return _buttons.IsButtonDown(button);
     }
 
     public static bool IsButtonPressed(Buttons button)
     {
-        return _gamePadState.IsButtonDown(button) && !_lastGamePadState.IsButtonDown(button);
+        return _buttons.IsButtonDown(button) && !_lastButtons.IsButtonDown(button);
     }
 
     public static bool IsButtonReleased(Buttons button)
     {
-        return !_gamePadState.IsButtonDown(button) && _lastGamePadState.IsButtonDown(button);
-    }
-
-    private static void UpdateActions()
-    {
-        foreach (InputAction action in _actions.Values)
-            action.Update(_keyboardState, _lastKeyboardState);
+        return !_buttons.IsButtonDown(button) && _lastButtons.IsButtonDown(button);
     }
 
     public static void Add(string input, Keys[] keys, Buttons[] buttons)
     {
         if (_actions.ContainsKey(input))
-            throw new Exception($"There already exists an input action with the name {input}");
+            throw new Exception($"There already exists an input action with the name '{input}'");
 
         _actions.Add(input, new(keys, buttons));
-    }
-
-    public static InputAction Get(string trigger)
-    {
-        if (_actions.TryGetValue(trigger, out InputAction action))
-            return action;
-        else
-            throw new Exception($"There is no input action called {trigger}");
     }
 
     public static bool IsPressed(string trigger)

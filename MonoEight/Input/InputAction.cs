@@ -15,26 +15,7 @@ public class InputAction
     public InputAction(Keys[] keys, Buttons[] buttons)
     {
         _keys = keys;
-    }
-
-    public void Update(KeyboardState state, KeyboardState lastState)
-    {
-        Clear();
-
-        int l = _keys.Length;
-        for (int i = 0; i < l; i++)
-        {
-            Keys key = _keys[i];
-
-            if (state.IsKeyDown(key))
-                IsDown = true;
-
-            if (state.IsKeyDown(key) && !lastState.IsKeyDown(key))
-                IsPressed = true;
-
-            if (!state.IsKeyDown(key) && lastState.IsKeyDown(key))
-                IsReleased = true;
-        }
+        _buttons = buttons;
     }
 
     private void Clear()
@@ -42,5 +23,44 @@ public class InputAction
         IsPressed = false;
         IsDown = false;
         IsReleased = false;
+    }
+
+    public void Update(KeyboardState keys, KeyboardState lastKeys, GamePadState buttons, GamePadState lastButtons)
+    {
+        Clear();
+        UpdateKeyboard(keys, lastKeys);
+        UpdateGamePad(buttons, lastButtons);
+    }
+
+    private void UpdateKeyboard(KeyboardState keys, KeyboardState lastKeys)
+    {
+        int length = _keys.Length;
+        for (int i = 0; i < length; i++)
+        {
+            Keys key = _keys[i];
+            UpdateState(keys.IsKeyDown(key), lastKeys.IsKeyDown(key));
+        }
+    }
+
+    private void UpdateGamePad(GamePadState buttons, GamePadState lastButtons)
+    {
+        int length = _buttons.Length;
+        for (int i = 0; i < length; i++)
+        {
+            Buttons button = _buttons[i];
+            UpdateState(buttons.IsButtonDown(button), lastButtons.IsButtonDown(button));
+        }
+    }
+
+    private void UpdateState(bool isDown, bool wasDown)
+    {
+        if (isDown)
+            IsDown = true;
+
+        if (isDown && !wasDown)
+            IsPressed = true;
+
+        if (!isDown && wasDown)
+            IsReleased = true;
     }
 }
