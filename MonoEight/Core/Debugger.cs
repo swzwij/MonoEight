@@ -36,4 +36,13 @@ public static class Debugger
             0
         );
     }
+
+    public static void DrawSquare(SpriteBatch spriteBatch, Point position, Point size, Color color)
+    {
+        position -= (size.ToVector2() / 2).ToPoint();
+        DrawLine(spriteBatch, position, new(position.X + size.X, position.Y), color);
+        DrawLine(spriteBatch, new(position.X + size.X, position.Y), position + size, color);
+        DrawLine(spriteBatch, position + size, new(position.X, position.Y + size.Y), color);
+        DrawLine(spriteBatch, new(position.X, position.Y + size.Y), position, color);
+    }
 }
