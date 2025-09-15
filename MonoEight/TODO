@@ -2,6 +2,7 @@ MVP:
 Crop ICO/BMP
 Add summaries to publicly accesable methods
 Collision detection (scene list collidable objects)
+Vector2 vs Point
 
 FUTURE:
 Add player prefs
