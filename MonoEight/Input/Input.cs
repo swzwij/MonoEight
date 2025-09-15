@@ -123,4 +123,19 @@ public static class Input
         else
             throw new Exception($"There is no input action called {trigger}");
     }
+
+    public static bool IsPressed(string trigger)
+    {
+        return _actions[trigger].IsPressed;
+    }
+
+    public static bool IsDown(string trigger)
+    {
+        return _actions[trigger].IsDown;
+    }
+
+    public static bool IsReleased(string trigger)
+    {
+        return _actions[trigger].IsReleased;
+    }
 }

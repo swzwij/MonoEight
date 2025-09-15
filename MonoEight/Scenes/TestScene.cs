@@ -19,7 +19,7 @@ public class TestScene : Scene
         if (Input.IsKeyPressed(Keys.Space))
             SceneManager.Load("Test 2");
 
-        if (Input.Get("Exit").IsPressed)
+        if (Input.IsPressed("Exit"))
             SceneManager.Load("Loading");
 
         base.Update(gameTime);
