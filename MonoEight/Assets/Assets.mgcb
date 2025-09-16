@@ -32,6 +32,13 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/MonoEight.spritefont
 
+#begin Fonts/MonoEightMedium.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/MonoEightMedium.spritefont
+
 #begin MonoEight.png
 /importer:TextureImporter
 /processor:TextureProcessor

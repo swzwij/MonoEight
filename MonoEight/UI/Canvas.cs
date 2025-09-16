@@ -15,6 +15,7 @@ public class Canvas
         _fonts = new()
         {
             { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEight") },
+            { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEightMedium") },
             // { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/M") },
             // { FontSize.L, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/L") },
             // { FontSize.Test, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/Blocky") },
