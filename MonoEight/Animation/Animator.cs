@@ -51,4 +51,9 @@ public class Animator
     {
         _activeAnimation?.Draw(spriteBatch, position);
     }
+
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    {
+        _activeAnimation?.Draw(spriteBatch, position);
+    }
 }

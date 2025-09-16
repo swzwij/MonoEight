@@ -46,4 +46,9 @@ public class SpriteRenderer
             Layer
         );
     }
+
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    {
+        Draw(spriteBatch, position.ToPoint());
+    }
 }

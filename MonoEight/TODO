@@ -2,6 +2,7 @@ MVP:
 Convert Points to Vector2, except drawing
 Add summaries to publicly accesable methods
 Collision detection (scene list collidable objects)
+Simplify Animator api
 
 FUTURE:
 Add player prefs

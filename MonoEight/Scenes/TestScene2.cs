@@ -11,7 +11,6 @@ public class TestScene2 : Scene
     private SquareCollider _squareA;
     private SquareCollider _squareB;
 
-    private Vector2 _position;
     private float _speed = 5;
 
     public override void Awake()
@@ -20,7 +19,6 @@ public class TestScene2 : Scene
 
         _squareA = new(Point.Zero, new(8));
         _squareB = new(new(32, 0), new(12));
-        _position = _squareB.Position.ToVector2();
 
         base.Awake();
     }
@@ -37,10 +35,15 @@ public class TestScene2 : Scene
 
         float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds * _speed;
 
-        _position.X += Input.InputAxis.X * deltaTime;
-        _position.Y += Input.InputAxis.Y * deltaTime;
+        // _position.X += Input.InputAxis.X * deltaTime;
+        // _position.Y += Input.InputAxis.Y * deltaTime;
 
-        _squareB.Position = _position.ToPoint();
+        // _squareB.Position = _position.ToPoint();
+
+        Point pos = Point.Zero;
+        pos.X = (int)(Input.InputAxis.X * deltaTime);
+        pos.Y = (int)(Input.InputAxis.Y * deltaTime);
+        _squareB.Position += pos;
 
         if (_squareA.Intersects(_squareB))
             Console.WriteLine("Collision");

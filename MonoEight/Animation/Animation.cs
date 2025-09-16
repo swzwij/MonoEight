@@ -19,7 +19,10 @@ public class Animation : SpriteSheet
         Reset();
     }
 
-    public Animation(Texture2D texture, int size) : base(texture, size) { }
+    public Animation(Texture2D texture, int size) : base(texture, size)
+    {
+        Reset();
+    }
 
     public void Update(GameTime gameTime)
     {
@@ -59,6 +62,11 @@ public class Animation : SpriteSheet
     }
 
     public new void Draw(SpriteBatch spriteBatch, Point position)
+    {
+        Draw(spriteBatch, _index, position);
+    }
+
+    public new void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Draw(spriteBatch, _index, position);
     }
