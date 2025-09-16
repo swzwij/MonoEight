@@ -66,11 +66,6 @@ public class Animation : SpriteSheet
         Draw(spriteBatch, _index, position);
     }
 
-    public new void Draw(SpriteBatch spriteBatch, Vector2 position)
-    {
-        Draw(spriteBatch, _index, position);
-    }
-
     private void Reset()
     {
         _index = 0;

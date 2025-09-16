@@ -57,16 +57,6 @@ public class SpriteSheet : SpriteRenderer
         _lastDrawnIndex = index;
     }
 
-    public new void Draw(SpriteBatch spriteBatch, Vector2 position)
-    {
-        Draw(spriteBatch, _lastDrawnIndex, position.ToPoint());
-    }
-
-    public void Draw(SpriteBatch spriteBatch, int index, Vector2 position)
-    {
-        Draw(spriteBatch, index, position.ToPoint());
-    }
-
     private void Splice()
     {
         int index = 0;

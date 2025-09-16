@@ -1,8 +1,6 @@
-
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
@@ -17,7 +15,7 @@ public class TestScene2 : Scene
     {
         Camera.BackgroundColor = MEColors.Black;
 
-        _squareA = new(Point.Zero, new(8));
+        _squareA = new(Vector2.Zero, new(8));
         _squareB = new(new(32, 0), new(12));
 
         base.Awake();
@@ -40,9 +38,9 @@ public class TestScene2 : Scene
 
         // _squareB.Position = _position.ToPoint();
 
-        Point pos = Point.Zero;
-        pos.X = (int)(Input.InputAxis.X * deltaTime);
-        pos.Y = (int)(Input.InputAxis.Y * deltaTime);
+        Vector2 pos = Vector2.Zero;
+        pos.X = Input.InputAxis.X * deltaTime;
+        pos.Y = Input.InputAxis.Y * deltaTime;
         _squareB.Position += pos;
 
         if (_squareA.Intersects(_squareB))

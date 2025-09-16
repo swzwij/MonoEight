@@ -6,29 +6,29 @@ namespace MonoEight;
 
 public class SquareCollider
 {
-    public Point Position { get; set; }
+    public Vector2 Position { get; set; }
     public Point Size { get; set; }
 
-    public SquareCollider(Point position, Point size)
+    public SquareCollider(Vector2 position, Point size)
     {
         Position = position;
         Size = size;
     }
 
-    public void Update(Point position)
+    public void Update(Vector2 position)
     {
         Position = position;
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        Debugger.DrawSquare(spriteBatch, Position, Size, Color.Green);
+        Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
     }
 
     public bool Intersects(SquareCollider other)
     {
-        Point posA = Position - (Size.ToVector2() / 2).ToPoint();
-        Point posB = other.Position - (other.Size.ToVector2() / 2).ToPoint();
+        Point posA = (Position - (Size.Float() / 2)).Int();
+        Point posB = (other.Position - (other.Size.Float() / 2)).Int();
 
         return posA.X < posB.X + other.Size.X &&
                posA.X + Size.X > posB.X &&

@@ -24,10 +24,11 @@ public class Canvas
 
     public void DrawText(SpriteBatch spriteBatch, string text, FontSize size, Point position, Color color)
     {
+        // TODO
         SpriteFont font = _fonts[size];
         Vector2 textSize = font.MeasureString(text);
-        Point offset = new((int)(-textSize.X / 2), (int)(-textSize.Y / 2));
-        Point newPosition = position + offset + _scene.Camera.Position;
+        Vector2 offset = new((int)(-textSize.X / 2), (int)(-textSize.Y / 2));
+        Point newPosition = position + offset.ToPoint() + _scene.Camera.Position.ToPoint();
         spriteBatch.DrawString(font, text, newPosition.ToVector2(), color, 0, Vector2.Zero, 1, SpriteEffects.None, 1);
     }
 }

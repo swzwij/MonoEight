@@ -5,7 +5,7 @@ namespace MonoEight;
 
 public abstract class GameObject
 {
-    public Point Position { get; set; }
+    public Vector2 Position { get; set; }
     public bool IsActive { get; set; }
     public bool ShouldDestroy { get; set; }
     public Scene Scene { get; set; }
