@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -26,9 +27,12 @@ public class SquareCollider
 
     public bool Intersects(SquareCollider other)
     {
-        return Position.X < other.Position.X + other.Size.X &&
-               Position.X + Size.X > other.Position.X &&
-               Position.Y < other.Position.Y + other.Size.Y &&
-               Position.Y + Size.Y > other.Position.Y;
+        Point posA = Position - (Size.ToVector2() / 2).ToPoint();
+        Point posB = other.Position - (other.Size.ToVector2() / 2).ToPoint();
+
+        return posA.X < posB.X + other.Size.X &&
+               posA.X + Size.X > posB.X &&
+               posA.Y < posB.Y + other.Size.Y &&
+               posA.Y + Size.Y > posB.Y;
     }
 }
