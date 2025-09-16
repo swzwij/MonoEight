@@ -19,10 +19,7 @@ public class Animation : SpriteSheet
         Reset();
     }
 
-    public Animation(Texture2D texture, int size) : base(texture, size)
-    {
-        Reset();
-    }
+    public Animation(Texture2D texture, int size) : this(texture, new Point(size, size)) { }
 
     public void Update(GameTime gameTime)
     {
