@@ -32,16 +32,7 @@ public class TestScene2 : Scene
             SceneManager.Load("Test 1");
 
         float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds * _speed;
-
-        // _position.X += Input.InputAxis.X * deltaTime;
-        // _position.Y += Input.InputAxis.Y * deltaTime;
-
-        // _squareB.Position = _position.ToPoint();
-
-        Vector2 pos = Vector2.Zero;
-        pos.X = Input.InputAxis.X * deltaTime;
-        pos.Y = Input.InputAxis.Y * deltaTime;
-        _squareB.Position += pos;
+        _squareB.Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * deltaTime;
 
         if (_squareA.Intersects(_squareB))
             Console.WriteLine("Collision");
