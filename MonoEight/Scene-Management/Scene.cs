@@ -9,6 +9,7 @@ public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
     private readonly List<SquareCollider> _colliders = [];
+    private readonly CollisionManager _collisionManager = new();
 
     public string Name { get; set; }
     public Camera Camera { get; set; } = new();
@@ -26,7 +27,7 @@ public abstract class Scene
     {
         RemoveObjects();
         UpdateObjects(gameTime);
-        UpdateColliders();
+        _collisionManager.Update(_colliders);
     }
 
     public virtual void Draw(SpriteBatch spriteBatch)
@@ -54,7 +55,7 @@ public abstract class Scene
 
     public void Remove(SquareCollider collider)
     {
-        _colliders.Add(collider);
+        _colliders.Remove(collider);
     }
 
     public T Find<T>() where T : GameObject
@@ -88,14 +89,5 @@ public abstract class Scene
     {
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].Update(gameTime);
-    }
-
-    private void UpdateColliders()
-    {
-        int l = _colliders.Count;
-        for (int i = 0; i < l; i++)
-        {
-
-        }
     }
 }

@@ -6,8 +6,6 @@ namespace MonoEight;
 
 public class SquareCollider
 {
-    private Scene _scene;
-
     public Vector2 Position { get; set; }
     public Point Size { get; set; }
     public bool IsActive { get; set; } = true;
@@ -15,14 +13,19 @@ public class SquareCollider
     public bool IsColliding { get; set; }
     public bool WasColliding { get; set; }
 
+    public Action OnCollisionEnter;
+    public Action OnCollisionExit;
+    public Action OnCollisionStay;
+
     public SquareCollider(Scene scene, Vector2 position, Point size)
     {
-        _scene = scene;
         scene.Add(this);
 
         Position = position;
         Size = size;
     }
+
+    public SquareCollider(Scene scene, Vector2 position, int size) : this(scene, position, new Point(size)) { }
 
     public void Update(Vector2 position)
     {
@@ -43,5 +46,15 @@ public class SquareCollider
                posA.X + Size.X > posB.X &&
                posA.Y < posB.Y + other.Size.Y &&
                posA.Y + Size.Y > posB.Y;
+    }
+
+    public void UpdateState()
+    {
+        if (IsColliding && !WasColliding)
+            OnCollisionEnter?.Invoke();
+        else if (!IsColliding && WasColliding)
+            OnCollisionExit?.Invoke();
+        else if (IsColliding && WasColliding)
+            OnCollisionStay?.Invoke();
     }
 }

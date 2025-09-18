@@ -6,8 +6,8 @@ namespace MonoEight;
 
 public class TestScene2 : Scene
 {
-    private SquareCollider _squareA;
     private SquareCollider _squareB;
+    private SquareCollider _collider;
 
     private float _speed = 5;
 
@@ -15,8 +15,12 @@ public class TestScene2 : Scene
     {
         Camera.BackgroundColor = MEColors.Black;
 
-        _squareA = new(Vector2.Zero, new(8));
-        _squareB = new(new(32, 0), new(12));
+        _squareB = new(this, new(32, 0), 12);
+
+        _collider = new(this, new(0, 0), 8);
+        _collider.OnCollisionEnter += () => { Console.WriteLine("CollisionEnter"); };
+        _collider.OnCollisionExit += () => { Console.WriteLine("CollisionExit"); };
+        _collider.OnCollisionStay += () => { Console.WriteLine("CollisionStay"); };
 
         base.Awake();
     }
@@ -34,15 +38,12 @@ public class TestScene2 : Scene
         float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds * _speed;
         _squareB.Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * deltaTime;
 
-        if (_squareA.Intersects(_squareB))
-            Console.WriteLine("Collision");
-
         base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _squareA.Draw(spriteBatch);
+        _collider.Draw(spriteBatch);
         _squareB.Draw(spriteBatch);
         base.Draw(spriteBatch);
     }
