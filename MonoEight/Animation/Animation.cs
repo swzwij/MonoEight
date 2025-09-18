@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -13,6 +14,9 @@ public class Animation : SpriteSheet
     public bool Loop { get; set; } = true;
 
     public float Duration => Count * FrameDuration;
+
+    public Action OnPlayed;
+    public Action OnStopped;
 
     public Animation(Texture2D texture, Point size) : base(texture, size)
     {
@@ -49,6 +53,7 @@ public class Animation : SpriteSheet
     public void Stop()
     {
         _isPlaying = false;
+        OnStopped?.Invoke();
     }
 
     public void Play()
@@ -56,6 +61,7 @@ public class Animation : SpriteSheet
         Reset();
 
         _isPlaying = true;
+        OnPlayed?.Invoke();
     }
 
     public new void Draw(SpriteBatch spriteBatch, Point position)
