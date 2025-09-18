@@ -18,12 +18,16 @@ public class Animation : SpriteSheet
     public Action OnPlayed;
     public Action OnStopped;
 
-    public Animation(Texture2D texture, Point size) : base(texture, size)
+    public Animation(Texture2D texture, Point size, float frameDuration = 1f, bool loops = true) : base(texture, size)
     {
+        FrameDuration = frameDuration;
+        Loop = loops;
+
         Reset();
     }
 
-    public Animation(Texture2D texture, int size) : this(texture, new Point(size, size)) { }
+    public Animation(Texture2D texture, int size, float frameDuration = 1f, bool loops = true)
+        : this(texture, new Point(size, size), frameDuration, loops) { }
 
     public void Update(GameTime gameTime)
     {
