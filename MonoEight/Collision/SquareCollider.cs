@@ -6,11 +6,20 @@ namespace MonoEight;
 
 public class SquareCollider
 {
+    private Scene _scene;
+
     public Vector2 Position { get; set; }
     public Point Size { get; set; }
+    public bool IsActive { get; set; } = true;
 
-    public SquareCollider(Vector2 position, Point size)
+    public bool IsColliding { get; set; }
+    public bool WasColliding { get; set; }
+
+    public SquareCollider(Scene scene, Vector2 position, Point size)
     {
+        _scene = scene;
+        scene.Add(this);
+
         Position = position;
         Size = size;
     }

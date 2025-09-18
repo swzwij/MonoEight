@@ -8,6 +8,7 @@ namespace MonoEight;
 public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
+    private readonly List<SquareCollider> _colliders = [];
 
     public string Name { get; set; }
     public Camera Camera { get; set; } = new();
@@ -23,17 +24,9 @@ public abstract class Scene
 
     public virtual void Update(GameTime gameTime)
     {
-        for (int i = 0; i < _gameObjects.Count; i++)
-        {
-            if (!_gameObjects[i].ShouldDestroy)
-                continue;
-
-            _gameObjects.RemoveAt(i);
-            i--;
-        }
-
-        for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Update(gameTime);
+        RemoveObjects();
+        UpdateObjects(gameTime);
+        UpdateColliders();
     }
 
     public virtual void Draw(SpriteBatch spriteBatch)
@@ -48,10 +41,20 @@ public abstract class Scene
         _gameObjects.Add(gameObject);
     }
 
+    public void Add(SquareCollider collider)
+    {
+        _colliders.Add(collider);
+    }
+
     public void Remove(GameObject gameObject)
     {
         gameObject.Scene = null;
         _gameObjects.Remove(gameObject);
+    }
+
+    public void Remove(SquareCollider collider)
+    {
+        _colliders.Add(collider);
     }
 
     public T Find<T>() where T : GameObject
@@ -67,5 +70,32 @@ public abstract class Scene
     public void Clear()
     {
         _gameObjects.Clear();
+    }
+
+    private void RemoveObjects()
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            if (!_gameObjects[i].ShouldDestroy)
+                continue;
+
+            _gameObjects.RemoveAt(i);
+            i--;
+        }
+    }
+
+    private void UpdateObjects(GameTime gameTime)
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
+            _gameObjects[i].Update(gameTime);
+    }
+
+    private void UpdateColliders()
+    {
+        int l = _colliders.Count;
+        for (int i = 0; i < l; i++)
+        {
+
+        }
     }
 }
