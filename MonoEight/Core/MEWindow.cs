@@ -4,29 +4,19 @@ namespace MonoEight;
 
 public static class MEWindow
 {
-    public static int Width { get; set; }
-    public static int Height { get; set; }
-
     private static GraphicsDeviceManager _graphics;
     private static GameWindow _window;
 
-    public static bool StartFullscreen { get; set; }
     private static bool _isFullscreen = false;
+
+    public static int Width { get; set; }
+    public static int Height { get; set; }
+    public static bool StartFullscreen { get; set; }
+
     public static bool IsFullscreen
     {
         get => _isFullscreen;
-        set
-        {
-            if (_isFullscreen == value)
-                return;
-
-            _isFullscreen = value;
-
-            if (_isFullscreen)
-                FullScreen();
-            else
-                Windowed();
-        }
+        set => SetFullScreen(value);
     }
 
     public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
@@ -46,6 +36,19 @@ public static class MEWindow
     public static void ToggleFullscreen()
     {
         IsFullscreen = !IsFullscreen;
+    }
+
+    private static void SetFullScreen(bool value)
+    {
+        if (_isFullscreen == value)
+            return;
+
+        _isFullscreen = value;
+
+        if (_isFullscreen)
+            FullScreen();
+        else
+            Windowed();
     }
 
     private static void FullScreen()

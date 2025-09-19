@@ -25,7 +25,7 @@ public class Main : Game
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
         Input.Add("Exit", [Keys.Escape, Keys.Back], []);
-        Input.Add("A", [Keys.Z, Keys.C, Keys.K], []);
+        Input.Add("A", [Keys.Z, Keys.C, Keys.K, Keys.Space], []);
 
         SceneManager.Add("Loading", new LoadingScene());
         SceneManager.Add("Test 1", new TestScene());
