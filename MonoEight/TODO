@@ -11,6 +11,8 @@ re sort folders
 create basic show case scene
 move scenes to game
 easy way to use the framework
+create sub namespaces
+add input action events
 
 FUTURE:
 Look into particle system
