@@ -71,6 +71,7 @@ public abstract class Scene
     public void Clear()
     {
         _gameObjects.Clear();
+        _colliders.Clear();
     }
 
     private void RemoveObjects()

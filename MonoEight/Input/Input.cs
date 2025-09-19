@@ -87,6 +87,13 @@ public static class Input
         return action.IsReleased;
     }
 
+    public static InputAction Action(string name)
+    {
+        if (!_actions.TryGetValue(name, out InputAction action))
+            throw new Exception($"No InputAction with the name '{name}' exists");
+        return action;
+    }
+
     public static int GetHorizontalAxis()
     {
         int axis = 0;

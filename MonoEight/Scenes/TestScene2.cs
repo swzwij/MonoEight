@@ -22,6 +22,8 @@ public class TestScene2 : Scene
         _collider.OnCollisionExit += () => { Console.WriteLine("CollisionExit"); };
         _collider.OnCollisionStay += () => { Console.WriteLine("CollisionStay"); };
 
+        Input.Action("A").OnPressed += () => Console.WriteLine("Pressed");
+
         base.Awake();
     }
 

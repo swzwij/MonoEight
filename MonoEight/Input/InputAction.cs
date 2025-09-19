@@ -12,6 +12,9 @@ public class InputAction
     public bool IsDown { get; private set; }
     public bool IsReleased { get; private set; }
 
+    public Action OnPressed;
+    public Action OnReleased;
+
     public InputAction(Keys[] keys, Buttons[] buttons)
     {
         _keys = keys;
@@ -58,9 +61,15 @@ public class InputAction
             IsDown = true;
 
         if (isDown && !wasDown)
+        {
             IsPressed = true;
+            OnPressed?.Invoke();
+        }
 
         if (!isDown && wasDown)
+        {
             IsReleased = true;
+            OnReleased?.Invoke();
+        }
     }
 }

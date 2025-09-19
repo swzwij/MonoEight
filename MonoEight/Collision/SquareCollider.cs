@@ -27,11 +27,6 @@ public class SquareCollider
 
     public SquareCollider(Scene scene, Vector2 position, int size) : this(scene, position, new Point(size)) { }
 
-    public void Update(Vector2 position)
-    {
-        Position = position;
-    }
-
     public void Draw(SpriteBatch spriteBatch)
     {
         Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
