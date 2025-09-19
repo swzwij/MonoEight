@@ -17,7 +17,6 @@ create sub namespaces
 add input action events
 move graphics Helper function to MEWindow
 wiki
-Scene Clearing
 
 FUTURE:
 Look into particle system

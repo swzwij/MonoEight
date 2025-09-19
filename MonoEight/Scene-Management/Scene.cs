@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -21,7 +22,11 @@ public abstract class Scene
     }
 
     public virtual void LoadContent() { }
-    public virtual void UnloadContent() { }
+
+    public virtual void UnloadContent()
+    {
+        Clear();
+    }
 
     public virtual void Update(GameTime gameTime)
     {
@@ -70,8 +75,14 @@ public abstract class Scene
 
     public void Clear()
     {
+        for (int i = 0; i < _gameObjects.Count; i++)
+            RemoveObject(i);
+
         _gameObjects.Clear();
         _colliders.Clear();
+
+        Camera = new();
+        Canvas = new(this);
     }
 
     private void RemoveObjects()
@@ -81,9 +92,20 @@ public abstract class Scene
             if (!_gameObjects[i].ShouldDestroy)
                 continue;
 
+            RemoveObject(i);
             _gameObjects.RemoveAt(i);
             i--;
         }
+    }
+
+    private void RemoveObject(int index)
+    {
+        GameObject gameObject = _gameObjects[index];
+
+        if (gameObject is IDisposable disposable)
+            disposable.Dispose();
+
+        gameObject.Scene = null;
     }
 
     private void UpdateObjects(GameTime gameTime)
