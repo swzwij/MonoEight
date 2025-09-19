@@ -1,12 +1,17 @@
 MVP:
 Add summaries to publicly accesable methods
-Collision detection (scene list collidable objects)
+Remove collision manager
 Simplify Animator api
+create new animation type
 Improve Medium font
-
-FUTURE:
 Add player prefs
 Add a Json parser
-Look into mouse input?
+improve Me window methods (width, height)
+re sort folders
+create basic show case scene
+move scenes to game
+easy way to use the framework
+
+FUTURE:
 Look into particle system
 Text boxes
