@@ -14,8 +14,6 @@ create basic show case scene
 move scenes to game
 easy way to use the framework
 create sub namespaces
-add input action events
-move graphics Helper function to MEWindow
 wiki
 
 FUTURE:
