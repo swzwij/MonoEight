@@ -1,6 +1,8 @@
 MVP:
 Add summaries to publicly accesable methods
 Remove collision manager
+add base collider
+add custom shape collider
 Simplify Animator api
 create new animation type
 Improve Medium font
@@ -13,6 +15,7 @@ move scenes to game
 easy way to use the framework
 create sub namespaces
 add input action events
+move graphics Helper function to MEWindow
 
 FUTURE:
 Look into particle system
