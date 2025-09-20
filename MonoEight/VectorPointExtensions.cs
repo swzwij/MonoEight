@@ -13,4 +13,9 @@ public static class VectorPointExtenseions
     {
         return new(vector.X, vector.Y);
     }
+
+    public static Vector2 Cast(this Vector2 vector)
+    {
+        return vector.Int().Float();
+    }
 }

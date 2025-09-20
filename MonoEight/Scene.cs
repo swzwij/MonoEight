@@ -18,6 +18,9 @@ public abstract class Scene
 
     public virtual void Awake()
     {
+        for (int i = 0; i < _gameObjects.Count; i++)
+            _gameObjects[i].Awake();
+
         Canvas = new(this);
     }
 
