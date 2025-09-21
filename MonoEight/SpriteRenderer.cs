@@ -1,9 +1,10 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class NewSpriteRenderer : IComponent
+public class NewSpriteRenderer : Component
 {
     private Texture2D _texture;
 
@@ -25,9 +26,6 @@ public class NewSpriteRenderer : IComponent
     public SpriteEffects SpriteEffects { get; set; } = SpriteEffects.None;
     public float Layer { get; set; } = 0;
 
-    public bool IsActive { get; set; } = true;
-    public GameObject GameObject { get; set; }
-
     public NewSpriteRenderer(GameObject gameObject, Texture2D texture)
     {
         Texture = texture;
@@ -35,18 +33,15 @@ public class NewSpriteRenderer : IComponent
         GameObject.Add(this);
     }
 
-    public void Awake()
+    private void Update()
     {
-
-    }
-
-    public void Update()
-    {
-
+        Console.WriteLine("Update Spriterender");
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
+        Console.WriteLine("Draw SpriteRenderer");
+
         spriteBatch.Draw
         (
             _texture,

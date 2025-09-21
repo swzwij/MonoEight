@@ -21,7 +21,7 @@ public abstract class Scene
         for (int i = 0; i < _gameObjects.Count; i++)
         {
             _gameObjects[i].SendMessage("Awake");
-            _gameObjects[i].AwakeComponents();
+            _gameObjects[i].MessageComponents("Awake");
         }
 
         Canvas = new(this);
@@ -46,7 +46,7 @@ public abstract class Scene
         for (int i = 0; i < _gameObjects.Count; i++)
         {
             _gameObjects[i].SendMessage("Draw", spriteBatch);
-            _gameObjects[i].DrawComponents(spriteBatch);
+            _gameObjects[i].MessageComponents("Draw", spriteBatch);
         }
     }
 
@@ -122,7 +122,7 @@ public abstract class Scene
         for (int i = 0; i < _gameObjects.Count; i++)
         {
             _gameObjects[i].SendMessage("Update");
-            _gameObjects[i].UpdateComponents();
+            _gameObjects[i].MessageComponents("Update");
         }
     }
 }

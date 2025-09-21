@@ -1,22 +1,9 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Internal;
 
 namespace MonoEight;
 
-public interface IComponent
+public class Component : MessageReceiver
 {
     public GameObject GameObject { get; protected set; }
-    public bool IsActive { get; set; }
-
-    public void Awake();
-    public void Update();
-    public void Draw(SpriteBatch spriteBatch);
+    public bool IsActive { get; set; } = true;
 }
-
-// public abstract class Component
-// {
-//     public GameObject GameObject { get; protected set; }
-//     public bool IsActive { get; set; }
-
-//     public virtual
-// }
