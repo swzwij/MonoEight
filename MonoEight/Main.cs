@@ -63,6 +63,7 @@ public class Main : Game
     protected override void Update(GameTime gameTime)
     {
         Input.Update();
+        Time.Update(gameTime);
 
         if (Input.IsKeyPressed(Keys.F11))
             MEWindow.ToggleFullscreen();

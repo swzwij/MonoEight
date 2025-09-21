@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Internal;
 
 namespace MonoEight;
 
-public abstract class GameObject
+public abstract class GameObject : MessageReceiver
 {
     private readonly List<IComponent> _components = [];
 
@@ -13,7 +14,7 @@ public abstract class GameObject
     public bool ShouldDestroy { get; set; }
     public Scene Scene { get; set; }
 
-    public virtual void Awake()
+    public void AwakeComponents()
     {
         int l = _components.Count;
         for (int i = 0; i < l; i++)
@@ -25,7 +26,7 @@ public abstract class GameObject
         }
     }
 
-    public virtual void Update(GameTime gameTime)
+    public void UpdateComponents()
     {
         int l = _components.Count;
         for (int i = 0; i < l; i++)
@@ -33,11 +34,11 @@ public abstract class GameObject
             if (!_components[i].IsActive)
                 continue;
 
-            _components[i].Update(gameTime);
+            _components[i].Update();
         }
     }
 
-    public virtual void Draw(SpriteBatch spriteBatch)
+    public void DrawComponents(SpriteBatch spriteBatch)
     {
         int l = _components.Count;
         for (int i = 0; i < l; i++)

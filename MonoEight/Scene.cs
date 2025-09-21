@@ -19,7 +19,10 @@ public abstract class Scene
     public virtual void Awake()
     {
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Awake();
+        {
+            _gameObjects[i].SendMessage("Awake");
+            _gameObjects[i].AwakeComponents();
+        }
 
         Canvas = new(this);
     }
@@ -41,7 +44,10 @@ public abstract class Scene
     public virtual void Draw(SpriteBatch spriteBatch)
     {
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Draw(spriteBatch);
+        {
+            _gameObjects[i].SendMessage("Draw", spriteBatch);
+            _gameObjects[i].DrawComponents(spriteBatch);
+        }
     }
 
     public void Add(GameObject gameObject)
@@ -114,6 +120,9 @@ public abstract class Scene
     private void UpdateObjects(GameTime gameTime)
     {
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].Update(gameTime);
+        {
+            _gameObjects[i].SendMessage("Update");
+            _gameObjects[i].UpdateComponents();
+        }
     }
 }

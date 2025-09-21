@@ -40,7 +40,7 @@ public class NewSpriteRenderer : IComponent
 
     }
 
-    public void Update(GameTime gameTime)
+    public void Update()
     {
 
     }

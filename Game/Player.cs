@@ -1,21 +1,23 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 
 public class Player : GameObject
 {
-    private NewSpriteRenderer _renderer;
-
     public Player(string texture)
     {
-        _renderer = new(this, Content.Load<Texture2D>(texture));
+        NewSpriteRenderer _ = new(this, Content.Load<Texture2D>(texture));
     }
 
-    public override void Update(GameTime gameTime)
+    private void Awake()
     {
-        float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds * 10;
-        Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * deltaTime;
+        Console.WriteLine("Awoken Player");
+    }
 
-        base.Update(gameTime);
+    private void Update()
+    {
+        float deltaTime = Time.DeltaTime * 10;
+        Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * deltaTime;
     }
 }
