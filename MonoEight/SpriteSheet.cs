@@ -4,15 +4,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class SpriteSheet : SpriteRenderer
+public class SpriteSheet
 {
     private readonly Point _spriteSize;
     private readonly Texture2D _texture;
     private readonly Texture2D[] _sprites;
     private readonly int _rows;
     private readonly int _columns;
-
-    private int _lastDrawnIndex;
 
     public int Count => _rows * _columns;
     public Texture2D this[int index] => Get(index);
@@ -28,33 +26,24 @@ public class SpriteSheet : SpriteRenderer
         _sprites = new Texture2D[_rows * _columns];
 
         Splice();
-
-        Texture = _sprites[0];
     }
 
-    public SpriteSheet(Texture2D texture, int size) : this(texture, new Point(size, size)) { }
+    public SpriteSheet(Texture2D texture, int size) : this(texture, new Point(size)) { }
+
+    public SpriteSheet(Texture2D texture, int size, int[] indices) : this(texture, new Point(size))
+    {
+        Texture2D[] sprites = new Texture2D[indices.Length];
+
+        for (int i = 0; i < indices.Length; i++)
+            sprites[i] = _sprites[indices[i]];
+
+        _sprites = sprites;
+    }
 
     public Texture2D Get(int index)
     {
         ValidateIndex(index);
         return _sprites[index];
-    }
-
-    public new void Draw(SpriteBatch spriteBatch, Point position)
-    {
-        Draw(spriteBatch, _lastDrawnIndex, position);
-    }
-
-    public void Draw(SpriteBatch spriteBatch, int index, Point position)
-    {
-        if (index != _lastDrawnIndex)
-        {
-            ValidateIndex(index);
-            Texture = _sprites[index];
-        }
-
-        base.Draw(spriteBatch, position);
-        _lastDrawnIndex = index;
     }
 
     private void Splice()
@@ -85,6 +74,7 @@ public class SpriteSheet : SpriteRenderer
         if (index >= 0 && index < Count)
             return;
 
-        throw new IndexOutOfRangeException($"{index} is either negative or outside the range of the spritesheet: {Count}.");
+        string message = $"{index} is either negative or outside the range of the spritesheet: {Count}.";
+        throw new IndexOutOfRangeException(message);
     }
 }

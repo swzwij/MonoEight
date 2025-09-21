@@ -68,11 +68,6 @@ public class Animation : SpriteSheet
         OnPlayed?.Invoke();
     }
 
-    public new void Draw(SpriteBatch spriteBatch, Point position)
-    {
-        Draw(spriteBatch, _index, position);
-    }
-
     private void Reset()
     {
         _index = 0;

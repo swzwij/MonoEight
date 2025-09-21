@@ -7,7 +7,7 @@ public class Player : GameObject
 {
     public Player(string texture)
     {
-        NewSpriteRenderer _ = new(this, Content.Load<Texture2D>(texture));
+        SpriteRenderer _ = new(this, Content.Load<Texture2D>(texture));
     }
 
     private void Awake()
