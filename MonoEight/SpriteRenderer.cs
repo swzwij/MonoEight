@@ -31,6 +31,11 @@ public class SpriteRenderer : Component
         Texture = texture;
     }
 
+    public SpriteRenderer(GameObject gameObject) : base(gameObject)
+    {
+
+    }
+
     public void Draw(SpriteBatch spriteBatch)
     {
         Console.WriteLine("Draw SpriteRenderer");
