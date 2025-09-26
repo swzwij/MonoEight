@@ -30,15 +30,15 @@ public class SpriteSheet
 
     public SpriteSheet(Texture2D texture, int size) : this(texture, new Point(size)) { }
 
-    // public SpriteSheet(Texture2D texture, int size, int[] indices) : this(texture, new Point(size))
-    // {
-    //     Texture2D[] sprites = new Texture2D[indices.Length];
+    public SpriteSheet(Texture2D texture, int size, int[] indices) : this(texture, new Point(size))
+    {
+        Texture2D[] sprites = new Texture2D[indices.Length];
 
-    //     for (int i = 0; i < indices.Length; i++)
-    //         sprites[i] = _sprites[indices[i]];
+        for (int i = 0; i < indices.Length; i++)
+            sprites[i] = _sprites[indices[i]];
 
-    //     _sprites = sprites;
-    // }
+        _sprites = sprites;
+    }
 
     public Texture2D Get(int index)
     {

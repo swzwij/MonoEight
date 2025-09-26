@@ -5,7 +5,7 @@ using MonoEight.Internal;
 
 namespace MonoEight;
 
-public abstract class GameObject : MessageReceiver
+public class GameObject : MessageReceiver
 {
     protected readonly List<Component> _components = [];
 

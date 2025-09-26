@@ -44,8 +44,6 @@ public class SpriteRenderer : Component
         if (!_hasTexture)
             return;
 
-        Console.WriteLine("Draw SpriteRenderer");
-
         spriteBatch.Draw
         (
             _texture,

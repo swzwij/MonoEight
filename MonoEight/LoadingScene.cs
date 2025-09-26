@@ -8,10 +8,8 @@ public class LoadingScene : Scene
 {
     private const float WAIT_TIME = 1f;
 
-    private float _time;
     private float _timer;
-
-    // private Animation _animation;
+    private bool _isAnimationFinished;
 
     public override void Awake()
     {
@@ -22,38 +20,32 @@ public class LoadingScene : Scene
     {
         Camera.BackgroundColor = MEColors.Black;
 
-        // _animation = new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64)
-        // {
-        //     FrameDuration = 0.05f,
-        //     Loop = false,
-        //     Scale = Math.Min(MEWindow.Width / 32, MEWindow.Height / 32) / 2
-        // };
+        GameObject logo = new();
+        Animator animator = new(logo, new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
+        {
+            FrameDuration = 0.05f,
+            Loop = false,
+            Scale = Math.Min(MEWindow.Width / 32, MEWindow.Height / 32) / 2
+        };
 
-        // _time = _animation.Duration + WAIT_TIME;
-        // _animation.Play();
+        animator.OnStopped += () => _isAnimationFinished = true;
+        animator.Play();
 
-        _time = 1;
+        Add(logo);
 
         base.LoadContent();
     }
 
     public override void Update(GameTime gameTime)
     {
-        float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+        if (_isAnimationFinished)
+        {
+            _timer += Time.DeltaTime;
 
-        _timer += deltaTime;
-
-        if (_timer >= _time)
-            SceneManager.Load("Test 1");
-
-        // _animation.Update(gameTime);
+            if (_timer >= WAIT_TIME)
+                SceneManager.Load("Test 1");
+        }
 
         base.Update(gameTime);
-    }
-
-    public override void Draw(SpriteBatch spriteBatch)
-    {
-        // _animation.Draw(spriteBatch, new(0, -3));
-        base.Draw(spriteBatch);
     }
 }
