@@ -1,29 +1,37 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 
 public class Player : GameObject
 {
-    // private NewAnimator _animator;
+    private readonly Animator _animator;
+
     public Player(string texture)
     {
-        // SpriteRenderer _ = new(this, Content.Load<Texture2D>(texture));
-        // _animator = new(this, new(Content.Load<Texture2D>(texture), 16),
-        // [new("Idle", 0, 1), new("Squish", 0, 2, 3, 2, 0)]);
-    }
+        _animator = new(this, new(Content.Load<Texture2D>(texture), 16),
+        [
+            new("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+            new("Squish", 0, 2, 3, 2, 0) { Loop = false }
+        ])
+        {
+            FrameDuration = 0.5f
+        };
 
-    private void Awake()
-    {
-        // _animator.Play("Idle");
+        _animator.Play("Idle");
+        _animator.OnFinished += OnAnimationFinished;
     }
 
     private void Update()
     {
-        float deltaTime = Time.DeltaTime * 10;
-        Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * deltaTime;
+        Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * Time.DeltaTime * 10;
 
-        // if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.E))
-            // _animator.Play("Squish");
+        if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.E))
+            _animator.Play("Squish");
+    }
+
+    private void OnAnimationFinished(string animationName)
+    {
+        if (animationName == "Squish")
+            _animator.Play("Idle");
     }
 }
