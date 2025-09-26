@@ -11,7 +11,7 @@ public class LoadingScene : Scene
     private float _time;
     private float _timer;
 
-    private Animation _animation;
+    // private Animation _animation;
 
     public override void Awake()
     {
@@ -22,15 +22,17 @@ public class LoadingScene : Scene
     {
         Camera.BackgroundColor = MEColors.Black;
 
-        _animation = new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64)
-        {
-            FrameDuration = 0.05f,
-            Loop = false,
-            Scale = Math.Min(MEWindow.Width / 32, MEWindow.Height / 32) / 2
-        };
+        // _animation = new(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64)
+        // {
+        //     FrameDuration = 0.05f,
+        //     Loop = false,
+        //     Scale = Math.Min(MEWindow.Width / 32, MEWindow.Height / 32) / 2
+        // };
 
-        _time = _animation.Duration + WAIT_TIME;
-        _animation.Play();
+        // _time = _animation.Duration + WAIT_TIME;
+        // _animation.Play();
+
+        _time = 1;
 
         base.LoadContent();
     }
@@ -44,14 +46,14 @@ public class LoadingScene : Scene
         if (_timer >= _time)
             SceneManager.Load("Test 1");
 
-        _animation.Update(gameTime);
+        // _animation.Update(gameTime);
 
         base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        _animation.Draw(spriteBatch, new(0, -3));
+        // _animation.Draw(spriteBatch, new(0, -3));
         base.Draw(spriteBatch);
     }
 }

@@ -15,6 +15,7 @@ public class SpriteRenderer : Component
         {
             _texture = value;
             Origin = new(_texture.Width / 2f, _texture.Height / 2f);
+            _hasTexture = true;
         }
     }
 
@@ -25,6 +26,8 @@ public class SpriteRenderer : Component
     public float Scale { get; set; } = 1;
     public SpriteEffects SpriteEffects { get; set; } = SpriteEffects.None;
     public float Layer { get; set; } = 0;
+
+    private bool _hasTexture;
 
     public SpriteRenderer(GameObject gameObject, Texture2D texture) : base(gameObject)
     {
@@ -38,6 +41,9 @@ public class SpriteRenderer : Component
 
     public void Draw(SpriteBatch spriteBatch)
     {
+        if (!_hasTexture)
+            return;
+
         Console.WriteLine("Draw SpriteRenderer");
 
         spriteBatch.Draw
