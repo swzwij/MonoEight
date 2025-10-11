@@ -9,13 +9,11 @@ public abstract class MessageReceiver
 
     private static readonly HashSet<string> _magicMethods =
     [
-        "Awake",
-        "Start",
+        "Initialize",
+        "LoadContent",
         "Update",
         "Draw",
-        "OnEnable",
-        "OnDisable",
-        "OnDestroy"
+        "Unload",
     ];
 
     protected MessageReceiver()

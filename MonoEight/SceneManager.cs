@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
@@ -26,21 +25,21 @@ public static class SceneManager
         if (!_scenes.TryGetValue(name, out Scene scene))
             throw new ArgumentException($"Scene '{name}' does not exist in the manager");
 
-        _activeScene?.UnloadContent();
+        _activeScene?.SendMessage("Unload");
 
         _activeScene = scene;
 
-        _activeScene.Awake();
-        _activeScene.LoadContent();
+        _activeScene.SendMessage("Initialize");
+        _activeScene.SendMessage("LoadContent");
     }
 
-    public static void Update(GameTime gameTime)
+    public static void Update()
     {
-        _activeScene?.Update(gameTime);
+        _activeScene?.SendMessage("Update");
     }
 
     public static void Draw(SpriteBatch spriteBatch)
     {
-        _activeScene?.Draw(spriteBatch);
+        _activeScene?.SendMessage("Draw", spriteBatch);
     }
 }

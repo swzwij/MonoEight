@@ -1,75 +1,62 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Internal;
 
 namespace MonoEight;
 
-public abstract class Scene
+public abstract class Scene : MessageReceiver
 {
     private readonly List<GameObject> _gameObjects = [];
-    private readonly List<SquareCollider> _colliders = [];
-    private readonly CollisionManager _collisionManager = new();
 
     public string Name { get; set; }
     public Camera Camera { get; set; } = new();
     public Canvas Canvas { get; private set; }
 
-    public virtual void Awake()
+    private void Initialize()
     {
         for (int i = 0; i < _gameObjects.Count; i++)
-        {
-            _gameObjects[i].SendMessage("Awake");
-            _gameObjects[i].MessageComponents("Awake");
-        }
+            _gameObjects[i].SendMessage("Initialize");
 
         Canvas = new(this);
     }
 
-    public virtual void LoadContent() { }
-
-    public virtual void UnloadContent()
-    {
-        Clear();
-    }
-
-    public virtual void Update(GameTime gameTime)
-    {
-        RemoveObjects();
-        UpdateObjects(gameTime);
-        _collisionManager.Update(_colliders);
-    }
-
-    public virtual void Draw(SpriteBatch spriteBatch)
+    private void LoadContent()
     {
         for (int i = 0; i < _gameObjects.Count; i++)
-        {
+            _gameObjects[i].SendMessage("LoadContent");
+    }
+
+    private void Update()
+    {
+        RemoveObjects();
+
+        for (int i = 0; i < _gameObjects.Count; i++)
+            _gameObjects[i].SendMessage("Update");
+    }
+
+    private void Draw(SpriteBatch spriteBatch)
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].SendMessage("Draw", spriteBatch);
-            _gameObjects[i].MessageComponents("Draw", spriteBatch);
+    }
+
+    private void Unload()
+    {
+        for (int i = _gameObjects.Count - 1; i >= 0; i--)
+        {
+            _gameObjects[i].Dispose();
+            _gameObjects[i].Scene = null;
         }
+
+        _gameObjects.Clear();
+        Canvas = null;
     }
 
     public void Add(GameObject gameObject)
     {
         gameObject.Scene = this;
         _gameObjects.Add(gameObject);
-    }
-
-    public void Add(SquareCollider collider)
-    {
-        _colliders.Add(collider);
-    }
-
-    public void Remove(GameObject gameObject)
-    {
-        gameObject.Scene = null;
-        _gameObjects.Remove(gameObject);
-    }
-
-    public void Remove(SquareCollider collider)
-    {
-        _colliders.Remove(collider);
     }
 
     public T Find<T>() where T : GameObject
@@ -80,18 +67,6 @@ public abstract class Scene
     public T[] FindAll<T>() where T : GameObject
     {
         return _gameObjects.OfType<T>().ToArray();
-    }
-
-    public void Clear()
-    {
-        for (int i = 0; i < _gameObjects.Count; i++)
-            RemoveObject(i);
-
-        _gameObjects.Clear();
-        _colliders.Clear();
-
-        Camera = new();
-        Canvas = new(this);
     }
 
     private void RemoveObjects()
@@ -110,19 +85,7 @@ public abstract class Scene
     private void RemoveObject(int index)
     {
         GameObject gameObject = _gameObjects[index];
-
-        if (gameObject is IDisposable disposable)
-            disposable.Dispose();
-
+        gameObject.Dispose();
         gameObject.Scene = null;
-    }
-
-    private void UpdateObjects(GameTime gameTime)
-    {
-        for (int i = 0; i < _gameObjects.Count; i++)
-        {
-            _gameObjects[i].SendMessage("Update");
-            _gameObjects[i].MessageComponents("Update");
-        }
     }
 }
