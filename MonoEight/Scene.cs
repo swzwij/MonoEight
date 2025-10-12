@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Graphics;
@@ -13,36 +14,46 @@ public abstract class Scene : MessageReceiver
     public Camera Camera { get; set; } = new();
     public Canvas Canvas { get; private set; }
 
-    private void Initialize()
+    public void InternalInitialize()
     {
+        SendMessage("Initialize");
+
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].SendMessage("Initialize");
 
         Canvas = new(this);
     }
 
-    private void LoadContent()
+    public void InternalLoadContent()
     {
+        SendMessage("LoadContent");
+
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].SendMessage("LoadContent");
     }
 
-    private void Update()
+    public void InternalUpdate()
     {
+        SendMessage("Update");
+
         RemoveObjects();
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].SendMessage("Update");
     }
 
-    private void Draw(SpriteBatch spriteBatch)
+    public void InternalDraw(SpriteBatch spriteBatch)
     {
+        SendMessage("Draw", spriteBatch);
+
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].SendMessage("Draw", spriteBatch);
     }
 
-    private void Unload()
+    public void InternalUnload()
     {
+        SendMessage("Unload");
+
         for (int i = _gameObjects.Count - 1; i >= 0; i--)
         {
             _gameObjects[i].Dispose();

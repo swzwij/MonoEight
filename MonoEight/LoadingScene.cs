@@ -1,6 +1,6 @@
 using System;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
@@ -11,13 +11,17 @@ public class LoadingScene : Scene
     private float _timer;
     private bool _isAnimationFinished;
 
-    public override void Awake()
+    private void Initialize()
     {
+        Console.WriteLine("Loading Scene Initialized");
+
         _timer = 0;
     }
 
-    public override void LoadContent()
+    private void LoadContent()
     {
+        Console.WriteLine("Loading Scene Content");
+
         Camera.BackgroundColor = MEColors.Black;
 
         GameObject logo = new();
@@ -32,12 +36,15 @@ public class LoadingScene : Scene
         animator.Play();
 
         Add(logo);
-
-        base.LoadContent();
     }
 
-    public override void Update(GameTime gameTime)
+    private void Update()
     {
+        Console.WriteLine($"Scene '{Name}' Update");
+
+        if (Input.IsKeyDown(Keys.Space))
+            SceneManager.Load("Test 1");
+
         if (_isAnimationFinished)
         {
             _timer += Time.DeltaTime;
@@ -45,7 +52,5 @@ public class LoadingScene : Scene
             if (_timer >= WAIT_TIME)
                 SceneManager.Load("Test 1");
         }
-
-        base.Update(gameTime);
     }
 }

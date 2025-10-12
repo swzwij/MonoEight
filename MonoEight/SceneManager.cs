@@ -25,21 +25,21 @@ public static class SceneManager
         if (!_scenes.TryGetValue(name, out Scene scene))
             throw new ArgumentException($"Scene '{name}' does not exist in the manager");
 
-        _activeScene?.SendMessage("Unload");
+        _activeScene?.InternalUnload();
 
         _activeScene = scene;
 
-        _activeScene.SendMessage("Initialize");
-        _activeScene.SendMessage("LoadContent");
+        _activeScene.InternalInitialize();
+        _activeScene.InternalLoadContent();
     }
 
     public static void Update()
     {
-        _activeScene?.SendMessage("Update");
+        _activeScene?.InternalUpdate();
     }
 
     public static void Draw(SpriteBatch spriteBatch)
     {
-        _activeScene?.SendMessage("Draw", spriteBatch);
+        _activeScene?.InternalDraw(spriteBatch);
     }
 }

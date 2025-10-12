@@ -1,10 +1,9 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class SpriteRenderer : Component
+public class SpriteRenderer
 {
     private Texture2D _texture;
 
@@ -19,6 +18,7 @@ public class SpriteRenderer : Component
         }
     }
 
+    public Vector2 Position { get; set; } = Vector2.Zero;
     public Point Offset { get; set; } = Point.Zero;
     public Color Color { get; set; } = Color.White;
     public float Rotation { get; set; } = 0;
@@ -29,14 +29,9 @@ public class SpriteRenderer : Component
 
     private bool _hasTexture;
 
-    public SpriteRenderer(GameObject gameObject, Texture2D texture) : base(gameObject)
+    public SpriteRenderer(Texture2D texture)
     {
         Texture = texture;
-    }
-
-    public SpriteRenderer(GameObject gameObject) : base(gameObject)
-    {
-
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -47,7 +42,7 @@ public class SpriteRenderer : Component
         spriteBatch.Draw
         (
             _texture,
-            (GameObject.Position.Int() + Offset).Float(),
+            (Position.Int() + Offset).Float(),
             null,
             Color,
             Rotation,

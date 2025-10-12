@@ -19,8 +19,6 @@ public class SquareCollider
 
     public SquareCollider(Scene scene, Vector2 position, Point size)
     {
-        scene.Add(this);
-
         Position = position;
         Size = size;
     }

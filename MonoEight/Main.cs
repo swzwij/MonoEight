@@ -68,7 +68,7 @@ public class Main : Game
         if (Input.IsKeyPressed(Keys.F11))
             MEWindow.ToggleFullscreen();
 
-        SceneManager.Update(gameTime);
+        SceneManager.Update();
 
         base.Update(gameTime);
     }
