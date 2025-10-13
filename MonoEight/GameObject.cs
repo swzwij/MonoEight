@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MonoEight.Internal;
 
 namespace MonoEight;
 
-public class GameObject : MessageReceiver, IDisposable
+public class GameObject : IDisposable
 {
     private readonly List<Component> _components = [];
 
@@ -15,20 +14,25 @@ public class GameObject : MessageReceiver, IDisposable
     public bool ShouldDestroy { get; private set; }
     public Scene Scene { get; internal set; }
 
+    protected virtual void Initialize() { }
+    protected virtual void LoadContent() { }
+    protected virtual void Update() { }
+    protected virtual void Draw(SpriteBatch spriteBatch) { }
+
     public void InternalInitialize()
     {
-        SendMessage("Initialize");
+        Initialize();
 
         for (int i = 0; i < _components.Count; i++)
-            _components[i].SendMessage("Initialize");
+            _components[i].InternalInitialize();
     }
 
     public void InternalLoadContent()
     {
-        SendMessage("LoadContent");
+        LoadContent();
 
         for (int i = 0; i < _components.Count; i++)
-            _components[i].SendMessage("LoadContent");
+            _components[i].InternalLoadContent();
     }
 
     public void InternalUpdate()
@@ -36,14 +40,14 @@ public class GameObject : MessageReceiver, IDisposable
         if (!IsActive)
             return;
 
-        SendMessage("Update");
+        Update();
 
         RemoveComponents();
 
         for (int i = 0; i < _components.Count; i++)
         {
             if (_components[i].IsActive)
-                _components[i].SendMessage("Update");
+                _components[i].InternalUpdate();
         }
     }
 
@@ -52,12 +56,12 @@ public class GameObject : MessageReceiver, IDisposable
         if (!IsActive)
             return;
 
-        SendMessage("Draw", spriteBatch);
+        Draw(spriteBatch);
 
         for (int i = 0; i < _components.Count; i++)
         {
             if (_components[i].IsActive)
-                _components[i].SendMessage("Draw", spriteBatch);
+                _components[i].InternalDraw(spriteBatch);
         }
     }
 

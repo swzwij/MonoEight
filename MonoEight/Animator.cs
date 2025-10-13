@@ -57,7 +57,7 @@ public class Animator : SpriteRenderer
         Reset();
     }
 
-    private void Update()
+    protected override void Update()
     {
         if (!_isPlaying || _currentAnimation == null)
             return;

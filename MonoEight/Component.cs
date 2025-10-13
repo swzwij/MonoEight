@@ -1,10 +1,10 @@
 using System;
 using Microsoft.Xna.Framework;
-using MonoEight.Internal;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class Component : MessageReceiver, IDisposable
+public class Component : IDisposable
 {
     public bool IsActive { get; set; } = true;
     public bool ShouldDestroy { get; private set; }
@@ -12,6 +12,16 @@ public class Component : MessageReceiver, IDisposable
 
     public Vector2 Position => GameObject?.Position ?? Vector2.Zero;
     public Scene Scene => GameObject?.Scene;
+
+    protected virtual void Initialize() { }
+    protected virtual void LoadContent() { }
+    protected virtual void Update() { }
+    protected virtual void Draw(SpriteBatch spriteBatch) { }
+
+    public void InternalInitialize() => Initialize();
+    public void InternalLoadContent() => LoadContent();
+    public void InternalUpdate() => Update();
+    public void InternalDraw(SpriteBatch spriteBatch) => Draw(spriteBatch);
 
     public void Destroy()
     {

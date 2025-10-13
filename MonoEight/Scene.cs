@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
-using MonoEight.Internal;
 
 namespace MonoEight;
 
-public abstract class Scene : MessageReceiver
+public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
 
@@ -12,9 +11,15 @@ public abstract class Scene : MessageReceiver
     public Camera Camera { get; set; } = new();
     public Canvas Canvas { get; private set; }
 
+    protected virtual void Initialize() { }
+    protected virtual void LoadContent() { }
+    protected virtual void Update() { }
+    protected virtual void Draw(SpriteBatch spriteBatch) { }
+    protected virtual void Unload() { }
+
     public void InternalInitialize()
     {
-        SendMessage("Initialize");
+        Initialize();
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].InternalInitialize();
@@ -24,7 +29,7 @@ public abstract class Scene : MessageReceiver
 
     public void InternalLoadContent()
     {
-        SendMessage("LoadContent");
+        LoadContent();
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].InternalLoadContent();
@@ -32,7 +37,7 @@ public abstract class Scene : MessageReceiver
 
     public void InternalUpdate()
     {
-        SendMessage("Update");
+        Update();
 
         RemoveObjects();
 
@@ -42,7 +47,7 @@ public abstract class Scene : MessageReceiver
 
     public void InternalDraw(SpriteBatch spriteBatch)
     {
-        SendMessage("Draw", spriteBatch);
+        Draw(spriteBatch);
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].InternalDraw(spriteBatch);
@@ -50,7 +55,7 @@ public abstract class Scene : MessageReceiver
 
     public void InternalUnload()
     {
-        SendMessage("Unload");
+        Unload();
 
         for (int i = _gameObjects.Count - 1; i >= 0; i--)
         {

@@ -7,12 +7,12 @@ namespace MonoEight;
 
 public class TestScene : Scene
 {
-    private void Initialize()
+    protected override void Initialize()
     {
         Camera.BackgroundColor = Color.LightYellow;
     }
 
-    private void Update()
+    protected override void Update()
     {
         if (Input.IsPressed("A"))
             SceneManager.Load("Test 2");
@@ -21,7 +21,7 @@ public class TestScene : Scene
             SceneManager.Load("Loading");
     }
 
-    private void Draw(SpriteBatch spriteBatch)
+    protected override void Draw(SpriteBatch spriteBatch)
     {
         Canvas.DrawText(spriteBatch, "Test", FontSize.S, new(0, -20), MEColors.Red);
         Canvas.DrawText(spriteBatch, "Test", FontSize.M, new(0, 0), MEColors.Red);

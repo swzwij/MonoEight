@@ -26,12 +26,15 @@ public class Player : GameObject
         _animator.OnFinished += OnAnimationFinished;
     }
 
-    private void Update()
+    protected override void Update()
     {
         Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * Time.DeltaTime * 10;
 
         if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.E))
             _animator.Play("Squish");
+
+        if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space))
+            SceneManager.Load("Test 1");
     }
 
     private void OnAnimationFinished(string animationName)

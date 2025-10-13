@@ -11,14 +11,14 @@ public class LoadingScene : Scene
     private float _timer;
     private bool _isAnimationFinished;
 
-    private void Initialize()
+    protected override void Initialize()
     {
         Console.WriteLine("Loading Scene Initialized");
 
         _timer = 0;
     }
 
-    private void LoadContent()
+    protected override void LoadContent()
     {
         Console.WriteLine("Loading Scene Content");
 
@@ -39,7 +39,7 @@ public class LoadingScene : Scene
         Add(logo);
     }
 
-    private void Update()
+    protected override void Update()
     {
         Console.WriteLine($"Scene '{Name}' Update");
 

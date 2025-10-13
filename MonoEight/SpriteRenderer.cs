@@ -38,10 +38,8 @@ public class SpriteRenderer : Component
         Texture = texture;
     }
 
-    private void Draw(SpriteBatch spriteBatch)
+    protected override void Draw(SpriteBatch spriteBatch)
     {
-        Console.WriteLine("Drawing SpriteRenderer");
-
         if (!_hasTexture)
             return;
 
