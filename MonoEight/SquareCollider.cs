@@ -22,7 +22,7 @@ public class SquareCollider : Component
 
     public SquareCollider(int size) : this(new Point(size)) { }
 
-    private void Draw(SpriteBatch spriteBatch)
+    protected override void Draw(SpriteBatch spriteBatch)
     {
         Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
     }

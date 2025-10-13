@@ -14,6 +14,8 @@ public class GameObject : IDisposable
     public bool ShouldDestroy { get; private set; }
     public Scene Scene { get; internal set; }
 
+    public Canvas Canvas => Scene?.Canvas;
+
     protected virtual void Initialize() { }
     protected virtual void LoadContent() { }
     protected virtual void Update() { }

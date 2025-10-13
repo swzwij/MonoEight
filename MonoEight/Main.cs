@@ -27,6 +27,7 @@ public class Main : Game
         Input.Add("Exit", [Keys.Escape, Keys.Back], []);
         Input.Add("A", [Keys.Z, Keys.C, Keys.K, Keys.Space], []);
         Input.Add("B", [Keys.X, Keys.L], []);
+        PlayerPrefs.Initialize();
 
         SceneManager.Add("Loading", new LoadingScene());
         SceneManager.Add("Test 1", new TestScene());

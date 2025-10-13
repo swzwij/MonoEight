@@ -43,15 +43,12 @@ public class LoadingScene : Scene
     {
         Console.WriteLine($"Scene '{Name}' Update");
 
-        if (Input.IsKeyDown(Keys.Space))
-            SceneManager.Load("Test 1");
-
         if (_isAnimationFinished)
         {
             _timer += Time.DeltaTime;
 
             if (_timer >= WAIT_TIME)
-                SceneManager.Load("Test 1");
+                SceneManager.Load("Test 2");
         }
     }
 }
