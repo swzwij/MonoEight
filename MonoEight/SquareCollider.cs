@@ -4,11 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
-public class SquareCollider
+public class SquareCollider : Component
 {
-    public Vector2 Position { get; set; }
     public Point Size { get; set; }
-    public bool IsActive { get; set; } = true;
 
     public bool IsColliding { get; set; }
     public bool WasColliding { get; set; }
@@ -17,15 +15,14 @@ public class SquareCollider
     public Action OnCollisionExit;
     public Action OnCollisionStay;
 
-    public SquareCollider(Scene scene, Vector2 position, Point size)
+    public SquareCollider(Point size)
     {
-        Position = position;
         Size = size;
     }
 
-    public SquareCollider(Scene scene, Vector2 position, int size) : this(scene, position, new Point(size)) { }
+    public SquareCollider(int size) : this(new Point(size)) { }
 
-    public void Draw(SpriteBatch spriteBatch)
+    private void Draw(SpriteBatch spriteBatch)
     {
         Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
     }

@@ -4,18 +4,23 @@ using MonoEight;
 
 public class Player : GameObject
 {
-    private readonly Animator _animator;
+    private Animator _animator;
 
     public Player(string texture)
     {
-        _animator = new(this, new(Content.Load<Texture2D>(texture), 16),
-        [
-            new("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
-            new("Squish", 0, 2, 3, 2, 0) { Loop = false }
-        ])
+        _animator = new Animator
+        (
+            new SpriteSheet(Content.Load<Texture2D>(texture), 16),
+            [
+                new("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+                new("Squish", 0, 2, 3, 2, 0) { Loop = false }
+            ]
+        )
         {
             FrameDuration = 0.5f
         };
+
+        AddComponent(_animator);
 
         _animator.Play("Idle");
         _animator.OnFinished += OnAnimationFinished;

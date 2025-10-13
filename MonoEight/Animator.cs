@@ -22,7 +22,7 @@ public class Animator : SpriteRenderer
     public Action<string> OnChanged;
     public Action<string> OnFinished;
 
-    public Animator(GameObject gameObject, SpriteSheet spriteSheet)
+    public Animator(SpriteSheet spriteSheet)
         : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;
@@ -40,7 +40,8 @@ public class Animator : SpriteRenderer
 
         Reset();
     }
-    public Animator(GameObject gameObject, SpriteSheet spriteSheet, Animation[] animations)
+
+    public Animator(SpriteSheet spriteSheet, Animation[] animations)
         : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;

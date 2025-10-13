@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Internal;
 
@@ -10,7 +8,7 @@ public abstract class Scene : MessageReceiver
 {
     private readonly List<GameObject> _gameObjects = [];
 
-    public string Name { get; set; }
+    public string Name { get; internal set; }
     public Camera Camera { get; set; } = new();
     public Canvas Canvas { get; private set; }
 
@@ -19,7 +17,7 @@ public abstract class Scene : MessageReceiver
         SendMessage("Initialize");
 
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].SendMessage("Initialize");
+            _gameObjects[i].InternalInitialize();
 
         Canvas = new(this);
     }
@@ -29,7 +27,7 @@ public abstract class Scene : MessageReceiver
         SendMessage("LoadContent");
 
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].SendMessage("LoadContent");
+            _gameObjects[i].InternalLoadContent();
     }
 
     public void InternalUpdate()
@@ -39,7 +37,7 @@ public abstract class Scene : MessageReceiver
         RemoveObjects();
 
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].SendMessage("Update");
+            _gameObjects[i].InternalUpdate();
     }
 
     public void InternalDraw(SpriteBatch spriteBatch)
@@ -47,7 +45,7 @@ public abstract class Scene : MessageReceiver
         SendMessage("Draw", spriteBatch);
 
         for (int i = 0; i < _gameObjects.Count; i++)
-            _gameObjects[i].SendMessage("Draw", spriteBatch);
+            _gameObjects[i].InternalDraw(spriteBatch);
     }
 
     public void InternalUnload()
@@ -64,20 +62,61 @@ public abstract class Scene : MessageReceiver
         Canvas = null;
     }
 
+    public GameObject Add()
+    {
+        GameObject gameObject = new();
+        gameObject.Scene = this;
+        _gameObjects.Add(gameObject);
+        return gameObject;
+    }
+
     public void Add(GameObject gameObject)
     {
         gameObject.Scene = this;
         _gameObjects.Add(gameObject);
     }
 
-    public T Find<T>() where T : GameObject
+    public T Find<T>() where T : Component
     {
-        return _gameObjects.OfType<T>().FirstOrDefault();
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            T component = _gameObjects[i].GetComponent<T>();
+            if (component != null)
+                return component;
+        }
+        return null;
     }
 
-    public T[] FindAll<T>() where T : GameObject
+    public T[] FindAll<T>() where T : Component
     {
-        return _gameObjects.OfType<T>().ToArray();
+        List<T> results = [];
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            T[] components = _gameObjects[i].GetComponents<T>();
+            results.AddRange(components);
+        }
+        return results.ToArray();
+    }
+
+    public GameObject FindGameObject<T>() where T : Component
+    {
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            if (_gameObjects[i].GetComponent<T>() != null)
+                return _gameObjects[i];
+        }
+        return null;
+    }
+
+    public GameObject[] FindGameObjects<T>() where T : Component
+    {
+        List<GameObject> results = [];
+        for (int i = 0; i < _gameObjects.Count; i++)
+        {
+            if (_gameObjects[i].GetComponent<T>() != null)
+                results.Add(_gameObjects[i]);
+        }
+        return results.ToArray();
     }
 
     private void RemoveObjects()
