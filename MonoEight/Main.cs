@@ -35,23 +35,6 @@ public class Main : Game
 
         SceneManager.Load("Loading");
 
-        // ContentLoader.Initialize(Content);
-        // GameWindow.StartFullscreen = false;
-        // GameWindow.Initialize(_graphics, Window);
-        // Camera.Initialize();
-        // GamePrefs.Initialize("MonoEight");
-        // StaticSpriteRenderer.Initialize(GraphicsDevice);
-
-        // StateManager.AddState("Loading", new LoadingState());
-        // StateManager.AddState("Title", new TitleState());
-        // StateManager.AddState("Game", new GameState());
-
-        // # if DEBUG
-        //     StateManager.ChangeState("Title");
-        // # else
-        //     StateManager.ChangeState("Loading");
-        // #endif
-
         base.Initialize();
     }
 
