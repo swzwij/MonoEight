@@ -19,6 +19,9 @@ public static class MEWindow
         set => SetFullScreen(value);
     }
 
+    public static GraphicsDeviceManager Graphics => _graphics;
+    public static GameWindow Window => _window;
+
     public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
     {
         _graphics = graphics;

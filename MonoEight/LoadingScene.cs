@@ -13,15 +13,11 @@ public class LoadingScene : Scene
 
     protected override void Initialize()
     {
-        Console.WriteLine("Loading Scene Initialized");
-
         _timer = 0;
     }
 
     protected override void LoadContent()
     {
-        Console.WriteLine("Loading Scene Content");
-
         Camera.BackgroundColor = MEColors.Black;
 
         GameObject logo = new();
@@ -41,8 +37,6 @@ public class LoadingScene : Scene
 
     protected override void Update()
     {
-        Console.WriteLine($"Scene '{Name}' Update");
-
         if (_isAnimationFinished)
         {
             _timer += Time.DeltaTime;
