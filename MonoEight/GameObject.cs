@@ -91,7 +91,7 @@ public class GameObject : IDisposable
             if (_components[i] is T component)
                 results.Add(component);
         }
-        return results.ToArray();
+        return [.. results];
     }
 
     public void Destroy()

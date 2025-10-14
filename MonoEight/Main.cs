@@ -6,7 +6,7 @@ namespace MonoEight;
 
 public class Main : Game
 {
-    private GraphicsDeviceManager _graphics;
+    private readonly GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private RenderTarget2D _renderTarget;
 

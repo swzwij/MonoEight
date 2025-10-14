@@ -100,7 +100,7 @@ public abstract class Scene
             T[] components = _gameObjects[i].GetComponents<T>();
             results.AddRange(components);
         }
-        return results.ToArray();
+        return [.. results];
     }
 
     public GameObject FindGameObject<T>() where T : Component
@@ -121,7 +121,7 @@ public abstract class Scene
             if (_gameObjects[i].GetComponent<T>() != null)
                 results.Add(_gameObjects[i]);
         }
-        return results.ToArray();
+        return [.. results];
     }
 
     private void RemoveObjects()

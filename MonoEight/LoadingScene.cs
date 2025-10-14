@@ -1,6 +1,5 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
@@ -8,13 +7,8 @@ public class LoadingScene : Scene
 {
     private const float WAIT_TIME = 1f;
 
-    private float _timer;
+    private float _timer = 0;
     private bool _isAnimationFinished;
-
-    protected override void Initialize()
-    {
-        _timer = 0;
-    }
 
     protected override void LoadContent()
     {
@@ -37,12 +31,12 @@ public class LoadingScene : Scene
 
     protected override void Update()
     {
-        if (_isAnimationFinished)
-        {
-            _timer += Time.DeltaTime;
+        if (!_isAnimationFinished)
+            return;
 
-            if (_timer >= WAIT_TIME)
-                SceneManager.Load("Test 1");
-        }
+        _timer += Time.DeltaTime;
+
+        if (_timer >= WAIT_TIME)
+            SceneManager.Load("Test 1");
     }
 }

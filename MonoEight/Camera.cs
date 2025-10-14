@@ -23,7 +23,7 @@ public class Camera
     public Camera()
     {
         Position = Vector2.Zero;
-        BackgroundColor = Color.AliceBlue;
+        BackgroundColor = MEColors.Blue;
     }
 
     private void UpdatePosition()
