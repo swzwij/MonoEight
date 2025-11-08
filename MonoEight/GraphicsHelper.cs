@@ -7,7 +7,7 @@ public static class GraphicsHelper
 {
     public static Rectangle CalculateDisplayRect(GraphicsDevice graphics)
     {
-        float aspectRatio = (float)MEWindow.Width / MEWindow.Height;
+        float aspectRatio = (float)MEWindow.Resolution.X / MEWindow.Resolution.Y;
 
         int viewportWidth = graphics.Viewport.Width;
         int viewportHeight = graphics.Viewport.Height;

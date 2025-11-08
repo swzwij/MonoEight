@@ -9,8 +9,7 @@ public static class MEWindow
 
     private static bool _isFullscreen = false;
 
-    public static int Width { get; set; }
-    public static int Height { get; set; }
+    public static Point Resolution { get; set; } = new Point(128, 96);
     public static bool StartFullscreen { get; set; }
 
     public static bool IsFullscreen
@@ -68,28 +67,31 @@ public static class MEWindow
 
     private static void Windowed()
     {
-        Point optimalSize = CalculateOptimalSize();
+        Point windowedSize = CalculateWindowedSize();
 
-        _graphics.PreferredBackBufferWidth = optimalSize.X;
-        _graphics.PreferredBackBufferHeight = optimalSize.Y;
+        _graphics.PreferredBackBufferWidth = windowedSize.X;
+        _graphics.PreferredBackBufferHeight = windowedSize.Y;
 
         _window.IsBorderless = false;
         _window.AllowUserResizing = true;
 
         _window.Position = new Point
         (
-            (_graphics.GraphicsDevice.DisplayMode.Width - optimalSize.X) / 2,
-            (_graphics.GraphicsDevice.DisplayMode.Height - optimalSize.Y) / 2
+            (_graphics.GraphicsDevice.DisplayMode.Width - windowedSize.X) / 2,
+            (_graphics.GraphicsDevice.DisplayMode.Height - windowedSize.Y) / 2
         );
 
         _graphics.ApplyChanges();
     }
 
-    private static Point CalculateOptimalSize()
+    private static Point CalculateWindowedSize()
     {
-        int targetHeight = _graphics.GraphicsDevice.DisplayMode.Height * 3 / 4;
-        float aspectRatio = (float)Width / (float)Height;
-        int targetWidth = (int)(targetHeight * aspectRatio);
-        return new(targetWidth, targetHeight);
+        int screenHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+        int windowHeight = screenHeight * 3 / 4;
+
+        float aspectRatio = (float)Resolution.X / (float)Resolution.Y;
+        int windowWidth = (int)(windowHeight * aspectRatio);
+
+        return new(windowWidth, windowHeight);
     }
 }

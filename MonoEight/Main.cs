@@ -20,8 +20,7 @@ public class Main : Game
     {
         MonoEight.Content.Initialize(Content, "Content");
         MEWindow.StartFullscreen = false;
-        MEWindow.Width = 128;
-        MEWindow.Height = 96;
+        MEWindow.Resolution = new Point(128, 96);
         MEWindow.Initialize(_graphics, Window);
         Debugger.Initialize(_graphics);
         Input.Add("Exit", [Keys.Escape, Keys.Back], []);
@@ -41,7 +40,7 @@ public class Main : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        _renderTarget = new RenderTarget2D(GraphicsDevice, MEWindow.Width, MEWindow.Height);
+        _renderTarget = new RenderTarget2D(GraphicsDevice, MEWindow.Resolution.X, MEWindow.Resolution.Y);
     }
 
     protected override void Update(GameTime gameTime)

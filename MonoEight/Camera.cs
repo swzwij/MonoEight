@@ -12,10 +12,10 @@ public class Camera
     public Matrix Transform => _transform;
     public Vector2 Position
     {
-        get => _position + new Vector2(MEWindow.Width / 2 , MEWindow.Height / 2);
+        get => _position + new Vector2(MEWindow.Resolution.X / 2 , MEWindow.Resolution.Y / 2);
         set
         {
-            _position = new(value.X - MEWindow.Width / 2, value.Y - MEWindow.Height / 2);
+            _position = new(value.X - MEWindow.Resolution.X / 2, value.Y - MEWindow.Resolution.Y / 2);
             UpdatePosition();
         }
     }
