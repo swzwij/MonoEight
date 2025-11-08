@@ -1,0 +1,1074 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.SpriteRenderer
+  commentId: T:MonoEight.SpriteRenderer
+  id: SpriteRenderer
+  parent: MonoEight
+  children:
+  - MonoEight.SpriteRenderer.#ctor
+  - MonoEight.SpriteRenderer.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D)
+  - MonoEight.SpriteRenderer.Color
+  - MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.SpriteRenderer.Layer
+  - MonoEight.SpriteRenderer.Offset
+  - MonoEight.SpriteRenderer.Origin
+  - MonoEight.SpriteRenderer.Rotation
+  - MonoEight.SpriteRenderer.Scale
+  - MonoEight.SpriteRenderer.SpriteEffects
+  - MonoEight.SpriteRenderer.Texture
+  langs:
+  - csharp
+  - vb
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: MonoEight.SpriteRenderer
+  type: Class
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: SpriteRenderer
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 6
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: 'public class SpriteRenderer : Component, IDisposable'
+    content.vb: Public Class SpriteRenderer Inherits Component Implements IDisposable
+  inheritance:
+  - System.Object
+  - MonoEight.Component
+  derivedClasses:
+  - MonoEight.Animator
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - MonoEight.Component.IsActive
+  - MonoEight.Component.ShouldDestroy
+  - MonoEight.Component.GameObject
+  - MonoEight.Component.Position
+  - MonoEight.Component.Scene
+  - MonoEight.Component.Initialize
+  - MonoEight.Component.LoadContent
+  - MonoEight.Component.Update
+  - MonoEight.Component.InternalInitialize
+  - MonoEight.Component.InternalLoadContent
+  - MonoEight.Component.InternalUpdate
+  - MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.Component.Destroy
+  - MonoEight.Component.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.SpriteRenderer.Texture
+  commentId: P:MonoEight.SpriteRenderer.Texture
+  id: Texture
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Texture
+  nameWithType: SpriteRenderer.Texture
+  fullName: MonoEight.SpriteRenderer.Texture
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Texture
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 11
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public Texture2D Texture { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+    content.vb: Public Property Texture As Texture2D
+  overload: MonoEight.SpriteRenderer.Texture*
+- uid: MonoEight.SpriteRenderer.Offset
+  commentId: P:MonoEight.SpriteRenderer.Offset
+  id: Offset
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: SpriteRenderer.Offset
+  fullName: MonoEight.SpriteRenderer.Offset
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Offset
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 25
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public Point Offset { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Public Property Offset As Point
+  overload: MonoEight.SpriteRenderer.Offset*
+- uid: MonoEight.SpriteRenderer.Color
+  commentId: P:MonoEight.SpriteRenderer.Color
+  id: Color
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: SpriteRenderer.Color
+  fullName: MonoEight.SpriteRenderer.Color
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Color
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 26
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public Color Color { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Property Color As Color
+  overload: MonoEight.SpriteRenderer.Color*
+- uid: MonoEight.SpriteRenderer.Rotation
+  commentId: P:MonoEight.SpriteRenderer.Rotation
+  id: Rotation
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Rotation
+  nameWithType: SpriteRenderer.Rotation
+  fullName: MonoEight.SpriteRenderer.Rotation
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Rotation
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 27
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public float Rotation { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Rotation As Single
+  overload: MonoEight.SpriteRenderer.Rotation*
+- uid: MonoEight.SpriteRenderer.Origin
+  commentId: P:MonoEight.SpriteRenderer.Origin
+  id: Origin
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: SpriteRenderer.Origin
+  fullName: MonoEight.SpriteRenderer.Origin
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Origin
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 28
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public Vector2 Origin { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Property Origin As Vector2
+  overload: MonoEight.SpriteRenderer.Origin*
+- uid: MonoEight.SpriteRenderer.Scale
+  commentId: P:MonoEight.SpriteRenderer.Scale
+  id: Scale
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: SpriteRenderer.Scale
+  fullName: MonoEight.SpriteRenderer.Scale
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Scale
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 29
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public float Scale { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Scale As Single
+  overload: MonoEight.SpriteRenderer.Scale*
+- uid: MonoEight.SpriteRenderer.SpriteEffects
+  commentId: P:MonoEight.SpriteRenderer.SpriteEffects
+  id: SpriteEffects
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: SpriteEffects
+  nameWithType: SpriteRenderer.SpriteEffects
+  fullName: MonoEight.SpriteRenderer.SpriteEffects
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: SpriteEffects
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 30
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public SpriteEffects SpriteEffects { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteEffects
+    content.vb: Public Property SpriteEffects As SpriteEffects
+  overload: MonoEight.SpriteRenderer.SpriteEffects*
+- uid: MonoEight.SpriteRenderer.Layer
+  commentId: P:MonoEight.SpriteRenderer.Layer
+  id: Layer
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: SpriteRenderer.Layer
+  fullName: MonoEight.SpriteRenderer.Layer
+  type: Property
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Layer
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 31
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public float Layer { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Layer As Single
+  overload: MonoEight.SpriteRenderer.Layer*
+- uid: MonoEight.SpriteRenderer.#ctor
+  commentId: M:MonoEight.SpriteRenderer.#ctor
+  id: '#ctor'
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: SpriteRenderer()
+  nameWithType: SpriteRenderer.SpriteRenderer()
+  fullName: MonoEight.SpriteRenderer.SpriteRenderer()
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 33
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public SpriteRenderer()
+    content.vb: Public Sub New()
+  overload: MonoEight.SpriteRenderer.#ctor*
+  nameWithType.vb: SpriteRenderer.New()
+  fullName.vb: MonoEight.SpriteRenderer.New()
+  name.vb: New()
+- uid: MonoEight.SpriteRenderer.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D)
+  commentId: M:MonoEight.SpriteRenderer.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D)
+  id: '#ctor(Microsoft.Xna.Framework.Graphics.Texture2D)'
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: SpriteRenderer(Texture2D)
+  nameWithType: SpriteRenderer.SpriteRenderer(Texture2D)
+  fullName: MonoEight.SpriteRenderer.SpriteRenderer(Microsoft.Xna.Framework.Graphics.Texture2D)
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 35
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public SpriteRenderer(Texture2D texture)
+    parameters:
+    - id: texture
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+    content.vb: Public Sub New(texture As Texture2D)
+  overload: MonoEight.SpriteRenderer.#ctor*
+  nameWithType.vb: SpriteRenderer.New(Texture2D)
+  fullName.vb: MonoEight.SpriteRenderer.New(Microsoft.Xna.Framework.Graphics.Texture2D)
+  name.vb: New(Texture2D)
+- uid: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.SpriteRenderer
+  langs:
+  - csharp
+  - vb
+  name: Draw(SpriteBatch)
+  nameWithType: SpriteRenderer.Draw(SpriteBatch)
+  fullName: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: MonoEight/SpriteRenderer.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Draw
+    path: ../MonoEight/SpriteRenderer.cs
+    startLine: 40
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  example: []
+  syntax:
+    content: protected override void Draw(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Protected Overrides Sub Draw(spriteBatch As SpriteBatch)
+  overridden: MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  overload: MonoEight.SpriteRenderer.Draw*
+references:
+- uid: MonoEight
+  commentId: N:MonoEight
+  href: MonoEight.html
+  name: MonoEight
+  nameWithType: MonoEight
+  fullName: MonoEight
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MonoEight.Component
+  commentId: T:MonoEight.Component
+  parent: MonoEight
+  href: MonoEight.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: MonoEight.Component
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: MonoEight.Component.IsActive
+  commentId: P:MonoEight.Component.IsActive
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_IsActive
+  name: IsActive
+  nameWithType: Component.IsActive
+  fullName: MonoEight.Component.IsActive
+- uid: MonoEight.Component.ShouldDestroy
+  commentId: P:MonoEight.Component.ShouldDestroy
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_ShouldDestroy
+  name: ShouldDestroy
+  nameWithType: Component.ShouldDestroy
+  fullName: MonoEight.Component.ShouldDestroy
+- uid: MonoEight.Component.GameObject
+  commentId: P:MonoEight.Component.GameObject
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_GameObject
+  name: GameObject
+  nameWithType: Component.GameObject
+  fullName: MonoEight.Component.GameObject
+- uid: MonoEight.Component.Position
+  commentId: P:MonoEight.Component.Position
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Position
+  name: Position
+  nameWithType: Component.Position
+  fullName: MonoEight.Component.Position
+- uid: MonoEight.Component.Scene
+  commentId: P:MonoEight.Component.Scene
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Scene
+  name: Scene
+  nameWithType: Component.Scene
+  fullName: MonoEight.Component.Scene
+- uid: MonoEight.Component.Initialize
+  commentId: M:MonoEight.Component.Initialize
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Initialize
+  name: Initialize()
+  nameWithType: Component.Initialize()
+  fullName: MonoEight.Component.Initialize()
+  spec.csharp:
+  - uid: MonoEight.Component.Initialize
+    name: Initialize
+    href: MonoEight.Component.html#MonoEight_Component_Initialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Initialize
+    name: Initialize
+    href: MonoEight.Component.html#MonoEight_Component_Initialize
+  - name: (
+  - name: )
+- uid: MonoEight.Component.LoadContent
+  commentId: M:MonoEight.Component.LoadContent
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  name: LoadContent()
+  nameWithType: Component.LoadContent()
+  fullName: MonoEight.Component.LoadContent()
+  spec.csharp:
+  - uid: MonoEight.Component.LoadContent
+    name: LoadContent
+    href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.LoadContent
+    name: LoadContent
+    href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  - name: (
+  - name: )
+- uid: MonoEight.Component.Update
+  commentId: M:MonoEight.Component.Update
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Update
+  name: Update()
+  nameWithType: Component.Update()
+  fullName: MonoEight.Component.Update()
+  spec.csharp:
+  - uid: MonoEight.Component.Update
+    name: Update
+    href: MonoEight.Component.html#MonoEight_Component_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Update
+    name: Update
+    href: MonoEight.Component.html#MonoEight_Component_Update
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalInitialize
+  commentId: M:MonoEight.Component.InternalInitialize
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  name: InternalInitialize()
+  nameWithType: Component.InternalInitialize()
+  fullName: MonoEight.Component.InternalInitialize()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalInitialize
+    name: InternalInitialize
+    href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalInitialize
+    name: InternalInitialize
+    href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalLoadContent
+  commentId: M:MonoEight.Component.InternalLoadContent
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  name: InternalLoadContent()
+  nameWithType: Component.InternalLoadContent()
+  fullName: MonoEight.Component.InternalLoadContent()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalLoadContent
+    name: InternalLoadContent
+    href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalLoadContent
+    name: InternalLoadContent
+    href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalUpdate
+  commentId: M:MonoEight.Component.InternalUpdate
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  name: InternalUpdate()
+  nameWithType: Component.InternalUpdate()
+  fullName: MonoEight.Component.InternalUpdate()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalUpdate
+    name: InternalUpdate
+    href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalUpdate
+    name: InternalUpdate
+    href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.Component
+  isExternal: true
+  href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: InternalDraw(SpriteBatch)
+  nameWithType: Component.InternalDraw(SpriteBatch)
+  fullName: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  spec.csharp:
+  - uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: InternalDraw
+    href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: InternalDraw
+    href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+- uid: MonoEight.Component.Destroy
+  commentId: M:MonoEight.Component.Destroy
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Destroy
+  name: Destroy()
+  nameWithType: Component.Destroy()
+  fullName: MonoEight.Component.Destroy()
+  spec.csharp:
+  - uid: MonoEight.Component.Destroy
+    name: Destroy
+    href: MonoEight.Component.html#MonoEight_Component_Destroy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Destroy
+    name: Destroy
+    href: MonoEight.Component.html#MonoEight_Component_Destroy
+  - name: (
+  - name: )
+- uid: MonoEight.Component.Dispose
+  commentId: M:MonoEight.Component.Dispose
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Dispose
+  name: Dispose()
+  nameWithType: Component.Dispose()
+  fullName: MonoEight.Component.Dispose()
+  spec.csharp:
+  - uid: MonoEight.Component.Dispose
+    name: Dispose
+    href: MonoEight.Component.html#MonoEight_Component_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Dispose
+    name: Dispose
+    href: MonoEight.Component.html#MonoEight_Component_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.SpriteRenderer.Texture*
+  commentId: Overload:MonoEight.SpriteRenderer.Texture
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Texture
+  name: Texture
+  nameWithType: SpriteRenderer.Texture
+  fullName: MonoEight.SpriteRenderer.Texture
+- uid: Microsoft.Xna.Framework.Graphics.Texture2D
+  commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: MonoEight.SpriteRenderer.Offset*
+  commentId: Overload:MonoEight.SpriteRenderer.Offset
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Offset
+  name: Offset
+  nameWithType: SpriteRenderer.Offset
+  fullName: MonoEight.SpriteRenderer.Offset
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: MonoEight.SpriteRenderer.Color*
+  commentId: Overload:MonoEight.SpriteRenderer.Color
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Color
+  name: Color
+  nameWithType: SpriteRenderer.Color
+  fullName: MonoEight.SpriteRenderer.Color
+- uid: Microsoft.Xna.Framework.Color
+  commentId: T:Microsoft.Xna.Framework.Color
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Microsoft.Xna.Framework.Color
+- uid: MonoEight.SpriteRenderer.Rotation*
+  commentId: Overload:MonoEight.SpriteRenderer.Rotation
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Rotation
+  name: Rotation
+  nameWithType: SpriteRenderer.Rotation
+  fullName: MonoEight.SpriteRenderer.Rotation
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: MonoEight.SpriteRenderer.Origin*
+  commentId: Overload:MonoEight.SpriteRenderer.Origin
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Origin
+  name: Origin
+  nameWithType: SpriteRenderer.Origin
+  fullName: MonoEight.SpriteRenderer.Origin
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: MonoEight.SpriteRenderer.Scale*
+  commentId: Overload:MonoEight.SpriteRenderer.Scale
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Scale
+  name: Scale
+  nameWithType: SpriteRenderer.Scale
+  fullName: MonoEight.SpriteRenderer.Scale
+- uid: MonoEight.SpriteRenderer.SpriteEffects*
+  commentId: Overload:MonoEight.SpriteRenderer.SpriteEffects
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_SpriteEffects
+  name: SpriteEffects
+  nameWithType: SpriteRenderer.SpriteEffects
+  fullName: MonoEight.SpriteRenderer.SpriteEffects
+- uid: Microsoft.Xna.Framework.Graphics.SpriteEffects
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteEffects
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteEffects
+  nameWithType: SpriteEffects
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteEffects
+- uid: MonoEight.SpriteRenderer.Layer*
+  commentId: Overload:MonoEight.SpriteRenderer.Layer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Layer
+  name: Layer
+  nameWithType: SpriteRenderer.Layer
+  fullName: MonoEight.SpriteRenderer.Layer
+- uid: MonoEight.SpriteRenderer.#ctor*
+  commentId: Overload:MonoEight.SpriteRenderer.#ctor
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer__ctor
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer.SpriteRenderer
+  fullName: MonoEight.SpriteRenderer.SpriteRenderer
+  nameWithType.vb: SpriteRenderer.New
+  fullName.vb: MonoEight.SpriteRenderer.New
+  name.vb: New
+- uid: MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.Component
+  isExternal: true
+  href: MonoEight.Component.html#MonoEight_Component_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw(SpriteBatch)
+  nameWithType: Component.Draw(SpriteBatch)
+  fullName: MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  spec.csharp:
+  - uid: MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.Component.html#MonoEight_Component_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.Component.html#MonoEight_Component_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+- uid: MonoEight.SpriteRenderer.Draw*
+  commentId: Overload:MonoEight.SpriteRenderer.Draw
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw
+  nameWithType: SpriteRenderer.Draw
+  fullName: MonoEight.SpriteRenderer.Draw
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch

@@ -1,0 +1,1294 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Animator
+  commentId: T:MonoEight.Animator
+  id: Animator
+  parent: MonoEight
+  children:
+  - MonoEight.Animator.#ctor(MonoEight.SpriteSheet)
+  - MonoEight.Animator.#ctor(MonoEight.SpriteSheet,MonoEight.Animation[])
+  - MonoEight.Animator.FrameDuration
+  - MonoEight.Animator.Loop
+  - MonoEight.Animator.OnChanged
+  - MonoEight.Animator.OnFinished
+  - MonoEight.Animator.OnLooped
+  - MonoEight.Animator.OnPlayed
+  - MonoEight.Animator.OnStopped
+  - MonoEight.Animator.Pause
+  - MonoEight.Animator.Play
+  - MonoEight.Animator.Play(System.String)
+  - MonoEight.Animator.Resume
+  - MonoEight.Animator.Stop
+  - MonoEight.Animator.Update
+  langs:
+  - csharp
+  - vb
+  name: Animator
+  nameWithType: Animator
+  fullName: MonoEight.Animator
+  type: Class
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Animator
+    path: ../MonoEight/Animator.cs
+    startLine: 8
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Animates a sprite using a sprite sheet and defined animations.
+  example: []
+  syntax:
+    content: 'public class Animator : SpriteRenderer, IDisposable'
+    content.vb: Public Class Animator Inherits SpriteRenderer Implements IDisposable
+  inheritance:
+  - System.Object
+  - MonoEight.Component
+  - MonoEight.SpriteRenderer
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - MonoEight.SpriteRenderer.Texture
+  - MonoEight.SpriteRenderer.Offset
+  - MonoEight.SpriteRenderer.Color
+  - MonoEight.SpriteRenderer.Rotation
+  - MonoEight.SpriteRenderer.Origin
+  - MonoEight.SpriteRenderer.Scale
+  - MonoEight.SpriteRenderer.SpriteEffects
+  - MonoEight.SpriteRenderer.Layer
+  - MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.Component.IsActive
+  - MonoEight.Component.ShouldDestroy
+  - MonoEight.Component.GameObject
+  - MonoEight.Component.Position
+  - MonoEight.Component.Scene
+  - MonoEight.Component.Initialize
+  - MonoEight.Component.LoadContent
+  - MonoEight.Component.InternalInitialize
+  - MonoEight.Component.InternalLoadContent
+  - MonoEight.Component.InternalUpdate
+  - MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.Component.Destroy
+  - MonoEight.Component.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Animator.FrameDuration
+  commentId: P:MonoEight.Animator.FrameDuration
+  id: FrameDuration
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: FrameDuration
+  nameWithType: Animator.FrameDuration
+  fullName: MonoEight.Animator.FrameDuration
+  type: Property
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: FrameDuration
+    path: ../MonoEight/Animator.cs
+    startLine: 25
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Gets or sets the default duration of each frame in seconds.
+  remarks: >-
+    Default is 0.1f (100 ms or 10 fps).
+
+    Overridden by individual animation's FrameDuration if set.
+  example: []
+  syntax:
+    content: public float FrameDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property FrameDuration As Single
+  overload: MonoEight.Animator.FrameDuration*
+- uid: MonoEight.Animator.Loop
+  commentId: P:MonoEight.Animator.Loop
+  id: Loop
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Loop
+  nameWithType: Animator.Loop
+  fullName: MonoEight.Animator.Loop
+  type: Property
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Loop
+    path: ../MonoEight/Animator.cs
+    startLine: 34
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Gets or sets whether the default animation should loop.
+  remarks: >-
+    Default is true.
+
+    Overridden by individual animation's Loop if set.
+  example: []
+  syntax:
+    content: public bool Loop { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property [Loop] As Boolean
+  overload: MonoEight.Animator.Loop*
+- uid: MonoEight.Animator.OnPlayed
+  commentId: F:MonoEight.Animator.OnPlayed
+  id: OnPlayed
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: OnPlayed
+  nameWithType: Animator.OnPlayed
+  fullName: MonoEight.Animator.OnPlayed
+  type: Field
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: OnPlayed
+    path: ../MonoEight/Animator.cs
+    startLine: 39
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Event invoked when the animation is played.
+  example: []
+  syntax:
+    content: public Action OnPlayed
+    return:
+      type: System.Action
+    content.vb: Public OnPlayed As Action
+- uid: MonoEight.Animator.OnStopped
+  commentId: F:MonoEight.Animator.OnStopped
+  id: OnStopped
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: OnStopped
+  nameWithType: Animator.OnStopped
+  fullName: MonoEight.Animator.OnStopped
+  type: Field
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: OnStopped
+    path: ../MonoEight/Animator.cs
+    startLine: 44
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Event invoked when the animation is stopped.
+  example: []
+  syntax:
+    content: public Action OnStopped
+    return:
+      type: System.Action
+    content.vb: Public OnStopped As Action
+- uid: MonoEight.Animator.OnLooped
+  commentId: F:MonoEight.Animator.OnLooped
+  id: OnLooped
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: OnLooped
+  nameWithType: Animator.OnLooped
+  fullName: MonoEight.Animator.OnLooped
+  type: Field
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: OnLooped
+    path: ../MonoEight/Animator.cs
+    startLine: 49
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Event invoked when the animation loops.
+  example: []
+  syntax:
+    content: public Action OnLooped
+    return:
+      type: System.Action
+    content.vb: Public OnLooped As Action
+- uid: MonoEight.Animator.OnChanged
+  commentId: F:MonoEight.Animator.OnChanged
+  id: OnChanged
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: OnChanged
+  nameWithType: Animator.OnChanged
+  fullName: MonoEight.Animator.OnChanged
+  type: Field
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: OnChanged
+    path: ../MonoEight/Animator.cs
+    startLine: 54
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Event invoked when the animation changes.
+  example: []
+  syntax:
+    content: public Action<string> OnChanged
+    return:
+      type: System.Action{System.String}
+    content.vb: Public OnChanged As Action(Of String)
+- uid: MonoEight.Animator.OnFinished
+  commentId: F:MonoEight.Animator.OnFinished
+  id: OnFinished
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: OnFinished
+  nameWithType: Animator.OnFinished
+  fullName: MonoEight.Animator.OnFinished
+  type: Field
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: OnFinished
+    path: ../MonoEight/Animator.cs
+    startLine: 59
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Event invoked when the animation finishes playing.
+  example: []
+  syntax:
+    content: public Action<string> OnFinished
+    return:
+      type: System.Action{System.String}
+    content.vb: Public OnFinished As Action(Of String)
+- uid: MonoEight.Animator.#ctor(MonoEight.SpriteSheet)
+  commentId: M:MonoEight.Animator.#ctor(MonoEight.SpriteSheet)
+  id: '#ctor(MonoEight.SpriteSheet)'
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Animator(SpriteSheet)
+  nameWithType: Animator.Animator(SpriteSheet)
+  fullName: MonoEight.Animator.Animator(MonoEight.SpriteSheet)
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight/Animator.cs
+    startLine: 65
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Initializes a new instance of the <xref href="MonoEight.Animator" data-throw-if-not-resolved="false"></xref> class with a sprite sheet.
+  example: []
+  syntax:
+    content: public Animator(SpriteSheet spriteSheet)
+    parameters:
+    - id: spriteSheet
+      type: MonoEight.SpriteSheet
+      description: The sprite sheet to use for animations.
+    content.vb: Public Sub New(spriteSheet As SpriteSheet)
+  overload: MonoEight.Animator.#ctor*
+  nameWithType.vb: Animator.New(SpriteSheet)
+  fullName.vb: MonoEight.Animator.New(MonoEight.SpriteSheet)
+  name.vb: New(SpriteSheet)
+- uid: MonoEight.Animator.#ctor(MonoEight.SpriteSheet,MonoEight.Animation[])
+  commentId: M:MonoEight.Animator.#ctor(MonoEight.SpriteSheet,MonoEight.Animation[])
+  id: '#ctor(MonoEight.SpriteSheet,MonoEight.Animation[])'
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Animator(SpriteSheet, Animation[])
+  nameWithType: Animator.Animator(SpriteSheet, Animation[])
+  fullName: MonoEight.Animator.Animator(MonoEight.SpriteSheet, MonoEight.Animation[])
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight/Animator.cs
+    startLine: 89
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Initializes a new instance of the <xref href="MonoEight.Animator" data-throw-if-not-resolved="false"></xref> class with a sprite sheet and animations.
+  example: []
+  syntax:
+    content: public Animator(SpriteSheet spriteSheet, Animation[] animations)
+    parameters:
+    - id: spriteSheet
+      type: MonoEight.SpriteSheet
+      description: The sprite sheet to use for animations.
+    - id: animations
+      type: MonoEight.Animation[]
+      description: The animations to define.
+    content.vb: Public Sub New(spriteSheet As SpriteSheet, animations As Animation())
+  overload: MonoEight.Animator.#ctor*
+  nameWithType.vb: Animator.New(SpriteSheet, Animation())
+  fullName.vb: MonoEight.Animator.New(MonoEight.SpriteSheet, MonoEight.Animation())
+  name.vb: New(SpriteSheet, Animation())
+- uid: MonoEight.Animator.Update
+  commentId: M:MonoEight.Animator.Update
+  id: Update
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: Animator.Update()
+  fullName: MonoEight.Animator.Update()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Update
+    path: ../MonoEight/Animator.cs
+    startLine: 105
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  example: []
+  syntax:
+    content: protected override void Update()
+    content.vb: Protected Overrides Sub Update()
+  overridden: MonoEight.Component.Update
+  overload: MonoEight.Animator.Update*
+- uid: MonoEight.Animator.Play
+  commentId: M:MonoEight.Animator.Play
+  id: Play
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: Animator.Play()
+  fullName: MonoEight.Animator.Play()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Play
+    path: ../MonoEight/Animator.cs
+    startLine: 149
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Plays the current animation.
+  example: []
+  syntax:
+    content: public void Play()
+    content.vb: Public Sub Play()
+  overload: MonoEight.Animator.Play*
+- uid: MonoEight.Animator.Play(System.String)
+  commentId: M:MonoEight.Animator.Play(System.String)
+  id: Play(System.String)
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Play(string)
+  nameWithType: Animator.Play(string)
+  fullName: MonoEight.Animator.Play(string)
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Play
+    path: ../MonoEight/Animator.cs
+    startLine: 159
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Plays the specified animation by name.
+  example: []
+  syntax:
+    content: public void Play(string animationName)
+    parameters:
+    - id: animationName
+      type: System.String
+      description: The name of the animation to play.
+    content.vb: Public Sub Play(animationName As String)
+  overload: MonoEight.Animator.Play*
+  nameWithType.vb: Animator.Play(String)
+  fullName.vb: MonoEight.Animator.Play(String)
+  name.vb: Play(String)
+- uid: MonoEight.Animator.Stop
+  commentId: M:MonoEight.Animator.Stop
+  id: Stop
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: Animator.Stop()
+  fullName: MonoEight.Animator.Stop()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Stop
+    path: ../MonoEight/Animator.cs
+    startLine: 180
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Stops the current animation.
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: MonoEight.Animator.Stop*
+- uid: MonoEight.Animator.Pause
+  commentId: M:MonoEight.Animator.Pause
+  id: Pause
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: Animator.Pause()
+  fullName: MonoEight.Animator.Pause()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Pause
+    path: ../MonoEight/Animator.cs
+    startLine: 189
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Pauses the current animation.
+  example: []
+  syntax:
+    content: public void Pause()
+    content.vb: Public Sub Pause()
+  overload: MonoEight.Animator.Pause*
+- uid: MonoEight.Animator.Resume
+  commentId: M:MonoEight.Animator.Resume
+  id: Resume
+  parent: MonoEight.Animator
+  langs:
+  - csharp
+  - vb
+  name: Resume()
+  nameWithType: Animator.Resume()
+  fullName: MonoEight.Animator.Resume()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/Animator.cs
+      branch: rework
+      repo: https://github.com/swzwij/MonoEight
+    id: Resume
+    path: ../MonoEight/Animator.cs
+    startLine: 197
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  summary: Resumes the current animation.
+  example: []
+  syntax:
+    content: public void Resume()
+    content.vb: Public Sub [Resume]()
+  overload: MonoEight.Animator.Resume*
+references:
+- uid: MonoEight
+  commentId: N:MonoEight
+  href: MonoEight.html
+  name: MonoEight
+  nameWithType: MonoEight
+  fullName: MonoEight
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MonoEight.Component
+  commentId: T:MonoEight.Component
+  parent: MonoEight
+  href: MonoEight.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: MonoEight.Component
+- uid: MonoEight.SpriteRenderer
+  commentId: T:MonoEight.SpriteRenderer
+  parent: MonoEight
+  href: MonoEight.SpriteRenderer.html
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: MonoEight.SpriteRenderer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: MonoEight.SpriteRenderer.Texture
+  commentId: P:MonoEight.SpriteRenderer.Texture
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Texture
+  name: Texture
+  nameWithType: SpriteRenderer.Texture
+  fullName: MonoEight.SpriteRenderer.Texture
+- uid: MonoEight.SpriteRenderer.Offset
+  commentId: P:MonoEight.SpriteRenderer.Offset
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Offset
+  name: Offset
+  nameWithType: SpriteRenderer.Offset
+  fullName: MonoEight.SpriteRenderer.Offset
+- uid: MonoEight.SpriteRenderer.Color
+  commentId: P:MonoEight.SpriteRenderer.Color
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Color
+  name: Color
+  nameWithType: SpriteRenderer.Color
+  fullName: MonoEight.SpriteRenderer.Color
+- uid: MonoEight.SpriteRenderer.Rotation
+  commentId: P:MonoEight.SpriteRenderer.Rotation
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Rotation
+  name: Rotation
+  nameWithType: SpriteRenderer.Rotation
+  fullName: MonoEight.SpriteRenderer.Rotation
+- uid: MonoEight.SpriteRenderer.Origin
+  commentId: P:MonoEight.SpriteRenderer.Origin
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Origin
+  name: Origin
+  nameWithType: SpriteRenderer.Origin
+  fullName: MonoEight.SpriteRenderer.Origin
+- uid: MonoEight.SpriteRenderer.Scale
+  commentId: P:MonoEight.SpriteRenderer.Scale
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Scale
+  name: Scale
+  nameWithType: SpriteRenderer.Scale
+  fullName: MonoEight.SpriteRenderer.Scale
+- uid: MonoEight.SpriteRenderer.SpriteEffects
+  commentId: P:MonoEight.SpriteRenderer.SpriteEffects
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_SpriteEffects
+  name: SpriteEffects
+  nameWithType: SpriteRenderer.SpriteEffects
+  fullName: MonoEight.SpriteRenderer.SpriteEffects
+- uid: MonoEight.SpriteRenderer.Layer
+  commentId: P:MonoEight.SpriteRenderer.Layer
+  parent: MonoEight.SpriteRenderer
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Layer
+  name: Layer
+  nameWithType: SpriteRenderer.Layer
+  fullName: MonoEight.SpriteRenderer.Layer
+- uid: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.SpriteRenderer
+  isExternal: true
+  href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw(SpriteBatch)
+  nameWithType: SpriteRenderer.Draw(SpriteBatch)
+  fullName: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  spec.csharp:
+  - uid: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: MonoEight.SpriteRenderer.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.SpriteRenderer.html#MonoEight_SpriteRenderer_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+- uid: MonoEight.Component.IsActive
+  commentId: P:MonoEight.Component.IsActive
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_IsActive
+  name: IsActive
+  nameWithType: Component.IsActive
+  fullName: MonoEight.Component.IsActive
+- uid: MonoEight.Component.ShouldDestroy
+  commentId: P:MonoEight.Component.ShouldDestroy
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_ShouldDestroy
+  name: ShouldDestroy
+  nameWithType: Component.ShouldDestroy
+  fullName: MonoEight.Component.ShouldDestroy
+- uid: MonoEight.Component.GameObject
+  commentId: P:MonoEight.Component.GameObject
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_GameObject
+  name: GameObject
+  nameWithType: Component.GameObject
+  fullName: MonoEight.Component.GameObject
+- uid: MonoEight.Component.Position
+  commentId: P:MonoEight.Component.Position
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Position
+  name: Position
+  nameWithType: Component.Position
+  fullName: MonoEight.Component.Position
+- uid: MonoEight.Component.Scene
+  commentId: P:MonoEight.Component.Scene
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Scene
+  name: Scene
+  nameWithType: Component.Scene
+  fullName: MonoEight.Component.Scene
+- uid: MonoEight.Component.Initialize
+  commentId: M:MonoEight.Component.Initialize
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Initialize
+  name: Initialize()
+  nameWithType: Component.Initialize()
+  fullName: MonoEight.Component.Initialize()
+  spec.csharp:
+  - uid: MonoEight.Component.Initialize
+    name: Initialize
+    href: MonoEight.Component.html#MonoEight_Component_Initialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Initialize
+    name: Initialize
+    href: MonoEight.Component.html#MonoEight_Component_Initialize
+  - name: (
+  - name: )
+- uid: MonoEight.Component.LoadContent
+  commentId: M:MonoEight.Component.LoadContent
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  name: LoadContent()
+  nameWithType: Component.LoadContent()
+  fullName: MonoEight.Component.LoadContent()
+  spec.csharp:
+  - uid: MonoEight.Component.LoadContent
+    name: LoadContent
+    href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.LoadContent
+    name: LoadContent
+    href: MonoEight.Component.html#MonoEight_Component_LoadContent
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalInitialize
+  commentId: M:MonoEight.Component.InternalInitialize
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  name: InternalInitialize()
+  nameWithType: Component.InternalInitialize()
+  fullName: MonoEight.Component.InternalInitialize()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalInitialize
+    name: InternalInitialize
+    href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalInitialize
+    name: InternalInitialize
+    href: MonoEight.Component.html#MonoEight_Component_InternalInitialize
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalLoadContent
+  commentId: M:MonoEight.Component.InternalLoadContent
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  name: InternalLoadContent()
+  nameWithType: Component.InternalLoadContent()
+  fullName: MonoEight.Component.InternalLoadContent()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalLoadContent
+    name: InternalLoadContent
+    href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalLoadContent
+    name: InternalLoadContent
+    href: MonoEight.Component.html#MonoEight_Component_InternalLoadContent
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalUpdate
+  commentId: M:MonoEight.Component.InternalUpdate
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  name: InternalUpdate()
+  nameWithType: Component.InternalUpdate()
+  fullName: MonoEight.Component.InternalUpdate()
+  spec.csharp:
+  - uid: MonoEight.Component.InternalUpdate
+    name: InternalUpdate
+    href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalUpdate
+    name: InternalUpdate
+    href: MonoEight.Component.html#MonoEight_Component_InternalUpdate
+  - name: (
+  - name: )
+- uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.Component
+  isExternal: true
+  href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: InternalDraw(SpriteBatch)
+  nameWithType: Component.InternalDraw(SpriteBatch)
+  fullName: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  spec.csharp:
+  - uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: InternalDraw
+    href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: InternalDraw
+    href: MonoEight.Component.html#MonoEight_Component_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+- uid: MonoEight.Component.Destroy
+  commentId: M:MonoEight.Component.Destroy
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Destroy
+  name: Destroy()
+  nameWithType: Component.Destroy()
+  fullName: MonoEight.Component.Destroy()
+  spec.csharp:
+  - uid: MonoEight.Component.Destroy
+    name: Destroy
+    href: MonoEight.Component.html#MonoEight_Component_Destroy
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Destroy
+    name: Destroy
+    href: MonoEight.Component.html#MonoEight_Component_Destroy
+  - name: (
+  - name: )
+- uid: MonoEight.Component.Dispose
+  commentId: M:MonoEight.Component.Dispose
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Dispose
+  name: Dispose()
+  nameWithType: Component.Dispose()
+  fullName: MonoEight.Component.Dispose()
+  spec.csharp:
+  - uid: MonoEight.Component.Dispose
+    name: Dispose
+    href: MonoEight.Component.html#MonoEight_Component_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Dispose
+    name: Dispose
+    href: MonoEight.Component.html#MonoEight_Component_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Animator.FrameDuration*
+  commentId: Overload:MonoEight.Animator.FrameDuration
+  href: MonoEight.Animator.html#MonoEight_Animator_FrameDuration
+  name: FrameDuration
+  nameWithType: Animator.FrameDuration
+  fullName: MonoEight.Animator.FrameDuration
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: MonoEight.Animator.Loop*
+  commentId: Overload:MonoEight.Animator.Loop
+  href: MonoEight.Animator.html#MonoEight_Animator_Loop
+  name: Loop
+  nameWithType: Animator.Loop
+  fullName: MonoEight.Animator.Loop
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MonoEight.Animator
+  commentId: T:MonoEight.Animator
+  href: MonoEight.Animator.html
+  name: Animator
+  nameWithType: Animator
+  fullName: MonoEight.Animator
+- uid: MonoEight.Animator.#ctor*
+  commentId: Overload:MonoEight.Animator.#ctor
+  href: MonoEight.Animator.html#MonoEight_Animator__ctor_MonoEight_SpriteSheet_
+  name: Animator
+  nameWithType: Animator.Animator
+  fullName: MonoEight.Animator.Animator
+  nameWithType.vb: Animator.New
+  fullName.vb: MonoEight.Animator.New
+  name.vb: New
+- uid: MonoEight.SpriteSheet
+  commentId: T:MonoEight.SpriteSheet
+  parent: MonoEight
+  href: MonoEight.SpriteSheet.html
+  name: SpriteSheet
+  nameWithType: SpriteSheet
+  fullName: MonoEight.SpriteSheet
+- uid: MonoEight.Animation[]
+  isExternal: true
+  href: MonoEight.Animation.html
+  name: Animation[]
+  nameWithType: Animation[]
+  fullName: MonoEight.Animation[]
+  nameWithType.vb: Animation()
+  fullName.vb: MonoEight.Animation()
+  name.vb: Animation()
+  spec.csharp:
+  - uid: MonoEight.Animation
+    name: Animation
+    href: MonoEight.Animation.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: MonoEight.Animation
+    name: Animation
+    href: MonoEight.Animation.html
+  - name: (
+  - name: )
+- uid: MonoEight.Component.Update
+  commentId: M:MonoEight.Component.Update
+  parent: MonoEight.Component
+  href: MonoEight.Component.html#MonoEight_Component_Update
+  name: Update()
+  nameWithType: Component.Update()
+  fullName: MonoEight.Component.Update()
+  spec.csharp:
+  - uid: MonoEight.Component.Update
+    name: Update
+    href: MonoEight.Component.html#MonoEight_Component_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Component.Update
+    name: Update
+    href: MonoEight.Component.html#MonoEight_Component_Update
+  - name: (
+  - name: )
+- uid: MonoEight.Animator.Update*
+  commentId: Overload:MonoEight.Animator.Update
+  href: MonoEight.Animator.html#MonoEight_Animator_Update
+  name: Update
+  nameWithType: Animator.Update
+  fullName: MonoEight.Animator.Update
+- uid: MonoEight.Animator.Play*
+  commentId: Overload:MonoEight.Animator.Play
+  href: MonoEight.Animator.html#MonoEight_Animator_Play
+  name: Play
+  nameWithType: Animator.Play
+  fullName: MonoEight.Animator.Play
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MonoEight.Animator.Stop*
+  commentId: Overload:MonoEight.Animator.Stop
+  href: MonoEight.Animator.html#MonoEight_Animator_Stop
+  name: Stop
+  nameWithType: Animator.Stop
+  fullName: MonoEight.Animator.Stop
+- uid: MonoEight.Animator.Pause*
+  commentId: Overload:MonoEight.Animator.Pause
+  href: MonoEight.Animator.html#MonoEight_Animator_Pause
+  name: Pause
+  nameWithType: Animator.Pause
+  fullName: MonoEight.Animator.Pause
+- uid: MonoEight.Animator.Resume*
+  commentId: Overload:MonoEight.Animator.Resume
+  href: MonoEight.Animator.html#MonoEight_Animator_Resume
+  name: Resume
+  nameWithType: Animator.Resume
+  fullName: MonoEight.Animator.Resume
