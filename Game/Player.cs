@@ -4,25 +4,56 @@ using MonoEight;
 
 public class Player : GameObject
 {
-    private Texture2D _texture;
-    private BoxCollider _collider;
+    private Animator _animator;
+    private int _count;
 
-    public Player(Vector2 position, int layer) : base(position, layer)
+    public Player(string texture)
     {
-        _texture = ContentLoader.Load<Texture2D>("PlayerTest");
-        _collider = new BoxCollider(position, new Vector2(32, 32));
+        _animator = new Animator
+        (
+            new SpriteSheet(Content.Load<Texture2D>(texture), 16),
+            [
+                new("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+                new("Squish", 0, 2, 3, 2, 0) { Loop = false }
+            ]
+        )
+        {
+            FrameDuration = 0.5f
+        };
+
+        AddComponent(_animator);
+
+        _animator.Play("Idle");
+        _animator.OnFinished += OnAnimationFinished;
+
+        _count = PlayerPrefs.Get("Count", 0);
     }
 
-    public override void Update(GameTime gameTime)
+    protected override void Update()
     {
-        Vector2 mousePosition = Input.Mouse.Position;
-        Transform.Position = mousePosition;
-        _collider.Position = mousePosition;
+        Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * Time.DeltaTime * 10;
+
+        if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.E))
+        {
+            _animator.Play("Squish");
+            _count++;
+            PlayerPrefs.Set("Count", _count);
+        }
+
+        if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.Space))
+            SceneManager.Load("Test 1");
     }
 
-    public override void Draw(SpriteBatch spriteBatch)
+    protected override void Draw(SpriteBatch spriteBatch)
     {
-        Sprite.DrawCentered(spriteBatch, _texture, Transform.Position);
-        _collider.Draw(spriteBatch, Color.Red);
+        base.Draw(spriteBatch);
+
+        Canvas.DrawText(spriteBatch, $"Count: {_count}", FontSize.S, new(0, -10), MEColors.Black);
+    }
+
+    private void OnAnimationFinished(string animationName)
+    {
+        if (animationName == "Squish")
+            _animator.Play("Idle");
     }
 }
