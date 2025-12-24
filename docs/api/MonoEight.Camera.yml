@@ -19,14 +19,22 @@ items:
   source:
     remote:
       path: MonoEight/Camera.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Camera
     path: ../MonoEight/Camera.cs
-    startLine: 4
+    startLine: 12
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents a 2D camera that manages view transformations and background color for rendering scenes.
+  remarks: >-
+    The Camera class provides functionality to control the visible area of a scene by adjusting its
+
+    position and transformation matrix. The camera's position is relative to the center of the window resolution, allowing for intuitive
+
+    placement within the scene. The background color determines the color used to clear the viewport before rendering objects.
+  example: []
   syntax:
     content: public class Camera
     content.vb: Public Class Camera
@@ -54,14 +62,16 @@ items:
   source:
     remote:
       path: MonoEight/Camera.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: BackgroundColor
     path: ../MonoEight/Camera.cs
-    startLine: 9
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Gets or sets the background color.
+  example: []
   syntax:
     content: public Color BackgroundColor { get; set; }
     parameters: []
@@ -83,14 +93,16 @@ items:
   source:
     remote:
       path: MonoEight/Camera.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Transform
     path: ../MonoEight/Camera.cs
-    startLine: 11
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Gets the transformation matrix that defines the spatial relationship of the object in world coordinates.
+  example: []
   syntax:
     content: public Matrix Transform { get; }
     parameters: []
@@ -112,14 +124,17 @@ items:
   source:
     remote:
       path: MonoEight/Camera.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Position
     path: ../MonoEight/Camera.cs
-    startLine: 12
+    startLine: 33
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Gets or sets the position of the camera in world coordinates.
+  remarks: The position is adjusted to be relative to the center of the window resolution.
+  example: []
   syntax:
     content: public Vector2 Position { get; set; }
     parameters: []
@@ -141,14 +156,19 @@ items:
   source:
     remote:
       path: MonoEight/Camera.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Camera.cs
-    startLine: 22
+    startLine: 47
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Initializes a new instance of the Camera class with the position set to (0,0) and the background color set
+
+    to blue.
+  example: []
   syntax:
     content: public Camera()
     content.vb: Public Sub New()

@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: SpriteSheet
     path: ../MonoEight/SpriteSheet.cs
     startLine: 6
@@ -56,8 +56,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Count
     path: ../MonoEight/SpriteSheet.cs
     startLine: 14
@@ -85,8 +85,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: this[]
     path: ../MonoEight/SpriteSheet.cs
     startLine: 15
@@ -119,8 +119,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
     startLine: 17
@@ -153,8 +153,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
     startLine: 30
@@ -187,8 +187,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
     startLine: 32
@@ -223,8 +223,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteSheet.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Get
     path: ../MonoEight/SpriteSheet.cs
     startLine: 42

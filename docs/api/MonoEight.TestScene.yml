@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: TestScene
     path: ../MonoEight/TestScene.cs
     startLine: 5
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/TestScene.cs
     startLine: 7
@@ -98,8 +98,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/TestScene.cs
     startLine: 12
@@ -126,8 +126,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/TestScene.cs
     startLine: 21

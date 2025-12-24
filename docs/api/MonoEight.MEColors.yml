@@ -31,8 +31,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: MEColors
     path: ../MonoEight/MEColors.cs
     startLine: 4
@@ -66,8 +66,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Black
     path: ../MonoEight/MEColors.cs
     startLine: 6
@@ -95,8 +95,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DarkPurple
     path: ../MonoEight/MEColors.cs
     startLine: 7
@@ -124,8 +124,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Red
     path: ../MonoEight/MEColors.cs
     startLine: 8
@@ -153,8 +153,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Orange
     path: ../MonoEight/MEColors.cs
     startLine: 9
@@ -182,8 +182,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Yellow
     path: ../MonoEight/MEColors.cs
     startLine: 10
@@ -211,8 +211,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Lime
     path: ../MonoEight/MEColors.cs
     startLine: 11
@@ -240,8 +240,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Green
     path: ../MonoEight/MEColors.cs
     startLine: 12
@@ -269,8 +269,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Cyan
     path: ../MonoEight/MEColors.cs
     startLine: 13
@@ -298,8 +298,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DarkBlue
     path: ../MonoEight/MEColors.cs
     startLine: 14
@@ -327,8 +327,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Blue
     path: ../MonoEight/MEColors.cs
     startLine: 15
@@ -356,8 +356,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LightBlue
     path: ../MonoEight/MEColors.cs
     startLine: 16
@@ -385,8 +385,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: SkyBlue
     path: ../MonoEight/MEColors.cs
     startLine: 17
@@ -414,8 +414,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: White
     path: ../MonoEight/MEColors.cs
     startLine: 18
@@ -443,8 +443,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LightGray
     path: ../MonoEight/MEColors.cs
     startLine: 19
@@ -472,8 +472,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Gray
     path: ../MonoEight/MEColors.cs
     startLine: 20
@@ -501,8 +501,8 @@ items:
   source:
     remote:
       path: MonoEight/MEColors.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DarkGray
     path: ../MonoEight/MEColors.cs
     startLine: 21

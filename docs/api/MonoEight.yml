@@ -20,6 +20,7 @@ items:
   - MonoEight.MEColors
   - MonoEight.MEWindow
   - MonoEight.Main
+  - MonoEight.MouseHandler
   - MonoEight.PlayerPrefs
   - MonoEight.Scene
   - MonoEight.SceneManager
@@ -142,6 +143,13 @@ references:
   name: MEWindow
   nameWithType: MEWindow
   fullName: MonoEight.MEWindow
+- uid: MonoEight.MouseHandler
+  commentId: T:MonoEight.MouseHandler
+  parent: MonoEight
+  href: MonoEight.MouseHandler.html
+  name: MouseHandler
+  nameWithType: MouseHandler
+  fullName: MonoEight.MouseHandler
 - uid: MonoEight.PlayerPrefs
   commentId: T:MonoEight.PlayerPrefs
   href: MonoEight.PlayerPrefs.html

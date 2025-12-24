@@ -26,8 +26,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: SpriteRenderer
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 6
@@ -80,8 +80,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Texture
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 11
@@ -109,8 +109,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Offset
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 25
@@ -138,8 +138,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Color
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 26
@@ -167,8 +167,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Rotation
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 27
@@ -196,8 +196,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Origin
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 28
@@ -225,8 +225,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Scale
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 29
@@ -254,8 +254,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: SpriteEffects
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 30
@@ -283,8 +283,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Layer
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 31
@@ -312,8 +312,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 33
@@ -341,8 +341,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 35
@@ -373,8 +373,8 @@ items:
   source:
     remote:
       path: MonoEight/SpriteRenderer.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/SpriteRenderer.cs
     startLine: 40

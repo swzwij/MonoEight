@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: MonoEight/GraphicsHelper.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: GraphicsHelper
     path: ../MonoEight/GraphicsHelper.cs
     startLine: 5
@@ -51,8 +51,8 @@ items:
   source:
     remote:
       path: MonoEight/GraphicsHelper.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: CalculateDisplayRect
     path: ../MonoEight/GraphicsHelper.cs
     startLine: 7

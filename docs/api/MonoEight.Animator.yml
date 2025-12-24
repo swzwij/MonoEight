@@ -30,8 +30,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Animator
     path: ../MonoEight/Animator.cs
     startLine: 8
@@ -93,8 +93,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: FrameDuration
     path: ../MonoEight/Animator.cs
     startLine: 25
@@ -128,8 +128,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Loop
     path: ../MonoEight/Animator.cs
     startLine: 34
@@ -163,8 +163,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: OnPlayed
     path: ../MonoEight/Animator.cs
     startLine: 39
@@ -192,8 +192,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: OnStopped
     path: ../MonoEight/Animator.cs
     startLine: 44
@@ -221,8 +221,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: OnLooped
     path: ../MonoEight/Animator.cs
     startLine: 49
@@ -250,8 +250,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: OnChanged
     path: ../MonoEight/Animator.cs
     startLine: 54
@@ -279,8 +279,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: OnFinished
     path: ../MonoEight/Animator.cs
     startLine: 59
@@ -308,8 +308,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Animator.cs
     startLine: 65
@@ -343,8 +343,8 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Animator.cs
     startLine: 89
@@ -381,14 +381,15 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Animator.cs
-    startLine: 105
+    startLine: 108
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Handles the update logic for the animator.
   example: []
   syntax:
     content: protected override void Update()
@@ -409,11 +410,11 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Play
     path: ../MonoEight/Animator.cs
-    startLine: 149
+    startLine: 152
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -437,11 +438,11 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Play
     path: ../MonoEight/Animator.cs
-    startLine: 159
+    startLine: 162
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -472,11 +473,11 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Stop
     path: ../MonoEight/Animator.cs
-    startLine: 180
+    startLine: 183
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -500,11 +501,11 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Pause
     path: ../MonoEight/Animator.cs
-    startLine: 189
+    startLine: 192
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -528,11 +529,11 @@ items:
   source:
     remote:
       path: MonoEight/Animator.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Resume
     path: ../MonoEight/Animator.cs
-    startLine: 197
+    startLine: 200
   assemblies:
   - MonoEight
   namespace: MonoEight

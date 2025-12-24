@@ -1,38 +1,42 @@
 ### YamlMime:ManagedReference
 items:
-- uid: MonoEight.MEWindow
-  commentId: T:MonoEight.MEWindow
-  id: MEWindow
+- uid: MonoEight.MouseHandler
+  commentId: T:MonoEight.MouseHandler
+  id: MouseHandler
   parent: MonoEight
   children:
-  - MonoEight.MEWindow.Graphics
-  - MonoEight.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
-  - MonoEight.MEWindow.IsFullscreen
-  - MonoEight.MEWindow.Resolution
-  - MonoEight.MEWindow.StartFullscreen
-  - MonoEight.MEWindow.ToggleFullscreen
-  - MonoEight.MEWindow.Window
+  - MonoEight.MouseHandler.LeftDown
+  - MonoEight.MouseHandler.LeftPressed
+  - MonoEight.MouseHandler.LeftReleased
+  - MonoEight.MouseHandler.LeftUp
+  - MonoEight.MouseHandler.Position
+  - MonoEight.MouseHandler.RightDown
+  - MonoEight.MouseHandler.RightPressed
+  - MonoEight.MouseHandler.RightReleased
+  - MonoEight.MouseHandler.RightUp
+  - MonoEight.MouseHandler.TruePosition
+  - MonoEight.MouseHandler.Update
   langs:
   - csharp
   - vb
-  name: MEWindow
-  nameWithType: MEWindow
-  fullName: MonoEight.MEWindow
+  name: MouseHandler
+  nameWithType: MouseHandler
+  fullName: MonoEight.MouseHandler
   type: Class
   source:
     remote:
-      path: MonoEight/MEWindow.cs
+      path: MonoEight/MouseHandler.cs
       branch: main
       repo: https://github.com/swzwij/MonoEight/
-    id: MEWindow
-    path: ../MonoEight/MEWindow.cs
-    startLine: 4
+    id: MouseHandler
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 5
   assemblies:
   - MonoEight
   namespace: MonoEight
   syntax:
-    content: public static class MEWindow
-    content.vb: Public Module MEWindow
+    content: public class MouseHandler
+    content.vb: Public Class MouseHandler
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,208 +47,322 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: MonoEight.MEWindow.Resolution
-  commentId: P:MonoEight.MEWindow.Resolution
-  id: Resolution
-  parent: MonoEight.MEWindow
+- uid: MonoEight.MouseHandler.TruePosition
+  commentId: P:MonoEight.MouseHandler.TruePosition
+  id: TruePosition
+  parent: MonoEight.MouseHandler
   langs:
   - csharp
   - vb
-  name: Resolution
-  nameWithType: MEWindow.Resolution
-  fullName: MonoEight.MEWindow.Resolution
+  name: TruePosition
+  nameWithType: MouseHandler.TruePosition
+  fullName: MonoEight.MouseHandler.TruePosition
   type: Property
   source:
     remote:
-      path: MonoEight/MEWindow.cs
+      path: MonoEight/MouseHandler.cs
       branch: main
       repo: https://github.com/swzwij/MonoEight/
-    id: Resolution
-    path: ../MonoEight/MEWindow.cs
-    startLine: 11
+    id: TruePosition
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 13
   assemblies:
   - MonoEight
   namespace: MonoEight
   syntax:
-    content: public static Point Resolution { get; set; }
+    content: public Point TruePosition { get; }
     parameters: []
     return:
       type: Microsoft.Xna.Framework.Point
-    content.vb: Public Shared Property Resolution As Point
-  overload: MonoEight.MEWindow.Resolution*
-- uid: MonoEight.MEWindow.StartFullscreen
-  commentId: P:MonoEight.MEWindow.StartFullscreen
-  id: StartFullscreen
-  parent: MonoEight.MEWindow
+    content.vb: Public ReadOnly Property TruePosition As Point
+  overload: MonoEight.MouseHandler.TruePosition*
+- uid: MonoEight.MouseHandler.Position
+  commentId: P:MonoEight.MouseHandler.Position
+  id: Position
+  parent: MonoEight.MouseHandler
   langs:
   - csharp
   - vb
-  name: StartFullscreen
-  nameWithType: MEWindow.StartFullscreen
-  fullName: MonoEight.MEWindow.StartFullscreen
+  name: Position
+  nameWithType: MouseHandler.Position
+  fullName: MonoEight.MouseHandler.Position
   type: Property
   source:
     remote:
-      path: MonoEight/MEWindow.cs
+      path: MonoEight/MouseHandler.cs
       branch: main
       repo: https://github.com/swzwij/MonoEight/
-    id: StartFullscreen
-    path: ../MonoEight/MEWindow.cs
-    startLine: 12
-  assemblies:
-  - MonoEight
-  namespace: MonoEight
-  syntax:
-    content: public static bool StartFullscreen { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Property StartFullscreen As Boolean
-  overload: MonoEight.MEWindow.StartFullscreen*
-- uid: MonoEight.MEWindow.IsFullscreen
-  commentId: P:MonoEight.MEWindow.IsFullscreen
-  id: IsFullscreen
-  parent: MonoEight.MEWindow
-  langs:
-  - csharp
-  - vb
-  name: IsFullscreen
-  nameWithType: MEWindow.IsFullscreen
-  fullName: MonoEight.MEWindow.IsFullscreen
-  type: Property
-  source:
-    remote:
-      path: MonoEight/MEWindow.cs
-      branch: main
-      repo: https://github.com/swzwij/MonoEight/
-    id: IsFullscreen
-    path: ../MonoEight/MEWindow.cs
-    startLine: 14
-  assemblies:
-  - MonoEight
-  namespace: MonoEight
-  syntax:
-    content: public static bool IsFullscreen { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Property IsFullscreen As Boolean
-  overload: MonoEight.MEWindow.IsFullscreen*
-- uid: MonoEight.MEWindow.Graphics
-  commentId: P:MonoEight.MEWindow.Graphics
-  id: Graphics
-  parent: MonoEight.MEWindow
-  langs:
-  - csharp
-  - vb
-  name: Graphics
-  nameWithType: MEWindow.Graphics
-  fullName: MonoEight.MEWindow.Graphics
-  type: Property
-  source:
-    remote:
-      path: MonoEight/MEWindow.cs
-      branch: main
-      repo: https://github.com/swzwij/MonoEight/
-    id: Graphics
-    path: ../MonoEight/MEWindow.cs
-    startLine: 20
-  assemblies:
-  - MonoEight
-  namespace: MonoEight
-  syntax:
-    content: public static GraphicsDeviceManager Graphics { get; }
-    parameters: []
-    return:
-      type: Microsoft.Xna.Framework.GraphicsDeviceManager
-    content.vb: Public Shared ReadOnly Property Graphics As GraphicsDeviceManager
-  overload: MonoEight.MEWindow.Graphics*
-- uid: MonoEight.MEWindow.Window
-  commentId: P:MonoEight.MEWindow.Window
-  id: Window
-  parent: MonoEight.MEWindow
-  langs:
-  - csharp
-  - vb
-  name: Window
-  nameWithType: MEWindow.Window
-  fullName: MonoEight.MEWindow.Window
-  type: Property
-  source:
-    remote:
-      path: MonoEight/MEWindow.cs
-      branch: main
-      repo: https://github.com/swzwij/MonoEight/
-    id: Window
-    path: ../MonoEight/MEWindow.cs
-    startLine: 21
-  assemblies:
-  - MonoEight
-  namespace: MonoEight
-  syntax:
-    content: public static GameWindow Window { get; }
-    parameters: []
-    return:
-      type: Microsoft.Xna.Framework.GameWindow
-    content.vb: Public Shared ReadOnly Property Window As GameWindow
-  overload: MonoEight.MEWindow.Window*
-- uid: MonoEight.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
-  commentId: M:MonoEight.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
-  id: Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
-  parent: MonoEight.MEWindow
-  langs:
-  - csharp
-  - vb
-  name: Initialize(GraphicsDeviceManager, GameWindow)
-  nameWithType: MEWindow.Initialize(GraphicsDeviceManager, GameWindow)
-  fullName: MonoEight.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager, Microsoft.Xna.Framework.GameWindow)
-  type: Method
-  source:
-    remote:
-      path: MonoEight/MEWindow.cs
-      branch: main
-      repo: https://github.com/swzwij/MonoEight/
-    id: Initialize
-    path: ../MonoEight/MEWindow.cs
-    startLine: 23
-  assemblies:
-  - MonoEight
-  namespace: MonoEight
-  syntax:
-    content: public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
-    parameters:
-    - id: graphics
-      type: Microsoft.Xna.Framework.GraphicsDeviceManager
-    - id: window
-      type: Microsoft.Xna.Framework.GameWindow
-    content.vb: Public Shared Sub Initialize(graphics As GraphicsDeviceManager, window As GameWindow)
-  overload: MonoEight.MEWindow.Initialize*
-- uid: MonoEight.MEWindow.ToggleFullscreen
-  commentId: M:MonoEight.MEWindow.ToggleFullscreen
-  id: ToggleFullscreen
-  parent: MonoEight.MEWindow
-  langs:
-  - csharp
-  - vb
-  name: ToggleFullscreen()
-  nameWithType: MEWindow.ToggleFullscreen()
-  fullName: MonoEight.MEWindow.ToggleFullscreen()
-  type: Method
-  source:
-    remote:
-      path: MonoEight/MEWindow.cs
-      branch: main
-      repo: https://github.com/swzwij/MonoEight/
-    id: ToggleFullscreen
-    path: ../MonoEight/MEWindow.cs
+    id: Position
+    path: ../MonoEight/MouseHandler.cs
     startLine: 37
   assemblies:
   - MonoEight
   namespace: MonoEight
   syntax:
-    content: public static void ToggleFullscreen()
-    content.vb: Public Shared Sub ToggleFullscreen()
-  overload: MonoEight.MEWindow.ToggleFullscreen*
+    content: public Vector2 Position { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public ReadOnly Property Position As Vector2
+  overload: MonoEight.MouseHandler.Position*
+- uid: MonoEight.MouseHandler.LeftDown
+  commentId: P:MonoEight.MouseHandler.LeftDown
+  id: LeftDown
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: LeftDown
+  nameWithType: MouseHandler.LeftDown
+  fullName: MonoEight.MouseHandler.LeftDown
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: LeftDown
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 60
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool LeftDown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property LeftDown As Boolean
+  overload: MonoEight.MouseHandler.LeftDown*
+- uid: MonoEight.MouseHandler.LeftUp
+  commentId: P:MonoEight.MouseHandler.LeftUp
+  id: LeftUp
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: LeftUp
+  nameWithType: MouseHandler.LeftUp
+  fullName: MonoEight.MouseHandler.LeftUp
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: LeftUp
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 61
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool LeftUp { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property LeftUp As Boolean
+  overload: MonoEight.MouseHandler.LeftUp*
+- uid: MonoEight.MouseHandler.LeftPressed
+  commentId: P:MonoEight.MouseHandler.LeftPressed
+  id: LeftPressed
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: LeftPressed
+  nameWithType: MouseHandler.LeftPressed
+  fullName: MonoEight.MouseHandler.LeftPressed
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: LeftPressed
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 62
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool LeftPressed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property LeftPressed As Boolean
+  overload: MonoEight.MouseHandler.LeftPressed*
+- uid: MonoEight.MouseHandler.LeftReleased
+  commentId: P:MonoEight.MouseHandler.LeftReleased
+  id: LeftReleased
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: LeftReleased
+  nameWithType: MouseHandler.LeftReleased
+  fullName: MonoEight.MouseHandler.LeftReleased
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: LeftReleased
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 63
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool LeftReleased { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property LeftReleased As Boolean
+  overload: MonoEight.MouseHandler.LeftReleased*
+- uid: MonoEight.MouseHandler.RightDown
+  commentId: P:MonoEight.MouseHandler.RightDown
+  id: RightDown
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: RightDown
+  nameWithType: MouseHandler.RightDown
+  fullName: MonoEight.MouseHandler.RightDown
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: RightDown
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 65
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool RightDown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RightDown As Boolean
+  overload: MonoEight.MouseHandler.RightDown*
+- uid: MonoEight.MouseHandler.RightUp
+  commentId: P:MonoEight.MouseHandler.RightUp
+  id: RightUp
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: RightUp
+  nameWithType: MouseHandler.RightUp
+  fullName: MonoEight.MouseHandler.RightUp
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: RightUp
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 66
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool RightUp { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RightUp As Boolean
+  overload: MonoEight.MouseHandler.RightUp*
+- uid: MonoEight.MouseHandler.RightPressed
+  commentId: P:MonoEight.MouseHandler.RightPressed
+  id: RightPressed
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: RightPressed
+  nameWithType: MouseHandler.RightPressed
+  fullName: MonoEight.MouseHandler.RightPressed
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: RightPressed
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 67
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool RightPressed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RightPressed As Boolean
+  overload: MonoEight.MouseHandler.RightPressed*
+- uid: MonoEight.MouseHandler.RightReleased
+  commentId: P:MonoEight.MouseHandler.RightReleased
+  id: RightReleased
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: RightReleased
+  nameWithType: MouseHandler.RightReleased
+  fullName: MonoEight.MouseHandler.RightReleased
+  type: Property
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: RightReleased
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 68
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public bool RightReleased { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RightReleased As Boolean
+  overload: MonoEight.MouseHandler.RightReleased*
+- uid: MonoEight.MouseHandler.Update
+  commentId: M:MonoEight.MouseHandler.Update
+  id: Update
+  parent: MonoEight.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: MouseHandler.Update()
+  fullName: MonoEight.MouseHandler.Update()
+  type: Method
+  source:
+    remote:
+      path: MonoEight/MouseHandler.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: Update
+    path: ../MonoEight/MouseHandler.cs
+    startLine: 70
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: MonoEight.MouseHandler.Update*
 references:
 - uid: MonoEight
   commentId: N:MonoEight
@@ -489,12 +607,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: MonoEight.MEWindow.Resolution*
-  commentId: Overload:MonoEight.MEWindow.Resolution
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_Resolution
-  name: Resolution
-  nameWithType: MEWindow.Resolution
-  fullName: MonoEight.MEWindow.Resolution
+- uid: MonoEight.MouseHandler.TruePosition*
+  commentId: Overload:MonoEight.MouseHandler.TruePosition
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_TruePosition
+  name: TruePosition
+  nameWithType: MouseHandler.TruePosition
+  fullName: MonoEight.MouseHandler.TruePosition
 - uid: Microsoft.Xna.Framework.Point
   commentId: T:Microsoft.Xna.Framework.Point
   parent: Microsoft.Xna.Framework
@@ -532,12 +650,25 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
-- uid: MonoEight.MEWindow.StartFullscreen*
-  commentId: Overload:MonoEight.MEWindow.StartFullscreen
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_StartFullscreen
-  name: StartFullscreen
-  nameWithType: MEWindow.StartFullscreen
-  fullName: MonoEight.MEWindow.StartFullscreen
+- uid: MonoEight.MouseHandler.Position*
+  commentId: Overload:MonoEight.MouseHandler.Position
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_Position
+  name: Position
+  nameWithType: MouseHandler.Position
+  fullName: MonoEight.MouseHandler.Position
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: MonoEight.MouseHandler.LeftDown*
+  commentId: Overload:MonoEight.MouseHandler.LeftDown
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_LeftDown
+  name: LeftDown
+  nameWithType: MouseHandler.LeftDown
+  fullName: MonoEight.MouseHandler.LeftDown
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -549,47 +680,51 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: MonoEight.MEWindow.IsFullscreen*
-  commentId: Overload:MonoEight.MEWindow.IsFullscreen
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_IsFullscreen
-  name: IsFullscreen
-  nameWithType: MEWindow.IsFullscreen
-  fullName: MonoEight.MEWindow.IsFullscreen
-- uid: MonoEight.MEWindow.Graphics*
-  commentId: Overload:MonoEight.MEWindow.Graphics
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_Graphics
-  name: Graphics
-  nameWithType: MEWindow.Graphics
-  fullName: MonoEight.MEWindow.Graphics
-- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
-  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: GraphicsDeviceManager
-  nameWithType: GraphicsDeviceManager
-  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
-- uid: MonoEight.MEWindow.Window*
-  commentId: Overload:MonoEight.MEWindow.Window
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_Window
-  name: Window
-  nameWithType: MEWindow.Window
-  fullName: MonoEight.MEWindow.Window
-- uid: Microsoft.Xna.Framework.GameWindow
-  commentId: T:Microsoft.Xna.Framework.GameWindow
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: GameWindow
-  nameWithType: GameWindow
-  fullName: Microsoft.Xna.Framework.GameWindow
-- uid: MonoEight.MEWindow.Initialize*
-  commentId: Overload:MonoEight.MEWindow.Initialize
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_Initialize_Microsoft_Xna_Framework_GraphicsDeviceManager_Microsoft_Xna_Framework_GameWindow_
-  name: Initialize
-  nameWithType: MEWindow.Initialize
-  fullName: MonoEight.MEWindow.Initialize
-- uid: MonoEight.MEWindow.ToggleFullscreen*
-  commentId: Overload:MonoEight.MEWindow.ToggleFullscreen
-  href: MonoEight.MEWindow.html#MonoEight_MEWindow_ToggleFullscreen
-  name: ToggleFullscreen
-  nameWithType: MEWindow.ToggleFullscreen
-  fullName: MonoEight.MEWindow.ToggleFullscreen
+- uid: MonoEight.MouseHandler.LeftUp*
+  commentId: Overload:MonoEight.MouseHandler.LeftUp
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_LeftUp
+  name: LeftUp
+  nameWithType: MouseHandler.LeftUp
+  fullName: MonoEight.MouseHandler.LeftUp
+- uid: MonoEight.MouseHandler.LeftPressed*
+  commentId: Overload:MonoEight.MouseHandler.LeftPressed
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_LeftPressed
+  name: LeftPressed
+  nameWithType: MouseHandler.LeftPressed
+  fullName: MonoEight.MouseHandler.LeftPressed
+- uid: MonoEight.MouseHandler.LeftReleased*
+  commentId: Overload:MonoEight.MouseHandler.LeftReleased
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_LeftReleased
+  name: LeftReleased
+  nameWithType: MouseHandler.LeftReleased
+  fullName: MonoEight.MouseHandler.LeftReleased
+- uid: MonoEight.MouseHandler.RightDown*
+  commentId: Overload:MonoEight.MouseHandler.RightDown
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_RightDown
+  name: RightDown
+  nameWithType: MouseHandler.RightDown
+  fullName: MonoEight.MouseHandler.RightDown
+- uid: MonoEight.MouseHandler.RightUp*
+  commentId: Overload:MonoEight.MouseHandler.RightUp
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_RightUp
+  name: RightUp
+  nameWithType: MouseHandler.RightUp
+  fullName: MonoEight.MouseHandler.RightUp
+- uid: MonoEight.MouseHandler.RightPressed*
+  commentId: Overload:MonoEight.MouseHandler.RightPressed
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_RightPressed
+  name: RightPressed
+  nameWithType: MouseHandler.RightPressed
+  fullName: MonoEight.MouseHandler.RightPressed
+- uid: MonoEight.MouseHandler.RightReleased*
+  commentId: Overload:MonoEight.MouseHandler.RightReleased
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_RightReleased
+  name: RightReleased
+  nameWithType: MouseHandler.RightReleased
+  fullName: MonoEight.MouseHandler.RightReleased
+- uid: MonoEight.MouseHandler.Update*
+  commentId: Overload:MonoEight.MouseHandler.Update
+  href: MonoEight.MouseHandler.html#MonoEight_MouseHandler_Update
+  name: Update
+  nameWithType: MouseHandler.Update
+  fullName: MonoEight.MouseHandler.Update

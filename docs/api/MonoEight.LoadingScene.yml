@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: MonoEight/LoadingScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LoadingScene
     path: ../MonoEight/LoadingScene.cs
     startLine: 5
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: MonoEight/LoadingScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/LoadingScene.cs
     startLine: 12
@@ -98,8 +98,8 @@ items:
   source:
     remote:
       path: MonoEight/LoadingScene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/LoadingScene.cs
     startLine: 31

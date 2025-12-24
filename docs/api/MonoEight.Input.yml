@@ -21,6 +21,7 @@ items:
   - MonoEight.Input.IsKeyReleased(Microsoft.Xna.Framework.Input.Keys)
   - MonoEight.Input.IsPressed(System.String)
   - MonoEight.Input.IsReleased(System.String)
+  - MonoEight.Input.Mouse
   - MonoEight.Input.Update
   - MonoEight.Input.VerticalAxis
   langs:
@@ -33,8 +34,8 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Input
     path: ../MonoEight/Input.cs
     startLine: 7
@@ -68,11 +69,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: ControllerDeadZone
     path: ../MonoEight/Input.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -97,11 +98,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: HorizontalAxis
     path: ../MonoEight/Input.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -126,11 +127,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: VerticalAxis
     path: ../MonoEight/Input.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -155,11 +156,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InputAxis
     path: ../MonoEight/Input.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -170,6 +171,35 @@ items:
       type: Microsoft.Xna.Framework.Point
     content.vb: Public Shared ReadOnly Property InputAxis As Point
   overload: MonoEight.Input.InputAxis*
+- uid: MonoEight.Input.Mouse
+  commentId: P:MonoEight.Input.Mouse
+  id: Mouse
+  parent: MonoEight.Input
+  langs:
+  - csharp
+  - vb
+  name: Mouse
+  nameWithType: Input.Mouse
+  fullName: MonoEight.Input.Mouse
+  type: Property
+  source:
+    remote:
+      path: MonoEight/Input.cs
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
+    id: Mouse
+    path: ../MonoEight/Input.cs
+    startLine: 21
+  assemblies:
+  - MonoEight
+  namespace: MonoEight
+  syntax:
+    content: public static MouseHandler Mouse { get; }
+    parameters: []
+    return:
+      type: MonoEight.MouseHandler
+    content.vb: Public Shared ReadOnly Property Mouse As MouseHandler
+  overload: MonoEight.Input.Mouse*
 - uid: MonoEight.Input.Update
   commentId: M:MonoEight.Input.Update
   id: Update
@@ -184,11 +214,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Input.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -210,11 +240,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsKeyDown
     path: ../MonoEight/Input.cs
-    startLine: 31
+    startLine: 36
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -241,11 +271,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsKeyPressed
     path: ../MonoEight/Input.cs
-    startLine: 36
+    startLine: 41
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -272,11 +302,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsKeyReleased
     path: ../MonoEight/Input.cs
-    startLine: 41
+    startLine: 46
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -303,11 +333,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsButtonDown
     path: ../MonoEight/Input.cs
-    startLine: 46
+    startLine: 51
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -334,11 +364,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsButtonPressed
     path: ../MonoEight/Input.cs
-    startLine: 51
+    startLine: 56
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -365,11 +395,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsButtonReleased
     path: ../MonoEight/Input.cs
-    startLine: 56
+    startLine: 61
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -396,11 +426,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Input.cs
-    startLine: 61
+    startLine: 66
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -432,11 +462,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsDown
     path: ../MonoEight/Input.cs
-    startLine: 68
+    startLine: 73
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -466,11 +496,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsPressed
     path: ../MonoEight/Input.cs
-    startLine: 75
+    startLine: 80
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -500,11 +530,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsReleased
     path: ../MonoEight/Input.cs
-    startLine: 82
+    startLine: 87
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -534,11 +564,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Action
     path: ../MonoEight/Input.cs
-    startLine: 89
+    startLine: 94
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -568,11 +598,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: GetHorizontalAxis
     path: ../MonoEight/Input.cs
-    startLine: 96
+    startLine: 101
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -596,11 +626,11 @@ items:
   source:
     remote:
       path: MonoEight/Input.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: GetVerticalAxis
     path: ../MonoEight/Input.cs
-    startLine: 113
+    startLine: 118
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -937,6 +967,19 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: MonoEight.Input.Mouse*
+  commentId: Overload:MonoEight.Input.Mouse
+  href: MonoEight.Input.html#MonoEight_Input_Mouse
+  name: Mouse
+  nameWithType: Input.Mouse
+  fullName: MonoEight.Input.Mouse
+- uid: MonoEight.MouseHandler
+  commentId: T:MonoEight.MouseHandler
+  parent: MonoEight
+  href: MonoEight.MouseHandler.html
+  name: MouseHandler
+  nameWithType: MouseHandler
+  fullName: MonoEight.MouseHandler
 - uid: MonoEight.Input.Update*
   commentId: Overload:MonoEight.Input.Update
   href: MonoEight.Input.html#MonoEight_Input_Update

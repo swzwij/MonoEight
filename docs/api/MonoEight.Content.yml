@@ -18,8 +18,8 @@ items:
   source:
     remote:
       path: MonoEight/Content.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Content
     path: ../MonoEight/Content.cs
     startLine: 4
@@ -53,8 +53,8 @@ items:
   source:
     remote:
       path: MonoEight/Content.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Content.cs
     startLine: 8
@@ -87,8 +87,8 @@ items:
   source:
     remote:
       path: MonoEight/Content.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Load
     path: ../MonoEight/Content.cs
     startLine: 14
@@ -123,8 +123,8 @@ items:
   source:
     remote:
       path: MonoEight/Content.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LoadFromRoot
     path: ../MonoEight/Content.cs
     startLine: 19

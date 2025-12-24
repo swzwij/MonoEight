@@ -20,8 +20,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: SceneManager
     path: ../MonoEight/SceneManager.cs
     startLine: 6
@@ -55,8 +55,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: ActiveScene
     path: ../MonoEight/SceneManager.cs
     startLine: 11
@@ -84,8 +84,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/SceneManager.cs
     startLine: 13
@@ -118,8 +118,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Load
     path: ../MonoEight/SceneManager.cs
     startLine: 22
@@ -150,8 +150,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/SceneManager.cs
     startLine: 35
@@ -176,8 +176,8 @@ items:
   source:
     remote:
       path: MonoEight/SceneManager.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/SceneManager.cs
     startLine: 40

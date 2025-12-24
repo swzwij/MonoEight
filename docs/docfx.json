@@ -38,10 +38,11 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "",
-      "_appTitle": "",
+      "_appName": "MonoEight",
+      "_appTitle": "MonoEight Documentation",
       "_enableSearch": true,
-      "pdf": true
+      "pdf": true,
+      "_appFaviconPath": "images/Icon.ico"
     }
   }
 }

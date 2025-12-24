@@ -30,8 +30,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Component
     path: ../MonoEight/Component.cs
     startLine: 6
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: IsActive
     path: ../MonoEight/Component.cs
     startLine: 8
@@ -99,8 +99,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: ShouldDestroy
     path: ../MonoEight/Component.cs
     startLine: 9
@@ -128,8 +128,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: GameObject
     path: ../MonoEight/Component.cs
     startLine: 10
@@ -157,8 +157,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Position
     path: ../MonoEight/Component.cs
     startLine: 12
@@ -186,8 +186,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Scene
     path: ../MonoEight/Component.cs
     startLine: 13
@@ -215,8 +215,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Component.cs
     startLine: 15
@@ -241,8 +241,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/Component.cs
     startLine: 16
@@ -267,8 +267,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Component.cs
     startLine: 17
@@ -293,8 +293,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/Component.cs
     startLine: 18
@@ -322,8 +322,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalInitialize
     path: ../MonoEight/Component.cs
     startLine: 20
@@ -348,8 +348,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalLoadContent
     path: ../MonoEight/Component.cs
     startLine: 21
@@ -374,8 +374,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalUpdate
     path: ../MonoEight/Component.cs
     startLine: 22
@@ -400,8 +400,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalDraw
     path: ../MonoEight/Component.cs
     startLine: 23
@@ -429,8 +429,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Destroy
     path: ../MonoEight/Component.cs
     startLine: 25
@@ -455,8 +455,8 @@ items:
   source:
     remote:
       path: MonoEight/Component.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Dispose
     path: ../MonoEight/Component.cs
     startLine: 30

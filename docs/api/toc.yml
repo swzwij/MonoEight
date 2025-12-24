@@ -52,6 +52,9 @@ items:
   - uid: MonoEight.Main
     name: Main
     type: Class
+  - uid: MonoEight.MouseHandler
+    name: MouseHandler
+    type: Class
   - uid: MonoEight.PlayerPrefs
     name: PlayerPrefs
     type: Class

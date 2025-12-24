@@ -21,8 +21,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: PlayerPrefs
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 7
@@ -56,8 +56,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 14
@@ -82,8 +82,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Get
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 89
@@ -120,8 +120,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Set
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 94
@@ -156,8 +156,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: HasKey
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 100
@@ -190,8 +190,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DeleteKey
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 105
@@ -222,8 +222,8 @@ items:
   source:
     remote:
       path: MonoEight/PlayerPrefs.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DeleteAll
     path: ../MonoEight/PlayerPrefs.cs
     startLine: 111

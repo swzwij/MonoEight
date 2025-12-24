@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: MonoEight/Time.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Time
     path: ../MonoEight/Time.cs
     startLine: 4
@@ -52,8 +52,8 @@ items:
   source:
     remote:
       path: MonoEight/Time.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DeltaTime
     path: ../MonoEight/Time.cs
     startLine: 8
@@ -81,8 +81,8 @@ items:
   source:
     remote:
       path: MonoEight/Time.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Time.cs
     startLine: 10

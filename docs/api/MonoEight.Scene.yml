@@ -34,8 +34,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Scene
     path: ../MonoEight/Scene.cs
     startLine: 5
@@ -73,8 +73,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Name
     path: ../MonoEight/Scene.cs
     startLine: 9
@@ -102,8 +102,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Camera
     path: ../MonoEight/Scene.cs
     startLine: 10
@@ -131,8 +131,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Canvas
     path: ../MonoEight/Scene.cs
     startLine: 11
@@ -160,8 +160,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Scene.cs
     startLine: 13
@@ -186,8 +186,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/Scene.cs
     startLine: 14
@@ -212,8 +212,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Scene.cs
     startLine: 15
@@ -238,8 +238,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/Scene.cs
     startLine: 16
@@ -267,8 +267,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Unload
     path: ../MonoEight/Scene.cs
     startLine: 17
@@ -293,8 +293,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalInitialize
     path: ../MonoEight/Scene.cs
     startLine: 19
@@ -319,8 +319,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalLoadContent
     path: ../MonoEight/Scene.cs
     startLine: 29
@@ -345,8 +345,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalUpdate
     path: ../MonoEight/Scene.cs
     startLine: 37
@@ -371,8 +371,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalDraw
     path: ../MonoEight/Scene.cs
     startLine: 47
@@ -400,8 +400,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: InternalUnload
     path: ../MonoEight/Scene.cs
     startLine: 55
@@ -426,8 +426,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Scene.cs
     startLine: 69
@@ -454,8 +454,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Scene.cs
     startLine: 77
@@ -483,8 +483,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Find
     path: ../MonoEight/Scene.cs
     startLine: 83
@@ -516,8 +516,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: FindAll
     path: ../MonoEight/Scene.cs
     startLine: 94
@@ -549,8 +549,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: FindGameObject
     path: ../MonoEight/Scene.cs
     startLine: 105
@@ -582,8 +582,8 @@ items:
   source:
     remote:
       path: MonoEight/Scene.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: FindGameObjects
     path: ../MonoEight/Scene.cs
     startLine: 115

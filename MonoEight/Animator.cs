@@ -103,6 +103,9 @@ public class Animator : SpriteRenderer
         Reset();
     }
 
+    /// <summary>
+    /// Handles the update logic for the animator.
+    /// </summary>
     protected override void Update()
     {
         if (!_isPlaying || _currentAnimation == null)

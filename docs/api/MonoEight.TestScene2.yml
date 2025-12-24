@@ -16,8 +16,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene2.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: TestScene2
     path: ../MonoEight/TestScene2.cs
     startLine: 2
@@ -70,8 +70,8 @@ items:
   source:
     remote:
       path: MonoEight/TestScene2.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/TestScene2.cs
     startLine: 4

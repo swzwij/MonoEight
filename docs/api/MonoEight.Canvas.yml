@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: MonoEight/Canvas.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: Canvas
     path: ../MonoEight/Canvas.cs
     startLine: 6
@@ -52,8 +52,8 @@ items:
   source:
     remote:
       path: MonoEight/Canvas.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Canvas.cs
     startLine: 11
@@ -84,8 +84,8 @@ items:
   source:
     remote:
       path: MonoEight/Canvas.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: DrawText
     path: ../MonoEight/Canvas.cs
     startLine: 24

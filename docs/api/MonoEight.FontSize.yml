@@ -17,8 +17,8 @@ items:
   source:
     remote:
       path: MonoEight/FontSize.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: FontSize
     path: ../MonoEight/FontSize.cs
     startLine: 2
@@ -42,8 +42,8 @@ items:
   source:
     remote:
       path: MonoEight/FontSize.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: S
     path: ../MonoEight/FontSize.cs
     startLine: 4
@@ -68,8 +68,8 @@ items:
   source:
     remote:
       path: MonoEight/FontSize.cs
-      branch: rework
-      repo: https://github.com/swzwij/MonoEight
+      branch: main
+      repo: https://github.com/swzwij/MonoEight/
     id: M
     path: ../MonoEight/FontSize.cs
     startLine: 5
