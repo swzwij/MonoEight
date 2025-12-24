@@ -2,6 +2,9 @@ using Microsoft.Xna.Framework.Content;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides static methods for initializing and loading content assets using a shared content manager.
+/// </summary>
 public static class Content
 {
     private static ContentManager _contentManager;

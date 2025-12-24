@@ -2,6 +2,9 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides a set of predefined MonoEight colors.
+/// </summary>
 public static class MEColors
 {
     public static Color Black => new(26, 28, 44);

@@ -2,6 +2,10 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides static methods and properties for managing the main game window, including resolution, fullscreen mode, and
+/// access to the underlying graphics and window objects.
+/// </summary>
 public static class MEWindow
 {
     private static GraphicsDeviceManager _graphics;

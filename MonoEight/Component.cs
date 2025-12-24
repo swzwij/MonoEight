@@ -4,6 +4,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a base class for attachable components that add behavior or data to a GameObject within a scene.
+/// </summary>
+/// <remarks>
+/// Component instances are typically associated with a GameObject and participate in the game loop
+/// through initialization, content loading, updating, and drawing. Derive from this class to implement custom
+/// behaviors. Components can be enabled or disabled using the IsActive property, and can be scheduled for removal by
+/// calling Destroy().
+/// </remarks>
 public class Component : IDisposable
 {
     public bool IsActive { get; set; } = true;

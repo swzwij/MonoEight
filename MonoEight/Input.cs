@@ -5,6 +5,17 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides static methods and properties for querying and managing keyboard, gamepad, and mouse input states, as well
+/// as custom input actions. Enables unified access to input from multiple devices for use in games or interactive
+/// applications.
+/// </summary>
+/// <remarks>
+/// The Input class is designed to be updated once per frame by calling the Update method, which
+/// refreshes the internal state of all supported input devices. It supports querying the current and previous states of
+/// keys and buttons, detecting presses and releases, and managing custom input actions mapped to specific keys or
+/// buttons.
+/// </remarks>
 public static class Input
 {
     private static KeyboardState _keys;

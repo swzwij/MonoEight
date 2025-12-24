@@ -2,6 +2,9 @@ using Microsoft.Xna.Framework;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides access to timing information for the current game frame.
+/// </summary>
 public static class Time
 {
     private static GameTime _gameTime;

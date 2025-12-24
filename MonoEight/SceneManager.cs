@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides static methods for managing and controlling scenes within the application, including adding, loading,
+/// updating, and drawing scenes.
+/// </summary>
 public static class SceneManager
 {
     private static readonly Dictionary<string, Scene> _scenes = [];

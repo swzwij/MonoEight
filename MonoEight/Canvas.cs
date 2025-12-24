@@ -4,6 +4,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides methods for drawing text onto a scene using different font sizes and styles.
+/// </summary>
+/// <remarks>
+/// The Canvas class manages font resources and coordinates text rendering relative to the scene's
+/// camera. It is intended to be used as a utility for drawing text elements within a graphical scene. Instances of
+/// Canvas are typically associated with a specific Scene and should be reused for consistent font management.
+/// </remarks>
 public class Canvas
 {
     private readonly Scene _scene;

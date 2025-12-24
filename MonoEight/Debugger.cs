@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides static methods for drawing basic debug shapes, such as pixels, lines, and squares, using a SpriteBatch in a
+/// 2D graphics context.
+/// </summary>
 public static class Debugger
 {
     private static Texture2D _pixel;

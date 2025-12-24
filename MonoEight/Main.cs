@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents the main game class for a MonoEight application, handling initialization, updating, and rendering.
+/// </summary>
 public class Main : Game
 {
     private readonly GraphicsDeviceManager _graphics;

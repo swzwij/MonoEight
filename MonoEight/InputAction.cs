@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a user input action that can be triggered by one or more keyboard keys or gamepad buttons.
+/// </summary>
 public class InputAction
 {
     private readonly Keys[] _keys;

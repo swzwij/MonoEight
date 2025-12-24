@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Represents a square-shaped collider component used for 2D collision detection in a scene.
+/// </summary>
 public class SquareCollider : Component
 {
     public Point Size { get; set; }

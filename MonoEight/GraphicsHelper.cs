@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
+/// <summary>
+/// Provides helper methods for calculating graphics related values such as display rectangles.
+/// </summary>
 public static class GraphicsHelper
 {
     public static Rectangle CalculateDisplayRect(GraphicsDevice graphics)
