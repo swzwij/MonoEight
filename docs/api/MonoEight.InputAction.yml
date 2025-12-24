@@ -26,10 +26,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InputAction
     path: ../MonoEight/InputAction.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents a user input action that can be triggered by one or more keyboard keys or gamepad buttons.
+  example: []
   syntax:
     content: public class InputAction
     content.vb: Public Class InputAction
@@ -61,7 +63,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsPressed
     path: ../MonoEight/InputAction.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -90,7 +92,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsDown
     path: ../MonoEight/InputAction.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -119,7 +121,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsReleased
     path: ../MonoEight/InputAction.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -148,7 +150,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: OnPressed
     path: ../MonoEight/InputAction.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -175,7 +177,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: OnReleased
     path: ../MonoEight/InputAction.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -202,7 +204,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/InputAction.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -236,7 +238,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/InputAction.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - MonoEight
   namespace: MonoEight

@@ -30,10 +30,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: SquareCollider
     path: ../MonoEight/SquareCollider.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents a square-shaped collider component used for 2D collision detection in a scene.
+  example: []
   syntax:
     content: 'public class SquareCollider : Component, IDisposable'
     content.vb: Public Class SquareCollider Inherits Component Implements IDisposable
@@ -82,7 +84,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Size
     path: ../MonoEight/SquareCollider.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -111,7 +113,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsColliding
     path: ../MonoEight/SquareCollider.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -140,7 +142,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: WasColliding
     path: ../MonoEight/SquareCollider.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -169,7 +171,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: OnCollisionEnter
     path: ../MonoEight/SquareCollider.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -196,7 +198,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: OnCollisionExit
     path: ../MonoEight/SquareCollider.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -223,7 +225,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: OnCollisionStay
     path: ../MonoEight/SquareCollider.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -250,7 +252,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SquareCollider.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -282,7 +284,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SquareCollider.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -314,7 +316,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/SquareCollider.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -345,7 +347,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Intersects
     path: ../MonoEight/SquareCollider.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -376,7 +378,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: UpdateState
     path: ../MonoEight/SquareCollider.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - MonoEight
   namespace: MonoEight

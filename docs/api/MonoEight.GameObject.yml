@@ -37,10 +37,22 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GameObject
     path: ../MonoEight/GameObject.cs
-    startLine: 7
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents an entity within a scene that can contain components and participate in the game loop lifecycle.
+  remarks: >-
+    A GameObject serves as a container for components, enabling modular behavior and logic composition.
+
+    It manages its own lifecycle, including initialization, content loading, updating, and drawing, and delegates these
+
+    phases to its components. GameObjects are typically managed by a Scene and can be activated, deactivated, or marked
+
+    for destruction. Components can be added or retrieved at runtime to extend functionality. GameObject implements
+
+    IDisposable to ensure proper cleanup of its components.
+  example: []
   syntax:
     content: 'public class GameObject : IDisposable'
     content.vb: Public Class GameObject Implements IDisposable
@@ -74,7 +86,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Position
     path: ../MonoEight/GameObject.cs
-    startLine: 11
+    startLine: 21
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -103,7 +115,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsActive
     path: ../MonoEight/GameObject.cs
-    startLine: 12
+    startLine: 22
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -132,7 +144,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: ShouldDestroy
     path: ../MonoEight/GameObject.cs
-    startLine: 13
+    startLine: 23
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -161,7 +173,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Scene
     path: ../MonoEight/GameObject.cs
-    startLine: 14
+    startLine: 24
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -190,7 +202,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Canvas
     path: ../MonoEight/GameObject.cs
-    startLine: 16
+    startLine: 26
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -219,7 +231,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/GameObject.cs
-    startLine: 18
+    startLine: 28
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -245,7 +257,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/GameObject.cs
-    startLine: 19
+    startLine: 29
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -271,7 +283,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/GameObject.cs
-    startLine: 20
+    startLine: 30
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -297,7 +309,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/GameObject.cs
-    startLine: 21
+    startLine: 31
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -326,7 +338,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalInitialize
     path: ../MonoEight/GameObject.cs
-    startLine: 23
+    startLine: 33
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -352,7 +364,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalLoadContent
     path: ../MonoEight/GameObject.cs
-    startLine: 31
+    startLine: 41
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -378,7 +390,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalUpdate
     path: ../MonoEight/GameObject.cs
-    startLine: 39
+    startLine: 49
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -404,7 +416,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalDraw
     path: ../MonoEight/GameObject.cs
-    startLine: 55
+    startLine: 65
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -433,7 +445,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: AddComponent
     path: ../MonoEight/GameObject.cs
-    startLine: 69
+    startLine: 79
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -462,7 +474,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GetComponent
     path: ../MonoEight/GameObject.cs
-    startLine: 75
+    startLine: 85
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -495,7 +507,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GetComponents
     path: ../MonoEight/GameObject.cs
-    startLine: 85
+    startLine: 95
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -528,7 +540,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Destroy
     path: ../MonoEight/GameObject.cs
-    startLine: 96
+    startLine: 106
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -554,7 +566,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Dispose
     path: ../MonoEight/GameObject.cs
-    startLine: 101
+    startLine: 111
   assemblies:
   - MonoEight
   namespace: MonoEight

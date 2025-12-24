@@ -9,7 +9,6 @@
         }
       ],
       "dest": "api",
-      "disableToc": true,
       "properties": {
         "TargetFramework": "net8.0"
       }
@@ -43,6 +42,7 @@
       "_appTitle": "MonoEight Documentation",
       "_enableSearch": true,
       "pdf": true,
+      "_appLogoPath": "images/MonoEight.svg",
       "_appFaviconPath": "images/Icon.ico"
     }
   }

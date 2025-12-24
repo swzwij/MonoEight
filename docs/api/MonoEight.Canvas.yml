@@ -21,10 +21,18 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Canvas
     path: ../MonoEight/Canvas.cs
-    startLine: 6
+    startLine: 14
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Provides methods for drawing text onto a scene using different font sizes and styles.
+  remarks: >-
+    The Canvas class manages font resources and coordinates text rendering relative to the scene's
+
+    camera. It is intended to be used as a utility for drawing text elements within a graphical scene. Instances of
+
+    Canvas are typically associated with a specific Scene and should be reused for consistent font management.
+  example: []
   syntax:
     content: public class Canvas
     content.vb: Public Class Canvas
@@ -56,7 +64,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Canvas.cs
-    startLine: 11
+    startLine: 19
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -88,7 +96,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DrawText
     path: ../MonoEight/Canvas.cs
-    startLine: 24
+    startLine: 32
   assemblies:
   - MonoEight
   namespace: MonoEight

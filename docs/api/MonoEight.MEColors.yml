@@ -35,10 +35,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: MEColors
     path: ../MonoEight/MEColors.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Provides a set of predefined MonoEight colors.
+  example: []
   syntax:
     content: public static class MEColors
     content.vb: Public Module MEColors
@@ -70,7 +72,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Black
     path: ../MonoEight/MEColors.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DarkPurple
     path: ../MonoEight/MEColors.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -128,7 +130,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Red
     path: ../MonoEight/MEColors.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Orange
     path: ../MonoEight/MEColors.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -186,7 +188,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Yellow
     path: ../MonoEight/MEColors.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -215,7 +217,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Lime
     path: ../MonoEight/MEColors.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -244,7 +246,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Green
     path: ../MonoEight/MEColors.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -273,7 +275,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Cyan
     path: ../MonoEight/MEColors.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -302,7 +304,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DarkBlue
     path: ../MonoEight/MEColors.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -331,7 +333,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Blue
     path: ../MonoEight/MEColors.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -360,7 +362,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LightBlue
     path: ../MonoEight/MEColors.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -389,7 +391,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: SkyBlue
     path: ../MonoEight/MEColors.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -418,7 +420,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: White
     path: ../MonoEight/MEColors.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -447,7 +449,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LightGray
     path: ../MonoEight/MEColors.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -476,7 +478,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Gray
     path: ../MonoEight/MEColors.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -505,7 +507,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DarkGray
     path: ../MonoEight/MEColors.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - MonoEight
   namespace: MonoEight

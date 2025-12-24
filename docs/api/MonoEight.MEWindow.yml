@@ -26,10 +26,15 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: MEWindow
     path: ../MonoEight/MEWindow.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Provides static methods and properties for managing the main game window, including resolution, fullscreen mode, and
+
+    access to the underlying graphics and window objects.
+  example: []
   syntax:
     content: public static class MEWindow
     content.vb: Public Module MEWindow
@@ -61,7 +66,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Resolution
     path: ../MonoEight/MEWindow.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -90,7 +95,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: StartFullscreen
     path: ../MonoEight/MEWindow.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -119,7 +124,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsFullscreen
     path: ../MonoEight/MEWindow.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -148,7 +153,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Graphics
     path: ../MonoEight/MEWindow.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -177,7 +182,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Window
     path: ../MonoEight/MEWindow.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -206,7 +211,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/MEWindow.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -237,7 +242,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: ToggleFullscreen
     path: ../MonoEight/MEWindow.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - MonoEight
   namespace: MonoEight

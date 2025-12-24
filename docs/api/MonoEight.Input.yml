@@ -38,10 +38,25 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Input
     path: ../MonoEight/Input.cs
-    startLine: 7
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Provides static methods and properties for querying and managing keyboard, gamepad, and mouse input states, as well
+
+    as custom input actions. Enables unified access to input from multiple devices for use in games or interactive
+
+    applications.
+  remarks: >-
+    The Input class is designed to be updated once per frame by calling the Update method, which
+
+    refreshes the internal state of all supported input devices. It supports querying the current and previous states of
+
+    keys and buttons, detecting presses and releases, and managing custom input actions mapped to specific keys or
+
+    buttons.
+  example: []
   syntax:
     content: public static class Input
     content.vb: Public Module Input
@@ -73,7 +88,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: ControllerDeadZone
     path: ../MonoEight/Input.cs
-    startLine: 17
+    startLine: 28
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -102,7 +117,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: HorizontalAxis
     path: ../MonoEight/Input.cs
-    startLine: 18
+    startLine: 29
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -131,7 +146,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: VerticalAxis
     path: ../MonoEight/Input.cs
-    startLine: 19
+    startLine: 30
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -160,7 +175,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InputAxis
     path: ../MonoEight/Input.cs
-    startLine: 20
+    startLine: 31
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -189,7 +204,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Mouse
     path: ../MonoEight/Input.cs
-    startLine: 21
+    startLine: 32
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -218,7 +233,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Input.cs
-    startLine: 23
+    startLine: 34
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -244,7 +259,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsKeyDown
     path: ../MonoEight/Input.cs
-    startLine: 36
+    startLine: 47
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -275,7 +290,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsKeyPressed
     path: ../MonoEight/Input.cs
-    startLine: 41
+    startLine: 52
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -306,7 +321,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsKeyReleased
     path: ../MonoEight/Input.cs
-    startLine: 46
+    startLine: 57
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -337,7 +352,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsButtonDown
     path: ../MonoEight/Input.cs
-    startLine: 51
+    startLine: 62
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -368,7 +383,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsButtonPressed
     path: ../MonoEight/Input.cs
-    startLine: 56
+    startLine: 67
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -399,7 +414,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsButtonReleased
     path: ../MonoEight/Input.cs
-    startLine: 61
+    startLine: 72
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -430,7 +445,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Input.cs
-    startLine: 66
+    startLine: 77
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -466,7 +481,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsDown
     path: ../MonoEight/Input.cs
-    startLine: 73
+    startLine: 84
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -500,7 +515,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsPressed
     path: ../MonoEight/Input.cs
-    startLine: 80
+    startLine: 91
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -534,7 +549,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsReleased
     path: ../MonoEight/Input.cs
-    startLine: 87
+    startLine: 98
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -568,7 +583,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Action
     path: ../MonoEight/Input.cs
-    startLine: 94
+    startLine: 105
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -602,7 +617,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GetHorizontalAxis
     path: ../MonoEight/Input.cs
-    startLine: 101
+    startLine: 112
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -630,7 +645,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GetVerticalAxis
     path: ../MonoEight/Input.cs
-    startLine: 118
+    startLine: 129
   assemblies:
   - MonoEight
   namespace: MonoEight

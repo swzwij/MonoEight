@@ -25,10 +25,15 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: PlayerPrefs
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Provides a simple, static API for storing and retrieving user preferences and settings as key value pairs, persisted
+
+    to disk between application sessions.
+  example: []
   syntax:
     content: public static class PlayerPrefs
     content.vb: Public Module PlayerPrefs
@@ -60,7 +65,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -86,7 +91,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Get
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 89
+    startLine: 93
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -124,7 +129,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Set
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 94
+    startLine: 98
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -160,7 +165,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: HasKey
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 100
+    startLine: 104
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -194,7 +199,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DeleteKey
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 105
+    startLine: 109
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -226,7 +231,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DeleteAll
     path: ../MonoEight/PlayerPrefs.cs
-    startLine: 111
+    startLine: 115
   assemblies:
   - MonoEight
   namespace: MonoEight

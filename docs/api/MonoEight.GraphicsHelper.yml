@@ -20,10 +20,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GraphicsHelper
     path: ../MonoEight/GraphicsHelper.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Provides helper methods for calculating graphics related values such as display rectangles.
+  example: []
   syntax:
     content: public static class GraphicsHelper
     content.vb: Public Module GraphicsHelper
@@ -55,7 +57,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: CalculateDisplayRect
     path: ../MonoEight/GraphicsHelper.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - MonoEight
   namespace: MonoEight

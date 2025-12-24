@@ -22,10 +22,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Content
     path: ../MonoEight/Content.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Provides static methods for initializing and loading content assets using a shared content manager.
+  example: []
   syntax:
     content: public static class Content
     content.vb: Public Module Content
@@ -57,7 +59,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Content.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -91,7 +93,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Load
     path: ../MonoEight/Content.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -127,7 +129,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LoadFromRoot
     path: ../MonoEight/Content.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - MonoEight
   namespace: MonoEight

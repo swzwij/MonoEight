@@ -34,10 +34,20 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Component
     path: ../MonoEight/Component.cs
-    startLine: 6
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents a base class for attachable components that add behavior or data to a GameObject within a scene.
+  remarks: >-
+    Component instances are typically associated with a GameObject and participate in the game loop
+
+    through initialization, content loading, updating, and drawing. Derive from this class to implement custom
+
+    behaviors. Components can be enabled or disabled using the IsActive property, and can be scheduled for removal by
+
+    calling Destroy().
+  example: []
   syntax:
     content: 'public class Component : IDisposable'
     content.vb: Public Class Component Implements IDisposable
@@ -74,7 +84,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: IsActive
     path: ../MonoEight/Component.cs
-    startLine: 8
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -103,7 +113,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: ShouldDestroy
     path: ../MonoEight/Component.cs
-    startLine: 9
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -132,7 +142,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: GameObject
     path: ../MonoEight/Component.cs
-    startLine: 10
+    startLine: 19
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -161,7 +171,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Position
     path: ../MonoEight/Component.cs
-    startLine: 12
+    startLine: 21
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -190,7 +200,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Scene
     path: ../MonoEight/Component.cs
-    startLine: 13
+    startLine: 22
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -219,7 +229,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Component.cs
-    startLine: 15
+    startLine: 24
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -245,7 +255,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/Component.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -271,7 +281,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Component.cs
-    startLine: 17
+    startLine: 26
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -297,7 +307,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/Component.cs
-    startLine: 18
+    startLine: 27
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -326,7 +336,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalInitialize
     path: ../MonoEight/Component.cs
-    startLine: 20
+    startLine: 29
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -352,7 +362,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalLoadContent
     path: ../MonoEight/Component.cs
-    startLine: 21
+    startLine: 30
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -378,7 +388,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalUpdate
     path: ../MonoEight/Component.cs
-    startLine: 22
+    startLine: 31
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -404,7 +414,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalDraw
     path: ../MonoEight/Component.cs
-    startLine: 23
+    startLine: 32
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -433,7 +443,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Destroy
     path: ../MonoEight/Component.cs
-    startLine: 25
+    startLine: 34
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -459,7 +469,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Dispose
     path: ../MonoEight/Component.cs
-    startLine: 30
+    startLine: 39
   assemblies:
   - MonoEight
   namespace: MonoEight

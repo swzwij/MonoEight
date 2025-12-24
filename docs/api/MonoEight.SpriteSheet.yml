@@ -25,10 +25,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: SpriteSheet
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents a collection of equally sized sprites extracted from a single texture.
+  example: []
   syntax:
     content: public class SpriteSheet
     content.vb: Public Class SpriteSheet
@@ -60,7 +62,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Count
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -89,7 +91,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: this[]
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -123,7 +125,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -191,7 +193,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -227,7 +229,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Get
     path: ../MonoEight/SpriteSheet.cs
-    startLine: 42
+    startLine: 45
   assemblies:
   - MonoEight
   namespace: MonoEight

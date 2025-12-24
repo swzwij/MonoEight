@@ -24,10 +24,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Main
     path: ../MonoEight/Main.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Represents the main game class for a MonoEight application, handling initialization, updating, and rendering.
+  example: []
   syntax:
     content: 'public class Main : Game, IDisposable'
     content.vb: Public Class Main Inherits Game Implements IDisposable
@@ -95,7 +97,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/Main.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -124,7 +126,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Main.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/Main.cs
-    startLine: 39
+    startLine: 42
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -186,7 +188,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Main.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -225,7 +227,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/Main.cs
-    startLine: 58
+    startLine: 61
   assemblies:
   - MonoEight
   namespace: MonoEight

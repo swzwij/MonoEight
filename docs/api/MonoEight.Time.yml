@@ -21,10 +21,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Time
     path: ../MonoEight/Time.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Provides access to timing information for the current game frame.
+  example: []
   syntax:
     content: public static class Time
     content.vb: Public Module Time
@@ -56,7 +58,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DeltaTime
     path: ../MonoEight/Time.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -85,7 +87,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Time.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - MonoEight
   namespace: MonoEight

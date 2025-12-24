@@ -23,10 +23,15 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Debugger
     path: ../MonoEight/Debugger.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Provides static methods for drawing basic debug shapes, such as pixels, lines, and squares, using a SpriteBatch in a
+
+    2D graphics context.
+  example: []
   syntax:
     content: public static class Debugger
     content.vb: Public Module Debugger
@@ -58,7 +63,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Debugger.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -87,7 +92,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DrawPixel
     path: ../MonoEight/Debugger.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -120,7 +125,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DrawLine
     path: ../MonoEight/Debugger.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -155,7 +160,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: DrawSquare
     path: ../MonoEight/Debugger.cs
-    startLine: 39
+    startLine: 43
   assemblies:
   - MonoEight
   namespace: MonoEight

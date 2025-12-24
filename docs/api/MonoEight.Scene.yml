@@ -38,10 +38,25 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Scene
     path: ../MonoEight/Scene.cs
-    startLine: 5
+    startLine: 16
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Represents a logical container for game objects, camera, and UI elements within a game. Provides the base
+
+    functionality for managing the lifecycle and content of a game scene.
+  remarks: >-
+    Derive from this class to implement custom game scenes. Override the protected virtual methods to
+
+    define scene-specific initialization, content loading, updating, drawing, and unloading behavior. Scenes manage
+
+    their own collection of game objects and provide methods for adding and searching for components or game objects.
+
+    The scene's camera and canvas are accessible for rendering and UI purposes. Scene lifecycle methods are
+
+    called by the game engine and should not be invoked directly.
+  example: []
   syntax:
     content: public abstract class Scene
     content.vb: Public MustInherit Class Scene
@@ -77,7 +92,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Name
     path: ../MonoEight/Scene.cs
-    startLine: 9
+    startLine: 20
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -106,7 +121,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Camera
     path: ../MonoEight/Scene.cs
-    startLine: 10
+    startLine: 21
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -135,7 +150,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Canvas
     path: ../MonoEight/Scene.cs
-    startLine: 11
+    startLine: 22
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -164,7 +179,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Initialize
     path: ../MonoEight/Scene.cs
-    startLine: 13
+    startLine: 24
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -190,7 +205,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: LoadContent
     path: ../MonoEight/Scene.cs
-    startLine: 14
+    startLine: 25
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -216,7 +231,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Update
     path: ../MonoEight/Scene.cs
-    startLine: 15
+    startLine: 26
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -242,7 +257,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/Scene.cs
-    startLine: 16
+    startLine: 27
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -271,7 +286,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Unload
     path: ../MonoEight/Scene.cs
-    startLine: 17
+    startLine: 28
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -297,7 +312,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalInitialize
     path: ../MonoEight/Scene.cs
-    startLine: 19
+    startLine: 30
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -323,7 +338,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalLoadContent
     path: ../MonoEight/Scene.cs
-    startLine: 29
+    startLine: 40
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -349,7 +364,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalUpdate
     path: ../MonoEight/Scene.cs
-    startLine: 37
+    startLine: 48
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -375,7 +390,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalDraw
     path: ../MonoEight/Scene.cs
-    startLine: 47
+    startLine: 58
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -404,7 +419,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: InternalUnload
     path: ../MonoEight/Scene.cs
-    startLine: 55
+    startLine: 66
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -430,7 +445,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Scene.cs
-    startLine: 69
+    startLine: 80
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -458,7 +473,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Add
     path: ../MonoEight/Scene.cs
-    startLine: 77
+    startLine: 88
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -487,7 +502,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Find
     path: ../MonoEight/Scene.cs
-    startLine: 83
+    startLine: 94
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -520,7 +535,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: FindAll
     path: ../MonoEight/Scene.cs
-    startLine: 94
+    startLine: 105
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -553,7 +568,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: FindGameObject
     path: ../MonoEight/Scene.cs
-    startLine: 105
+    startLine: 116
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -586,7 +601,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: FindGameObjects
     path: ../MonoEight/Scene.cs
-    startLine: 115
+    startLine: 126
   assemblies:
   - MonoEight
   namespace: MonoEight

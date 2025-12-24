@@ -30,10 +30,15 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: SpriteRenderer
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: >-
+    Represents a component that renders a 2D texture (sprite) with configurable position, color, rotation, scale, and
+
+    rendering effects.
+  example: []
   syntax:
     content: 'public class SpriteRenderer : Component, IDisposable'
     content.vb: Public Class SpriteRenderer Inherits Component Implements IDisposable
@@ -84,7 +89,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Texture
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -113,7 +118,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Offset
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -142,7 +147,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Color
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 26
+    startLine: 30
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -171,7 +176,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Rotation
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -200,7 +205,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Origin
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -229,7 +234,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Scale
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 29
+    startLine: 33
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -258,7 +263,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: SpriteEffects
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -287,7 +292,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Layer
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 31
+    startLine: 35
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -316,7 +321,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 33
+    startLine: 37
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -345,7 +350,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: .ctor
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 35
+    startLine: 39
   assemblies:
   - MonoEight
   namespace: MonoEight
@@ -377,7 +382,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Draw
     path: ../MonoEight/SpriteRenderer.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - MonoEight
   namespace: MonoEight

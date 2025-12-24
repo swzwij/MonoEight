@@ -22,10 +22,12 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: VectorPointExtenseions
     path: ../MonoEight/VectorPointExtensions.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: ''
+  example: []
   syntax:
     content: public static class VectorPointExtenseions
     content.vb: Public Module VectorPointExtenseions
@@ -58,17 +60,25 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Int
     path: ../MonoEight/VectorPointExtensions.cs
-    startLine: 6
+    startLine: 18
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Converts the specified Vector2 to a Point by truncating the X and Y components to their integer values.
+  remarks: >-
+    The conversion truncates the fractional part of each component, it does not perform rounding.
+
+    For example, a component value of 3.9 becomes 3.
+  example: []
   syntax:
     content: public static Point Int(this Vector2 vector)
     parameters:
     - id: vector
       type: Microsoft.Xna.Framework.Vector2
+      description: The Vector2 instance to convert to a Point.
     return:
       type: Microsoft.Xna.Framework.Point
+      description: A Point whose X and Y values are the integer parts of the corresponding components of the input vector.
     content.vb: Public Shared Function Int(vector As Vector2) As Point
   overload: MonoEight.VectorPointExtenseions.Int*
 - uid: MonoEight.VectorPointExtenseions.Float(Microsoft.Xna.Framework.Point)
@@ -90,17 +100,21 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Float
     path: ../MonoEight/VectorPointExtensions.cs
-    startLine: 11
+    startLine: 28
   assemblies:
   - MonoEight
   namespace: MonoEight
+  summary: Converts a Point structure to a Vector2 structure with the same X and Y values.
+  example: []
   syntax:
     content: public static Vector2 Float(this Point vector)
     parameters:
     - id: vector
       type: Microsoft.Xna.Framework.Point
+      description: The Point to convert to a Vector2.
     return:
       type: Microsoft.Xna.Framework.Vector2
+      description: A Vector2 whose X and Y components are set to the X and Y values of the specified Point.
     content.vb: Public Shared Function Float(vector As Point) As Vector2
   overload: MonoEight.VectorPointExtenseions.Float*
 - uid: MonoEight.VectorPointExtenseions.Cast(Microsoft.Xna.Framework.Vector2)
@@ -122,7 +136,7 @@ items:
       repo: https://github.com/swzwij/MonoEight/
     id: Cast
     path: ../MonoEight/VectorPointExtensions.cs
-    startLine: 16
+    startLine: 43
   assemblies:
   - MonoEight
   namespace: MonoEight
