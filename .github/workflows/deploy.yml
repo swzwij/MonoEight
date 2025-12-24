@@ -31,11 +31,12 @@ jobs:
 
       - name: Build Website
         run: docfx docfx.json
+        working-directory: docs
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_site'
+          path: 'docs/_site'
 
   deploy:
     environment:
