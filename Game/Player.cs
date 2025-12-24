@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 
@@ -32,7 +31,7 @@ public class Player : GameObject
     protected override void Update()
     {
         // Position += new Vector2(Input.InputAxis.X, Input.InputAxis.Y) * Time.DeltaTime * 10;
-        Position = Input.Mouse.WorldPosition;
+        Position = Input.Mouse.Position;
 
         if (Input.IsKeyPressed(Microsoft.Xna.Framework.Input.Keys.E))
         {
@@ -50,7 +49,7 @@ public class Player : GameObject
         base.Draw(spriteBatch);
 
         Canvas.DrawText(spriteBatch, $"Count: {_count}", FontSize.S, new(0, -10), MEColors.Black);
-        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse.WorldPosition}", FontSize.S, new(0, 10), MEColors.Black);
+        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse.Position}", FontSize.S, new(0, 10), MEColors.Black);
 
     }
 

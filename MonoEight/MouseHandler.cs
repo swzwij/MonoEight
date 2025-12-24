@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
@@ -11,10 +8,10 @@ public class MouseHandler
     private MouseState _mouse;
     private MouseState _lastMouse;
 
-    private Point _position = new();
-    private Vector2 _worldPosition = new();
+    private Point _truePosition = new();
+    private Vector2 _position = new();
 
-    public Point Position
+    public Point TruePosition
     {
         get
         {
@@ -24,7 +21,7 @@ public class MouseHandler
             int mouseY = _mouse.Y;
 
             if (!displayRect.Contains(mouseX, mouseY))
-                return _position;
+                return _truePosition;
 
             float relativeX = (mouseX - displayRect.X) / (float)displayRect.Width;
             float relativeY = (mouseY - displayRect.Y) / (float)displayRect.Height;
@@ -32,32 +29,32 @@ public class MouseHandler
             int gameX = (int)(relativeX * MEWindow.Resolution.X);
             int gameY = (int)(relativeY * MEWindow.Resolution.Y);
 
-            _position = new Point(gameX, gameY);
-            return _position;
+            _truePosition = new Point(gameX, gameY);
+            return _truePosition;
         }
     }
 
 
-    public Vector2 WorldPosition
+    public Vector2 Position
     {
         get
         {
-            Point screenPos = Position;
+            Point screenPos = TruePosition;
 
             if (screenPos.X < 0 || screenPos.Y < 0)
-                return _worldPosition;
+                return _position;
 
             if (SceneManager.ActiveScene != null)
             {
                 Vector2 resolutionOffset = new(MEWindow.Resolution.X / 2, MEWindow.Resolution.Y / 2);
                 Vector2 cameraOffset = SceneManager.ActiveScene.Camera.Position - resolutionOffset;
 
-                _worldPosition = new Vector2(screenPos.X, screenPos.Y) + cameraOffset;
-                return _worldPosition;
+                _position = new Vector2(screenPos.X, screenPos.Y) + cameraOffset;
+                return _position;
             }
 
-            _worldPosition = new(screenPos.X, screenPos.Y);
-            return _worldPosition;
+            _position = new(screenPos.X, screenPos.Y);
+            return _position;
         }
     }
 

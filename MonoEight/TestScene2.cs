@@ -5,6 +5,6 @@ public class TestScene2 : Scene
     protected override void Initialize()
     {
         Camera.BackgroundColor = MEColors.Blue;
-        Add(new Player("PlayerTest"));
+        Add(new NewPlayer("PlayerTest"));
     }
 }
