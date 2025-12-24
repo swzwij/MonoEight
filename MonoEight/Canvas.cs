@@ -17,6 +17,10 @@ public class Canvas
     private readonly Scene _scene;
     private readonly Dictionary<FontSize, SpriteFont> _fonts;
 
+    /// <summary>
+    /// Initializes a new instance of the Canvas class using the specified scene.
+    /// </summary>
+    /// <param name="scene">The scene to associate with this canvas. Cannot be null.</param>
     public Canvas(Scene scene)
     {
         _scene = scene;
@@ -30,6 +34,18 @@ public class Canvas
         };
     }
 
+    /// <summary>
+    /// Draws the specified text string at the given position using the provided font size and color.
+    /// </summary>
+    /// <remarks>
+    /// The text is centered at the specified position. The position is adjusted based on the current
+    /// camera offset in the scene.
+    /// </remarks>
+    /// <param name="spriteBatch">The SpriteBatch instance used to render the text. Must not be null.</param>
+    /// <param name="text">The text string to draw. If null or empty, no text is rendered.</param>
+    /// <param name="size">The font size to use when rendering the text.</param>
+    /// <param name="position">The center position, in screen coordinates, where the text will be drawn.</param>
+    /// <param name="color">The color to use when rendering the text.</param>
     public void DrawText(SpriteBatch spriteBatch, string text, FontSize size, Point position, Color color)
     {
         // TODO
