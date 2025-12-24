@@ -9,6 +9,7 @@
         }
       ],
       "dest": "api",
+      "disableToc": true,
       "properties": {
         "TargetFramework": "net8.0"
       }
