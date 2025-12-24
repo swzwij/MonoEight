@@ -13,10 +13,13 @@ public static class Input
     private static GamePadState _lastButtons;
     private static readonly Dictionary<string, InputAction> _actions = [];
 
+    private static MouseHandler _mouse = new();
+
     public static float ControllerDeadZone { get; set; } = 0.1f;
     public static int HorizontalAxis => GetHorizontalAxis();
     public static int VerticalAxis => GetVerticalAxis();
     public static Point InputAxis => new(HorizontalAxis, VerticalAxis);
+    public static MouseHandler Mouse => _mouse;
 
     public static void Update()
     {
@@ -24,6 +27,8 @@ public static class Input
         _keys = Keyboard.GetState();
         _lastButtons = _buttons;
         _buttons = GamePad.GetState(PlayerIndex.One);
+
+        _mouse.Update();
 
         foreach (InputAction action in _actions.Values)
             action.Update(_keys, _lastKeys, _buttons, _lastButtons);
