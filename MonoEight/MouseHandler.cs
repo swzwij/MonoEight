@@ -11,6 +11,9 @@ public class MouseHandler
     private MouseState _mouse;
     private MouseState _lastMouse;
 
+    private Point _position = new();
+    private Vector2 _worldPosition = new();
+
     public Point Position
     {
         get
@@ -21,9 +24,7 @@ public class MouseHandler
             int mouseY = _mouse.Y;
 
             if (!displayRect.Contains(mouseX, mouseY))
-            {
-                return new Point(-1, -1);
-            }
+                return _position;
 
             float relativeX = (mouseX - displayRect.X) / (float)displayRect.Width;
             float relativeY = (mouseY - displayRect.Y) / (float)displayRect.Height;
@@ -31,11 +32,11 @@ public class MouseHandler
             int gameX = (int)(relativeX * MEWindow.Resolution.X);
             int gameY = (int)(relativeY * MEWindow.Resolution.Y);
 
-            return new Point(gameX, gameY);
+            _position = new Point(gameX, gameY);
+            return _position;
         }
     }
 
-    public Vector2 _worldPosition;
 
     public Vector2 WorldPosition
     {
@@ -48,13 +49,14 @@ public class MouseHandler
 
             if (SceneManager.ActiveScene != null)
             {
-                Vector2 resolutionOffset = new Vector2(MEWindow.Resolution.X / 2, MEWindow.Resolution.Y / 2);
+                Vector2 resolutionOffset = new(MEWindow.Resolution.X / 2, MEWindow.Resolution.Y / 2);
                 Vector2 cameraOffset = SceneManager.ActiveScene.Camera.Position - resolutionOffset;
 
-                return new Vector2(screenPos.X, screenPos.Y) + cameraOffset;
+                _worldPosition = new Vector2(screenPos.X, screenPos.Y) + cameraOffset;
+                return _worldPosition;
             }
 
-            _worldPosition = new Vector2(screenPos.X, screenPos.Y);
+            _worldPosition = new(screenPos.X, screenPos.Y);
             return _worldPosition;
         }
     }

@@ -50,7 +50,7 @@ public class Player : GameObject
         base.Draw(spriteBatch);
 
         Canvas.DrawText(spriteBatch, $"Count: {_count}", FontSize.S, new(0, -10), MEColors.Black);
-        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse._worldPosition}", FontSize.S, new(0, 10), MEColors.Black);
+        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse.WorldPosition}", FontSize.S, new(0, 10), MEColors.Black);
 
     }
 
