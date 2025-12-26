@@ -5,7 +5,7 @@ using System;
 
 public class NewPlayer : GameObject
 {
-    private SquareCollider _collider;
+    private BoxCollider _collider;
     private SpriteRenderer _renderer;
     private Vector2 _velocity;
     private Vector2 _clickPosition;
@@ -18,7 +18,7 @@ public class NewPlayer : GameObject
 
         SpriteSheet sheet = new(Content.Load<Texture2D>(texture), 16);
         _renderer = new SpriteRenderer(sheet[0]);
-        _collider = new SquareCollider(16);
+        _collider = new BoxCollider(16);
     }
 
     protected override void Initialize()

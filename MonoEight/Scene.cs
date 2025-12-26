@@ -19,7 +19,7 @@ namespace MonoEight;
 public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
-    private readonly List<SquareCollider> _colliders = [];
+    private readonly List<BoxCollider> _colliders = [];
 
     public string Name { get; internal set; }
     public Camera Camera { get; set; } = new();
@@ -57,11 +57,11 @@ public abstract class Scene
 
         for (int i = 0; i < _colliders.Count; i++)
         {
-            SquareCollider colliderA = _colliders[i];
+            BoxCollider colliderA = _colliders[i];
 
             for (int j = 0; j < _colliders.Count; j++)
             {
-                SquareCollider colliderB = _colliders[j];
+                BoxCollider colliderB = _colliders[j];
 
                 Debug.WriteLine($"Checking collision between Collider {i} and Collider {j}");
 
@@ -122,7 +122,7 @@ public abstract class Scene
         _gameObjects.Add(gameObject);
     }
 
-    public void AddCollider(SquareCollider collider)
+    public void AddCollider(BoxCollider collider)
     {
         _colliders.Add(collider);
     }
