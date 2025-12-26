@@ -5,30 +5,37 @@ using System;
 
 public class NewPlayer : GameObject
 {
+    private SquareCollider _collider;
     private SpriteRenderer _renderer;
     private Vector2 _velocity;
     private Vector2 _clickPosition;
     private bool _hasClicked;
     private float _speed = 200f;
 
-    public NewPlayer(string texture)
+    public NewPlayer(string texture, int x)
     {
+        Position = new Vector2(x, 0);
+
         SpriteSheet sheet = new(Content.Load<Texture2D>(texture), 16);
         _renderer = new SpriteRenderer(sheet[0]);
+        _collider = new SquareCollider(16);
+    }
 
+    protected override void Initialize()
+    {
         AddComponent(_renderer);
+        AddComponent(_collider);
     }
 
     protected override void Update()
     {
         if (Input.Mouse.LeftPressed)
         {
+            if (!_collider.Intersects(Input.Mouse.Position.Int()))
+                return;
+
             _clickPosition = Input.Mouse.Position;
             _hasClicked = true;
-
-            //Vector2 direction = _clickPosition - Position;
-            //direction.Normalize();
-            //_velocity = direction * _speed;
         }
 
         if (Input.Mouse.LeftReleased)
@@ -40,10 +47,15 @@ public class NewPlayer : GameObject
             direction.Normalize();
             float speed = Vector2.Distance(_clickPosition, Input.Mouse.Position) * 6f;
             _velocity = direction * speed;
+            _hasClicked = false;
         }
-
 
         _velocity *= 0.9f;
         Position += _velocity * Time.DeltaTime;
     }
+
+    //protected override void Draw(SpriteBatch spriteBatch)
+    //{
+    //    _collider.Draw(spriteBatch);
+    //}
 }

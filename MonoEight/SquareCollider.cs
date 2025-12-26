@@ -23,11 +23,14 @@ public class SquareCollider : Component
         Size = size;
     }
 
+    public SquareCollider(int width, int height) : this(new Point(width, height)) { }
+
     public SquareCollider(int size) : this(new Point(size)) { }
 
     protected override void Draw(SpriteBatch spriteBatch)
     {
-        Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
+        Color color = IsColliding ? Color.Red : Color.Green;
+        Debugger.DrawSquare(spriteBatch, Position.Int(), Size, color);
     }
 
     public bool Intersects(SquareCollider other)
@@ -39,6 +42,15 @@ public class SquareCollider : Component
                posA.X + Size.X > posB.X &&
                posA.Y < posB.Y + other.Size.Y &&
                posA.Y + Size.Y > posB.Y;
+    }
+
+    public bool Intersects(Point point)
+    {
+        Point posA = (Position - (Size.Float() / 2)).Int();
+        return point.X >= posA.X &&
+               point.X <= posA.X + Size.X &&
+               point.Y >= posA.Y &&
+               point.Y <= posA.Y + Size.Y;
     }
 
     public void UpdateState()

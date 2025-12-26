@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
@@ -17,6 +19,7 @@ namespace MonoEight;
 public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
+    private readonly List<SquareCollider> _colliders = [];
 
     public string Name { get; internal set; }
     public Camera Camera { get; set; } = new();
@@ -51,6 +54,33 @@ public abstract class Scene
         Update();
 
         RemoveObjects();
+
+        for (int i = 0; i < _colliders.Count; i++)
+        {
+            SquareCollider colliderA = _colliders[i];
+
+            for (int j = 0; j < _colliders.Count; j++)
+            {
+                SquareCollider colliderB = _colliders[j];
+
+                Debug.WriteLine($"Checking collision between Collider {i} and Collider {j}");
+
+                if (i == j)
+                    continue;
+
+                if (colliderA.Intersects(colliderB))
+                {
+                    colliderA.IsColliding = true;
+                }
+                else
+                {
+                    colliderA.IsColliding = false;
+                }
+            }
+        }
+
+        //for (int i = 0; i < _colliders.Count; i++)
+        //    _colliders[i].UpdateState();
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].InternalUpdate();
@@ -90,6 +120,11 @@ public abstract class Scene
     {
         gameObject.Scene = this;
         _gameObjects.Add(gameObject);
+    }
+
+    public void AddCollider(SquareCollider collider)
+    {
+        _colliders.Add(collider);
     }
 
     public T Find<T>() where T : Component
