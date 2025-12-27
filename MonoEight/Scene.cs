@@ -19,7 +19,9 @@ namespace MonoEight;
 public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];
-    private readonly List<BoxCollider> _colliders = [];
+    private readonly List<Collider> _colliders = [];
+
+    public IReadOnlyList<Collider> Colliders => _colliders;
 
     public string Name { get; internal set; }
     public Camera Camera { get; set; } = new();
@@ -54,33 +56,6 @@ public abstract class Scene
         Update();
 
         RemoveObjects();
-
-        for (int i = 0; i < _colliders.Count; i++)
-        {
-            BoxCollider colliderA = _colliders[i];
-
-            for (int j = 0; j < _colliders.Count; j++)
-            {
-                BoxCollider colliderB = _colliders[j];
-
-                Debug.WriteLine($"Checking collision between Collider {i} and Collider {j}");
-
-                if (i == j)
-                    continue;
-
-                if (colliderA.Intersects(colliderB))
-                {
-                    colliderA.IsColliding = true;
-                }
-                else
-                {
-                    colliderA.IsColliding = false;
-                }
-            }
-        }
-
-        //for (int i = 0; i < _colliders.Count; i++)
-        //    _colliders[i].UpdateState();
 
         for (int i = 0; i < _gameObjects.Count; i++)
             _gameObjects[i].InternalUpdate();
@@ -122,7 +97,7 @@ public abstract class Scene
         _gameObjects.Add(gameObject);
     }
 
-    public void AddCollider(BoxCollider collider)
+    public void AddCollider(Collider collider)
     {
         _colliders.Add(collider);
     }

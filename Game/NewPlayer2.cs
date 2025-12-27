@@ -3,22 +3,22 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoEight;
 using System;
 
-public class NewPlayer : GameObject
+public class NewPlayer2 : GameObject
 {
-    private BoxCollider _collider;
+    private CircleCollider _collider;
     private SpriteRenderer _renderer;
     private Vector2 _velocity;
     private Vector2 _clickPosition;
     private bool _hasClicked;
     private float _speed = 200f;
 
-    public NewPlayer(string texture, int x)
+    public NewPlayer2(string texture, int x)
     {
         Position = new Vector2(x, 0);
 
         SpriteSheet sheet = new(Content.Load<Texture2D>(texture), 16);
         _renderer = new SpriteRenderer(sheet[0]);
-        _collider = new BoxCollider(16);
+        _collider = new CircleCollider(16);
     }
 
     protected override void Initialize()
@@ -56,6 +56,7 @@ public class NewPlayer : GameObject
             _velocity = Vector2.Zero;
 
         Position += _velocity * Time.DeltaTime;
+
         if (_velocity.LengthSquared() > .1f)
         {
             foreach (Collider collider in Scene.Colliders)
@@ -72,9 +73,4 @@ public class NewPlayer : GameObject
             }
         }
     }
-
-    //protected override void Draw(SpriteBatch spriteBatch)
-    //{
-    //    _collider.Draw(spriteBatch);
-    //}
 }

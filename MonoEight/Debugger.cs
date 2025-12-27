@@ -49,4 +49,23 @@ public static class Debugger
         DrawLine(spriteBatch, position + size, new(position.X, position.Y + size.Y), color);
         DrawLine(spriteBatch, new(position.X, position.Y + size.Y), position, color);
     }
+
+    public static void DrawCircle(SpriteBatch spriteBatch, Point center, int radius, Color color)
+    {
+        const int segments = 36;
+        float increment = MathHelper.TwoPi / segments;
+        float theta = 0f;
+        Point lastPoint = new(center.X + radius, center.Y);
+        for (int i = 1; i <= segments; i++)
+        {
+            theta += increment;
+            Point nextPoint = new
+            (
+                center.X + (int)(radius * Math.Cos(theta)),
+                center.Y + (int)(radius * Math.Sin(theta))
+            );
+            DrawLine(spriteBatch, lastPoint, nextPoint, color);
+            lastPoint = nextPoint;
+        }
+    }
 }

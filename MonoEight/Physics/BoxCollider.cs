@@ -1,11 +1,14 @@
-using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight;
 
 public class BoxCollider : Collider
 {
     public Point Size { get; set; }
+
+    public Vector2 Min => Position - (Size.Float() / 2);
+    public Vector2 Max => Position + (Size.Float() / 2);
 
     public BoxCollider(Point size)
     {
@@ -23,24 +26,23 @@ public class BoxCollider : Collider
 
     public override bool Intersects(Point point)
     {
-        throw new NotImplementedException();
+        return CollisionHelper.PointBox(point, this);
     }
 
     public override bool Intersects(BoxCollider other)
     {
-        throw new NotImplementedException();
+        return CollisionHelper.BoxBox(this, other);
     }
 
     public override bool Intersects(CircleCollider other)
     {
-        throw new NotImplementedException();
+        return CollisionHelper.CircleBox(other, this);
     }
 
-    //protected override void Draw(SpriteBatch spriteBatch)
-    //{
-    //    Color color = IsColliding ? Color.Red : Color.Green;
-    //    Debugger.DrawSquare(spriteBatch, Position.Int(), Size, color);
-    //}
+    protected override void Draw(SpriteBatch spriteBatch)
+    {
+        Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
+    }
 
     //public bool Intersects(SquareCollider other)
     //{
