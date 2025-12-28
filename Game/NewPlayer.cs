@@ -56,6 +56,7 @@ public class NewPlayer : GameObject
             _velocity = Vector2.Zero;
 
         Position += _velocity * Time.DeltaTime;
+
         if (_velocity.LengthSquared() > .1f)
         {
             foreach (Collider collider in Scene.Colliders)
@@ -65,7 +66,7 @@ public class NewPlayer : GameObject
 
                 if (_collider.Intersects(collider))
                 {
-                    Position -= _velocity * Time.DeltaTime;
+                    Position -= _velocity * Time.DeltaTime / 2;
                     _velocity = -_velocity * 0.75f;
                     break;
                 }

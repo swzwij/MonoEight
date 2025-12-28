@@ -9,6 +9,8 @@ namespace MonoEight;
 /// </summary>
 public class MouseHandler
 {
+    public bool IsEnabled { get; set; } = true;
+
     private MouseState _mouse;
     private MouseState _lastMouse;
 
@@ -74,7 +76,13 @@ public class MouseHandler
 
     public void Update()
     {
+        if (!IsEnabled)
+            return;
+
         _lastMouse = _mouse;
         _mouse = Mouse.GetState();
+
+        _ = TruePosition;
+        _ = Position;
     }
 }

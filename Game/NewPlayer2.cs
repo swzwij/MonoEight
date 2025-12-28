@@ -43,6 +43,7 @@ public class NewPlayer2 : GameObject
             if (!_hasClicked)
                 return;
 
+            Vector2 mousePosition = Input.Mouse.Position;
             Vector2 direction = _clickPosition - Input.Mouse.Position;
             direction.Normalize();
             float speed = Vector2.Distance(_clickPosition, Input.Mouse.Position) * 6f;
