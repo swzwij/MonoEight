@@ -7,8 +7,8 @@ public class BoxCollider : Collider
 {
     public Point Size { get; set; }
 
-    public Vector2 Min => Position - (Size.Float() / 2);
-    public Vector2 Max => Position + (Size.Float() / 2);
+    public Vector2 Min => Position - Size.Float() / 2;
+    public Vector2 Max => Position + Size.Float() / 2;
 
     public BoxCollider(Point size)
     {
@@ -43,24 +43,4 @@ public class BoxCollider : Collider
     {
         Debugger.DrawSquare(spriteBatch, Position.Int(), Size, Color.Green);
     }
-
-    //public bool Intersects(SquareCollider other)
-    //{
-    //    Point posA = (Position - (Size.Float() / 2)).Int();
-    //    Point posB = (other.Position - (other.Size.Float() / 2)).Int();
-
-    //    return posA.X < posB.X + other.Size.X &&
-    //           posA.X + Size.X > posB.X &&
-    //           posA.Y < posB.Y + other.Size.Y &&
-    //           posA.Y + Size.Y > posB.Y;
-    //}
-
-    //public bool Intersects(Point point)
-    //{
-    //    Point posA = (Position - (Size.Float() / 2)).Int();
-    //    return point.X >= posA.X &&
-    //           point.X <= posA.X + Size.X &&
-    //           point.Y >= posA.Y &&
-    //           point.Y <= posA.Y + Size.Y;
-    //}
 }

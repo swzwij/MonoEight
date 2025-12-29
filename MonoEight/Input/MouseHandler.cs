@@ -3,10 +3,6 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
 
-/// <summary>
-/// Provides access to the current and previous mouse state, including mouse position and button events, for use in
-/// input handling.
-/// </summary>
 public class MouseHandler
 {
     public bool IsEnabled { get; set; } = true;

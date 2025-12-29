@@ -33,4 +33,7 @@
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />
   </Target>
+  <PropertyGroup>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
 </Project>
