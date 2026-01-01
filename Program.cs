@@ -1,2 +1,2 @@
-﻿using MonoEight.Main main = new();
-main.Run();
+﻿using MonoEight.MyGame game = new();
+game.Run();

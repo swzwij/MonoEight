@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using MonoEight;
+using MonoEight.Core;
 using System;
 
 public class NewPlayer2 : GameObject

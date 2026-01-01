@@ -1,4 +1,4 @@
-namespace MonoEight;
+namespace MonoEight.Core;
 
 public class TestScene2 : Scene
 {

@@ -1,5 +1,5 @@
 using Microsoft.Xna.Framework.Graphics;
-using MonoEight;
+using MonoEight.Core;
 
 public class Player : GameObject
 {
