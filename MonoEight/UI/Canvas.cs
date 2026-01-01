@@ -12,7 +12,7 @@ public class Canvas
     public Canvas(Scene scene)
     {
         _scene = scene;
-        _fonts = new()
+        _fonts = new Dictionary<FontSize, SpriteFont>
         {
             { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEight") },
             { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEightMedium") },

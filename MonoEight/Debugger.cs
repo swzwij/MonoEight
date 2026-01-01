@@ -14,7 +14,7 @@ public static class Debugger
 
     public static void Initialize(GraphicsDeviceManager graphics)
     {
-        _pixel = new(graphics.GraphicsDevice, 1, 1);
+        _pixel = new Texture2D(graphics.GraphicsDevice, 1, 1);
         _pixel.SetData([Color.White]);
     }
 
@@ -53,7 +53,7 @@ public static class Debugger
     public static void DrawCircle(SpriteBatch spriteBatch, Point center, int radius, Color color)
     {
         const int segments = 36;
-        float increment = MathHelper.TwoPi / segments;
+        const float increment = MathHelper.TwoPi / segments;
         float theta = 0f;
         Point lastPoint = new(center.X + radius, center.Y);
         for (int i = 1; i <= segments; i++)

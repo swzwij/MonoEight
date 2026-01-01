@@ -13,7 +13,7 @@ namespace MonoEight
             Vector2 closestPoint = new(closestX, closestY);
             float distanceSquared = Vector2.DistanceSquared(circle.Position, closestPoint);
 
-            return distanceSquared < (circle.Radius * circle.Radius);
+            return distanceSquared < circle.Radius * circle.Radius;
         }
 
         public static bool PointBox(Point point, BoxCollider box)
@@ -27,7 +27,7 @@ namespace MonoEight
             float dx = point.X - circle.Position.X;
             float dy = point.Y - circle.Position.Y;
             float distanceSquared = dx * dx + dy * dy;
-            return distanceSquared < (circle.Radius * circle.Radius);
+            return distanceSquared < circle.Radius * circle.Radius;
         }
 
         public static bool CircleCircle(CircleCollider a, CircleCollider b)
@@ -36,7 +36,7 @@ namespace MonoEight
             float dy = a.Position.Y - b.Position.Y;
             float distanceSquared = dx * dx + dy * dy;
             float radiusSum = a.Radius + b.Radius;
-            return distanceSquared < (radiusSum * radiusSum);
+            return distanceSquared < radiusSum * radiusSum;
         }
 
         public static bool BoxBox(BoxCollider a, BoxCollider b)
