@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using MonoEight.Core;
+﻿using MonoEight.Core;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace MonoEight;
