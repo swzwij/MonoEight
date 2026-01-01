@@ -82,10 +82,8 @@ public class GameObject : IDisposable
         component.GameObject = this;
         _components.Add(component);
 
-        if (component.GetType() == typeof(BoxCollider))
-            Scene?.AddCollider(component as Collider);
-        else if (component.GetType() == typeof(CircleCollider))
-            Scene?.AddCollider(component as Collider);
+        if (component is Collider collider)
+            Scene?.AddCollider(collider);
     }
 
     public T GetComponent<T>() where T : Component
