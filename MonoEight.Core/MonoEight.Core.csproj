@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.1.0</Version>
+        <Version>0.1.2</Version>
         <Title>MonoEight Framework</Title>
         <Authors>Samuel Zwijsen</Authors>
         <RepositoryUrl>https://github.com/swzwij/MonoEight</RepositoryUrl>
@@ -19,17 +19,14 @@
     <ItemGroup>
         <Content Include="Assets\bin\DesktopGL\**\*.*">
             <Pack>true</Pack>
-            <PackagePath>./</PackagePath>
+
+            <PackagePath>contentFiles\any\net8.0\Assets</PackagePath>
+
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+
             <Link>Assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <Visible>false</Visible>
         </Content>
     </ItemGroup>
-<!--    <ItemGroup>-->
-<!--        <Content Include="Assets\bin\DesktopGL\**\*.*">-->
-<!--            <Pack>true</Pack>-->
-<!--            <PackagePath>content\Assets</PackagePath>-->
-<!--            <PackageCopyToOutput>true</PackageCopyToOutput> </Content>-->
-<!--    </ItemGroup>-->
-
 </Project>
