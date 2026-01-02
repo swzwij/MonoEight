@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>0.1.2</Version>
+        <Version>0.1.3</Version>
         <Title>MonoEight Framework</Title>
         <Authors>Samuel Zwijsen</Authors>
         <RepositoryUrl>https://github.com/swzwij/MonoEight</RepositoryUrl>
