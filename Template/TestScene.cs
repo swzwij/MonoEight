@@ -1,7 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Core;
 
-namespace MonoEight.Core;
+namespace MonoEight;
 
 public class TestScene : Scene
 {

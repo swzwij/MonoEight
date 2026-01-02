@@ -4,7 +4,7 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoEight.Core", "MonoEight.Core\MonoEight.Core.csproj", "{0F5A3DDA-707B-4C55-8F35-05702A263141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoEight.Template", "MonoEight.Template\MonoEight.Template.csproj", "{FE0B6EDB-8608-4C3F-BEEA-E4E58FF9C56A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{FE0B6EDB-8608-4C3F-BEEA-E4E58FF9C56A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

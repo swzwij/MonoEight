@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
 
+namespace MonoEight;
+
 public class Player : GameObject
 {
     private Animator _animator;

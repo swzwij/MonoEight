@@ -3,12 +3,12 @@
   "author": "Samuel Zwijsen",
   "classifications": [ "Common", "Game" ],
   "name": "MonoEight Game",
-  "identity": "MonoEight.Template",
+  "identity": "MonoEight.Game.Template",
   "shortName": "monoeight",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "MonoEight",
+  "sourceName": "Template",
   "preferNameDirectory": true
 }
