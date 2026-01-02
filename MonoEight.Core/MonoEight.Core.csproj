@@ -19,11 +19,17 @@
     <ItemGroup>
         <Content Include="Assets\bin\DesktopGL\**\*.*">
             <Pack>true</Pack>
-            <PackagePath>content\Assets</PackagePath>
+            <PackagePath>./</PackagePath>
             <Link>Assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <Visible>false</Visible>
         </Content>
     </ItemGroup>
+<!--    <ItemGroup>-->
+<!--        <Content Include="Assets\bin\DesktopGL\**\*.*">-->
+<!--            <Pack>true</Pack>-->
+<!--            <PackagePath>content\Assets</PackagePath>-->
+<!--            <PackageCopyToOutput>true</PackageCopyToOutput> </Content>-->
+<!--    </ItemGroup>-->
 
 </Project>

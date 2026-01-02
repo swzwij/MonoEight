@@ -38,12 +38,15 @@
   <PropertyGroup>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
-    <ItemGroup>
-        <Compile Remove="MonoEight.Core\**" />
-        <EmbeddedResource Remove="MonoEight.Core\**" />
-        <None Remove="MonoEight.Core\**" />
-    </ItemGroup>
+<!--    <ItemGroup>-->
+<!--        <Compile Remove="MonoEight.Core\**" />-->
+<!--        <EmbeddedResource Remove="MonoEight.Core\**" />-->
+<!--        <None Remove="MonoEight.Core\**" />-->
+<!--    </ItemGroup>-->
     <ItemGroup>
       <Content Include=".template.config\template.json" />
     </ItemGroup>
+<!--    <ItemGroup>-->
+<!--      <ProjectReference Include="..\MonoEight.Core\MonoEight.Core.csproj" />-->
+<!--    </ItemGroup>-->
 </Project>
