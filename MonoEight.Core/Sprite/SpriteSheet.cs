@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoEight.Core;
+namespace MonoEight.Core.Sprite;
 
 /// <summary>
 /// Represents a collection of equally sized sprites extracted from a single texture.

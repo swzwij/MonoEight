@@ -1,4 +1,4 @@
-namespace MonoEight.Core;
+namespace MonoEight.Core.Sprite;
 
 /// <summary>
 /// Represents an animation consisting of frames.

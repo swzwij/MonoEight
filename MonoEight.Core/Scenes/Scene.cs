@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Core.Physics;
+using MonoEight.Core.UI;
 
-namespace MonoEight.Core;
+namespace MonoEight.Core.Scenes;
 
 /// <summary>
 /// Represents a logical container for game objects, camera, and UI elements within a game. Provides the base

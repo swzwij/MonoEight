@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoEight.Core
+namespace MonoEight.Core.Physics
 {
     public class CircleCollider : Collider
     {

@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MonoEight.Core;
+namespace MonoEight.Core.Scenes;
 
 /// <summary>
 /// Provides static methods for managing and controlling scenes within the application, including adding, loading,

@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
+using MonoEight.Core.Inputting;
+using MonoEight.Core.Physics;
+using MonoEight.Core.Sprite;
 
 namespace MonoEight;
 

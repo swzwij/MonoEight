@@ -1,5 +1,10 @@
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
+using MonoEight.Core.Sprite;
+using MonoEight.Core.Inputting;
+using MonoEight.Core.UI;
+using MonoEight.Core.Scenes;
 
 namespace MonoEight;
 
@@ -14,8 +19,8 @@ public class Player : GameObject
         (
             new SpriteSheet(Content.Load<Texture2D>(texture), 16),
             [
-                new("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
-                new("Squish", 0, 2, 3, 2, 0) { Loop = false }
+                new Animation("Idle", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+                new Animation("Squish", 0, 2, 3, 2, 0) { Loop = false }
             ]
         )
         {
@@ -50,8 +55,8 @@ public class Player : GameObject
     {
         base.Draw(spriteBatch);
 
-        Canvas.DrawText(spriteBatch, $"Count: {_count}", FontSize.S, new(0, -10), MEColors.Black);
-        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse.Position}", FontSize.S, new(0, 10), MEColors.Black);
+        Canvas.DrawText(spriteBatch, $"Count: {_count}", FontSize.S, new Point(0, -10), MEColors.Black);
+        Canvas.DrawText(spriteBatch, $"World Position: {Input.Mouse.Position}", FontSize.S, new Point(0, 10), MEColors.Black);
 
     }
 

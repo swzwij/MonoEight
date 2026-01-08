@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace MonoEight.Core
+namespace MonoEight.Core.Physics
 {
     public abstract class Collider : Component
     {

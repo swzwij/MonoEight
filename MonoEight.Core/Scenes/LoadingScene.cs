@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Core.Sprite;
 
-namespace MonoEight.Core;
+namespace MonoEight.Core.Scenes;
 
 public class LoadingScene : Scene
 {

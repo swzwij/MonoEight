@@ -1,7 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoEight.Core.Scenes;
 
-namespace MonoEight.Core;
+namespace MonoEight.Core.UI;
 
 public class Canvas
 {

@@ -1,4 +1,4 @@
-namespace MonoEight.Core;
+namespace MonoEight.Core.UI;
 
 public enum FontSize
 {

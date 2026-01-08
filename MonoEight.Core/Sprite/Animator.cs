@@ -1,4 +1,4 @@
-namespace MonoEight.Core;
+namespace MonoEight.Core.Sprite;
 
 /// <summary>
 /// Animates a sprite using a sprite sheet and defined animations.
