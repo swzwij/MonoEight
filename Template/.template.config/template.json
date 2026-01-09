@@ -1,0 +1,14 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Samuel Zwijsen",
+  "classifications": [ "Common", "Game" ],
+  "name": "MonoEight Game",
+  "identity": "MonoEight.Game.Template",
+  "shortName": "monoeight",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Template",
+  "preferNameDirectory": true
+}

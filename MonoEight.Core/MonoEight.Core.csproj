@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.3</Version>
+        <Title>MonoEight Framework</Title>
+        <Authors>Samuel Zwijsen</Authors>
+        <RepositoryUrl>https://github.com/swzwij/MonoEight</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <MonoGameContentReference Include="Assets\Assets.mgcb" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Assets\bin\DesktopGL\**\*.*">
+            <Pack>true</Pack>
+
+            <PackagePath>contentFiles\any\net8.0\Assets</PackagePath>
+
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+
+            <Link>Assets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Visible>false</Visible>
+        </Content>
+    </ItemGroup>
+</Project>
