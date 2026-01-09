@@ -19,14 +19,14 @@ public static class Input
     public static Point InputAxis => new(HorizontalAxis, VerticalAxis);
     public static MouseHandler Mouse { get; } = new();
 
-    public static void Update()
+    public static void Update(Rectangle displayRect)
     {
         _lastKeys = _keys;
         _keys = Keyboard.GetState();
         _lastButtons = _buttons;
         _buttons = GamePad.GetState(PlayerIndex.One);
 
-        Mouse.Update();
+        Mouse.Update(displayRect);
 
         foreach (InputAction action in _actions.Values)
             action.Update(_keys, _lastKeys, _buttons, _lastButtons);

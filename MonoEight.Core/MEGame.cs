@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoEight.Core.Scenes;
@@ -11,6 +12,7 @@ public class MEGame : Game
     private readonly GraphicsDeviceManager _graphics;
     private SpriteBatch? _spriteBatch;
     private RenderTarget2D? _renderTarget;
+    private Rectangle _displayRect;
 
     protected MEGame()
     {
@@ -59,7 +61,9 @@ public class MEGame : Game
 
     protected override void Update(GameTime gameTime)
     {
-        Input.Update();
+        _displayRect = GraphicsHelper.CalculateDisplayRect(GraphicsDevice);
+        
+        Input.Update(_displayRect);
         Time.Update(gameTime);
 
         if (Input.IsKeyPressed(Keys.F11))
@@ -102,9 +106,7 @@ public class MEGame : Game
 
         _spriteBatch?.Begin(samplerState: SamplerState.PointClamp);
 
-        Rectangle targetRect = GraphicsHelper.CalculateDisplayRect(GraphicsDevice);
-
-        _spriteBatch?.Draw(_renderTarget, targetRect, Color.White);
+        _spriteBatch?.Draw(_renderTarget, _displayRect, Color.White);
         _spriteBatch?.End();
 
         base.Draw(gameTime);

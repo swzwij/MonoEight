@@ -10,56 +10,11 @@ public class MouseHandler
 
     private MouseState _mouse;
     private MouseState _lastMouse;
+    
+    private Rectangle _displayRect;
 
-    private Point _truePosition = new();
-    private Vector2 _position = new();
-
-    public Point TruePosition
-    {
-        get
-        {
-            Rectangle displayRect = GraphicsHelper.CalculateDisplayRect(MEWindow.Graphics.GraphicsDevice);
-
-            int mouseX = _mouse.X;
-            int mouseY = _mouse.Y;
-
-            if (!displayRect.Contains(mouseX, mouseY))
-                return _truePosition;
-
-            float relativeX = (mouseX - displayRect.X) / (float)displayRect.Width;
-            float relativeY = (mouseY - displayRect.Y) / (float)displayRect.Height;
-
-            int gameX = (int)(relativeX * MEWindow.Resolution.X);
-            int gameY = (int)(relativeY * MEWindow.Resolution.Y);
-
-            _truePosition = new Point(gameX, gameY);
-            return _truePosition;
-        }
-    }
-
-
-    public Vector2 Position
-    {
-        get
-        {
-            Point screenPos = TruePosition;
-
-            if (screenPos.X < 0 || screenPos.Y < 0)
-                return _position;
-
-            if (SceneManager.ActiveScene != null)
-            {
-                Vector2 resolutionOffset = new(MEWindow.Resolution.X / 2, MEWindow.Resolution.Y / 2);
-                Vector2 cameraOffset = SceneManager.ActiveScene.Camera.Position - resolutionOffset;
-
-                _position = new Vector2(screenPos.X, screenPos.Y) + cameraOffset;
-                return _position;
-            }
-
-            _position = new(screenPos.X, screenPos.Y);
-            return _position;
-        }
-    }
+    public Point TruePosition {get; private set;}
+    public Vector2 Position { get; private set; }
 
     public bool LeftDown => _mouse.LeftButton == ButtonState.Pressed;
     public bool LeftUp => _mouse.LeftButton == ButtonState.Released;
@@ -71,17 +26,45 @@ public class MouseHandler
     public bool RightPressed => _mouse.RightButton == ButtonState.Pressed && _lastMouse.RightButton == ButtonState.Released;
     public bool RightReleased => _mouse.RightButton == ButtonState.Released && _lastMouse.RightButton == ButtonState.Pressed;
 
-    public void Update()
+    public void Update(Rectangle displayRect)
     {
         if (!IsEnabled)
             return;
 
+        _displayRect = displayRect;
+        
         _lastMouse = _mouse;
         _mouse = Mouse.GetState();
 
-        _ = TruePosition;
-        _ = Position;
-        
-        // TODO
+        UpdateTruePosition();
+        UpdatePosition();
+    }
+    
+    private void UpdateTruePosition()
+    {
+        int mouseX = _mouse.X;
+        int mouseY = _mouse.Y;
+
+        if (!_displayRect.Contains(mouseX, mouseY))
+            return;
+
+        float relativeX = (mouseX - _displayRect.X) / (float)_displayRect.Width;
+        float relativeY = (mouseY - _displayRect.Y) / (float)_displayRect.Height;
+
+        int gameX = (int)(relativeX * MEWindow.Resolution.X);
+        int gameY = (int)(relativeY * MEWindow.Resolution.Y);
+
+        TruePosition = new Point(gameX, gameY);
+    }
+
+    private void UpdatePosition()
+    {
+        if (TruePosition.X < 0 || TruePosition.Y < 0)
+            return;
+
+        Vector2 resolutionOffset = new(MEWindow.Resolution.X / 2, MEWindow.Resolution.Y / 2);
+        Vector2 cameraOffset = SceneManager.ActiveScene.Camera.Position - resolutionOffset;
+
+        Position = new Vector2(TruePosition.X, TruePosition.Y) + cameraOffset;
     }
 }
