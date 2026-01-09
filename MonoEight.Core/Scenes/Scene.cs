@@ -4,17 +4,6 @@ using MonoEight.Core.UI;
 
 namespace MonoEight.Core.Scenes;
 
-/// <summary>
-/// Represents a logical container for game objects, camera, and UI elements within a game. Provides the base
-/// functionality for managing the lifecycle and content of a game scene.
-/// </summary>
-/// <remarks>
-/// Derive from this class to implement custom game scenes. Override the protected virtual methods to
-/// define scene-specific initialization, content loading, updating, drawing, and unloading behavior. Scenes manage
-/// their own collection of game objects and provide methods for adding and searching for components or game objects.
-/// The scene's camera and canvas are accessible for rendering and UI purposes. Scene lifecycle methods are
-/// called by the game engine and should not be invoked directly.
-/// </remarks>
 public abstract class Scene
 {
     private readonly List<GameObject> _gameObjects = [];

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Content;
 namespace MonoEight.Core;
 
 /// <summary>
-/// Provides static methods for initializing and loading content assets using a shared content manager.
+/// Provides static methods for loading content assets using the MonoGame content builder.
 /// </summary>
 public static class Content
 {

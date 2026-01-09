@@ -3,10 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight.Core.Sprite;
 
-/// <summary>
-/// Represents a component that renders a 2D texture (sprite) with configurable position, color, rotation, scale, and
-/// rendering effects.
-/// </summary>
 public class SpriteRenderer : Component
 {
     private Texture2D _texture;

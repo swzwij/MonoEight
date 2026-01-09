@@ -3,9 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight.Core.Sprite;
 
-/// <summary>
-/// Represents a collection of equally sized sprites extracted from a single texture.
-/// </summary>
 public class SpriteSheet
 {
     private readonly Point _spriteSize;

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace MonoEight.Core;
 
 /// <summary>
-/// Provides helper methods for calculating graphics related values such as display rectangles.
+/// Provides helper methods for calculating graphics related values.
 /// </summary>
 public static class GraphicsHelper
 {
