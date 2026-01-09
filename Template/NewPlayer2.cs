@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
 using MonoEight.Core.Physics;
 using MonoEight.Core.Sprite;
-using MonoEight.Core.Inputting;
+using MonoEight.Core.UserInput;
 
 namespace MonoEight;
 

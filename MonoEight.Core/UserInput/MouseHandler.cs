@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using MonoEight.Core.Scenes;
 
-namespace MonoEight.Core.Inputting;
+namespace MonoEight.Core.UserInput;
 
 public class MouseHandler
 {

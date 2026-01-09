@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
-using MonoEight.Core.Inputting;
+using MonoEight.Core.UserInput;
 using MonoEight.Core.UI;
 using MonoEight.Core.Scenes;
 

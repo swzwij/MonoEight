@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using MonoEight.Core.Scenes;
-using MonoEight.Core.Inputting;
+using MonoEight.Core.UserInput;
 
 namespace MonoEight;
 

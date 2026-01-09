@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoEight.Core;
-using MonoEight.Core.Inputting;
+using MonoEight.Core.UserInput;
 using MonoEight.Core.Physics;
 using MonoEight.Core.Sprite;
 
@@ -33,6 +33,11 @@ public class NewPlayer : GameObject
 
     protected override void Update()
     {
+        Vector2 position = Position;
+        position.X += Input.IsPressed("A") ? 1f : 0f;
+        position.Y += Input.IsPressed("B") ? 1f : 0f;
+        Position = position;    
+        
         if (Input.Mouse.LeftPressed)
         {
             if (!_collider.Intersects(Input.Mouse.Position.Int()))

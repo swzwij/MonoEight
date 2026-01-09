@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonoEight.Core.Inputting;
+namespace MonoEight.Core.UserInput;
 
 public static class Input
 {
@@ -66,37 +64,36 @@ public static class Input
     {
         if (_actions.ContainsKey(name))
             throw new Exception($"There already exists a InputAction with the name: '{name}'");
-        _actions.Add(name, new(keys, buttons));
+        _actions.Add(name, new InputAction(keys, buttons));
     }
 
     public static bool IsDown(string name)
     {
-        if (!_actions.TryGetValue(name, out InputAction action))
-            throw new Exception($"No InputAction with the name '{name}' exists");
-        return action.IsDown;
+        return !_actions.TryGetValue(name, out InputAction? action) 
+            ? throw new Exception($"No InputAction with the name '{name}' exists") 
+            : action.IsDown;
     }
 
     public static bool IsPressed(string name)
     {
-        if (!_actions.TryGetValue(name, out InputAction action))
-            throw new Exception($"No InputAction with the name '{name}' exists");
-        return action.IsPressed;
+        return !_actions.TryGetValue(name, out InputAction? action) 
+            ? throw new Exception($"No InputAction with the name '{name}' exists") 
+            : action.IsPressed;
     }
 
     public static bool IsReleased(string name)
     {
-        if (!_actions.TryGetValue(name, out InputAction action))
-            throw new Exception($"No InputAction with the name '{name}' exists");
-        return action.IsReleased;
+        return !_actions.TryGetValue(name, out InputAction? action) 
+            ? throw new Exception($"No InputAction with the name '{name}' exists") 
+            : action.IsReleased;
     }
 
     public static InputAction Action(string name)
     {
-        if (!_actions.TryGetValue(name, out InputAction action))
-            throw new Exception($"No InputAction with the name '{name}' exists");
-        return action;
+        return !_actions.TryGetValue(name, out InputAction? action) 
+            ? throw new Exception($"No InputAction with the name '{name}' exists") 
+            : action;
     }
-
     public static int GetHorizontalAxis()
     {
         int axis = 0;

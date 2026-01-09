@@ -1,7 +1,6 @@
-using System;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonoEight.Core.Inputting;
+namespace MonoEight.Core.UserInput;
 
 public class InputAction
 {
