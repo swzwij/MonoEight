@@ -40,7 +40,7 @@ public static class SceneManager
         _activeScene?.InternalUpdate();
     }
 
-    public static void Draw(SpriteBatch spriteBatch)
+    public static void Draw(SpriteBatch? spriteBatch)
     {
         _activeScene?.InternalDraw(spriteBatch);
     }

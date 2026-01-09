@@ -5,7 +5,7 @@ namespace MonoEight.Core;
 /// <summary>
 /// 
 /// </summary>
-public static class VectorPointExtenseions
+public static class VectorPointExtensions
 {
     /// <summary>
     /// Converts the specified Vector2 to a Point by truncating the X and Y components to their integer values.
@@ -18,7 +18,7 @@ public static class VectorPointExtenseions
     /// <returns>A Point whose X and Y values are the integer parts of the corresponding components of the input vector.</returns>
     public static Point Int(this Vector2 vector)
     {
-        return new((int)vector.X, (int)vector.Y);
+        return new Point((int)vector.X, (int)vector.Y);
     }
 
     /// <summary>
@@ -28,7 +28,7 @@ public static class VectorPointExtenseions
     /// <returns>A Vector2 whose X and Y components are set to the X and Y values of the specified Point.</returns>
     public static Vector2 Float(this Point vector)
     {
-        return new(vector.X, vector.Y);
+        return new Vector2(vector.X, vector.Y);
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public static class VectorPointExtenseions
     /// The resulting vector has floating-point components that represent the truncated integer values.
     /// </remarks>
     /// <param name="vector">The vector whose components will be truncated to their integer values.</param>
-    /// <returns>A new Vector2 whose X and Y components are the integer parts of the corresponding components in
+    /// <returns>A new Vector2 whose X and Y components are the integer parts of the corresponding components in 
     public static Vector2 Cast(this Vector2 vector)
     {
         return vector.Int().Float();

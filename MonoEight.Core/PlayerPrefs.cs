@@ -8,8 +8,8 @@ namespace MonoEight.Core;
 /// </summary>
 public static class PlayerPrefs
 {
-    private static readonly Dictionary<string, object> _prefs = [];
-    private static string _path;
+    private static readonly Dictionary<string, object?> _prefs = [];
+    private static string? _path;
     private static readonly JsonSerializerOptions _jsonOptions = new() { WriteIndented = true };
 
 
@@ -32,31 +32,36 @@ public static class PlayerPrefs
         try
         {
             string json = File.ReadAllText(_path);
-            Dictionary<string, JsonElement> loadedPrefs = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
+            Dictionary<string, JsonElement>? loadedPrefs = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(json);
 
             _prefs.Clear();
-            if (loadedPrefs != null)
+            
+            if (loadedPrefs == null)
+                return;
+            
+            foreach (KeyValuePair<string, JsonElement> pair in loadedPrefs)
             {
-                foreach (KeyValuePair<string, JsonElement> pair in loadedPrefs)
+                switch (pair.Value.ValueKind)
                 {
-                    switch (pair.Value.ValueKind)
-                    {
-                        case JsonValueKind.Number:
-                            if (pair.Value.TryGetInt32(out int intValue))
-                                _prefs[pair.Key] = intValue;
-                            else if (pair.Value.TryGetDouble(out double doubleValue))
-                                _prefs[pair.Key] = doubleValue;
-                            break;
-                        case JsonValueKind.String:
-                            _prefs[pair.Key] = pair.Value.GetString();
-                            break;
-                        case JsonValueKind.True:
-                        case JsonValueKind.False:
-                            _prefs[pair.Key] = pair.Value.GetBoolean();
-                            break;
-                        default:
-                            break;
-                    }
+                    case JsonValueKind.Number:
+                        if (pair.Value.TryGetInt32(out int intValue))
+                            _prefs[pair.Key] = intValue;
+                        else if (pair.Value.TryGetDouble(out double doubleValue))
+                            _prefs[pair.Key] = doubleValue;
+                        break;
+                    case JsonValueKind.String:
+                        _prefs[pair.Key] = pair.Value.GetString();
+                        break;
+                    case JsonValueKind.True:
+                    case JsonValueKind.False:
+                        _prefs[pair.Key] = pair.Value.GetBoolean();
+                        break;
+                    case JsonValueKind.Undefined:
+                    case JsonValueKind.Object:
+                    case JsonValueKind.Array:
+                    case JsonValueKind.Null:
+                    default:
+                        break;
                 }
             }
         }
@@ -72,6 +77,10 @@ public static class PlayerPrefs
         try
         {
             string json = JsonSerializer.Serialize(_prefs, _jsonOptions);
+
+            if (_path == null)
+                return;
+            
             File.WriteAllText(_path, json);
         }
         catch (Exception e)
@@ -82,13 +91,13 @@ public static class PlayerPrefs
 
     private static T GetValue<T>(string key, T defaultValue)
     {
-        if (_prefs.TryGetValue(key, out object value) && value is T typedValue)
+        if (_prefs.TryGetValue(key, out object? value) && value is T typedValue)
             return typedValue;
 
         return defaultValue;
     }
 
-    public static T Get<T>(string key, T defaultValue = default)
+    public static T? Get<T>(string key, T? defaultValue = default)
     {
         return GetValue(key, defaultValue);
     }

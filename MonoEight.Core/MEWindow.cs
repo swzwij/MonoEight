@@ -8,27 +8,24 @@ namespace MonoEight.Core;
 /// </summary>
 public static class MEWindow
 {
-    private static GraphicsDeviceManager _graphics;
-    private static GameWindow _window;
-
     private static bool _isFullscreen = false;
 
     public static Point Resolution { get; set; } = new Point(128, 96);
     public static bool StartFullscreen { get; set; }
 
-    public static bool IsFullscreen
+    private static bool IsFullscreen
     {
         get => _isFullscreen;
         set => SetFullScreen(value);
     }
 
-    public static GraphicsDeviceManager Graphics => _graphics;
-    public static GameWindow Window => _window;
+    public static GraphicsDeviceManager? Graphics { get; private set; }
+    public static GameWindow? Window { get; private set; }
 
     public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
     {
-        _graphics = graphics;
-        _window = window;
+        Graphics = graphics;
+        Window = window;
 
         if (StartFullscreen)
         {
@@ -59,43 +56,43 @@ public static class MEWindow
 
     private static void FullScreen()
     {
-        _graphics.PreferredBackBufferWidth = _graphics.GraphicsDevice.DisplayMode.Width;
-        _graphics.PreferredBackBufferHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+        Graphics!.PreferredBackBufferWidth = Graphics.GraphicsDevice.DisplayMode.Width;
+        Graphics.PreferredBackBufferHeight = Graphics.GraphicsDevice.DisplayMode.Height;
 
-        _window.IsBorderless = true;
-        _window.Position = new Point(0, 0);
-        _window.AllowUserResizing = false;
+        Window!.IsBorderless = true;
+        Window.Position = new Point(0, 0);
+        Window.AllowUserResizing = false;
 
-        _graphics.ApplyChanges();
+        Graphics.ApplyChanges();
     }
 
     private static void Windowed()
     {
         Point windowedSize = CalculateWindowedSize();
 
-        _graphics.PreferredBackBufferWidth = windowedSize.X;
-        _graphics.PreferredBackBufferHeight = windowedSize.Y;
+        Graphics!.PreferredBackBufferWidth = windowedSize.X;
+        Graphics.PreferredBackBufferHeight = windowedSize.Y;
 
-        _window.IsBorderless = false;
-        _window.AllowUserResizing = true;
+        Window!.IsBorderless = false;
+        Window.AllowUserResizing = true;
 
-        _window.Position = new Point
+        Window.Position = new Point
         (
-            (_graphics.GraphicsDevice.DisplayMode.Width - windowedSize.X) / 2,
-            (_graphics.GraphicsDevice.DisplayMode.Height - windowedSize.Y) / 2
+            (Graphics.GraphicsDevice.DisplayMode.Width - windowedSize.X) / 2,
+            (Graphics.GraphicsDevice.DisplayMode.Height - windowedSize.Y) / 2
         );
 
-        _graphics.ApplyChanges();
+        Graphics.ApplyChanges();
     }
 
     private static Point CalculateWindowedSize()
     {
-        int screenHeight = _graphics.GraphicsDevice.DisplayMode.Height;
+        int screenHeight = Graphics!.GraphicsDevice.DisplayMode.Height;
         int windowHeight = screenHeight * 3 / 4;
 
-        float aspectRatio = (float)Resolution.X / (float)Resolution.Y;
+        float aspectRatio = (float)Resolution.X / Resolution.Y;
         int windowWidth = (int)(windowHeight * aspectRatio);
 
-        return new(windowWidth, windowHeight);
+        return new Point(windowWidth, windowHeight);
     }
 }

@@ -7,9 +7,9 @@ namespace MonoEight.Core;
 /// </summary>
 public static class Time
 {
-    private static GameTime _gameTime;
+    private static GameTime? _gameTime = null;
 
-    public static float DeltaTime => (float)_gameTime.ElapsedGameTime.TotalSeconds;
+    public static float DeltaTime => (float)_gameTime?.ElapsedGameTime.TotalSeconds!;
 
     public static void Update(GameTime gameTime)
     {

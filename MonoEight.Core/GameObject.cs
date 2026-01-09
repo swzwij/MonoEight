@@ -23,9 +23,9 @@ public class GameObject : IDisposable
     public Vector2 Position { get; set; }
     public bool IsActive { get; set; } = true;
     public bool ShouldDestroy { get; private set; }
-    public Scene Scene { get; internal set; }
+    public Scene? Scene { get; internal set; }
 
-    public Canvas Canvas => Scene?.Canvas;
+    public Canvas? Canvas => Scene?.Canvas;
 
     protected virtual void Initialize() { }
     protected virtual void LoadContent() { }
@@ -36,16 +36,16 @@ public class GameObject : IDisposable
     {
         Initialize();
 
-        for (int i = 0; i < _components.Count; i++)
-            _components[i].InternalInitialize();
+        foreach (Component component in _components)
+            component.InternalInitialize();
     }
 
     public void InternalLoadContent()
     {
         LoadContent();
 
-        for (int i = 0; i < _components.Count; i++)
-            _components[i].InternalLoadContent();
+        foreach (Component component in _components)
+            component.InternalLoadContent();
     }
 
     public void InternalUpdate()
@@ -57,11 +57,8 @@ public class GameObject : IDisposable
 
         RemoveComponents();
 
-        for (int i = 0; i < _components.Count; i++)
-        {
-            if (_components[i].IsActive)
-                _components[i].InternalUpdate();
-        }
+        foreach (Component component in _components.Where(component => component.IsActive))
+            component.InternalUpdate();
     }
 
     public void InternalDraw(SpriteBatch spriteBatch)
@@ -71,11 +68,8 @@ public class GameObject : IDisposable
 
         Draw(spriteBatch);
 
-        for (int i = 0; i < _components.Count; i++)
-        {
-            if (_components[i].IsActive)
-                _components[i].InternalDraw(spriteBatch);
-        }
+        foreach (Component component in _components.Where(component => component.IsActive))
+            component.InternalDraw(spriteBatch);
     }
 
     public void AddComponent(Component component)
@@ -87,7 +81,7 @@ public class GameObject : IDisposable
             Scene?.AddCollider(collider);
     }
 
-    public T GetComponent<T>() where T : Component
+    public T? GetComponent<T>() where T : Component
     {
         for (int i = 0; i < _components.Count; i++)
         {

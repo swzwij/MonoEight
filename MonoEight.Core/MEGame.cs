@@ -8,11 +8,11 @@ namespace MonoEight.Core;
 
 public class MEGame : Game
 {
-    protected readonly GraphicsDeviceManager _graphics;
-    protected SpriteBatch _spriteBatch;
-    protected RenderTarget2D _renderTarget;
+    private readonly GraphicsDeviceManager _graphics;
+    private SpriteBatch? _spriteBatch;
+    private RenderTarget2D? _renderTarget;
 
-    public MEGame()
+    protected MEGame()
     {
         _graphics = new GraphicsDeviceManager(this);
         IsMouseVisible = true;
@@ -82,7 +82,7 @@ public class MEGame : Game
         GraphicsDevice.SetRenderTarget(_renderTarget);
         GraphicsDevice.Clear(SceneManager.ActiveScene.Camera.BackgroundColor);
 
-        _spriteBatch.Begin
+        _spriteBatch?.Begin
         (
             SpriteSortMode.FrontToBack,
             null,
@@ -95,17 +95,17 @@ public class MEGame : Game
 
         SceneManager.Draw(_spriteBatch);
 
-        _spriteBatch.End();
+        _spriteBatch?.End();
 
         GraphicsDevice.SetRenderTarget(null);
         GraphicsDevice.Clear(Color.Black);
 
-        _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        _spriteBatch?.Begin(samplerState: SamplerState.PointClamp);
 
         Rectangle targetRect = GraphicsHelper.CalculateDisplayRect(GraphicsDevice);
 
-        _spriteBatch.Draw(_renderTarget, targetRect, Color.White);
-        _spriteBatch.End();
+        _spriteBatch?.Draw(_renderTarget, targetRect, Color.White);
+        _spriteBatch?.End();
 
         base.Draw(gameTime);
     }
