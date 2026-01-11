@@ -77,6 +77,10 @@ public class SpriteRenderer : Component
         Texture = texture;
     }
 
+    /// <summary>
+    /// Draws the sprite to the screen if a texture is assigned.
+    /// </summary>
+    /// <param name="spriteBatch"><see cref="SpriteBatch"/></param>
     protected override void Draw(SpriteBatch spriteBatch)
     {
         if (!_hasTexture)
