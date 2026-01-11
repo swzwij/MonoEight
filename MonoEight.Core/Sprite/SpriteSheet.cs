@@ -3,6 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoEight.Core.Sprite;
 
+/// <summary>
+/// A collection of sprites sliced from a larger texture
+/// </summary>
 public class SpriteSheet
 {
     private readonly Point _spriteSize;
@@ -11,9 +14,24 @@ public class SpriteSheet
     private readonly int _rows;
     private readonly int _columns;
 
+    /// <summary>
+    /// Gets the total number of sprites in this sheet.
+    /// </summary>
     public int Count => _rows * _columns;
+    
+    /// <summary>
+    /// Gets the sprite <see cref="Texture2D"/> at the given index.
+    /// </summary>
+    /// <param name="index">The index of the sprite.</param>
+    /// <returns>The sprite <see cref="Texture2D"/>.</returns>
+    /// <exception cref="IndexOutOfRangeException">Thrown if the index is invalid.</exception>
     public Texture2D this[int index] => Get(index);
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SpriteSheet"/> from the given <see cref="Texture2D"/>.
+    /// </summary>
+    /// <param name="texture">The <see cref="Texture2D"/> that will be sliced.</param>
+    /// <param name="size">The size of a single sprite in the sheet.</param>
     public SpriteSheet(Texture2D texture, Point size)
     {
         _texture = texture;
@@ -27,8 +45,19 @@ public class SpriteSheet
         Splice();
     }
 
+    /// <summary>
+    /// <inheritdoc/>
+    /// </summary>
+    /// <param name="texture"><inheritdoc/></param>
+    /// <param name="size">The size of a single sprite in the sheet.</param>
     public SpriteSheet(Texture2D texture, int size) : this(texture, new Point(size)) { }
 
+    /// <summary>
+    /// <inheritdoc/>
+    /// </summary>
+    /// <param name="texture"><inheritdoc/></param>
+    /// <param name="size">The size of a single sprite in the sheet.</param>
+    /// <param name="indices">The indices to keep from the sliced sheet.</param>
     public SpriteSheet(Texture2D texture, int size, int[] indices) : this(texture, new Point(size))
     {
         Texture2D[] sprites = new Texture2D[indices.Length];
@@ -39,6 +68,12 @@ public class SpriteSheet
         _sprites = sprites;
     }
 
+    /// <summary>
+    /// Gets the sprite <see cref="Texture2D"/> at the given index.
+    /// </summary>
+    /// <param name="index">The index of the sprite.</param>
+    /// <returns>The sprite <see cref="Texture2D"/>.</returns>
+    /// <exception cref="IndexOutOfRangeException">Thrown if the index is invalid.</exception>
     public Texture2D Get(int index)
     {
         ValidateIndex(index);
