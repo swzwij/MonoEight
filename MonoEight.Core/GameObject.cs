@@ -6,16 +6,6 @@ using MonoEight.Core.Scenes;
 
 namespace MonoEight.Core;
 
-/// <summary>
-/// Represents an entity within a scene that can contain components and participate in the game loop lifecycle.
-/// </summary>
-/// <remarks>
-/// A GameObject serves as a container for components, enabling modular behavior and logic composition.
-/// It manages its own lifecycle, including initialization, content loading, updating, and drawing, and delegates these
-/// phases to its components. GameObjects are typically managed by a Scene and can be activated, deactivated, or marked
-/// for destruction. Components can be added or retrieved at runtime to extend functionality. GameObject implements
-/// IDisposable to ensure proper cleanup of its components.
-/// </remarks>
 public class GameObject : IDisposable
 {
     private readonly List<Component> _components = [];

@@ -2,10 +2,6 @@ using System.Text.Json;
 
 namespace MonoEight.Core;
 
-/// <summary>
-/// Provides a simple, static API for storing and retrieving user preferences and settings as key value pairs, persisted
-/// to disk between application sessions.
-/// </summary>
 public static class PlayerPrefs
 {
     private static readonly Dictionary<string, object?> _prefs = [];
