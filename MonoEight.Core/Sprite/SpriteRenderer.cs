@@ -71,7 +71,7 @@ public class SpriteRenderer : Component
     /// Initializes a new instance of the <see cref="SpriteRenderer"/> class with the given texture.
     /// </summary>
     /// <param name="texture">The <see cref="Texture2D"/> to render.</param>
-    public SpriteRenderer(Texture2D texture)
+    public SpriteRenderer(Texture2D? texture)
     {
         _texture = texture;
         Texture = texture;
