@@ -56,8 +56,7 @@ public class Animator : SpriteRenderer
     /// Initializes a new instance of the <see cref="Animator"/> class with a default animation using all frames in the sheet.
     /// </summary>
     /// <param name="spriteSheet">The source sprite sheet containing the frames.</param>
-    public Animator(SpriteSheet spriteSheet)
-        : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
+    public Animator(SpriteSheet spriteSheet) : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;
         _animations = [];
@@ -81,8 +80,7 @@ public class Animator : SpriteRenderer
     /// <param name="spriteSheet">The source sprite sheet containing the frames.</param>
     /// <param name="animations">The array of animations to register.</param>
     /// <exception cref="Exception">Thrown if the animations array is empty.</exception>
-    public Animator(SpriteSheet spriteSheet, Animation[] animations)
-        : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
+    public Animator(SpriteSheet spriteSheet, Animation[] animations) : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;
         _animations = [];
