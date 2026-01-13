@@ -3,44 +3,41 @@ using Microsoft.Xna.Framework;
 namespace MonoEight.Core;
 
 /// <summary>
-/// 
+/// Provides extension methods for converting between <see cref="Vector2"/> and <see cref="Point"/>.
 /// </summary>
 public static class VectorPointExtensions
 {
     /// <summary>
-    /// Converts the specified Vector2 to a Point by truncating the X and Y components to their integer values.
+    /// Converts a <see cref="Vector2"/> to a <see cref="Point"/> by casting the components to integers.
     /// </summary>
     /// <remarks>
-    /// The conversion truncates the fractional part of each component, it does not perform rounding.
-    /// For example, a component value of 3.9 becomes 3.
+    /// This operation truncates decimal values.
     /// </remarks>
-    /// <param name="vector">The Vector2 instance to convert to a Point.</param>
-    /// <returns>A Point whose X and Y values are the integer parts of the corresponding components of the input vector.</returns>
+    /// <param name="vector">The source vector.</param>
+    /// <returns>A <see cref="Point"/> with integer coordinates.</returns>
     public static Point Int(this Vector2 vector)
     {
         return new Point((int)vector.X, (int)vector.Y);
     }
-
+    
     /// <summary>
-    /// Converts a Point structure to a Vector2 structure with the same X and Y values.
+    /// Converts a <see cref="Point"/> to a <see cref="Vector2"/>.
     /// </summary>
-    /// <param name="vector">The Point to convert to a Vector2.</param>
-    /// <returns>A Vector2 whose X and Y components are set to the X and Y values of the specified Point.</returns>
+    /// <param name="vector">The source point.</param>
+    /// <returns>A <see cref="Vector2"/> with the same coordinates.</returns>
     public static Vector2 Float(this Point vector)
     {
         return new Vector2(vector.X, vector.Y);
     }
-
+    
     /// <summary>
-    /// Returns a new vector whose components are the integer parts of the specified vector, with any fractional parts
-    /// removed.
+    /// Snaps a <see cref="Vector2"/> to the nearest integer coordinates while keeping it as a <see cref="Vector2"/>.
     /// </summary>
     /// <remarks>
-    /// This method truncates each component toward zero, effectively removing any fractional part.
-    /// The resulting vector has floating-point components that represent the truncated integer values.
+    /// Effectively performs <c>new Vector2((int)x, (int)y)</c>.
     /// </remarks>
-    /// <param name="vector">The vector whose components will be truncated to their integer values.</param>
-    /// <returns>A new Vector2 whose X and Y components are the integer parts of the corresponding components in 
+    /// <param name="vector">The source vector.</param>
+    /// <returns>A <see cref="Vector2"/> with integer values.</returns>
     public static Vector2 Cast(this Vector2 vector)
     {
         return vector.Int().Float();

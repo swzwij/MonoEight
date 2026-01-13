@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoEight.Core.Scenes;
@@ -7,6 +6,12 @@ using MonoEight.Core.UserInput;
 
 namespace MonoEight.Core;
 
+/// <summary>
+/// The core game class that manages the main game loop, rendering pipeline, and engine initialization.
+/// </summary>
+/// <remarks>
+/// Inherit from this class to create your specific game entry point.
+/// </remarks>
 public class MEGame : Game
 {
     private readonly GraphicsDeviceManager _graphics;
@@ -37,6 +42,10 @@ public class MEGame : Game
         base.Initialize();
     }
 
+    /// <summary>
+    /// Called after the engine systems are initialized but before content is loaded.
+    /// Override this to register your own scenes or configure window settings.
+    /// </summary>
     protected virtual void OnGameInitialize()
     {
         
@@ -54,6 +63,10 @@ public class MEGame : Game
         OnLoadContent();
     }
 
+    /// <summary>
+    /// Called when the game content is being loaded.
+    /// Override this to load global assets or fonts.
+    /// </summary>
     protected virtual void OnLoadContent()
     {
         
@@ -76,6 +89,10 @@ public class MEGame : Game
         base.Update(gameTime);
     }
 
+    /// <summary>
+    /// Called every frame after the engine has updated the scene.
+    /// Override this to add global logic that runs regardless of the scene.
+    /// </summary>
     protected virtual void OnUpdate()
     {
         
@@ -84,7 +101,7 @@ public class MEGame : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.SetRenderTarget(_renderTarget);
-        GraphicsDevice.Clear(SceneManager.ActiveScene.Camera.BackgroundColor);
+        GraphicsDevice.Clear(SceneManager.ActiveScene?.Camera.BackgroundColor ?? Color.Black);
 
         _spriteBatch?.Begin
         (
@@ -94,10 +111,10 @@ public class MEGame : Game
             null,
             null,
             null,
-            SceneManager.ActiveScene.Camera.Transform
+            SceneManager.ActiveScene?.Camera.Transform ?? new Matrix()
         );
 
-        SceneManager.Draw(_spriteBatch);
+        SceneManager.Draw(_spriteBatch!);
 
         _spriteBatch?.End();
 

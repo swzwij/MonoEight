@@ -1,7 +1,7 @@
 namespace MonoEight.Core.Sprite;
 
 /// <summary>
-/// Animates a sprite using a sprite sheet and defined animations.
+/// A <see cref="Component"/> that renders animated sprites by cycling through frames form a <see cref="SpriteSheet"/>. 
 /// </summary>
 public class Animator : SpriteRenderer
 {
@@ -14,54 +14,49 @@ public class Animator : SpriteRenderer
     private bool _isPlaying;
 
     /// <summary>
-    /// Gets or sets the default duration of each frame in seconds.
+    /// Gets or sets the default duration, in seconds, for each frame. 
+    /// Used only for the default animation created in the constructor.
     /// </summary>
-    /// <remarks>
-    /// Default is 0.1f (100 ms or 10 fps).
-    /// Overridden by individual animation's FrameDuration if set.
-    /// </remarks>
-    public float FrameDuration { get; set; } = 0.1f;
+    public float FrameDuration { get; init; } = 0.1f;
 
     /// <summary>
-    /// Gets or sets whether the default animation should loop.
+    /// Gets or sets a value indicating whether the default animation should loop.
+    /// Used only for the default animation created in the constructor.
     /// </summary>
-    /// <remarks>
-    /// Default is true.
-    /// Overridden by individual animation's Loop if set.
-    /// </remarks>
-    public bool Loop { get; set; } = true;
+    public bool Loop { get; init; } = true;
 
     /// <summary>
-    /// Event invoked when the animation is played.
+    /// Invoked when playback starts or resumes.
     /// </summary>
     public Action OnPlayed;
 
     /// <summary>
-    /// Event invoked when the animation is stopped.
+    /// Invoked when playback is stopped manually or when a non looping animation finishes.
     /// </summary>
     public Action OnStopped;
 
     /// <summary>
-    /// Event invoked when the animation loops.
+    /// Invoked when the current animation completes a cycle and loops back to the start.
     /// </summary>
     public Action OnLooped;
 
     /// <summary>
-    /// Event invoked when the animation changes.
+    /// Invoked when the current animation is switched to a new one. 
+    /// Provides the name of the new animation.
     /// </summary>
     public Action<string> OnChanged;
 
     /// <summary>
-    /// Event invoked when the animation finishes playing.
+    /// Invoked when a non-looping animation reaches its final frame.
+    /// Provides the name of the finished animation.
     /// </summary>
     public Action<string> OnFinished;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="Animator"/> class with a sprite sheet.
+    /// Initializes a new instance of the <see cref="Animator"/> class with a default animation using all frames in the sheet.
     /// </summary>
-    /// <param name="spriteSheet">The sprite sheet to use for animations.</param>
-    public Animator(SpriteSheet spriteSheet)
-        : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
+    /// <param name="spriteSheet">The source sprite sheet containing the frames.</param>
+    public Animator(SpriteSheet spriteSheet) : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;
         _animations = [];
@@ -78,14 +73,14 @@ public class Animator : SpriteRenderer
 
         Reset();
     }
-
+    
     /// <summary>
-    /// Initializes a new instance of the <see cref="Animator"/> class with a sprite sheet and animations.
+    /// Initializes a new instance of the <see cref="Animator"/> class with a given set of named animations.
     /// </summary>
-    /// <param name="spriteSheet">The sprite sheet to use for animations.</param>
-    /// <param name="animations">The animations to define.</param>
-    public Animator(SpriteSheet spriteSheet, Animation[] animations)
-        : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
+    /// <param name="spriteSheet">The source sprite sheet containing the frames.</param>
+    /// <param name="animations">The array of animations to register.</param>
+    /// <exception cref="Exception">Thrown if the animations array is empty.</exception>
+    public Animator(SpriteSheet spriteSheet, Animation[] animations) : base(spriteSheet.Count > 0 ? spriteSheet[0] : null)
     {
         _spriteSheet = spriteSheet;
         _animations = [];
@@ -100,12 +95,9 @@ public class Animator : SpriteRenderer
         Reset();
     }
 
-    /// <summary>
-    /// Handles the update logic for the animator.
-    /// </summary>
     protected override void Update()
     {
-        if (!_isPlaying || _currentAnimation == null)
+        if (!_isPlaying)
             return;
 
         _timer += Time.DeltaTime;
@@ -145,7 +137,7 @@ public class Animator : SpriteRenderer
     }
 
     /// <summary>
-    /// Plays the current animation.
+    /// Starts or resumes playback of the current animation.
     /// </summary>
     public void Play()
     {
@@ -154,12 +146,16 @@ public class Animator : SpriteRenderer
     }
 
     /// <summary>
-    /// Plays the specified animation by name.
+    /// Switches to the given animation and starts playback from the beginning.
     /// </summary>
+    /// <remarks>
+    /// If the specified animation is already playing, this method does nothing, unless <see cref="Stop"/> was called previously.
+    /// </remarks>
     /// <param name="animationName">The name of the animation to play.</param>
+    /// <exception cref="Exception">Thrown if the animation name is not found.</exception>
     public void Play(string animationName)
     {
-        if (!_animations.TryGetValue(animationName, out Animation newAnimation))
+        if (!_animations.TryGetValue(animationName, out Animation? newAnimation))
             throw new Exception($"Animation '{animationName}' not found!");
 
         if (_currentAnimation != newAnimation)
@@ -174,9 +170,9 @@ public class Animator : SpriteRenderer
         _isPlaying = true;
         OnPlayed?.Invoke();
     }
-
+    
     /// <summary>
-    /// Stops the current animation.
+    /// Stops playback. The sprite remains on the current frame.
     /// </summary>
     public void Stop()
     {
@@ -185,7 +181,7 @@ public class Animator : SpriteRenderer
     }
 
     /// <summary>
-    /// Pauses the current animation.
+    /// Pauses playback.
     /// </summary>
     public void Pause()
     {
@@ -193,7 +189,7 @@ public class Animator : SpriteRenderer
     }
 
     /// <summary>
-    /// Resumes the current animation.
+    /// Resumes playback from the current frame.
     /// </summary>
     public void Resume()
     {

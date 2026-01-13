@@ -4,26 +4,76 @@ using MonoEight.Core.Scenes;
 
 namespace MonoEight.Core.UserInput;
 
+/// <summary>
+/// Manages the mouse button input and cursor positioning. 
+/// </summary>
 public class MouseHandler
 {
-    public bool IsEnabled { get; set; } = true;
-
     private MouseState _mouse;
     private MouseState _lastMouse;
     
     private Rectangle _displayRect;
+    
+    /// <summary>
+    /// Gets or sets whether mouse input processing is enabled.
+    /// Default is <c>true</c>.
+    /// </summary>
+    public bool IsEnabled { get; set; } = true;
 
+    /// <summary>
+    /// Gets the mouse cursor position in screen coordinates.
+    /// </summary>
+    /// <remarks>
+    /// The value is scaled relative to the internal resolution (<see cref="MEWindow.Resolution"/>), ignoring the camera.
+    /// </remarks>
     public Point TruePosition {get; private set;}
+
+    /// <summary>
+    /// Gets the mouse cursor position in world coordinates.
+    /// </summary>
+    /// <remarks>
+    /// This value includes the camera offset.
+    /// </remarks>
     public Vector2 Position { get; private set; }
 
+    /// <summary>
+    /// Gets whether the left mouse button is currently held down.
+    /// </summary>
     public bool LeftDown => _mouse.LeftButton == ButtonState.Pressed;
+
+    /// <summary>
+    /// Gets whether the left mouse button is currently up.
+    /// </summary>
     public bool LeftUp => _mouse.LeftButton == ButtonState.Released;
+
+    /// <summary>
+    /// Gets whether the left mouse button was pressed this frame.
+    /// </summary>
     public bool LeftPressed => _mouse.LeftButton == ButtonState.Pressed && _lastMouse.LeftButton == ButtonState.Released;
+
+    /// <summary>
+    /// Gets whether the left mouse button was released this frame.
+    /// </summary>
     public bool LeftReleased => _mouse.LeftButton == ButtonState.Released && _lastMouse.LeftButton == ButtonState.Pressed;
 
+    /// <summary>
+    /// Gets whether the right mouse button is currently held down.
+    /// </summary>
     public bool RightDown => _mouse.RightButton == ButtonState.Pressed;
+
+    /// <summary>
+    /// Gets whether the right mouse button is currently up.
+    /// </summary>
     public bool RightUp => _mouse.RightButton == ButtonState.Released;
+
+    /// <summary>
+    /// Gets whether the right mouse button was pressed this frame.
+    /// </summary>
     public bool RightPressed => _mouse.RightButton == ButtonState.Pressed && _lastMouse.RightButton == ButtonState.Released;
+
+    /// <summary>
+    /// Gets whether the right mouse button was released this frame.
+    /// </summary>
     public bool RightReleased => _mouse.RightButton == ButtonState.Released && _lastMouse.RightButton == ButtonState.Pressed;
 
     public void Update(Rectangle displayRect)

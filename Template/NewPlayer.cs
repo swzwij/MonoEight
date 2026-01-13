@@ -38,6 +38,8 @@ public class NewPlayer : GameObject
         position.Y += Input.IsPressed("B") ? 1f : 0f;
         Position = position;    
         
+        GameTime t = Time.GameTime;
+        
         if (Input.Mouse.LeftPressed)
         {
             if (!_collider.Intersects(Input.Mouse.Position.Int()))
