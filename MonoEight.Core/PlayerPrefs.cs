@@ -2,13 +2,28 @@ using System.Text.Json;
 
 namespace MonoEight.Core;
 
+/// <summary>
+/// Provides a static interface for storing and retrieving simple player data to a local JSON file.
+/// </summary>
+/// <remarks>
+/// Supported Types: int, double, bool, string. 
+/// </remarks>
 public static class PlayerPrefs
 {
     private static readonly Dictionary<string, object?> _prefs = [];
     private static string? _path;
     private static readonly JsonSerializerOptions _jsonOptions = new() { WriteIndented = true };
-
-
+    
+    /// <summary>
+    /// Initializes the storage directory and loads existing preferences from disk.
+    /// </summary>
+    /// <remarks>
+    /// <para><b>File Locations:</b></para>
+    /// <list type="bullet">
+    /// <item>Windows: <c>%AppData%\MonoEight-Game\playerprefs.json</c></item>
+    /// <item>Unix/Mac: <c>~/.local/share/MonoEight-Game/playerprefs.json</c></item>
+    /// </list>
+    /// </remarks>
     public static void Initialize()
     {
         string root = Environment.OSVersion.Platform == PlatformID.Unix
@@ -93,28 +108,53 @@ public static class PlayerPrefs
         return defaultValue;
     }
 
+    /// <summary>
+    /// Retrieves the value associated with the given key.
+    /// </summary>
+    /// <typeparam name="T">The type of the value.</typeparam>
+    /// <param name="key">The unique key to identify the preference.</param>
+    /// <param name="defaultValue">The value to return if the key does not exist.</param>
+    /// <returns>The stored value, or <paramref name="defaultValue"/> if not found.</returns>
     public static T? Get<T>(string key, T? defaultValue = default)
     {
         return GetValue(key, defaultValue);
     }
 
+    /// <summary>
+    /// Sets the value for the given key and writes the changes to disk immediately.
+    /// </summary>
+    /// <typeparam name="T">The type of the value.</typeparam>
+    /// <param name="key">The unique key.</param>
+    /// <param name="value">The value to store.</param>
     public static void Set<T>(string key, T value)
     {
         _prefs[key] = value;
         Save();
     }
 
+    /// <summary>
+    /// Checks if the given key exists in the preferences.
+    /// </summary>
+    /// <param name="key">The key to check.</param>
+    /// <returns><c>true</c> if the key exists, otherwise, <c>false</c>.</returns>
     public static bool HasKey(string key)
     {
         return _prefs.ContainsKey(key);
     }
 
+    /// <summary>
+    /// Removes the given key and its value from the preferences, then saves to disk.
+    /// </summary>
+    /// <param name="key">The key to remove.</param>
     public static void DeleteKey(string key)
     {
         if (_prefs.Remove(key))
             Save();
     }
 
+    /// <summary>
+    /// Removes all keys and values from the preferences, then saves to disk.
+    /// </summary>
     public static void DeleteAll()
     {
         _prefs.Clear();
