@@ -2,5 +2,14 @@
     <img src="MonoEight.Core/Assets/MonoEightTitle.png">
 </p>
 <h2 align="center">
-  A <a href="https://monogame.net/">MonoGame</a> based framework specifically made for<br>small games with big pixels
+  A <a href="https://monogame.net/">MonoGame</a> based framework made for<br>small games with big pixels
 </h2>
+
+<p align="center">
+    <!-- <a href="https://www.nuget.org/packages/MonoEight">
+        <img src="https://img.shields.io/nuget/v/MonoEight?style=flat-square&color=blue" alt="NuGet Version" />
+    </a> -->
+    <a href="https://swzwij.github.io/MonoEight/">
+        <img src="https://img.shields.io/badge/Docs-Read%20Now-green?style=flat-square" alt="Documentation" />
+    </a>
+</p>
