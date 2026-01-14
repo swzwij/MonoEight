@@ -1,0 +1,945 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.MEColors
+  commentId: T:MonoEight.Core.MEColors
+  id: MEColors
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.MEColors.Black
+  - MonoEight.Core.MEColors.Blue
+  - MonoEight.Core.MEColors.Cyan
+  - MonoEight.Core.MEColors.DarkBlue
+  - MonoEight.Core.MEColors.DarkGray
+  - MonoEight.Core.MEColors.DarkPurple
+  - MonoEight.Core.MEColors.Gray
+  - MonoEight.Core.MEColors.Green
+  - MonoEight.Core.MEColors.LightBlue
+  - MonoEight.Core.MEColors.LightGray
+  - MonoEight.Core.MEColors.Lime
+  - MonoEight.Core.MEColors.Orange
+  - MonoEight.Core.MEColors.Red
+  - MonoEight.Core.MEColors.SkyBlue
+  - MonoEight.Core.MEColors.White
+  - MonoEight.Core.MEColors.Yellow
+  langs:
+  - csharp
+  - vb
+  name: MEColors
+  nameWithType: MEColors
+  fullName: MonoEight.Core.MEColors
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: MEColors
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 7
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Provides a set of predefined MonoEight colors.
+  example: []
+  syntax:
+    content: public static class MEColors
+    content.vb: Public Module MEColors
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.MEColors.Black
+  commentId: P:MonoEight.Core.MEColors.Black
+  id: Black
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: MEColors.Black
+  fullName: MonoEight.Core.MEColors.Black
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Black
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 10
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Black (R:26, G:28, B:44).
+  example: []
+  syntax:
+    content: public static Color Black { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Black As Color
+  overload: MonoEight.Core.MEColors.Black*
+- uid: MonoEight.Core.MEColors.DarkPurple
+  commentId: P:MonoEight.Core.MEColors.DarkPurple
+  id: DarkPurple
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: DarkPurple
+  nameWithType: MEColors.DarkPurple
+  fullName: MonoEight.Core.MEColors.DarkPurple
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: DarkPurple
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 13
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Dark Purple (R:93, G:39, B:93).
+  example: []
+  syntax:
+    content: public static Color DarkPurple { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property DarkPurple As Color
+  overload: MonoEight.Core.MEColors.DarkPurple*
+- uid: MonoEight.Core.MEColors.Red
+  commentId: P:MonoEight.Core.MEColors.Red
+  id: Red
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: MEColors.Red
+  fullName: MonoEight.Core.MEColors.Red
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Red
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 16
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Red (R:177, G:62, B:83).
+  example: []
+  syntax:
+    content: public static Color Red { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Red As Color
+  overload: MonoEight.Core.MEColors.Red*
+- uid: MonoEight.Core.MEColors.Orange
+  commentId: P:MonoEight.Core.MEColors.Orange
+  id: Orange
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Orange
+  nameWithType: MEColors.Orange
+  fullName: MonoEight.Core.MEColors.Orange
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Orange
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 19
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Orange (R:239, G:125, B:87).
+  example: []
+  syntax:
+    content: public static Color Orange { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Orange As Color
+  overload: MonoEight.Core.MEColors.Orange*
+- uid: MonoEight.Core.MEColors.Yellow
+  commentId: P:MonoEight.Core.MEColors.Yellow
+  id: Yellow
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Yellow
+  nameWithType: MEColors.Yellow
+  fullName: MonoEight.Core.MEColors.Yellow
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Yellow
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 22
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Yellow (R:255, G:205, B:117).
+  example: []
+  syntax:
+    content: public static Color Yellow { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Yellow As Color
+  overload: MonoEight.Core.MEColors.Yellow*
+- uid: MonoEight.Core.MEColors.Lime
+  commentId: P:MonoEight.Core.MEColors.Lime
+  id: Lime
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Lime
+  nameWithType: MEColors.Lime
+  fullName: MonoEight.Core.MEColors.Lime
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Lime
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 25
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Lime (R:167, G:240, B:112).
+  example: []
+  syntax:
+    content: public static Color Lime { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Lime As Color
+  overload: MonoEight.Core.MEColors.Lime*
+- uid: MonoEight.Core.MEColors.Green
+  commentId: P:MonoEight.Core.MEColors.Green
+  id: Green
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: MEColors.Green
+  fullName: MonoEight.Core.MEColors.Green
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Green
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 28
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Green (R:56, G:183, B:100).
+  example: []
+  syntax:
+    content: public static Color Green { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Green As Color
+  overload: MonoEight.Core.MEColors.Green*
+- uid: MonoEight.Core.MEColors.Cyan
+  commentId: P:MonoEight.Core.MEColors.Cyan
+  id: Cyan
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Cyan
+  nameWithType: MEColors.Cyan
+  fullName: MonoEight.Core.MEColors.Cyan
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Cyan
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 31
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Cyan (R:37, G:113, B:121).
+  example: []
+  syntax:
+    content: public static Color Cyan { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Cyan As Color
+  overload: MonoEight.Core.MEColors.Cyan*
+- uid: MonoEight.Core.MEColors.DarkBlue
+  commentId: P:MonoEight.Core.MEColors.DarkBlue
+  id: DarkBlue
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: DarkBlue
+  nameWithType: MEColors.DarkBlue
+  fullName: MonoEight.Core.MEColors.DarkBlue
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: DarkBlue
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 34
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Dark Blue (R:41, G:54, B:111).
+  example: []
+  syntax:
+    content: public static Color DarkBlue { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property DarkBlue As Color
+  overload: MonoEight.Core.MEColors.DarkBlue*
+- uid: MonoEight.Core.MEColors.Blue
+  commentId: P:MonoEight.Core.MEColors.Blue
+  id: Blue
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Blue
+  nameWithType: MEColors.Blue
+  fullName: MonoEight.Core.MEColors.Blue
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Blue
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 37
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Blue (R:59, G:93, B:201).
+  example: []
+  syntax:
+    content: public static Color Blue { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Blue As Color
+  overload: MonoEight.Core.MEColors.Blue*
+- uid: MonoEight.Core.MEColors.LightBlue
+  commentId: P:MonoEight.Core.MEColors.LightBlue
+  id: LightBlue
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: LightBlue
+  nameWithType: MEColors.LightBlue
+  fullName: MonoEight.Core.MEColors.LightBlue
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: LightBlue
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 40
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Light Blue (R:65, G:166, B:246).
+  example: []
+  syntax:
+    content: public static Color LightBlue { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property LightBlue As Color
+  overload: MonoEight.Core.MEColors.LightBlue*
+- uid: MonoEight.Core.MEColors.SkyBlue
+  commentId: P:MonoEight.Core.MEColors.SkyBlue
+  id: SkyBlue
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: SkyBlue
+  nameWithType: MEColors.SkyBlue
+  fullName: MonoEight.Core.MEColors.SkyBlue
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: SkyBlue
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 43
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Sky Blue (R:115, G:239, B:247).
+  example: []
+  syntax:
+    content: public static Color SkyBlue { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property SkyBlue As Color
+  overload: MonoEight.Core.MEColors.SkyBlue*
+- uid: MonoEight.Core.MEColors.White
+  commentId: P:MonoEight.Core.MEColors.White
+  id: White
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: MEColors.White
+  fullName: MonoEight.Core.MEColors.White
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: White
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 46
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color White (R:244, G:244, B:244).
+  example: []
+  syntax:
+    content: public static Color White { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property White As Color
+  overload: MonoEight.Core.MEColors.White*
+- uid: MonoEight.Core.MEColors.LightGray
+  commentId: P:MonoEight.Core.MEColors.LightGray
+  id: LightGray
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: LightGray
+  nameWithType: MEColors.LightGray
+  fullName: MonoEight.Core.MEColors.LightGray
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: LightGray
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 49
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Light Gray (R:148, G:176, B:194).
+  example: []
+  syntax:
+    content: public static Color LightGray { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property LightGray As Color
+  overload: MonoEight.Core.MEColors.LightGray*
+- uid: MonoEight.Core.MEColors.Gray
+  commentId: P:MonoEight.Core.MEColors.Gray
+  id: Gray
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: Gray
+  nameWithType: MEColors.Gray
+  fullName: MonoEight.Core.MEColors.Gray
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Gray
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 52
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Gray (R:86, G:108, B:134).
+  example: []
+  syntax:
+    content: public static Color Gray { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property Gray As Color
+  overload: MonoEight.Core.MEColors.Gray*
+- uid: MonoEight.Core.MEColors.DarkGray
+  commentId: P:MonoEight.Core.MEColors.DarkGray
+  id: DarkGray
+  parent: MonoEight.Core.MEColors
+  langs:
+  - csharp
+  - vb
+  name: DarkGray
+  nameWithType: MEColors.DarkGray
+  fullName: MonoEight.Core.MEColors.DarkGray
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEColors.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: DarkGray
+    path: ../MonoEight.Core/MEColors.cs
+    startLine: 55
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the color Dark Gray (R:51, G:60, B:87).
+  example: []
+  syntax:
+    content: public static Color DarkGray { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Shared ReadOnly Property DarkGray As Color
+  overload: MonoEight.Core.MEColors.DarkGray*
+references:
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.MEColors.Black*
+  commentId: Overload:MonoEight.Core.MEColors.Black
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Black
+  name: Black
+  nameWithType: MEColors.Black
+  fullName: MonoEight.Core.MEColors.Black
+- uid: Microsoft.Xna.Framework.Color
+  commentId: T:Microsoft.Xna.Framework.Color
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Microsoft.Xna.Framework.Color
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: MonoEight.Core.MEColors.DarkPurple*
+  commentId: Overload:MonoEight.Core.MEColors.DarkPurple
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_DarkPurple
+  name: DarkPurple
+  nameWithType: MEColors.DarkPurple
+  fullName: MonoEight.Core.MEColors.DarkPurple
+- uid: MonoEight.Core.MEColors.Red*
+  commentId: Overload:MonoEight.Core.MEColors.Red
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Red
+  name: Red
+  nameWithType: MEColors.Red
+  fullName: MonoEight.Core.MEColors.Red
+- uid: MonoEight.Core.MEColors.Orange*
+  commentId: Overload:MonoEight.Core.MEColors.Orange
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Orange
+  name: Orange
+  nameWithType: MEColors.Orange
+  fullName: MonoEight.Core.MEColors.Orange
+- uid: MonoEight.Core.MEColors.Yellow*
+  commentId: Overload:MonoEight.Core.MEColors.Yellow
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Yellow
+  name: Yellow
+  nameWithType: MEColors.Yellow
+  fullName: MonoEight.Core.MEColors.Yellow
+- uid: MonoEight.Core.MEColors.Lime*
+  commentId: Overload:MonoEight.Core.MEColors.Lime
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Lime
+  name: Lime
+  nameWithType: MEColors.Lime
+  fullName: MonoEight.Core.MEColors.Lime
+- uid: MonoEight.Core.MEColors.Green*
+  commentId: Overload:MonoEight.Core.MEColors.Green
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Green
+  name: Green
+  nameWithType: MEColors.Green
+  fullName: MonoEight.Core.MEColors.Green
+- uid: MonoEight.Core.MEColors.Cyan*
+  commentId: Overload:MonoEight.Core.MEColors.Cyan
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Cyan
+  name: Cyan
+  nameWithType: MEColors.Cyan
+  fullName: MonoEight.Core.MEColors.Cyan
+- uid: MonoEight.Core.MEColors.DarkBlue*
+  commentId: Overload:MonoEight.Core.MEColors.DarkBlue
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_DarkBlue
+  name: DarkBlue
+  nameWithType: MEColors.DarkBlue
+  fullName: MonoEight.Core.MEColors.DarkBlue
+- uid: MonoEight.Core.MEColors.Blue*
+  commentId: Overload:MonoEight.Core.MEColors.Blue
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Blue
+  name: Blue
+  nameWithType: MEColors.Blue
+  fullName: MonoEight.Core.MEColors.Blue
+- uid: MonoEight.Core.MEColors.LightBlue*
+  commentId: Overload:MonoEight.Core.MEColors.LightBlue
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_LightBlue
+  name: LightBlue
+  nameWithType: MEColors.LightBlue
+  fullName: MonoEight.Core.MEColors.LightBlue
+- uid: MonoEight.Core.MEColors.SkyBlue*
+  commentId: Overload:MonoEight.Core.MEColors.SkyBlue
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_SkyBlue
+  name: SkyBlue
+  nameWithType: MEColors.SkyBlue
+  fullName: MonoEight.Core.MEColors.SkyBlue
+- uid: MonoEight.Core.MEColors.White*
+  commentId: Overload:MonoEight.Core.MEColors.White
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_White
+  name: White
+  nameWithType: MEColors.White
+  fullName: MonoEight.Core.MEColors.White
+- uid: MonoEight.Core.MEColors.LightGray*
+  commentId: Overload:MonoEight.Core.MEColors.LightGray
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_LightGray
+  name: LightGray
+  nameWithType: MEColors.LightGray
+  fullName: MonoEight.Core.MEColors.LightGray
+- uid: MonoEight.Core.MEColors.Gray*
+  commentId: Overload:MonoEight.Core.MEColors.Gray
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Gray
+  name: Gray
+  nameWithType: MEColors.Gray
+  fullName: MonoEight.Core.MEColors.Gray
+- uid: MonoEight.Core.MEColors.DarkGray*
+  commentId: Overload:MonoEight.Core.MEColors.DarkGray
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_DarkGray
+  name: DarkGray
+  nameWithType: MEColors.DarkGray
+  fullName: MonoEight.Core.MEColors.DarkGray

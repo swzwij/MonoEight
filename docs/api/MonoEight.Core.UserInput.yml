@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.UserInput
+  commentId: N:MonoEight.Core.UserInput
+  id: UserInput
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.UserInput.Input
+  - MonoEight.Core.UserInput.InputAction
+  - MonoEight.Core.UserInput.MouseHandler
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core.UserInput
+  nameWithType: MonoEight.Core.UserInput
+  fullName: MonoEight.Core.UserInput
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.UserInput.Input
+  commentId: T:MonoEight.Core.UserInput.Input
+  href: MonoEight.Core.UserInput.Input.html
+  name: Input
+  nameWithType: Input
+  fullName: MonoEight.Core.UserInput.Input
+- uid: MonoEight.Core.UserInput.InputAction
+  commentId: T:MonoEight.Core.UserInput.InputAction
+  parent: MonoEight.Core.UserInput
+  href: MonoEight.Core.UserInput.InputAction.html
+  name: InputAction
+  nameWithType: InputAction
+  fullName: MonoEight.Core.UserInput.InputAction
+- uid: MonoEight.Core.UserInput.MouseHandler
+  commentId: T:MonoEight.Core.UserInput.MouseHandler
+  parent: MonoEight.Core.UserInput
+  href: MonoEight.Core.UserInput.MouseHandler.html
+  name: MouseHandler
+  nameWithType: MouseHandler
+  fullName: MonoEight.Core.UserInput.MouseHandler
+- uid: MonoEight.Core.UserInput
+  commentId: N:MonoEight.Core.UserInput
+  href: MonoEight.html
+  name: MonoEight.Core.UserInput
+  nameWithType: MonoEight.Core.UserInput
+  fullName: MonoEight.Core.UserInput
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UserInput
+    name: UserInput
+    href: MonoEight.Core.UserInput.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UserInput
+    name: UserInput
+    href: MonoEight.Core.UserInput.html

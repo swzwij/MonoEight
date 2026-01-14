@@ -1,0 +1,530 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.Camera
+  commentId: T:MonoEight.Core.Camera
+  id: Camera
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.Camera.#ctor
+  - MonoEight.Core.Camera.BackgroundColor
+  - MonoEight.Core.Camera.Position
+  - MonoEight.Core.Camera.Transform
+  langs:
+  - csharp
+  - vb
+  name: Camera
+  nameWithType: Camera
+  fullName: MonoEight.Core.Camera
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/Camera.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Camera
+    path: ../MonoEight.Core/Camera.cs
+    startLine: 10
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Represents a 2D camera that defines the viewable area of the game world.
+  remarks: The camera centers the view on a given world position.
+  example: []
+  syntax:
+    content: public class Camera
+    content.vb: Public Class Camera
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.Camera.BackgroundColor
+  commentId: P:MonoEight.Core.Camera.BackgroundColor
+  id: BackgroundColor
+  parent: MonoEight.Core.Camera
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColor
+  nameWithType: Camera.BackgroundColor
+  fullName: MonoEight.Core.Camera.BackgroundColor
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/Camera.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: BackgroundColor
+    path: ../MonoEight.Core/Camera.cs
+    startLine: 18
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: >-
+    Gets or sets the background color used when clearing the screen.
+
+    Default is <xref href="MonoEight.Core.MEColors.Blue" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Color BackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Public Property BackgroundColor As Color
+  overload: MonoEight.Core.Camera.BackgroundColor*
+- uid: MonoEight.Core.Camera.Transform
+  commentId: P:MonoEight.Core.Camera.Transform
+  id: Transform
+  parent: MonoEight.Core.Camera
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Camera.Transform
+  fullName: MonoEight.Core.Camera.Transform
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/Camera.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Transform
+    path: ../MonoEight.Core/Camera.cs
+    startLine: 23
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the transformation matrix used for rendering.
+  example: []
+  syntax:
+    content: public Matrix Transform { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Matrix
+    content.vb: Public Property Transform As Matrix
+  overload: MonoEight.Core.Camera.Transform*
+- uid: MonoEight.Core.Camera.Position
+  commentId: P:MonoEight.Core.Camera.Position
+  id: Position
+  parent: MonoEight.Core.Camera
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: Camera.Position
+  fullName: MonoEight.Core.Camera.Position
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/Camera.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Position
+    path: ../MonoEight.Core/Camera.cs
+    startLine: 31
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets or sets the world position that the camera is at.
+  remarks: Setting this value automatically recalculates the <xref href="MonoEight.Core.Camera.Transform" data-throw-if-not-resolved="false"></xref> matrix.
+  example: []
+  syntax:
+    content: public Vector2 Position { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Property Position As Vector2
+  overload: MonoEight.Core.Camera.Position*
+- uid: MonoEight.Core.Camera.#ctor
+  commentId: M:MonoEight.Core.Camera.#ctor
+  id: '#ctor'
+  parent: MonoEight.Core.Camera
+  langs:
+  - csharp
+  - vb
+  name: Camera()
+  nameWithType: Camera.Camera()
+  fullName: MonoEight.Core.Camera.Camera()
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight.Core/Camera.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight.Core/Camera.cs
+    startLine: 48
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Initializes a new instance of the <xref href="MonoEight.Core.Camera" data-throw-if-not-resolved="false"></xref> class centered at (0,0).
+  example: []
+  syntax:
+    content: public Camera()
+    content.vb: Public Sub New()
+  overload: MonoEight.Core.Camera.#ctor*
+  nameWithType.vb: Camera.New()
+  fullName.vb: MonoEight.Core.Camera.New()
+  name.vb: New()
+references:
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.MEColors.Blue
+  commentId: P:MonoEight.Core.MEColors.Blue
+  href: MonoEight.Core.MEColors.html#MonoEight_Core_MEColors_Blue
+  name: Blue
+  nameWithType: MEColors.Blue
+  fullName: MonoEight.Core.MEColors.Blue
+- uid: MonoEight.Core.Camera.BackgroundColor*
+  commentId: Overload:MonoEight.Core.Camera.BackgroundColor
+  href: MonoEight.Core.Camera.html#MonoEight_Core_Camera_BackgroundColor
+  name: BackgroundColor
+  nameWithType: Camera.BackgroundColor
+  fullName: MonoEight.Core.Camera.BackgroundColor
+- uid: Microsoft.Xna.Framework.Color
+  commentId: T:Microsoft.Xna.Framework.Color
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Microsoft.Xna.Framework.Color
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: MonoEight.Core.Camera.Transform*
+  commentId: Overload:MonoEight.Core.Camera.Transform
+  href: MonoEight.Core.Camera.html#MonoEight_Core_Camera_Transform
+  name: Transform
+  nameWithType: Camera.Transform
+  fullName: MonoEight.Core.Camera.Transform
+- uid: Microsoft.Xna.Framework.Matrix
+  commentId: T:Microsoft.Xna.Framework.Matrix
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Microsoft.Xna.Framework.Matrix
+- uid: MonoEight.Core.Camera.Transform
+  commentId: P:MonoEight.Core.Camera.Transform
+  href: MonoEight.Core.Camera.html#MonoEight_Core_Camera_Transform
+  name: Transform
+  nameWithType: Camera.Transform
+  fullName: MonoEight.Core.Camera.Transform
+- uid: MonoEight.Core.Camera.Position*
+  commentId: Overload:MonoEight.Core.Camera.Position
+  href: MonoEight.Core.Camera.html#MonoEight_Core_Camera_Position
+  name: Position
+  nameWithType: Camera.Position
+  fullName: MonoEight.Core.Camera.Position
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: MonoEight.Core.Camera
+  commentId: T:MonoEight.Core.Camera
+  parent: MonoEight.Core
+  href: MonoEight.Core.Camera.html
+  name: Camera
+  nameWithType: Camera
+  fullName: MonoEight.Core.Camera
+- uid: MonoEight.Core.Camera.#ctor*
+  commentId: Overload:MonoEight.Core.Camera.#ctor
+  href: MonoEight.Core.Camera.html#MonoEight_Core_Camera__ctor
+  name: Camera
+  nameWithType: Camera.Camera
+  fullName: MonoEight.Core.Camera.Camera
+  nameWithType.vb: Camera.New
+  fullName.vb: MonoEight.Core.Camera.New
+  name.vb: New

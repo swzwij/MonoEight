@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.UI.FontSize
+  commentId: T:MonoEight.Core.UI.FontSize
+  id: FontSize
+  parent: MonoEight.Core.UI
+  children:
+  - MonoEight.Core.UI.FontSize.M
+  - MonoEight.Core.UI.FontSize.S
+  langs:
+  - csharp
+  - vb
+  name: FontSize
+  nameWithType: FontSize
+  fullName: MonoEight.Core.UI.FontSize
+  type: Enum
+  source:
+    remote:
+      path: MonoEight.Core/UI/FontSize.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: FontSize
+    path: ../MonoEight.Core/UI/FontSize.cs
+    startLine: 5
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.UI
+  summary: The available font sizes for text rendered in the <xref href="MonoEight.Core.UI.Canvas" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public enum FontSize
+    content.vb: Public Enum FontSize
+- uid: MonoEight.Core.UI.FontSize.S
+  commentId: F:MonoEight.Core.UI.FontSize.S
+  id: S
+  parent: MonoEight.Core.UI.FontSize
+  langs:
+  - csharp
+  - vb
+  name: S
+  nameWithType: FontSize.S
+  fullName: MonoEight.Core.UI.FontSize.S
+  type: Field
+  source:
+    remote:
+      path: MonoEight.Core/UI/FontSize.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: S
+    path: ../MonoEight.Core/UI/FontSize.cs
+    startLine: 7
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.UI
+  syntax:
+    content: S = 0
+    return:
+      type: MonoEight.Core.UI.FontSize
+- uid: MonoEight.Core.UI.FontSize.M
+  commentId: F:MonoEight.Core.UI.FontSize.M
+  id: M
+  parent: MonoEight.Core.UI.FontSize
+  langs:
+  - csharp
+  - vb
+  name: M
+  nameWithType: FontSize.M
+  fullName: MonoEight.Core.UI.FontSize.M
+  type: Field
+  source:
+    remote:
+      path: MonoEight.Core/UI/FontSize.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: M
+    path: ../MonoEight.Core/UI/FontSize.cs
+    startLine: 8
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.UI
+  syntax:
+    content: M = 1
+    return:
+      type: MonoEight.Core.UI.FontSize
+references:
+- uid: MonoEight.Core.UI.Canvas
+  commentId: T:MonoEight.Core.UI.Canvas
+  parent: MonoEight.Core.UI
+  href: MonoEight.Core.UI.Canvas.html
+  name: Canvas
+  nameWithType: Canvas
+  fullName: MonoEight.Core.UI.Canvas
+- uid: MonoEight.Core.UI
+  commentId: N:MonoEight.Core.UI
+  href: MonoEight.html
+  name: MonoEight.Core.UI
+  nameWithType: MonoEight.Core.UI
+  fullName: MonoEight.Core.UI
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+- uid: MonoEight.Core.UI.FontSize
+  commentId: T:MonoEight.Core.UI.FontSize
+  parent: MonoEight.Core.UI
+  href: MonoEight.Core.UI.FontSize.html
+  name: FontSize
+  nameWithType: FontSize
+  fullName: MonoEight.Core.UI.FontSize
