@@ -1,0 +1,40 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["MonoEight.Core.csproj"],
+          "src": "../MonoEight.Core"
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "namespaceLayout": "nested"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**.yml", "api/index.md"]
+      },
+      {
+        "files": ["**.md", "**.yml"],
+        "exclude": ["_site/**", "obj/**", "api/**"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["images/**"]
+      }
+    ],
+    "output": "_site",
+    "template": ["default", "modern"],
+    "globalMetadata": {
+      "_appName": "MonoEight Docs",
+      "_appTitle": "MonoEight Documentation",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  }
+}
