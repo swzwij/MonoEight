@@ -16,3 +16,30 @@
         <img src="https://img.shields.io/badge/Docs-Read%20Now-green?style=flat-square" alt="Documentation" />
     </a>
 </p>
+
+## Getting started
+
+### 1. Install the template
+
+```bash
+dotnet new install MonoEight.Templates
+```
+
+### 2. Create a new game
+
+```bash
+dotnet new monoeight -n MyGameName
+```
+
+### 3. Run
+
+```
+cd MyGameName
+dotnet run
+```
+
+## Documentation
+
+<a href="https://swzwij.github.io/MonoEight/">
+swzwij.github.io/MonoEight
+</a>
