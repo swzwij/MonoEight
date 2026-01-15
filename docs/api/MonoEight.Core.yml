@@ -1,0 +1,280 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  id: MonoEight.Core
+  children:
+  - MonoEight.Core.Camera
+  - MonoEight.Core.Component
+  - MonoEight.Core.Content
+  - MonoEight.Core.Debugger
+  - MonoEight.Core.GameObject
+  - MonoEight.Core.GraphicsHelper
+  - MonoEight.Core.MEColors
+  - MonoEight.Core.MEGame
+  - MonoEight.Core.MEWindow
+  - MonoEight.Core.Physics
+  - MonoEight.Core.PlayerPrefs
+  - MonoEight.Core.Scenes
+  - MonoEight.Core.Sprite
+  - MonoEight.Core.Time
+  - MonoEight.Core.UI
+  - MonoEight.Core.UserInput
+  - MonoEight.Core.VectorPointExtensions
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.Physics
+  commentId: N:MonoEight.Core.Physics
+  href: MonoEight.html
+  name: MonoEight.Core.Physics
+  nameWithType: MonoEight.Core.Physics
+  fullName: MonoEight.Core.Physics
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html
+- uid: MonoEight.Core.Scenes
+  commentId: N:MonoEight.Core.Scenes
+  href: MonoEight.html
+  name: MonoEight.Core.Scenes
+  nameWithType: MonoEight.Core.Scenes
+  fullName: MonoEight.Core.Scenes
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html
+- uid: MonoEight.Core.Sprite
+  commentId: N:MonoEight.Core.Sprite
+  href: MonoEight.html
+  name: MonoEight.Core.Sprite
+  nameWithType: MonoEight.Core.Sprite
+  fullName: MonoEight.Core.Sprite
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html
+- uid: MonoEight.Core.UI
+  commentId: N:MonoEight.Core.UI
+  href: MonoEight.html
+  name: MonoEight.Core.UI
+  nameWithType: MonoEight.Core.UI
+  fullName: MonoEight.Core.UI
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+- uid: MonoEight.Core.UserInput
+  commentId: N:MonoEight.Core.UserInput
+  href: MonoEight.html
+  name: MonoEight.Core.UserInput
+  nameWithType: MonoEight.Core.UserInput
+  fullName: MonoEight.Core.UserInput
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UserInput
+    name: UserInput
+    href: MonoEight.Core.UserInput.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UserInput
+    name: UserInput
+    href: MonoEight.Core.UserInput.html
+- uid: MonoEight.Core.Camera
+  commentId: T:MonoEight.Core.Camera
+  parent: MonoEight.Core
+  href: MonoEight.Core.Camera.html
+  name: Camera
+  nameWithType: Camera
+  fullName: MonoEight.Core.Camera
+- uid: MonoEight.Core.Component
+  commentId: T:MonoEight.Core.Component
+  parent: MonoEight.Core
+  href: MonoEight.Core.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: MonoEight.Core.Component
+- uid: MonoEight.Core.Content
+  commentId: T:MonoEight.Core.Content
+  href: MonoEight.Core.Content.html
+  name: Content
+  nameWithType: Content
+  fullName: MonoEight.Core.Content
+- uid: MonoEight.Core.Debugger
+  commentId: T:MonoEight.Core.Debugger
+  href: MonoEight.Core.Debugger.html
+  name: Debugger
+  nameWithType: Debugger
+  fullName: MonoEight.Core.Debugger
+- uid: MonoEight.Core.GameObject
+  commentId: T:MonoEight.Core.GameObject
+  parent: MonoEight.Core
+  href: MonoEight.Core.GameObject.html
+  name: GameObject
+  nameWithType: GameObject
+  fullName: MonoEight.Core.GameObject
+- uid: MonoEight.Core.GraphicsHelper
+  commentId: T:MonoEight.Core.GraphicsHelper
+  href: MonoEight.Core.GraphicsHelper.html
+  name: GraphicsHelper
+  nameWithType: GraphicsHelper
+  fullName: MonoEight.Core.GraphicsHelper
+- uid: MonoEight.Core.MEColors
+  commentId: T:MonoEight.Core.MEColors
+  href: MonoEight.Core.MEColors.html
+  name: MEColors
+  nameWithType: MEColors
+  fullName: MonoEight.Core.MEColors
+- uid: MonoEight.Core.MEGame
+  commentId: T:MonoEight.Core.MEGame
+  href: MonoEight.Core.MEGame.html
+  name: MEGame
+  nameWithType: MEGame
+  fullName: MonoEight.Core.MEGame
+- uid: MonoEight.Core.MEWindow
+  commentId: T:MonoEight.Core.MEWindow
+  href: MonoEight.Core.MEWindow.html
+  name: MEWindow
+  nameWithType: MEWindow
+  fullName: MonoEight.Core.MEWindow
+- uid: MonoEight.Core.PlayerPrefs
+  commentId: T:MonoEight.Core.PlayerPrefs
+  href: MonoEight.Core.PlayerPrefs.html
+  name: PlayerPrefs
+  nameWithType: PlayerPrefs
+  fullName: MonoEight.Core.PlayerPrefs
+- uid: MonoEight.Core.Time
+  commentId: T:MonoEight.Core.Time
+  href: MonoEight.Core.Time.html
+  name: Time
+  nameWithType: Time
+  fullName: MonoEight.Core.Time
+- uid: MonoEight.Core.VectorPointExtensions
+  commentId: T:MonoEight.Core.VectorPointExtensions
+  href: MonoEight.Core.VectorPointExtensions.html
+  name: VectorPointExtensions
+  nameWithType: VectorPointExtensions
+  fullName: MonoEight.Core.VectorPointExtensions
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html

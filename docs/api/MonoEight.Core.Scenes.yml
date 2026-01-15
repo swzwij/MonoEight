@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.Scenes
+  commentId: N:MonoEight.Core.Scenes
+  id: Scenes
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.Scenes.LoadingScene
+  - MonoEight.Core.Scenes.Scene
+  - MonoEight.Core.Scenes.SceneManager
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core.Scenes
+  nameWithType: MonoEight.Core.Scenes
+  fullName: MonoEight.Core.Scenes
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.Scenes.LoadingScene
+  commentId: T:MonoEight.Core.Scenes.LoadingScene
+  href: MonoEight.Core.Scenes.LoadingScene.html
+  name: LoadingScene
+  nameWithType: LoadingScene
+  fullName: MonoEight.Core.Scenes.LoadingScene
+- uid: MonoEight.Core.Scenes.Scene
+  commentId: T:MonoEight.Core.Scenes.Scene
+  parent: MonoEight.Core.Scenes
+  href: MonoEight.Core.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: MonoEight.Core.Scenes.Scene
+- uid: MonoEight.Core.Scenes.SceneManager
+  commentId: T:MonoEight.Core.Scenes.SceneManager
+  href: MonoEight.Core.Scenes.SceneManager.html
+  name: SceneManager
+  nameWithType: SceneManager
+  fullName: MonoEight.Core.Scenes.SceneManager
+- uid: MonoEight.Core.Scenes
+  commentId: N:MonoEight.Core.Scenes
+  href: MonoEight.html
+  name: MonoEight.Core.Scenes
+  nameWithType: MonoEight.Core.Scenes
+  fullName: MonoEight.Core.Scenes
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html

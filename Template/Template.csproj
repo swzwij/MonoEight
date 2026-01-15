@@ -41,10 +41,9 @@
     <ItemGroup>
       <Content Include=".template.config\template.json" />
     </ItemGroup>
-    <ItemGroup>
+
+    <!-- <ItemGroup>
       <ProjectReference Include="..\MonoEight.Core\MonoEight.Core.csproj" />
-    </ItemGroup>
-<!--    <ItemGroup>-->
-<!--      <ProjectReference Include="..\MonoEight.Core\MonoEight.Core.csproj" />-->
-<!--    </ItemGroup>-->
+    </ItemGroup> -->
+
 </Project>

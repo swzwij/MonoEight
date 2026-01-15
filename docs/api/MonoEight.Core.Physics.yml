@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.Physics
+  commentId: N:MonoEight.Core.Physics
+  id: Physics
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.Physics.BoxCollider
+  - MonoEight.Core.Physics.CircleCollider
+  - MonoEight.Core.Physics.Collider
+  - MonoEight.Core.Physics.CollisionHelper
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core.Physics
+  nameWithType: MonoEight.Core.Physics
+  fullName: MonoEight.Core.Physics
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.Physics.BoxCollider
+  commentId: T:MonoEight.Core.Physics.BoxCollider
+  parent: MonoEight.Core.Physics
+  href: MonoEight.Core.Physics.BoxCollider.html
+  name: BoxCollider
+  nameWithType: BoxCollider
+  fullName: MonoEight.Core.Physics.BoxCollider
+- uid: MonoEight.Core.Physics.CircleCollider
+  commentId: T:MonoEight.Core.Physics.CircleCollider
+  parent: MonoEight.Core.Physics
+  href: MonoEight.Core.Physics.CircleCollider.html
+  name: CircleCollider
+  nameWithType: CircleCollider
+  fullName: MonoEight.Core.Physics.CircleCollider
+- uid: MonoEight.Core.Physics.Collider
+  commentId: T:MonoEight.Core.Physics.Collider
+  parent: MonoEight.Core.Physics
+  href: MonoEight.Core.Physics.Collider.html
+  name: Collider
+  nameWithType: Collider
+  fullName: MonoEight.Core.Physics.Collider
+- uid: MonoEight.Core.Physics.CollisionHelper
+  commentId: T:MonoEight.Core.Physics.CollisionHelper
+  href: MonoEight.Core.Physics.CollisionHelper.html
+  name: CollisionHelper
+  nameWithType: CollisionHelper
+  fullName: MonoEight.Core.Physics.CollisionHelper
+- uid: MonoEight.Core.Physics
+  commentId: N:MonoEight.Core.Physics
+  href: MonoEight.html
+  name: MonoEight.Core.Physics
+  nameWithType: MonoEight.Core.Physics
+  fullName: MonoEight.Core.Physics
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html

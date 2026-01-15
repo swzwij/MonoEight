@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.Sprite
+  commentId: N:MonoEight.Core.Sprite
+  id: Sprite
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.Sprite.Animation
+  - MonoEight.Core.Sprite.Animator
+  - MonoEight.Core.Sprite.SpriteRenderer
+  - MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core.Sprite
+  nameWithType: MonoEight.Core.Sprite
+  fullName: MonoEight.Core.Sprite
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.Sprite.Animation
+  commentId: T:MonoEight.Core.Sprite.Animation
+  href: MonoEight.Core.Sprite.Animation.html
+  name: Animation
+  nameWithType: Animation
+  fullName: MonoEight.Core.Sprite.Animation
+- uid: MonoEight.Core.Sprite.Animator
+  commentId: T:MonoEight.Core.Sprite.Animator
+  href: MonoEight.Core.Sprite.Animator.html
+  name: Animator
+  nameWithType: Animator
+  fullName: MonoEight.Core.Sprite.Animator
+- uid: MonoEight.Core.Sprite.SpriteRenderer
+  commentId: T:MonoEight.Core.Sprite.SpriteRenderer
+  parent: MonoEight.Core.Sprite
+  href: MonoEight.Core.Sprite.SpriteRenderer.html
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: MonoEight.Core.Sprite.SpriteRenderer
+- uid: MonoEight.Core.Sprite.SpriteSheet
+  commentId: T:MonoEight.Core.Sprite.SpriteSheet
+  parent: MonoEight.Core.Sprite
+  href: MonoEight.Core.Sprite.SpriteSheet.html
+  name: SpriteSheet
+  nameWithType: SpriteSheet
+  fullName: MonoEight.Core.Sprite.SpriteSheet
+- uid: MonoEight.Core.Sprite
+  commentId: N:MonoEight.Core.Sprite
+  href: MonoEight.html
+  name: MonoEight.Core.Sprite
+  nameWithType: MonoEight.Core.Sprite
+  fullName: MonoEight.Core.Sprite
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html

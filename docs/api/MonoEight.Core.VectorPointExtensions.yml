@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.VectorPointExtensions
+  commentId: T:MonoEight.Core.VectorPointExtensions
+  id: VectorPointExtensions
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.VectorPointExtensions.Cast(Microsoft.Xna.Framework.Vector2)
+  - MonoEight.Core.VectorPointExtensions.Float(Microsoft.Xna.Framework.Point)
+  - MonoEight.Core.VectorPointExtensions.Int(Microsoft.Xna.Framework.Vector2)
+  langs:
+  - csharp
+  - vb
+  name: VectorPointExtensions
+  nameWithType: VectorPointExtensions
+  fullName: MonoEight.Core.VectorPointExtensions
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/VectorPointExtensions.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: VectorPointExtensions
+    path: ../MonoEight.Core/VectorPointExtensions.cs
+    startLine: 7
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Provides extension methods for converting between <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref> and <xref href="Microsoft.Xna.Framework.Point" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static class VectorPointExtensions
+    content.vb: Public Module VectorPointExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.VectorPointExtensions.Int(Microsoft.Xna.Framework.Vector2)
+  commentId: M:MonoEight.Core.VectorPointExtensions.Int(Microsoft.Xna.Framework.Vector2)
+  id: Int(Microsoft.Xna.Framework.Vector2)
+  isExtensionMethod: true
+  parent: MonoEight.Core.VectorPointExtensions
+  langs:
+  - csharp
+  - vb
+  name: Int(Vector2)
+  nameWithType: VectorPointExtensions.Int(Vector2)
+  fullName: MonoEight.Core.VectorPointExtensions.Int(Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/VectorPointExtensions.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Int
+    path: ../MonoEight.Core/VectorPointExtensions.cs
+    startLine: 17
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Converts a <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref> to a <xref href="Microsoft.Xna.Framework.Point" data-throw-if-not-resolved="false"></xref> by casting the components to integers.
+  remarks: This operation truncates decimal values.
+  example: []
+  syntax:
+    content: public static Point Int(this Vector2 vector)
+    parameters:
+    - id: vector
+      type: Microsoft.Xna.Framework.Vector2
+      description: The source vector.
+    return:
+      type: Microsoft.Xna.Framework.Point
+      description: A <xref href="Microsoft.Xna.Framework.Point" data-throw-if-not-resolved="false"></xref> with integer coordinates.
+    content.vb: Public Shared Function Int(vector As Vector2) As Point
+  overload: MonoEight.Core.VectorPointExtensions.Int*
+- uid: MonoEight.Core.VectorPointExtensions.Float(Microsoft.Xna.Framework.Point)
+  commentId: M:MonoEight.Core.VectorPointExtensions.Float(Microsoft.Xna.Framework.Point)
+  id: Float(Microsoft.Xna.Framework.Point)
+  isExtensionMethod: true
+  parent: MonoEight.Core.VectorPointExtensions
+  langs:
+  - csharp
+  - vb
+  name: Float(Point)
+  nameWithType: VectorPointExtensions.Float(Point)
+  fullName: MonoEight.Core.VectorPointExtensions.Float(Microsoft.Xna.Framework.Point)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/VectorPointExtensions.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Float
+    path: ../MonoEight.Core/VectorPointExtensions.cs
+    startLine: 27
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Converts a <xref href="Microsoft.Xna.Framework.Point" data-throw-if-not-resolved="false"></xref> to a <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Vector2 Float(this Point vector)
+    parameters:
+    - id: vector
+      type: Microsoft.Xna.Framework.Point
+      description: The source point.
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+      description: A <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref> with the same coordinates.
+    content.vb: Public Shared Function Float(vector As Point) As Vector2
+  overload: MonoEight.Core.VectorPointExtensions.Float*
+- uid: MonoEight.Core.VectorPointExtensions.Cast(Microsoft.Xna.Framework.Vector2)
+  commentId: M:MonoEight.Core.VectorPointExtensions.Cast(Microsoft.Xna.Framework.Vector2)
+  id: Cast(Microsoft.Xna.Framework.Vector2)
+  isExtensionMethod: true
+  parent: MonoEight.Core.VectorPointExtensions
+  langs:
+  - csharp
+  - vb
+  name: Cast(Vector2)
+  nameWithType: VectorPointExtensions.Cast(Vector2)
+  fullName: MonoEight.Core.VectorPointExtensions.Cast(Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/VectorPointExtensions.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Cast
+    path: ../MonoEight.Core/VectorPointExtensions.cs
+    startLine: 40
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Snaps a <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref> to the nearest integer coordinates while keeping it as a <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref>.
+  remarks: Effectively performs <code>new Vector2((int)x, (int)y)</code>.
+  example: []
+  syntax:
+    content: public static Vector2 Cast(this Vector2 vector)
+    parameters:
+    - id: vector
+      type: Microsoft.Xna.Framework.Vector2
+      description: The source vector.
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+      description: A <xref href="Microsoft.Xna.Framework.Vector2" data-throw-if-not-resolved="false"></xref> with integer values.
+    content.vb: Public Shared Function Cast(vector As Vector2) As Vector2
+  overload: MonoEight.Core.VectorPointExtensions.Cast*
+references:
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.VectorPointExtensions.Int*
+  commentId: Overload:MonoEight.Core.VectorPointExtensions.Int
+  href: MonoEight.Core.VectorPointExtensions.html#MonoEight_Core_VectorPointExtensions_Int_Microsoft_Xna_Framework_Vector2_
+  name: Int
+  nameWithType: VectorPointExtensions.Int
+  fullName: MonoEight.Core.VectorPointExtensions.Int
+- uid: MonoEight.Core.VectorPointExtensions.Float*
+  commentId: Overload:MonoEight.Core.VectorPointExtensions.Float
+  href: MonoEight.Core.VectorPointExtensions.html#MonoEight_Core_VectorPointExtensions_Float_Microsoft_Xna_Framework_Point_
+  name: Float
+  nameWithType: VectorPointExtensions.Float
+  fullName: MonoEight.Core.VectorPointExtensions.Float
+- uid: MonoEight.Core.VectorPointExtensions.Cast*
+  commentId: Overload:MonoEight.Core.VectorPointExtensions.Cast
+  href: MonoEight.Core.VectorPointExtensions.html#MonoEight_Core_VectorPointExtensions_Cast_Microsoft_Xna_Framework_Vector2_
+  name: Cast
+  nameWithType: VectorPointExtensions.Cast
+  fullName: MonoEight.Core.VectorPointExtensions.Cast
