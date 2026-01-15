@@ -1,0 +1,1338 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.GameObject
+  commentId: T:MonoEight.Core.GameObject
+  id: GameObject
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.GameObject.AddComponent(MonoEight.Core.Component)
+  - MonoEight.Core.GameObject.AddComponent``1
+  - MonoEight.Core.GameObject.Canvas
+  - MonoEight.Core.GameObject.Destroy
+  - MonoEight.Core.GameObject.Dispose
+  - MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.Core.GameObject.GetComponent``1
+  - MonoEight.Core.GameObject.GetComponents``1
+  - MonoEight.Core.GameObject.Initialize
+  - MonoEight.Core.GameObject.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - MonoEight.Core.GameObject.InternalInitialize
+  - MonoEight.Core.GameObject.InternalLoadContent
+  - MonoEight.Core.GameObject.InternalUpdate
+  - MonoEight.Core.GameObject.IsActive
+  - MonoEight.Core.GameObject.LoadContent
+  - MonoEight.Core.GameObject.Position
+  - MonoEight.Core.GameObject.Scene
+  - MonoEight.Core.GameObject.ShouldDestroy
+  - MonoEight.Core.GameObject.Update
+  langs:
+  - csharp
+  - vb
+  name: GameObject
+  nameWithType: GameObject
+  fullName: MonoEight.Core.GameObject
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: GameObject
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 12
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: >-
+    Represents the base gameobject in the game world. 
+
+    Acts as a container for <xref href="MonoEight.Core.Component" data-throw-if-not-resolved="false"></xref>s and handles their lifecycle.
+  example: []
+  syntax:
+    content: 'public class GameObject : IDisposable'
+    content.vb: Public Class GameObject Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.GameObject.Position
+  commentId: P:MonoEight.Core.GameObject.Position
+  id: Position
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: GameObject.Position
+  fullName: MonoEight.Core.GameObject.Position
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Position
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 19
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets or sets the world space position of the object.
+  example: []
+  syntax:
+    content: public Vector2 Position { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Property Position As Vector2
+  overload: MonoEight.Core.GameObject.Position*
+- uid: MonoEight.Core.GameObject.IsActive
+  commentId: P:MonoEight.Core.GameObject.IsActive
+  id: IsActive
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: GameObject.IsActive
+  fullName: MonoEight.Core.GameObject.IsActive
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: IsActive
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 25
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: >-
+    Gets or sets whether the object is active.
+
+    If <code>false</code>, the object (and its components) will skip <xref href="MonoEight.Core.GameObject.Update" data-throw-if-not-resolved="false"></xref> and <xref href="MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsActive As Boolean
+  overload: MonoEight.Core.GameObject.IsActive*
+- uid: MonoEight.Core.GameObject.ShouldDestroy
+  commentId: P:MonoEight.Core.GameObject.ShouldDestroy
+  id: ShouldDestroy
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: ShouldDestroy
+  nameWithType: GameObject.ShouldDestroy
+  fullName: MonoEight.Core.GameObject.ShouldDestroy
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: ShouldDestroy
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 30
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets whether the object is marked for destruction at the end of the frame.
+  example: []
+  syntax:
+    content: public bool ShouldDestroy { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ShouldDestroy As Boolean
+  overload: MonoEight.Core.GameObject.ShouldDestroy*
+- uid: MonoEight.Core.GameObject.Scene
+  commentId: P:MonoEight.Core.GameObject.Scene
+  id: Scene
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: GameObject.Scene
+  fullName: MonoEight.Core.GameObject.Scene
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Scene
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 35
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the <xref href="MonoEight.Core.GameObject.Scene" data-throw-if-not-resolved="false"></xref> that owns this object.
+  example: []
+  syntax:
+    content: public Scene? Scene { get; }
+    parameters: []
+    return:
+      type: MonoEight.Core.Scenes.Scene
+    content.vb: Public Property Scene As Scene
+  overload: MonoEight.Core.GameObject.Scene*
+- uid: MonoEight.Core.GameObject.Canvas
+  commentId: P:MonoEight.Core.GameObject.Canvas
+  id: Canvas
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Canvas
+  nameWithType: GameObject.Canvas
+  fullName: MonoEight.Core.GameObject.Canvas
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Canvas
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 40
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the UI <xref href="MonoEight.Core.GameObject.Canvas" data-throw-if-not-resolved="false"></xref> associated with the current scene.
+  example: []
+  syntax:
+    content: public Canvas? Canvas { get; }
+    parameters: []
+    return:
+      type: MonoEight.Core.UI.Canvas
+    content.vb: Public ReadOnly Property Canvas As Canvas
+  overload: MonoEight.Core.GameObject.Canvas*
+- uid: MonoEight.Core.GameObject.Initialize
+  commentId: M:MonoEight.Core.GameObject.Initialize
+  id: Initialize
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: GameObject.Initialize()
+  fullName: MonoEight.Core.GameObject.Initialize()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Initialize
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 45
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Called when the object is initialized. Override to set up initial state.
+  example: []
+  syntax:
+    content: protected virtual void Initialize()
+    content.vb: Protected Overridable Sub Initialize()
+  overload: MonoEight.Core.GameObject.Initialize*
+- uid: MonoEight.Core.GameObject.LoadContent
+  commentId: M:MonoEight.Core.GameObject.LoadContent
+  id: LoadContent
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: LoadContent()
+  nameWithType: GameObject.LoadContent()
+  fullName: MonoEight.Core.GameObject.LoadContent()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: LoadContent
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 50
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Called when content needs to be loaded. Override to load assets.
+  example: []
+  syntax:
+    content: protected virtual void LoadContent()
+    content.vb: Protected Overridable Sub LoadContent()
+  overload: MonoEight.Core.GameObject.LoadContent*
+- uid: MonoEight.Core.GameObject.Update
+  commentId: M:MonoEight.Core.GameObject.Update
+  id: Update
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: GameObject.Update()
+  fullName: MonoEight.Core.GameObject.Update()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Update
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 55
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Called once per frame to update logic.
+  example: []
+  syntax:
+    content: protected virtual void Update()
+    content.vb: Protected Overridable Sub Update()
+  overload: MonoEight.Core.GameObject.Update*
+- uid: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Draw(SpriteBatch)
+  nameWithType: GameObject.Draw(SpriteBatch)
+  fullName: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Draw
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 61
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Called once per frame to render the object.
+  example: []
+  syntax:
+    content: protected virtual void Draw(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+      description: <xref href="Microsoft.Xna.Framework.Graphics.SpriteBatch" data-throw-if-not-resolved="false"></xref>
+    content.vb: Protected Overridable Sub Draw(spriteBatch As SpriteBatch)
+  overload: MonoEight.Core.GameObject.Draw*
+- uid: MonoEight.Core.GameObject.InternalInitialize
+  commentId: M:MonoEight.Core.GameObject.InternalInitialize
+  id: InternalInitialize
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: InternalInitialize()
+  nameWithType: GameObject.InternalInitialize()
+  fullName: MonoEight.Core.GameObject.InternalInitialize()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: InternalInitialize
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 63
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  syntax:
+    content: public void InternalInitialize()
+    content.vb: Public Sub InternalInitialize()
+  overload: MonoEight.Core.GameObject.InternalInitialize*
+- uid: MonoEight.Core.GameObject.InternalLoadContent
+  commentId: M:MonoEight.Core.GameObject.InternalLoadContent
+  id: InternalLoadContent
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: InternalLoadContent()
+  nameWithType: GameObject.InternalLoadContent()
+  fullName: MonoEight.Core.GameObject.InternalLoadContent()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: InternalLoadContent
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 71
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  syntax:
+    content: public void InternalLoadContent()
+    content.vb: Public Sub InternalLoadContent()
+  overload: MonoEight.Core.GameObject.InternalLoadContent*
+- uid: MonoEight.Core.GameObject.InternalUpdate
+  commentId: M:MonoEight.Core.GameObject.InternalUpdate
+  id: InternalUpdate
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: InternalUpdate()
+  nameWithType: GameObject.InternalUpdate()
+  fullName: MonoEight.Core.GameObject.InternalUpdate()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: InternalUpdate
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 79
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  syntax:
+    content: public void InternalUpdate()
+    content.vb: Public Sub InternalUpdate()
+  overload: MonoEight.Core.GameObject.InternalUpdate*
+- uid: MonoEight.Core.GameObject.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Core.GameObject.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: InternalDraw(SpriteBatch)
+  nameWithType: GameObject.InternalDraw(SpriteBatch)
+  fullName: MonoEight.Core.GameObject.InternalDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: InternalDraw
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 92
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  syntax:
+    content: public void InternalDraw(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Public Sub InternalDraw(spriteBatch As SpriteBatch)
+  overload: MonoEight.Core.GameObject.InternalDraw*
+- uid: MonoEight.Core.GameObject.AddComponent(MonoEight.Core.Component)
+  commentId: M:MonoEight.Core.GameObject.AddComponent(MonoEight.Core.Component)
+  id: AddComponent(MonoEight.Core.Component)
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: AddComponent(Component)
+  nameWithType: GameObject.AddComponent(Component)
+  fullName: MonoEight.Core.GameObject.AddComponent(MonoEight.Core.Component)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: AddComponent
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 111
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Attaches a new <xref href="MonoEight.Core.Component" data-throw-if-not-resolved="false"></xref> to this object.
+  remarks: >-
+    Side Effect: If the component is a <xref href="MonoEight.Core.Physics.Collider" data-throw-if-not-resolved="false"></xref>, it is automatically registered 
+
+    with the <xref href="MonoEight.Core.GameObject.Scene" data-throw-if-not-resolved="false"></xref>'s physics system.
+  example: []
+  syntax:
+    content: public void AddComponent(Component component)
+    parameters:
+    - id: component
+      type: MonoEight.Core.Component
+      description: The component instance to add.
+    content.vb: Public Sub AddComponent(component As Component)
+  overload: MonoEight.Core.GameObject.AddComponent*
+- uid: MonoEight.Core.GameObject.AddComponent``1
+  commentId: M:MonoEight.Core.GameObject.AddComponent``1
+  id: AddComponent``1
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: AddComponent<T>()
+  nameWithType: GameObject.AddComponent<T>()
+  fullName: MonoEight.Core.GameObject.AddComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: AddComponent
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 123
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Creates a new component of type T, attaches it to the object, and returns it.
+  example: []
+  syntax:
+    content: 'public T AddComponent<T>() where T : Component, new()'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Function AddComponent(Of T As {Component, New})() As T
+  overload: MonoEight.Core.GameObject.AddComponent*
+  nameWithType.vb: GameObject.AddComponent(Of T)()
+  fullName.vb: MonoEight.Core.GameObject.AddComponent(Of T)()
+  name.vb: AddComponent(Of T)()
+- uid: MonoEight.Core.GameObject.GetComponent``1
+  commentId: M:MonoEight.Core.GameObject.GetComponent``1
+  id: GetComponent``1
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetComponent<T>()
+  nameWithType: GameObject.GetComponent<T>()
+  fullName: MonoEight.Core.GameObject.GetComponent<T>()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: GetComponent
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 135
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Retrieves the first component of the given type.
+  example: []
+  syntax:
+    content: 'public T? GetComponent<T>() where T : Component'
+    typeParameters:
+    - id: T
+      description: The type of component to find.
+    return:
+      type: '{T}'
+      description: The component instance, or <code>null</code> if not found.
+    content.vb: Public Function GetComponent(Of T As Component)() As T
+  overload: MonoEight.Core.GameObject.GetComponent*
+  nameWithType.vb: GameObject.GetComponent(Of T)()
+  fullName.vb: MonoEight.Core.GameObject.GetComponent(Of T)()
+  name.vb: GetComponent(Of T)()
+- uid: MonoEight.Core.GameObject.GetComponents``1
+  commentId: M:MonoEight.Core.GameObject.GetComponents``1
+  id: GetComponents``1
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: GetComponents<T>()
+  nameWithType: GameObject.GetComponents<T>()
+  fullName: MonoEight.Core.GameObject.GetComponents<T>()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: GetComponents
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 150
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Retrieves all components of the given type.
+  example: []
+  syntax:
+    content: 'public T[] GetComponents<T>() where T : Component'
+    typeParameters:
+    - id: T
+      description: The type of components to find.
+    return:
+      type: '{T}[]'
+      description: An array containing all matching components.
+    content.vb: Public Function GetComponents(Of T As Component)() As T()
+  overload: MonoEight.Core.GameObject.GetComponents*
+  nameWithType.vb: GameObject.GetComponents(Of T)()
+  fullName.vb: MonoEight.Core.GameObject.GetComponents(Of T)()
+  name.vb: GetComponents(Of T)()
+- uid: MonoEight.Core.GameObject.Destroy
+  commentId: M:MonoEight.Core.GameObject.Destroy
+  id: Destroy
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Destroy()
+  nameWithType: GameObject.Destroy()
+  fullName: MonoEight.Core.GameObject.Destroy()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Destroy
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 164
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Marks the object to be removed from the scene at the end of the current update cycle.
+  example: []
+  syntax:
+    content: public void Destroy()
+    content.vb: Public Sub Destroy()
+  overload: MonoEight.Core.GameObject.Destroy*
+- uid: MonoEight.Core.GameObject.Dispose
+  commentId: M:MonoEight.Core.GameObject.Dispose
+  id: Dispose
+  parent: MonoEight.Core.GameObject
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: GameObject.Dispose()
+  fullName: MonoEight.Core.GameObject.Dispose()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/GameObject.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Dispose
+    path: ../MonoEight.Core/GameObject.cs
+    startLine: 172
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Disposes all attached components and clears references.
+  example: []
+  syntax:
+    content: public virtual void Dispose()
+    content.vb: Public Overridable Sub Dispose()
+  overload: MonoEight.Core.GameObject.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: MonoEight.Core.Component
+  commentId: T:MonoEight.Core.Component
+  parent: MonoEight.Core
+  href: MonoEight.Core.Component.html
+  name: Component
+  nameWithType: Component
+  fullName: MonoEight.Core.Component
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.GameObject.Position*
+  commentId: Overload:MonoEight.Core.GameObject.Position
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Position
+  name: Position
+  nameWithType: GameObject.Position
+  fullName: MonoEight.Core.GameObject.Position
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: MonoEight.Core.GameObject.Update
+  commentId: M:MonoEight.Core.GameObject.Update
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Update
+  name: Update()
+  nameWithType: GameObject.Update()
+  fullName: MonoEight.Core.GameObject.Update()
+  spec.csharp:
+  - uid: MonoEight.Core.GameObject.Update
+    name: Update
+    href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Core.GameObject.Update
+    name: Update
+    href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Update
+  - name: (
+  - name: )
+- uid: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  isExternal: true
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw(SpriteBatch)
+  nameWithType: GameObject.Draw(SpriteBatch)
+  fullName: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  spec.csharp:
+  - uid: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: MonoEight.Core.GameObject.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+    name: Draw
+    href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  - name: (
+  - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    name: SpriteBatch
+    isExternal: true
+  - name: )
+- uid: MonoEight.Core.GameObject.IsActive*
+  commentId: Overload:MonoEight.Core.GameObject.IsActive
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_IsActive
+  name: IsActive
+  nameWithType: GameObject.IsActive
+  fullName: MonoEight.Core.GameObject.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MonoEight.Core.GameObject.ShouldDestroy*
+  commentId: Overload:MonoEight.Core.GameObject.ShouldDestroy
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_ShouldDestroy
+  name: ShouldDestroy
+  nameWithType: GameObject.ShouldDestroy
+  fullName: MonoEight.Core.GameObject.ShouldDestroy
+- uid: MonoEight.Core.GameObject.Scene
+  commentId: P:MonoEight.Core.GameObject.Scene
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Scene
+  name: Scene
+  nameWithType: GameObject.Scene
+  fullName: MonoEight.Core.GameObject.Scene
+- uid: MonoEight.Core.GameObject.Scene*
+  commentId: Overload:MonoEight.Core.GameObject.Scene
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Scene
+  name: Scene
+  nameWithType: GameObject.Scene
+  fullName: MonoEight.Core.GameObject.Scene
+- uid: MonoEight.Core.Scenes.Scene
+  commentId: T:MonoEight.Core.Scenes.Scene
+  parent: MonoEight.Core.Scenes
+  href: MonoEight.Core.Scenes.Scene.html
+  name: Scene
+  nameWithType: Scene
+  fullName: MonoEight.Core.Scenes.Scene
+- uid: MonoEight.Core.Scenes
+  commentId: N:MonoEight.Core.Scenes
+  href: MonoEight.html
+  name: MonoEight.Core.Scenes
+  nameWithType: MonoEight.Core.Scenes
+  fullName: MonoEight.Core.Scenes
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Scenes
+    name: Scenes
+    href: MonoEight.Core.Scenes.html
+- uid: MonoEight.Core.GameObject.Canvas
+  commentId: P:MonoEight.Core.GameObject.Canvas
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Canvas
+  name: Canvas
+  nameWithType: GameObject.Canvas
+  fullName: MonoEight.Core.GameObject.Canvas
+- uid: MonoEight.Core.GameObject.Canvas*
+  commentId: Overload:MonoEight.Core.GameObject.Canvas
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Canvas
+  name: Canvas
+  nameWithType: GameObject.Canvas
+  fullName: MonoEight.Core.GameObject.Canvas
+- uid: MonoEight.Core.UI.Canvas
+  commentId: T:MonoEight.Core.UI.Canvas
+  parent: MonoEight.Core.UI
+  href: MonoEight.Core.UI.Canvas.html
+  name: Canvas
+  nameWithType: Canvas
+  fullName: MonoEight.Core.UI.Canvas
+- uid: MonoEight.Core.UI
+  commentId: N:MonoEight.Core.UI
+  href: MonoEight.html
+  name: MonoEight.Core.UI
+  nameWithType: MonoEight.Core.UI
+  fullName: MonoEight.Core.UI
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+- uid: MonoEight.Core.GameObject.Initialize*
+  commentId: Overload:MonoEight.Core.GameObject.Initialize
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Initialize
+  name: Initialize
+  nameWithType: GameObject.Initialize
+  fullName: MonoEight.Core.GameObject.Initialize
+- uid: MonoEight.Core.GameObject.LoadContent*
+  commentId: Overload:MonoEight.Core.GameObject.LoadContent
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_LoadContent
+  name: LoadContent
+  nameWithType: GameObject.LoadContent
+  fullName: MonoEight.Core.GameObject.LoadContent
+- uid: MonoEight.Core.GameObject.Update*
+  commentId: Overload:MonoEight.Core.GameObject.Update
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Update
+  name: Update
+  nameWithType: GameObject.Update
+  fullName: MonoEight.Core.GameObject.Update
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: MonoEight.Core.GameObject.Draw*
+  commentId: Overload:MonoEight.Core.GameObject.Draw
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Draw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw
+  nameWithType: GameObject.Draw
+  fullName: MonoEight.Core.GameObject.Draw
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: MonoEight.Core.GameObject.InternalInitialize*
+  commentId: Overload:MonoEight.Core.GameObject.InternalInitialize
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_InternalInitialize
+  name: InternalInitialize
+  nameWithType: GameObject.InternalInitialize
+  fullName: MonoEight.Core.GameObject.InternalInitialize
+- uid: MonoEight.Core.GameObject.InternalLoadContent*
+  commentId: Overload:MonoEight.Core.GameObject.InternalLoadContent
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_InternalLoadContent
+  name: InternalLoadContent
+  nameWithType: GameObject.InternalLoadContent
+  fullName: MonoEight.Core.GameObject.InternalLoadContent
+- uid: MonoEight.Core.GameObject.InternalUpdate*
+  commentId: Overload:MonoEight.Core.GameObject.InternalUpdate
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_InternalUpdate
+  name: InternalUpdate
+  nameWithType: GameObject.InternalUpdate
+  fullName: MonoEight.Core.GameObject.InternalUpdate
+- uid: MonoEight.Core.GameObject.InternalDraw*
+  commentId: Overload:MonoEight.Core.GameObject.InternalDraw
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_InternalDraw_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: InternalDraw
+  nameWithType: GameObject.InternalDraw
+  fullName: MonoEight.Core.GameObject.InternalDraw
+- uid: MonoEight.Core.Physics.Collider
+  commentId: T:MonoEight.Core.Physics.Collider
+  parent: MonoEight.Core.Physics
+  href: MonoEight.Core.Physics.Collider.html
+  name: Collider
+  nameWithType: Collider
+  fullName: MonoEight.Core.Physics.Collider
+- uid: MonoEight.Core.GameObject.AddComponent*
+  commentId: Overload:MonoEight.Core.GameObject.AddComponent
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_AddComponent_MonoEight_Core_Component_
+  name: AddComponent
+  nameWithType: GameObject.AddComponent
+  fullName: MonoEight.Core.GameObject.AddComponent
+- uid: MonoEight.Core.Physics
+  commentId: N:MonoEight.Core.Physics
+  href: MonoEight.html
+  name: MonoEight.Core.Physics
+  nameWithType: MonoEight.Core.Physics
+  fullName: MonoEight.Core.Physics
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Physics
+    name: Physics
+    href: MonoEight.Core.Physics.html
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: MonoEight.Core.GameObject.GetComponent*
+  commentId: Overload:MonoEight.Core.GameObject.GetComponent
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_GetComponent__1
+  name: GetComponent
+  nameWithType: GameObject.GetComponent
+  fullName: MonoEight.Core.GameObject.GetComponent
+- uid: MonoEight.Core.GameObject.GetComponents*
+  commentId: Overload:MonoEight.Core.GameObject.GetComponents
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_GetComponents__1
+  name: GetComponents
+  nameWithType: GameObject.GetComponents
+  fullName: MonoEight.Core.GameObject.GetComponents
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: MonoEight.Core.GameObject.Destroy*
+  commentId: Overload:MonoEight.Core.GameObject.Destroy
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Destroy
+  name: Destroy
+  nameWithType: GameObject.Destroy
+  fullName: MonoEight.Core.GameObject.Destroy
+- uid: MonoEight.Core.GameObject.Dispose*
+  commentId: Overload:MonoEight.Core.GameObject.Dispose
+  href: MonoEight.Core.GameObject.html#MonoEight_Core_GameObject_Dispose
+  name: Dispose
+  nameWithType: GameObject.Dispose
+  fullName: MonoEight.Core.GameObject.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

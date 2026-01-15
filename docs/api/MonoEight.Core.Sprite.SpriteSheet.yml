@@ -1,0 +1,706 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.Sprite.SpriteSheet
+  commentId: T:MonoEight.Core.Sprite.SpriteSheet
+  id: SpriteSheet
+  parent: MonoEight.Core.Sprite
+  children:
+  - MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Point)
+  - MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32)
+  - MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32,System.Int32[])
+  - MonoEight.Core.Sprite.SpriteSheet.Count
+  - MonoEight.Core.Sprite.SpriteSheet.Get(System.Int32)
+  - MonoEight.Core.Sprite.SpriteSheet.Item(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: SpriteSheet
+  nameWithType: SpriteSheet
+  fullName: MonoEight.Core.Sprite.SpriteSheet
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: SpriteSheet
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 8
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: A collection of sprites sliced from a larger texture
+  example: []
+  syntax:
+    content: public class SpriteSheet
+    content.vb: Public Class SpriteSheet
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.Sprite.SpriteSheet.Count
+  commentId: P:MonoEight.Core.Sprite.SpriteSheet.Count
+  id: Count
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: SpriteSheet.Count
+  fullName: MonoEight.Core.Sprite.SpriteSheet.Count
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Count
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 19
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: Gets the total number of sprites in this sheet.
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: MonoEight.Core.Sprite.SpriteSheet.Count*
+- uid: MonoEight.Core.Sprite.SpriteSheet.Item(System.Int32)
+  commentId: P:MonoEight.Core.Sprite.SpriteSheet.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: this[int]
+  nameWithType: SpriteSheet.this[int]
+  fullName: MonoEight.Core.Sprite.SpriteSheet.this[int]
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: this[]
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 27
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: Gets the sprite <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref> at the given index.
+  example: []
+  syntax:
+    content: public Texture2D this[int index] { get; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the sprite.
+    return:
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+      description: The sprite <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Default Property this[](index As Integer) As Texture2D
+  overload: MonoEight.Core.Sprite.SpriteSheet.Item*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: Thrown if the index is invalid.
+  nameWithType.vb: SpriteSheet.this[](Integer)
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.this[](Integer)
+  name.vb: this[](Integer)
+- uid: MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Point)
+  commentId: M:MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Point)
+  id: '#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Point)'
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: SpriteSheet(Texture2D, Point)
+  nameWithType: SpriteSheet.SpriteSheet(Texture2D, Point)
+  fullName: MonoEight.Core.Sprite.SpriteSheet.SpriteSheet(Microsoft.Xna.Framework.Graphics.Texture2D, Microsoft.Xna.Framework.Point)
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 34
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: Initializes a new instance of the <xref href="MonoEight.Core.Sprite.SpriteSheet" data-throw-if-not-resolved="false"></xref> from the given <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public SpriteSheet(Texture2D texture, Point size)
+    parameters:
+    - id: texture
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+      description: The <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref> that will be sliced.
+    - id: size
+      type: Microsoft.Xna.Framework.Point
+      description: The size of a single sprite in the sheet.
+    content.vb: Public Sub New(texture As Texture2D, size As Point)
+  overload: MonoEight.Core.Sprite.SpriteSheet.#ctor*
+  nameWithType.vb: SpriteSheet.New(Texture2D, Point)
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.New(Microsoft.Xna.Framework.Graphics.Texture2D, Microsoft.Xna.Framework.Point)
+  name.vb: New(Texture2D, Point)
+- uid: MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32)
+  commentId: M:MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32)
+  id: '#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32)'
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: SpriteSheet(Texture2D, int)
+  nameWithType: SpriteSheet.SpriteSheet(Texture2D, int)
+  fullName: MonoEight.Core.Sprite.SpriteSheet.SpriteSheet(Microsoft.Xna.Framework.Graphics.Texture2D, int)
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 52
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: <inheritdoc></inheritdoc>
+  example: []
+  syntax:
+    content: public SpriteSheet(Texture2D texture, int size)
+    parameters:
+    - id: texture
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+      description: <inheritdoc></inheritdoc>
+    - id: size
+      type: System.Int32
+      description: The size of a single sprite in the sheet.
+    content.vb: Public Sub New(texture As Texture2D, size As Integer)
+  overload: MonoEight.Core.Sprite.SpriteSheet.#ctor*
+  nameWithType.vb: SpriteSheet.New(Texture2D, Integer)
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.New(Microsoft.Xna.Framework.Graphics.Texture2D, Integer)
+  name.vb: New(Texture2D, Integer)
+- uid: MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32,System.Int32[])
+  commentId: M:MonoEight.Core.Sprite.SpriteSheet.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32,System.Int32[])
+  id: '#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,System.Int32,System.Int32[])'
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: SpriteSheet(Texture2D, int, int[])
+  nameWithType: SpriteSheet.SpriteSheet(Texture2D, int, int[])
+  fullName: MonoEight.Core.Sprite.SpriteSheet.SpriteSheet(Microsoft.Xna.Framework.Graphics.Texture2D, int, int[])
+  type: Constructor
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: .ctor
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 60
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: <inheritdoc></inheritdoc>
+  example: []
+  syntax:
+    content: public SpriteSheet(Texture2D texture, int size, int[] indices)
+    parameters:
+    - id: texture
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+      description: <inheritdoc></inheritdoc>
+    - id: size
+      type: System.Int32
+      description: The size of a single sprite in the sheet.
+    - id: indices
+      type: System.Int32[]
+      description: The indices to keep from the sliced sheet.
+    content.vb: Public Sub New(texture As Texture2D, size As Integer, indices As Integer())
+  overload: MonoEight.Core.Sprite.SpriteSheet.#ctor*
+  nameWithType.vb: SpriteSheet.New(Texture2D, Integer, Integer())
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.New(Microsoft.Xna.Framework.Graphics.Texture2D, Integer, Integer())
+  name.vb: New(Texture2D, Integer, Integer())
+- uid: MonoEight.Core.Sprite.SpriteSheet.Get(System.Int32)
+  commentId: M:MonoEight.Core.Sprite.SpriteSheet.Get(System.Int32)
+  id: Get(System.Int32)
+  parent: MonoEight.Core.Sprite.SpriteSheet
+  langs:
+  - csharp
+  - vb
+  name: Get(int)
+  nameWithType: SpriteSheet.Get(int)
+  fullName: MonoEight.Core.Sprite.SpriteSheet.Get(int)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/Sprite/SpriteSheet.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Get
+    path: ../MonoEight.Core/Sprite/SpriteSheet.cs
+    startLine: 76
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core.Sprite
+  summary: Gets the sprite <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref> at the given index.
+  example: []
+  syntax:
+    content: public Texture2D Get(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The index of the sprite.
+    return:
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+      description: The sprite <xref href="Microsoft.Xna.Framework.Graphics.Texture2D" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function [Get](index As Integer) As Texture2D
+  overload: MonoEight.Core.Sprite.SpriteSheet.Get*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: Thrown if the index is invalid.
+  nameWithType.vb: SpriteSheet.Get(Integer)
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.Get(Integer)
+  name.vb: Get(Integer)
+references:
+- uid: MonoEight.Core.Sprite
+  commentId: N:MonoEight.Core.Sprite
+  href: MonoEight.html
+  name: MonoEight.Core.Sprite
+  nameWithType: MonoEight.Core.Sprite
+  fullName: MonoEight.Core.Sprite
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.Sprite
+    name: Sprite
+    href: MonoEight.Core.Sprite.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.Sprite.SpriteSheet.Count*
+  commentId: Overload:MonoEight.Core.Sprite.SpriteSheet.Count
+  href: MonoEight.Core.Sprite.SpriteSheet.html#MonoEight_Core_Sprite_SpriteSheet_Count
+  name: Count
+  nameWithType: SpriteSheet.Count
+  fullName: MonoEight.Core.Sprite.SpriteSheet.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Microsoft.Xna.Framework.Graphics.Texture2D
+  commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: System.IndexOutOfRangeException
+  commentId: T:System.IndexOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception
+  name: IndexOutOfRangeException
+  nameWithType: IndexOutOfRangeException
+  fullName: System.IndexOutOfRangeException
+- uid: MonoEight.Core.Sprite.SpriteSheet.Item*
+  commentId: Overload:MonoEight.Core.Sprite.SpriteSheet.Item
+  href: MonoEight.Core.Sprite.SpriteSheet.html#MonoEight_Core_Sprite_SpriteSheet_Item_System_Int32_
+  name: this
+  nameWithType: SpriteSheet.this
+  fullName: MonoEight.Core.Sprite.SpriteSheet.this
+  nameWithType.vb: SpriteSheet.this[]
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.this[]
+  name.vb: this[]
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: MonoEight.Core.Sprite.SpriteSheet
+  commentId: T:MonoEight.Core.Sprite.SpriteSheet
+  parent: MonoEight.Core.Sprite
+  href: MonoEight.Core.Sprite.SpriteSheet.html
+  name: SpriteSheet
+  nameWithType: SpriteSheet
+  fullName: MonoEight.Core.Sprite.SpriteSheet
+- uid: MonoEight.Core.Sprite.SpriteSheet.#ctor*
+  commentId: Overload:MonoEight.Core.Sprite.SpriteSheet.#ctor
+  href: MonoEight.Core.Sprite.SpriteSheet.html#MonoEight_Core_Sprite_SpriteSheet__ctor_Microsoft_Xna_Framework_Graphics_Texture2D_Microsoft_Xna_Framework_Point_
+  name: SpriteSheet
+  nameWithType: SpriteSheet.SpriteSheet
+  fullName: MonoEight.Core.Sprite.SpriteSheet.SpriteSheet
+  nameWithType.vb: SpriteSheet.New
+  fullName.vb: MonoEight.Core.Sprite.SpriteSheet.New
+  name.vb: New
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: MonoEight.Core.Sprite.SpriteSheet.Get*
+  commentId: Overload:MonoEight.Core.Sprite.SpriteSheet.Get
+  href: MonoEight.Core.Sprite.SpriteSheet.html#MonoEight_Core_Sprite_SpriteSheet_Get_System_Int32_
+  name: Get
+  nameWithType: SpriteSheet.Get
+  fullName: MonoEight.Core.Sprite.SpriteSheet.Get

@@ -1,0 +1,63 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.UI
+  commentId: N:MonoEight.Core.UI
+  id: UI
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.UI.Canvas
+  - MonoEight.Core.UI.FontSize
+  langs:
+  - csharp
+  - vb
+  name: MonoEight.Core.UI
+  nameWithType: MonoEight.Core.UI
+  fullName: MonoEight.Core.UI
+  type: Namespace
+  assemblies:
+  - MonoEight.Core
+references:
+- uid: MonoEight.Core.UI.Canvas
+  commentId: T:MonoEight.Core.UI.Canvas
+  parent: MonoEight.Core.UI
+  href: MonoEight.Core.UI.Canvas.html
+  name: Canvas
+  nameWithType: Canvas
+  fullName: MonoEight.Core.UI.Canvas
+- uid: MonoEight.Core.UI.FontSize
+  commentId: T:MonoEight.Core.UI.FontSize
+  parent: MonoEight.Core.UI
+  href: MonoEight.Core.UI.FontSize.html
+  name: FontSize
+  nameWithType: FontSize
+  fullName: MonoEight.Core.UI.FontSize
+- uid: MonoEight.Core.UI
+  commentId: N:MonoEight.Core.UI
+  href: MonoEight.html
+  name: MonoEight.Core.UI
+  nameWithType: MonoEight.Core.UI
+  fullName: MonoEight.Core.UI
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  - name: .
+  - uid: MonoEight.Core.UI
+    name: UI
+    href: MonoEight.Core.UI.html

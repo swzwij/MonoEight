@@ -1,0 +1,630 @@
+### YamlMime:ManagedReference
+items:
+- uid: MonoEight.Core.MEWindow
+  commentId: T:MonoEight.Core.MEWindow
+  id: MEWindow
+  parent: MonoEight.Core
+  children:
+  - MonoEight.Core.MEWindow.Graphics
+  - MonoEight.Core.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
+  - MonoEight.Core.MEWindow.IsFullscreen
+  - MonoEight.Core.MEWindow.Resolution
+  - MonoEight.Core.MEWindow.StartFullscreen
+  - MonoEight.Core.MEWindow.ToggleFullscreen
+  - MonoEight.Core.MEWindow.Window
+  langs:
+  - csharp
+  - vb
+  name: MEWindow
+  nameWithType: MEWindow
+  fullName: MonoEight.Core.MEWindow
+  type: Class
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: MEWindow
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 7
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: A static manager for controlling the application window.
+  example: []
+  syntax:
+    content: public static class MEWindow
+    content.vb: Public Module MEWindow
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MonoEight.Core.MEWindow.Resolution
+  commentId: P:MonoEight.Core.MEWindow.Resolution
+  id: Resolution
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: Resolution
+  nameWithType: MEWindow.Resolution
+  fullName: MonoEight.Core.MEWindow.Resolution
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Resolution
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 17
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets or sets the internal game resolution.
+  remarks: This is the size of the render target, not necessarily the size of the actual OS window.
+  example: []
+  syntax:
+    content: public static Point Resolution { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Public Shared Property Resolution As Point
+  overload: MonoEight.Core.MEWindow.Resolution*
+- uid: MonoEight.Core.MEWindow.StartFullscreen
+  commentId: P:MonoEight.Core.MEWindow.StartFullscreen
+  id: StartFullscreen
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: StartFullscreen
+  nameWithType: MEWindow.StartFullscreen
+  fullName: MonoEight.Core.MEWindow.StartFullscreen
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: StartFullscreen
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 22
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets or sets whether the game should start in fullscreen mode.
+  example: []
+  syntax:
+    content: public static bool StartFullscreen { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property StartFullscreen As Boolean
+  overload: MonoEight.Core.MEWindow.StartFullscreen*
+- uid: MonoEight.Core.MEWindow.IsFullscreen
+  commentId: P:MonoEight.Core.MEWindow.IsFullscreen
+  id: IsFullscreen
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: IsFullscreen
+  nameWithType: MEWindow.IsFullscreen
+  fullName: MonoEight.Core.MEWindow.IsFullscreen
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: IsFullscreen
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 27
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets or sets whether the game window is currently in fullscreen mode.
+  example: []
+  syntax:
+    content: public static bool IsFullscreen { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsFullscreen As Boolean
+  overload: MonoEight.Core.MEWindow.IsFullscreen*
+- uid: MonoEight.Core.MEWindow.Graphics
+  commentId: P:MonoEight.Core.MEWindow.Graphics
+  id: Graphics
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: Graphics
+  nameWithType: MEWindow.Graphics
+  fullName: MonoEight.Core.MEWindow.Graphics
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Graphics
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 36
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the <xref href="Microsoft.Xna.Framework.GraphicsDeviceManager" data-throw-if-not-resolved="false"></xref> used by the game.
+  example: []
+  syntax:
+    content: public static GraphicsDeviceManager? Graphics { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.GraphicsDeviceManager
+    content.vb: Public Shared Property Graphics As GraphicsDeviceManager
+  overload: MonoEight.Core.MEWindow.Graphics*
+- uid: MonoEight.Core.MEWindow.Window
+  commentId: P:MonoEight.Core.MEWindow.Window
+  id: Window
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: Window
+  nameWithType: MEWindow.Window
+  fullName: MonoEight.Core.MEWindow.Window
+  type: Property
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Window
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 41
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Gets the underlying <xref href="Microsoft.Xna.Framework.GameWindow" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static GameWindow? Window { get; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.GameWindow
+    content.vb: Public Shared Property Window As GameWindow
+  overload: MonoEight.Core.MEWindow.Window*
+- uid: MonoEight.Core.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
+  commentId: M:MonoEight.Core.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
+  id: Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager,Microsoft.Xna.Framework.GameWindow)
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: Initialize(GraphicsDeviceManager, GameWindow)
+  nameWithType: MEWindow.Initialize(GraphicsDeviceManager, GameWindow)
+  fullName: MonoEight.Core.MEWindow.Initialize(Microsoft.Xna.Framework.GraphicsDeviceManager, Microsoft.Xna.Framework.GameWindow)
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: Initialize
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 48
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Initializes the window manager with the required MonoGame references.
+  example: []
+  syntax:
+    content: public static void Initialize(GraphicsDeviceManager graphics, GameWindow window)
+    parameters:
+    - id: graphics
+      type: Microsoft.Xna.Framework.GraphicsDeviceManager
+      description: The main graphics device manager.
+    - id: window
+      type: Microsoft.Xna.Framework.GameWindow
+      description: The main game window.
+    content.vb: Public Shared Sub Initialize(graphics As GraphicsDeviceManager, window As GameWindow)
+  overload: MonoEight.Core.MEWindow.Initialize*
+- uid: MonoEight.Core.MEWindow.ToggleFullscreen
+  commentId: M:MonoEight.Core.MEWindow.ToggleFullscreen
+  id: ToggleFullscreen
+  parent: MonoEight.Core.MEWindow
+  langs:
+  - csharp
+  - vb
+  name: ToggleFullscreen()
+  nameWithType: MEWindow.ToggleFullscreen()
+  fullName: MonoEight.Core.MEWindow.ToggleFullscreen()
+  type: Method
+  source:
+    remote:
+      path: MonoEight.Core/MEWindow.cs
+      branch: hotfix/documentation-settings
+      repo: https://github.com/swzwij/MonoEight
+    id: ToggleFullscreen
+    path: ../MonoEight.Core/MEWindow.cs
+    startLine: 65
+  assemblies:
+  - MonoEight.Core
+  namespace: MonoEight.Core
+  summary: Toggles the window between borderless fullscreen and windowed mode.
+  example: []
+  syntax:
+    content: public static void ToggleFullscreen()
+    content.vb: Public Shared Sub ToggleFullscreen()
+  overload: MonoEight.Core.MEWindow.ToggleFullscreen*
+references:
+- uid: MonoEight.Core
+  commentId: N:MonoEight.Core
+  href: MonoEight.html
+  name: MonoEight.Core
+  nameWithType: MonoEight.Core
+  fullName: MonoEight.Core
+  spec.csharp:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+  spec.vb:
+  - uid: MonoEight
+    name: MonoEight
+    href: MonoEight.html
+  - name: .
+  - uid: MonoEight.Core
+    name: Core
+    href: MonoEight.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MonoEight.Core.MEWindow.Resolution*
+  commentId: Overload:MonoEight.Core.MEWindow.Resolution
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_Resolution
+  name: Resolution
+  nameWithType: MEWindow.Resolution
+  fullName: MonoEight.Core.MEWindow.Resolution
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: MonoEight.Core.MEWindow.StartFullscreen*
+  commentId: Overload:MonoEight.Core.MEWindow.StartFullscreen
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_StartFullscreen
+  name: StartFullscreen
+  nameWithType: MEWindow.StartFullscreen
+  fullName: MonoEight.Core.MEWindow.StartFullscreen
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MonoEight.Core.MEWindow.IsFullscreen*
+  commentId: Overload:MonoEight.Core.MEWindow.IsFullscreen
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_IsFullscreen
+  name: IsFullscreen
+  nameWithType: MEWindow.IsFullscreen
+  fullName: MonoEight.Core.MEWindow.IsFullscreen
+- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
+  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GraphicsDeviceManager
+  nameWithType: GraphicsDeviceManager
+  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
+- uid: MonoEight.Core.MEWindow.Graphics*
+  commentId: Overload:MonoEight.Core.MEWindow.Graphics
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_Graphics
+  name: Graphics
+  nameWithType: MEWindow.Graphics
+  fullName: MonoEight.Core.MEWindow.Graphics
+- uid: Microsoft.Xna.Framework.GameWindow
+  commentId: T:Microsoft.Xna.Framework.GameWindow
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameWindow
+  nameWithType: GameWindow
+  fullName: Microsoft.Xna.Framework.GameWindow
+- uid: MonoEight.Core.MEWindow.Window*
+  commentId: Overload:MonoEight.Core.MEWindow.Window
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_Window
+  name: Window
+  nameWithType: MEWindow.Window
+  fullName: MonoEight.Core.MEWindow.Window
+- uid: MonoEight.Core.MEWindow.Initialize*
+  commentId: Overload:MonoEight.Core.MEWindow.Initialize
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_Initialize_Microsoft_Xna_Framework_GraphicsDeviceManager_Microsoft_Xna_Framework_GameWindow_
+  name: Initialize
+  nameWithType: MEWindow.Initialize
+  fullName: MonoEight.Core.MEWindow.Initialize
+- uid: MonoEight.Core.MEWindow.ToggleFullscreen*
+  commentId: Overload:MonoEight.Core.MEWindow.ToggleFullscreen
+  href: MonoEight.Core.MEWindow.html#MonoEight_Core_MEWindow_ToggleFullscreen
+  name: ToggleFullscreen
+  nameWithType: MEWindow.ToggleFullscreen
+  fullName: MonoEight.Core.MEWindow.ToggleFullscreen
