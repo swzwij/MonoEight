@@ -34,9 +34,9 @@
       "_appName": "MonoEight Docs",
       "_appTitle": "MonoEight Documentation",
       "_enableSearch": true,
-      "pdf": false
-    },
-    "_appLogoPath": "images/logo.png"
-
+      "pdf": false,
+      "_appLogoPath": "images/MonoEight.svg",
+      "_appFaviconPath": "images/Icon.ico"
+    }
   }
 }
