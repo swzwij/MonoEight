@@ -2,3 +2,5 @@
   href: index.md
 - name: API
   href: api/
+- name: Installation
+  href: installation.md
