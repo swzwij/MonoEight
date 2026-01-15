@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageId>MonoEight.Templates</PackageId>
+    <Title>MonoEight Game Template</Title>
+    <Version>0.1.3</Version>
+    <Authors>Samuel Zwijsen</Authors>
+    <Description>Templates for building games with MonoEight.</Description>
+    <TargetFramework>net8.0</TargetFramework>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Template\**\*" Exclude="Template\**\bin\**;Template\**\obj\**;Template\**\.vs\**" />
+  </ItemGroup>
+</Project>
