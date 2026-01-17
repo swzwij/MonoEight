@@ -1,0 +1,62 @@
+name: Publish to NuGet
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    
+    env:
+      MAJOR_MINOR: "1.0"
+      NUGET_SOURCE: "https://api.nuget.org/v3/index.json"
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Calculate Version
+        id: version
+        run: |
+          echo "NEW_VERSION=${{ env.MAJOR_MINOR }}.${{ github.run_number }}" >> $GITHUB_ENV
+          echo "Building Version: ${{ env.MAJOR_MINOR }}.${{ github.run_number }}"
+
+      - name: Pack MonoEight.Core
+        run: |
+          dotnet pack MonoEight.Core/MonoEight.Core.csproj \
+            --configuration Release \
+            -p:Version=${{ env.NEW_VERSION }} \
+            --output ./nupkgs
+
+      - name: Push MonoEight.Core
+        run: |
+          dotnet nuget push ./nupkgs/MonoEight.Core.${{ env.NEW_VERSION }}.nupkg \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source ${{ env.NUGET_SOURCE }} \
+            --skip-duplicate
+
+      - name: Update Template Dependency Version
+        run: |
+          sed -i 's/<PackageReference Include="MonoEight.Core" Version=".*" \/>/<PackageReference Include="MonoEight.Core" Version="${{ env.NEW_VERSION }}" \/>/' MonoEight.Template/MonoEight.Template.csproj
+          grep "MonoEight.Core" MonoEight.Template/MonoEight.Template.csproj
+
+      - name: Pack MonoEight.Templates
+        run: |
+          dotnet pack MonoEight.Templates/MonoEight.Templates.csproj \
+            --configuration Release \
+            -p:Version=${{ env.NEW_VERSION }} \
+            --output ./nupkgs
+
+      - name: Push MonoEight.Templates
+        run: |
+          dotnet nuget push ./nupkgs/MonoEight.Templates.${{ env.NEW_VERSION }}.nupkg \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source ${{ env.NUGET_SOURCE }} \
+            --skip-duplicate
