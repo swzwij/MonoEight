@@ -16,97 +16,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="..\MonoEight.Template\.template.config\template.json">
+    <Content Include="..\MonoEight.Template\**\*"
+             Exclude="..\MonoEight.Template\bin\**;
+                      ..\MonoEight.Template\obj\**;
+                      ..\MonoEight.Template\Content\bin\**;
+                      ..\MonoEight.Template\Content\obj\**;
+                      ..\MonoEight.Template\.vs\**;
+                      ..\MonoEight.Template\*.user">
       <PackagePath>content</PackagePath>
-      <Link>.template.config\template.json</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\app.manifest">
-      <PackagePath>content</PackagePath>
-      <Link>app.manifest</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\bin\DesktopGL\Content\Debug.xnb">
-      <PackagePath>content</PackagePath>
-      <Link>Content\bin\DesktopGL\Content\Debug.xnb</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\bin\DesktopGL\Content\PlayerTest.xnb">
-      <PackagePath>content</PackagePath>
-      <Link>Content\bin\DesktopGL\Content\PlayerTest.xnb</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\Content.mgcb">
-      <PackagePath>content</PackagePath>
-      <Link>Content\Content.mgcb</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\Debug.png">
-      <PackagePath>content</PackagePath>
-      <Link>Content\Debug.png</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\obj\DesktopGL\net8.0\Content\.mgcontent">
-      <PackagePath>content</PackagePath>
-      <Link>Content\obj\DesktopGL\net8.0\Content\.mgcontent</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\obj\DesktopGL\net8.0\Content\.mgstats">
-      <PackagePath>content</PackagePath>
-      <Link>Content\obj\DesktopGL\net8.0\Content\.mgstats</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\obj\DesktopGL\net8.0\Content\Debug.mgcontent">
-      <PackagePath>content</PackagePath>
-      <Link>Content\obj\DesktopGL\net8.0\Content\Debug.mgcontent</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\obj\DesktopGL\net8.0\Content\PlayerTest.mgcontent">
-      <PackagePath>content</PackagePath>
-      <Link>Content\obj\DesktopGL\net8.0\Content\PlayerTest.mgcontent</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\PlayerTest.png">
-      <PackagePath>content</PackagePath>
-      <Link>Content\PlayerTest.png</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Content\Test.aseprite">
-      <PackagePath>content</PackagePath>
-      <Link>Content\Test.aseprite</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Icon.bmp">
-      <PackagePath>content</PackagePath>
-      <Link>Icon.bmp</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Icon.ico">
-      <PackagePath>content</PackagePath>
-      <Link>Icon.ico</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\MyGame.cs">
-      <PackagePath>content</PackagePath>
-      <Link>MyGame.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\NewPlayer.cs">
-      <PackagePath>content</PackagePath>
-      <Link>NewPlayer.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\NewPlayer2.cs">
-      <PackagePath>content</PackagePath>
-      <Link>NewPlayer2.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\nuget.config">
-      <PackagePath>content</PackagePath>
-      <Link>nuget.config</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Player.cs">
-      <PackagePath>content</PackagePath>
-      <Link>Player.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\Program.cs">
-      <PackagePath>content</PackagePath>
-      <Link>Program.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\TestScene.cs">
-      <PackagePath>content</PackagePath>
-      <Link>TestScene.cs</Link>
-    </Content>
-    <Content Include="..\MonoEight.Template\TestScene2.cs">
-      <PackagePath>content</PackagePath>
-      <Link>TestScene2.cs</Link>
-    </Content>
-    <Content Include="..\Template\**\*" Exclude="..\Template\bin\**;..\Template\obj\**" >
-        <PackagePath>content</PackagePath>
     </Content>
   </ItemGroup>
-
 </Project>
