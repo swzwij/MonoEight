@@ -12,4 +12,10 @@ public class AudioMap
         Name = name;
         SoundEffect = soundEffect;
     }
+
+    public AudioMap(string name, string path)
+    {
+        Name = name;
+        SoundEffect = Content.Load<SoundEffect>(path);
+    }
 }
