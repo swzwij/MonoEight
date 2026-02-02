@@ -39,7 +39,8 @@ public static class Debugger
     /// <param name="start">The start point of the line.</param>
     /// <param name="end">The end point of the line.</param>
     /// <param name="color">The color of the line.</param>
-    public static void DrawLine(SpriteBatch spriteBatch, Point start, Point end, Color color)
+    /// <param name="width">The width of the line. Default is 1.</param>
+    public static void DrawLine(SpriteBatch spriteBatch, Point start, Point end, Color color, int width = 1)
     {
         Point edge = end - start;
         double angle = Math.Atan2(edge.Y, edge.X);
@@ -51,7 +52,7 @@ public static class Debugger
             color,
             (float)angle,
             Vector2.Zero,
-            new Vector2(edge.ToVector2().Length(), 1),
+            new Vector2(edge.ToVector2().Length(), width),
             SpriteEffects.None,
             0
         );
@@ -65,13 +66,14 @@ public static class Debugger
     /// <param name="position">The position of the square.</param>
     /// <param name="size">The size of the square.</param>
     /// <param name="color">The color of the square.</param>
-    public static void DrawSquare(SpriteBatch spriteBatch, Point position, Point size, Color color)
+    /// <param name="width">The width of the square. Default is 1.</param>
+    public static void DrawSquare(SpriteBatch spriteBatch, Point position, Point size, Color color, int width = 1)
     {
         position -= (size.ToVector2() / 2).ToPoint();
-        DrawLine(spriteBatch, position, new Point(position.X + size.X, position.Y), color);
-        DrawLine(spriteBatch, new Point(position.X + size.X, position.Y), position + size, color);
-        DrawLine(spriteBatch, position + size, new Point(position.X, position.Y + size.Y), color);
-        DrawLine(spriteBatch, new Point(position.X, position.Y + size.Y), position, color);
+        DrawLine(spriteBatch, position, new Point(position.X + size.X, position.Y), color, width);
+        DrawLine(spriteBatch, new Point(position.X + size.X, position.Y), position + size, color, width);
+        DrawLine(spriteBatch, position + size, new Point(position.X, position.Y + size.Y), color, width);
+        DrawLine(spriteBatch, new Point(position.X, position.Y + size.Y), position, color, width);
     }
 
     /// <summary>
@@ -82,9 +84,10 @@ public static class Debugger
     /// <param name="position">The position of the circle</param>
     /// <param name="radius">The radius of the circle.</param>
     /// <param name="color">The color of the circle.</param>
-    public static void DrawCircle(SpriteBatch spriteBatch, Point position, int radius, Color color)
+    /// <param name="width">The width of the circle. Default is 1.</param>
+    public static void DrawCircle(SpriteBatch spriteBatch, Point position, int radius, Color color, int width = 1)
     {
-        const int segments = 36;
+        const int segments = 32;
         const float increment = MathHelper.TwoPi / segments;
         float theta = 0f;
         Point lastPoint = new(position.X + radius, position.Y);
@@ -96,7 +99,7 @@ public static class Debugger
                 position.X + (int)(radius * Math.Cos(theta)),
                 position.Y + (int)(radius * Math.Sin(theta))
             );
-            DrawLine(spriteBatch, lastPoint, nextPoint, color);
+            DrawLine(spriteBatch, lastPoint, nextPoint, color, width);
             lastPoint = nextPoint;
         }
     }
