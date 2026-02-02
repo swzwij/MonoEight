@@ -39,7 +39,7 @@ public class LoadingScene : Scene
 
         _timer += Time.DeltaTime;
 
-        // if (_timer >= WAIT_TIME)
-        //     SceneManager.Load("Test 1");
+        if (_timer >= WAIT_TIME)
+            SceneManager.Load("Test 1");
     }
 }
