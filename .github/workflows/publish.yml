@@ -45,6 +45,7 @@ jobs:
       - name: Update Template Dependency Version
         run: |
           sed -i 's/<PackageReference Include="MonoEight.Core" Version=".*" \/>/<PackageReference Include="MonoEight.Core" Version="${{ env.NEW_VERSION }}" \/>/' MonoEight.Template/MonoEight.Template.csproj
+          sed -i 's/<UseProjectReference Condition="\x27\$(UseProjectReference)\x27 == \x27\x27">true<\/UseProjectReference>/<UseProjectReference Condition="\x27\$(UseProjectReference)\x27 == \x27\x27">false<\/UseProjectReference>/' MonoEight.Template/MonoEight.Template.csproj
           grep "MonoEight.Core" MonoEight.Template/MonoEight.Template.csproj
 
       - name: Pack MonoEight.Templates
