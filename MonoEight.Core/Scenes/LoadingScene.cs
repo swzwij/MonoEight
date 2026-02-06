@@ -22,7 +22,7 @@ public class LoadingScene : Scene
         {
             FrameDuration = 0.05f,
             Loop = false,
-            Scale = Math.Min(MEWindow.Resolution.X / 32f, MEWindow.Resolution.Y / 32f) / 2
+            Scale = (int)Math.Max(1, Math.Min(MEWindow.Resolution.X / 32f, MEWindow.Resolution.Y / 32f) / 2)
         };
 
         logo.AddComponent(animator);

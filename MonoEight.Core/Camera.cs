@@ -31,13 +31,13 @@ public class Camera
     /// </remarks>
     public Vector2 Position
     {
-        get => _position + new Vector2(MEWindow.Resolution.X / 2f, MEWindow.Resolution.Y / 2f);
+        get => _position + new Vector2((int)(MEWindow.Resolution.X / 2f), (int)(MEWindow.Resolution.Y / 2f));
         set
         {
             _position = new Vector2
             (
-                value.X - MEWindow.Resolution.X / 2f, 
-                value.Y - MEWindow.Resolution.Y / 2f
+                value.X - (int)(MEWindow.Resolution.X / 2f), 
+                value.Y - (int)(MEWindow.Resolution.Y / 2f)
             );
             UpdatePosition();
         }

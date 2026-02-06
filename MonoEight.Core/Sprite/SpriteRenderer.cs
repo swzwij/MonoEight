@@ -23,7 +23,7 @@ public class SpriteRenderer : Component
         set
         {
             _texture = value;
-            Origin = new Vector2(_texture.Width / 2f, _texture.Height / 2f);
+            Origin = new Vector2((int)(_texture.Width / 2f), (int)(_texture.Height / 2f));
             _hasTexture = true;
         }
     }
