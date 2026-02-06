@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Assets\bin\DesktopGL\**\*.*">
+        <Content Include="Assets\bin\DesktopGL\Assets\**\*.*">
             <Pack>true</Pack>
 
             <PackagePath>contentFiles\any\net8.0\Assets</PackagePath>
