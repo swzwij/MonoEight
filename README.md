@@ -6,9 +6,6 @@
 </h2>
 
 <p align="center">
-    <a href="https://www.nuget.org/packages/MonoEight.Core">
-        <img src="https://img.shields.io/nuget/v/MonoEight.Core?style=flat-square&color=3b5dc9&label=nuget%20core" alt="NuGet Core Version" />
-    </a>
     <a href="https://www.nuget.org/packages/MonoEight.Templates">
         <img src="https://img.shields.io/nuget/v/MonoEight.Templates?style=flat-square&color=3b5dc9&label=nuget%20template" alt="NuGet Template Version" />
     </a>
