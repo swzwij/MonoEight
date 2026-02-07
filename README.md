@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="MonoEight.Core/Assets/MonoEightTitle.png">
+    <img src="MonoEight.Template/MonoEight/Assets/MonoEightTitle.png">
 </p>
 <h2 align="center">
   A <a href="https://monogame.net/">MonoGame</a> based framework made for<br>small games with big pixels
