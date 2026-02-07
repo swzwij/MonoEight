@@ -3,8 +3,8 @@
     {
       "src": [
         {
-          "files": ["MonoEight.Core.csproj"],
-          "src": "../MonoEight.Core"
+          "files": ["MonoEight.Template.csproj"],
+          "src": "../MonoEight.Template"
         }
       ],
       "dest": "api",

@@ -5,7 +5,7 @@ using MonoEight.Core.Physics;
 using MonoEight.Core.Sprite;
 using MonoEight.Core.UserInput;
 
-namespace MonoEight;
+namespace Template;
 
 public class NewPlayer2 : GameObject
 {

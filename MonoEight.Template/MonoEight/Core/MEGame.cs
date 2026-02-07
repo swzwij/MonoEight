@@ -27,7 +27,7 @@ public class MEGame : Game
 
     protected override void Initialize()
     {
-        MonoEight.Core.Content.Initialize(Content, "Content");
+        MonoEight.Core.Content.Initialize(Content, "Game/Content");
         MEWindow.StartFullscreen = false;
         MEWindow.Resolution = new Point(128, 96);
         MEWindow.Initialize(_graphics, Window);
@@ -38,7 +38,7 @@ public class MEGame : Game
         SceneManager.Load("Loading");
 
         OnGameInitialize();
-        
+
         base.Initialize();
     }
 
@@ -48,18 +48,18 @@ public class MEGame : Game
     /// </summary>
     protected virtual void OnGameInitialize()
     {
-        
+
     }
 
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        
+
         int width = MEWindow.Resolution.X > 0 ? MEWindow.Resolution.X : 128;
         int height = MEWindow.Resolution.Y > 0 ? MEWindow.Resolution.Y : 96;
-        
+
         _renderTarget = new RenderTarget2D(GraphicsDevice, width, height);
-        
+
         OnLoadContent();
     }
 
@@ -69,13 +69,13 @@ public class MEGame : Game
     /// </summary>
     protected virtual void OnLoadContent()
     {
-        
+
     }
 
     protected override void Update(GameTime gameTime)
     {
         _displayRect = GraphicsHelper.CalculateDisplayRect(GraphicsDevice);
-        
+
         Input.Update(_displayRect);
         Time.Update(gameTime);
 
@@ -85,7 +85,7 @@ public class MEGame : Game
         SceneManager.Update();
 
         OnUpdate();
-        
+
         base.Update(gameTime);
     }
 
@@ -95,7 +95,7 @@ public class MEGame : Game
     /// </summary>
     protected virtual void OnUpdate()
     {
-        
+
     }
 
     protected override void Draw(GameTime gameTime)

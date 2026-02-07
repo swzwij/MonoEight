@@ -5,7 +5,9 @@
         <RollForward>Major</RollForward>
         <PublishReadyToRun>false</PublishReadyToRun>
         <TieredCompilation>false</TieredCompilation>
-        <RootNamespace>MonoEight</RootNamespace>
+        <RootNamespace>Template</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
     <PropertyGroup>
         <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -13,9 +15,6 @@
     </PropertyGroup>
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
-    <PropertyGroup>
-        <UseProjectReference Condition="'$(UseProjectReference)' == ''">false</UseProjectReference>
     </PropertyGroup>
     <ItemGroup>
         <None Remove="Icon.ico" />
@@ -29,12 +28,7 @@
             <LogicalName>Icon.bmp</LogicalName>
         </EmbeddedResource>
     </ItemGroup>
-    <ItemGroup Condition="'$(UseProjectReference)' != 'true'">
-        <PackageReference Include="MonoEight.Core" Version="0.2.7" />
-        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
-        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
-    </ItemGroup>
-    <ItemGroup Condition="'$(UseProjectReference)' == 'true'">
+    <ItemGroup>
         <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
         <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
     </ItemGroup>
@@ -49,14 +43,22 @@
       <Content Include=".template.config\template.json" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(UseProjectReference)' == 'true'">
-        <ProjectReference Include="..\MonoEight.Core\MonoEight.Core.csproj" />
+    <ItemGroup>
+        <MonoGameContentReference Include="MonoEight\Assets\Assets.mgcb" />
+        <MonoGameContentReference Include="Game\Content\Content.mgcb" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(UseProjectReference)' == 'true'">
-        <Content Include="..\MonoEight.Core\Assets\bin\DesktopGL\Assets\**\*.*" Link="Assets\%(RecursiveDir)%(Filename)%(Extension)">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+    <Target Name="CopyMonoEightContent" AfterTargets="Build">
+        <ItemGroup>
+            <MonoEightBuiltContent Include="MonoEight\Assets\bin\DesktopGL\Assets\**\*.*" />
+            <GameBuiltContent Include="Game\Content\bin\DesktopGL\Content\**\*.*" />
+        </ItemGroup>
+        <Copy SourceFiles="@(MonoEightBuiltContent)"
+              DestinationFiles="@(MonoEightBuiltContent->'$(OutputPath)MonoEight\Assets\%(RecursiveDir)%(Filename)%(Extension)')"
+              SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(GameBuiltContent)"
+              DestinationFiles="@(GameBuiltContent->'$(OutputPath)Game\Content\%(RecursiveDir)%(Filename)%(Extension)')"
+              SkipUnchangedFiles="true" />
+    </Target>
 
 </Project>

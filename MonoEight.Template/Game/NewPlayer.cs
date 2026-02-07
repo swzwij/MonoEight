@@ -5,7 +5,7 @@ using MonoEight.Core.UserInput;
 using MonoEight.Core.Physics;
 using MonoEight.Core.Sprite;
 
-namespace MonoEight;
+namespace Template;
 
 public class NewPlayer : GameObject
 {
@@ -36,10 +36,10 @@ public class NewPlayer : GameObject
         Vector2 position = Position;
         position.X += Input.IsPressed("A") ? 1f : 0f;
         position.Y += Input.IsPressed("B") ? 1f : 0f;
-        Position = position;    
-        
+        Position = position;
+
         GameTime t = Time.GameTime;
-        
+
         if (Input.Mouse.LeftPressed)
         {
             if (!_collider.Intersects(Input.Mouse.Position.Int()))
