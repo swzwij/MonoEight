@@ -28,8 +28,8 @@ dotnet new install MonoEight.Templates
 dotnet new monoeight -n MyGameName
 ```
 
-## Documentation
+## API Documentation
 
-<a href="https://swzwij.github.io/MonoEight/">
+<a href="https://swzwij.github.io/MonoEight/api/MonoEight.Core.html">
 swzwij.github.io/MonoEight
 </a>
