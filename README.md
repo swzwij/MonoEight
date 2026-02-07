@@ -7,7 +7,7 @@
 
 <p align="center">
     <a href="https://www.nuget.org/packages/MonoEight.Templates">
-        <img src="https://img.shields.io/nuget/v/MonoEight.Templates?style=flat-square&color=3b5dc9&label=nuget%20template" alt="NuGet Template Version" />
+        <img src="https://img.shields.io/nuget/v/MonoEight.Templates?style=flat-square&color=3b5dc9&label=NuGet%20Template" alt="NuGet Template Version" />
     </a>
     <a href="https://swzwij.github.io/MonoEight/">
         <img src="https://img.shields.io/badge/Docs-Read%20Now-b13e53?style=flat-square" alt="Documentation" />
