@@ -17,7 +17,7 @@ public class MyGame : MEGame
         Input.Add("A", [Keys.Z, Keys.C, Keys.K, Keys.Space], []);
         Input.Add("B", [Keys.X, Keys.L], []);
 
-        SceneManager.Add("Test 1", new TestScene());
-        SceneManager.Add("Test 2", new TestScene2());
+        SceneManager.Add("MainMenu", new MainMenuScene());
+        SceneManager.Add("Test", new TestScene());
     }
 }
