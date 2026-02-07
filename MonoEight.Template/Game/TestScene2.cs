@@ -1,7 +1,7 @@
 using MonoEight.Core;
 using MonoEight.Core.Scenes;
 
-namespace MonoEight;
+namespace Template;
 
 public class TestScene2 : Scene
 {

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using MonoEight.Core.Scenes;
 using MonoEight.Core.UserInput;
 
-namespace MonoEight;
+namespace Template;
 
 public class MyGame : MEGame
 {

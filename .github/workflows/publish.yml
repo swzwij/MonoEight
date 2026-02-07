@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    
+
     env:
       MAJOR_MINOR: "0.2"
       NUGET_SOURCE: "https://api.nuget.org/v3/index.json"
@@ -25,39 +25,20 @@ jobs:
       - name: Calculate Version
         id: version
         run: |
-          echo "NEW_VERSION=${{ env.MAJOR_MINOR }}.${{ github.run_number }}" >> $GITHUB_ENV
-          echo "Building Version: ${{ env.MAJOR_MINOR }}.${{ github.run_number }}"
-
-      - name: Pack MonoEight.Core
-        run: |
-          dotnet pack MonoEight.Core/MonoEight.Core.csproj \
-            --configuration Release \
-            -p:Version=${{ env.NEW_VERSION }} \
-            --output ./nupkgs
-
-      - name: Push MonoEight.Core
-        run: |
-          dotnet nuget push ./nupkgs/MonoEight.Core.${{ env.NEW_VERSION }}.nupkg \
-            --api-key ${{ secrets.NUGET_API_KEY }} \
-            --source ${{ env.NUGET_SOURCE }} \
-            --skip-duplicate
-
-      - name: Update Template Dependency Version
-        run: |
-          sed -i 's/<PackageReference Include="MonoEight.Core" Version=".*" \/>/<PackageReference Include="MonoEight.Core" Version="${{ env.NEW_VERSION }}" \/>/' MonoEight.Template/MonoEight.Template.csproj
-          sed -i 's/<UseProjectReference Condition="\x27\$(UseProjectReference)\x27 == \x27\x27">true<\/UseProjectReference>/<UseProjectReference Condition="\x27\$(UseProjectReference)\x27 == \x27\x27">false<\/UseProjectReference>/' MonoEight.Template/MonoEight.Template.csproj
-          grep "MonoEight.Core" MonoEight.Template/MonoEight.Template.csproj
+          VERSION="${{ env.MAJOR_MINOR }}.${{ github.run_number }}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Building Version: $VERSION"
 
       - name: Pack MonoEight.Templates
         run: |
           dotnet pack MonoEight.Templates/MonoEight.Templates.csproj \
             --configuration Release \
-            -p:Version=${{ env.NEW_VERSION }} \
+            -p:Version=${{ steps.version.outputs.version }} \
             --output ./nupkgs
 
       - name: Push MonoEight.Templates
         run: |
-          dotnet nuget push ./nupkgs/MonoEight.Templates.${{ env.NEW_VERSION }}.nupkg \
+          dotnet nuget push ./nupkgs/MonoEight.Templates.${{ steps.version.outputs.version }}.nupkg \
             --api-key ${{ secrets.NUGET_API_KEY }} \
             --source ${{ env.NUGET_SOURCE }} \
             --skip-duplicate

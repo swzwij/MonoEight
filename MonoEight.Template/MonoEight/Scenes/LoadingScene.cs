@@ -18,7 +18,7 @@ public class LoadingScene : Scene
         Camera.BackgroundColor = MEColors.Black;
 
         GameObject logo = new();
-        Animator animator = new(new SpriteSheet(Content.LoadFromRoot<Texture2D>("Assets", "MonoEightAnimation"), 64))
+        Animator animator = new(new SpriteSheet(Content.LoadFromRoot<Texture2D>("MonoEight/Assets", "MonoEightAnimation"), 64))
         {
             FrameDuration = 0.05f,
             Loop = false,

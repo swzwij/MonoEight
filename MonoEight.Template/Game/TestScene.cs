@@ -5,7 +5,7 @@ using MonoEight.Core.UserInput;
 using MonoEight.Core.UI;
 using MonoEight.Core.Scenes;
 
-namespace MonoEight;
+namespace Template;
 
 public class TestScene : Scene
 {

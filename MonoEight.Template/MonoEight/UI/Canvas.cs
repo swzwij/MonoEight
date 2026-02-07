@@ -11,7 +11,7 @@ public class Canvas
 {
     private readonly Scene _scene;
     private readonly Dictionary<FontSize, SpriteFont> _fonts;
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="Canvas"/> class and loads the default fonts.
     /// </summary>
@@ -21,11 +21,11 @@ public class Canvas
         _scene = scene;
         _fonts = new Dictionary<FontSize, SpriteFont>
         {
-            { FontSize.S, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEight") },
-            { FontSize.M, Content.LoadFromRoot<SpriteFont>("Assets", "Fonts/MonoEightMedium") },
+            { FontSize.S, Content.LoadFromRoot<SpriteFont>("MonoEight/Assets", "Fonts/MonoEight") },
+            { FontSize.M, Content.LoadFromRoot<SpriteFont>("MonoEight/Assets", "Fonts/MonoEightMedium") },
         };
     }
-    
+
     /// <summary>
     /// Draws a string of text centered at the given position.
     /// </summary>
