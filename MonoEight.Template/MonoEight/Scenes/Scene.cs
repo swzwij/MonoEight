@@ -27,11 +27,11 @@ public abstract class Scene
     /// The <see cref="Camera"/> of the <see cref="Scene"/>.
     /// </summary>
     public Camera Camera { get; set; } = new();
-    
+
     /// <summary>
     /// The <see cref="Canvas"/> of the <see cref="Scene"/>.
     /// </summary>
-    public Canvas? Canvas { get; private set; }
+    public Canvas Canvas { get; private set; } = null!;
 
     protected virtual void Initialize() { }
     protected virtual void LoadContent() { }
@@ -86,7 +86,7 @@ public abstract class Scene
         }
 
         _gameObjects.Clear();
-        Canvas = null;
+        Canvas = null!;
     }
 
     /// <summary>
