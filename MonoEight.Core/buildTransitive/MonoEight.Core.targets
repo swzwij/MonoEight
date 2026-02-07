@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <_MonoEightAssetsDir>$(MSBuildThisFileDirectory)..\contentFiles\any\net8.0\Assets\</_MonoEightAssetsDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <_MonoEightAssetFiles Include="$(_MonoEightAssetsDir)**\*.*" />
+  </ItemGroup>
+
+  <Target Name="MonoEight_CopyAssetsToOutput" AfterTargets="Build" Condition="'@(_MonoEightAssetFiles)' != '' and '$(DesignTimeBuild)' != 'true'">
+    <Copy SourceFiles="@(_MonoEightAssetFiles)"
+          DestinationFiles="@(_MonoEightAssetFiles->'$(TargetDir)Assets\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="MonoEight_CopyAssetsToPublish" AfterTargets="Publish" Condition="'@(_MonoEightAssetFiles)' != '' and '$(PublishDir)' != ''">
+    <Copy SourceFiles="@(_MonoEightAssetFiles)"
+          DestinationFiles="@(_MonoEightAssetFiles->'$(PublishDir)Assets\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>

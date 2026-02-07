@@ -32,4 +32,11 @@
             <Visible>false</Visible>
         </Content>
     </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="buildTransitive\MonoEight.Core.targets">
+            <Pack>true</Pack>
+            <PackagePath>buildTransitive\</PackagePath>
+        </Content>
+    </ItemGroup>
 </Project>
