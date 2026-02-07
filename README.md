@@ -31,13 +31,6 @@ dotnet new install MonoEight.Templates
 dotnet new monoeight -n MyGameName
 ```
 
-### 3. Run
-
-```
-cd MyGameName
-dotnet run
-```
-
 ## Documentation
 
 <a href="https://swzwij.github.io/MonoEight/">
